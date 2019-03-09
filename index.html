@@ -291,6 +291,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/IntelliJ-IDEA/" itemprop="url" rel="index">
+                    <span itemprop="name">IntelliJ_IDEA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -333,7 +355,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  40
+                  424
                 </span>
               
 
@@ -373,7 +395,27 @@
         
           
             <p>下午我打算新建一个工程，研究ChoiceBox该怎么使用，发现新工程的Scene Builder假死，下面记录一下当时的情况。</p>
-
+<h3 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h3><ul>
+<li>进入Scene Builder，删除自动生成的Container，拖动任意Container到画布上，再拖动任意控件进入画布，当鼠标进入到Container的区域，<strong>发现无法放下该Control</strong>。</li>
+<li>此时可以通过双击Controls栏来添加控件，但发现添加上去的控件无法自由拖动。</li>
+<li>此时Chrome开着，且开着10个左右的标签页</li>
+<li>Eclipse也开着，开着一个项目</li>
+<li>IntelliJ IDEA重新新建Java FX项目、重启后仍会出现第一条所描述的情况，删除后重新新建也无效</li>
+</ul>
+<p>由于还未发现解决方案，下面写一下当时在哪些操作后Scene Builder又能重新恢复正常使用</p>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul>
+<li>关闭Chrome与Eclipse</li>
+<li>将IDEA从显示器上拖动到<strong>笔记本电脑的屏幕</strong>上，并在<strong>小屏幕上</strong>通过拖动在Container上添加组件（似乎在小屏幕上IDEA的Scene Builder就不会有这个问题），然后将IDEA拖回显示器上，确认在显示器上没有该问题后，可以最大化，这是应该会发现Container上的控件能够自由拖动了。</li>
+</ul>
+<hr>
+<h4 id="查资料的收获"><a href="#查资料的收获" class="headerlink" title="查资料的收获"></a>查资料的收获</h4><blockquote>
+<p>Scene Builder似乎还有别的假死情况：</p>
+<ol>
+<li>右侧属性栏无法操作，通过改变属性栏的大小可以解决假死，这可能是由Scene Builder<strong>未完全加载/加载速度慢/加载内容过多/操作过于频繁</strong>引起的</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a><font color="white">吐槽</font></h2><font color="white"><del>干完这个我就认真学习C#，Java界面编程真实反人类</del></font>
           
         
       
@@ -641,6 +683,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
             
 
             
