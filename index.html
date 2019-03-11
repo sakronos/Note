@@ -403,21 +403,16 @@
 
       
         
-          
-            <p>河蟹<em>河蟹</em>河蟹<em>…( ＿ ＿)ノ｜</em>文明*</p>
+          <p>河蟹<em>河蟹</em>河蟹<em>…( ＿ ＿)ノ｜</em>文明*</p>
 <p>写这玩意儿的时候很慌，万一被请去喝茶了怎么办😭</p>
 <p>二十四字护体 <strong>富强民主文明和谐自由平等公正法治爱国敬业诚信友善</strong></p>
-<h1 id="梯子出问题的可能修复方法"><a href="#梯子出问题的可能修复方法" class="headerlink" title="梯子出问题的可能修复方法"></a>梯子出问题的可能修复方法</h1><h5 id="以下正文："><a href="#以下正文：" class="headerlink" title="以下正文："></a>以下正文：</h5><p>以前也遇到过梯子用不了，但那次的情况是似乎仍能连接到服务器，但是无法上网，检查了一下服务器能不能ping通–&gt; 可以，再检查一下端口，telnet–&gt; 无法连接，所以基本上可以得出结论，端口被封了，那只能等解封或者换一个服务器  </p>
-<p>但这次不同，端口正常，能ping通，服务器重启了也没用，真的是一脸懵逼  </p>
-<h5 id="以下解决方案"><a href="#以下解决方案" class="headerlink" title="以下解决方案"></a>以下解决方案</h5><p>简而言之 换端口  </p>
-<ul>
-<li>打开/etc/shadowsocks.json文件，更换server_port的值</li>
-<li>重启小飞机服务</li>
-</ul>
-<p>这样应该就能恢复正常使用</p>
-<h5 id="附上多用户设置方法"><a href="#附上多用户设置方法" class="headerlink" title="附上多用户设置方法"></a>附上多用户设置方法</h5><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">"server"</span>:<span class="string">"11.32.15.21"</span>,</span><br><span class="line"> <span class="attr">"local_address"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line"> <span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line"> <span class="attr">"port_password"</span>:&#123;</span><br><span class="line"> <span class="attr">"9001"</span>:<span class="string">"10001"</span>,</span><br><span class="line"> <span class="attr">"9002"</span>:<span class="string">"10002"</span>,</span><br><span class="line"> <span class="attr">"9003"</span>:<span class="string">"10003"</span></span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="attr">"timeout"</span>:<span class="number">300</span>,</span><br><span class="line"> <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span>,</span><br><span class="line"> <span class="attr">"fast_open"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Note/2019/03/11/服务器能ping通且端口正常梯-仔-的修复方法/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -608,30 +603,14 @@
 
       
         
-          
-            <p>下午我打算新建一个工程，研究ChoiceBox该怎么使用，发现新工程的Scene Builder假死，下面记录一下当时的情况。</p>
-<h3 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h3><ul>
-<li>进入Scene Builder，删除自动生成的Container，拖动任意Container到画布上，再拖动任意控件进入画布，当鼠标进入到Container的区域，<strong>发现无法放下该Control</strong>。</li>
-<li>此时可以通过双击Controls栏来添加控件，但发现添加上去的控件无法自由拖动。</li>
-<li>此时Chrome开着，且开着10个左右的标签页</li>
-<li>Eclipse也开着，开着一个项目</li>
-<li>IntelliJ IDEA重新新建Java FX项目、重启后仍会出现第一条所描述的情况，删除后重新新建也无效</li>
-</ul>
-<p>由于还未发现解决方案，下面写一下当时在哪些操作后Scene Builder又能重新恢复正常使用</p>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul>
-<li>关闭Chrome与Eclipse</li>
-<li>将IDEA从显示器上拖动到<strong>笔记本电脑的屏幕</strong>上，并在<strong>小屏幕上</strong>通过拖动在Container上添加组件（似乎在小屏幕上IDEA的Scene Builder就不会有这个问题），然后将IDEA拖回显示器上，确认在显示器上没有该问题后，可以最大化，这是应该会发现Container上的控件能够自由拖动了。</li>
-</ul>
-<hr>
-<h4 id="查资料的收获"><a href="#查资料的收获" class="headerlink" title="查资料的收获"></a>查资料的收获</h4><blockquote>
-<p>Scene Builder似乎还有别的假死情况：</p>
-<ol>
-<li>右侧属性栏无法操作，通过改变属性栏的大小可以解决假死，这可能是由Scene Builder<strong>未完全加载/加载速度慢/加载内容过多/操作过于频繁</strong>引起的</li>
-</ol>
-</blockquote>
-<hr>
-<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a><font color="white">吐槽</font></h2><font color="white"><del>干完这个我就认真学习C#，Java界面编程真实反人类</del></font>
-          
+          <p>下午我打算新建一个工程，研究ChoiceBox该怎么使用，发现新工程的Scene Builder假死，下面记录一下当时的情况。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Note/2019/03/09/IntelliJ IDEA JavaFX Scene Builder问题一则/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
