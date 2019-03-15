@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： O(${log n}+{log m}$) .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-03-15T08:56:54.978Z">
+<meta property="og:updated_time" content="2019-03-15T09:59:44.563Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法执行时间的渐进表示法">
 <meta name="twitter:description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： O(${log n}+{log m}$) .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  378
+                  560
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  1
+                  2
                 </span>
               
             </div>
@@ -422,14 +422,20 @@
 <a id="more"></a>
 <h4 id="1-欧几里得迭代算法："><a href="#1-欧几里得迭代算法：" class="headerlink" title="1. 欧几里得迭代算法："></a>1. 欧几里得迭代算法：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Gcd</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(m==<span class="number">0</span>) <span class="keyword">return</span> n; <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">return</span> m; </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    卧槽，我是第一次发现如果两数中有零，最大公约数为另一个数</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">if</span>(m&gt;n) Swap(m,n); <span class="comment">//交换两数位置，使得n大于m，其实这一步可有可无</span></span><br><span class="line">    <span class="keyword">while</span>(m&gt;<span class="number">0</span>)         <span class="comment">//下次要试试若两数中有负数，算法的结果会变成怎样</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> c=n%m;n=m;m=c;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        若迭代次数大于等于两次，当此迭代执行完毕后，</span></span><br><span class="line"><span class="comment">        m为本次迭代中n%m的值，n为上一次迭代n%m的值</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n;   <span class="comment">//返回m与n的最大公约数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-渐近时间复杂度的求解"><a href="#2-渐近时间复杂度的求解" class="headerlink" title="2. 渐近时间复杂度的求解"></a>2. 渐近时间复杂度的求解</h4><p>这里先要证明一个引理  </p>
-<h5 id="I-定理："><a href="#I-定理：" class="headerlink" title="I. 定理："></a><strong>I. 定理：</strong></h5><center><font face="微软雅黑" size="4">如果n&gt;m, 则n mod m &lt; $\frac{n}{2}\qquad$ </font></center>
+<h5 id="I-定理："><a href="#I-定理：" class="headerlink" title="I. 定理："></a><strong>I. <a name="a"><font color="black">定理：</font></a></strong></h5><center><font face="微软雅黑" size="4">如果${n &gt; m}$, 则$n mod m &lt; \frac{n}{2}\qquad$ </font></center>
 
 <p><strong>证明：</strong> </p>
 <ol>
 <li>if $m \leq\frac{n}{2}\qquad$ ,则由于余数小于m，所以成立.  </li>
 <li>if $m \geq\frac{n}{2}\qquad, n-m\leq\frac{n}{2}\qquad$,即商为壹，余数为${n-m}$,所以成立.</li>
 </ol>
-<h5 id="Ⅱ-证明结论"><a href="#Ⅱ-证明结论" class="headerlink" title="Ⅱ.证明结论"></a><strong>Ⅱ.证明结论</strong></h5><p>书上写道：</p>
+<h5 id="Ⅱ-证明结论"><a href="#Ⅱ-证明结论" class="headerlink" title="Ⅱ.证明结论"></a><strong>Ⅱ.证明结论</strong></h5><p>书上写道：<a href="#a">定理</a>表明，<b><em>两次</em></b>迭代以后，余数最多是原始值的一半</p>
+<p>余数至多是原始值的一半，这已经由定理显而易见的给出了，但“两次迭代以后”出现的很突兀，反正我是看不出来😂</p>
+<p>这里我有两种想法来解释：  </p>
+<ol>
+<li>在有的版本中，欧几里得迭代算法是没有Swap()函数的，所以在输入数${n &lt; m}$的情况下，第一次迭代的作用是交换两数位置，确保${n &gt; m}$,这样第二次迭代所得${n mod m}$则可由定理得出小于$\frac{n}{2}\qquad$,这可以成为计算渐近时间复杂度的根据<br>但很遗憾的是  </li>
+<li>首先，</li>
+</ol>
 
       
     </div>
