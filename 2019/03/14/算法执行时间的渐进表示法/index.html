@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： O(${log\ n}+{log\ m}$) .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
+<meta name="description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： $O({log\ n}+{log\ m})$ .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法执行时间的渐进表示法">
 <meta property="og:url" content="https://github.com/sakronos/Note/2019/03/14/算法执行时间的渐进表示法/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： O(${log\ n}+{log\ m}$) .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
+<meta property="og:description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： $O({log\ n}+{log\ m})$ .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-03-15T10:07:49.134Z">
+<meta property="og:updated_time" content="2019-03-15T15:51:36.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法执行时间的渐进表示法">
-<meta name="twitter:description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： O(${log\ n}+{log\ m}$) .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
+<meta name="twitter:description" content="今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： $O({log\ n}+{log\ m})$ .  使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社">
 
 
 
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  555
+                  855
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  2
+                  3
                 </span>
               
             </div>
@@ -415,7 +415,7 @@
       
 
       
-        <p>今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）<br>其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： O(${log\ n}+{log\ m}$) .</p>
+        <p>今天算法设计课上老师讲了算法执行时间的渐进表示法，首先复习了大O记号（big O notation）<br>其中，欧几里得辗转相除法（求最大公约数迭代算法）的渐近时间复杂度的计算并不是很好理解，这里先把结果贴出来： $O({log\ n}+{log\ m})$ .</p>
 <blockquote>
 <font face="微软雅黑">使用的书是《算法设计与分析- C++语言描述（第3版）》 电子工业出版社</font>
 </blockquote>
@@ -427,14 +427,18 @@
 <p><strong>证明：</strong> </p>
 <ol>
 <li>$if\ m \leq\frac{n}{2}$ ,则由于余数小于m，所以成立.  </li>
-<li>$if\ m \geq\frac{n}{2}, n-m\leq\frac{n}{2}$,即商为壹，余数为${n-m}$,所以成立.</li>
+<li>$if\ m &gt;\frac{n}{2}, n-m&lt;\frac{n}{2}$,即商为壹，余数为${n-m}$,所以成立.</li>
 </ol>
-<h5 id="Ⅱ-证明结论"><a href="#Ⅱ-证明结论" class="headerlink" title="Ⅱ.证明结论"></a><strong>Ⅱ.证明结论</strong></h5><p>书上写道：<a href="#a">定理</a>表明，<b><em>两次</em></b>迭代以后，余数最多是原始值的一半</p>
+<h5 id="Ⅱ-证明结论"><a href="#Ⅱ-证明结论" class="headerlink" title="Ⅱ.证明结论"></a><strong>Ⅱ.证明结论</strong></h5><p>书上写道：<a href="#a">定理</a><a name="b"><font color="black">表明</font></a>，<b><em>两次</em></b>迭代以后，余数最多是原始值的一半</p>
 <p>余数至多是原始值的一半，这已经由定理显而易见的给出了，但“两次迭代以后”出现的很突兀，反正我是看不出来😂</p>
 <p>这里我有两种想法来解释：  </p>
 <ol>
-<li>在有的版本中，欧几里得迭代算法是没有Swap()函数的，所以在输入数${n &lt; m}$的情况下，第一次迭代的作用是交换两数位置，确保${n &gt; m}$,这样第二次迭代所得${n\ mod\ m}$则可由定理得出小于$\frac{n}{2}$,这可以成为计算渐近时间复杂度的根据<br>但很遗憾的是  </li>
-<li>首先，</li>
+<li>在有的版本中，欧几里得迭代算法是没有Swap()函数的，所以在输入数${n &lt; m}$的情况下，第一次迭代的作用是交换两数位置，确保${n &gt; m}$,这样第二次迭代所得${n\ mod\ m}$则可由定理得出小于$\frac{n}{2}$,这可以成为计算渐近时间复杂度的根据<br>但很遗憾的是，这个解释对于<u><strong>解释为何时间复杂度为$O(log\ n+log\ m)$</strong></u>似乎毫无帮助。（写到这里，我觉得有点好笑，因为我是从结论来反推这个结论是怎么推导出的，境界还是太低了，这根本从出发点开始就不对啊喂！😭）  </li>
+</ol>
+<hr>
+<p>下面写第二种想法（根据张成解释，不是我想出来的）  <font color="white">1. </font>  </p>
+<ol start="2">
+<li>首先，记住算法的返回参量是$n$<br>前面在算法部分我已经提到了，在每一次迭代中，我们会将取余这一步中的除数赋给$n$，将余数赋给$m$，$n$要经过两次迭代才会获得&amp;n\ mod\ m&amp;的值，<br>由算法可知最大公约数必定是一次迭代中所得的余数，所以，我认为两次迭代才完成了一次循环，只有第二次迭代完成后$n$得到了这次循环初$n\ mod\ m$的值（此时的$n$最多是最初$n$的一半），这次循环才算完成。<br>书上写的<a href="#b">“定理表明”</a>，<strong>余数</strong>最多是原始值的一半，这是否证明为使$n$为<em>余数</em>，必须要以两次迭代为单位？</li>
 </ol>
 
       
