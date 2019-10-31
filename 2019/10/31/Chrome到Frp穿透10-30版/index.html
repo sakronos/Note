@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-10-31T08:02:20.032Z">
+<meta property="og:updated_time" content="2019-10-31T08:13:44.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从ERR_ADDRESS_UNREACHABLE到Frp穿透">
 <meta name="twitter:description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
@@ -292,7 +292,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-10-31T13:00:26+09:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-10-31T12:00:26+08:00">
                 2019-10-31
               </time>
             
@@ -444,7 +444,7 @@
 <li><a href="http://lyscholar.cn/2019/08/13/frp-爆错%EF%BC%81parse-conf-error-invalid-server_port/" target="_blank" rel="noopener">Frp 爆错！Parse conf error: invalid server_port</a></li>
 <li><a href="https://www.cnblogs.com/jackzz/p/9358213.html?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">tailf、tail -f、tail -F三者区别（转）</a></li>
 </ol>
-<h3 id="P3：FRP日志：Parse-conf-error-invalid-server-port"><a href="#P3：FRP日志：Parse-conf-error-invalid-server-port" class="headerlink" title="P3：FRP日志：Parse conf error: invalid server_port"></a>P3：FRP日志：Parse conf error: invalid server_port</h3><p><strong>前情提要</strong><br>frpc正常运行后，网页仍不能通过外网FRP服务器访问。  </p>
+<h3 id="P3：FRP正常运行，Chrome报错Connection-Refused"><a href="#P3：FRP正常运行，Chrome报错Connection-Refused" class="headerlink" title="P3：FRP正常运行，Chrome报错Connection Refused"></a>P3：FRP正常运行，Chrome报错Connection Refused</h3><p><strong>前情提要</strong><br>frpc正常运行后，网页仍不能通过外网FRP服务器访问。  </p>
 <p><strong>正片：</strong><br>首先是一个老问题，你的云服务器是否放行了向你指定的端口的请求，因为防火墙和云服务提供商都有可能拒绝向几个常用端口以外端口的请求。<br>其次，根据<em>frp0.27无视NET内网穿透及要点说明</em> [1]，如果需要http穿透的话，建议客户端配置type=tcp ,如果写成type=http可能不成功。我这边用http怎么都不能访从外网问本地web服务。<br>我在更改web代理部分的type为tcp后大功告成。</p>
 <p><strong>解决方案</strong>  </p>
 <ol>
@@ -648,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE"><span class="nav-number">1.</span> <span class="nav-text">P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P2：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">2.</span> <span class="nav-text">P2：FRP日志：Parse conf error: invalid server_port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P3：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">3.</span> <span class="nav-text">P3：FRP日志：Parse conf error: invalid server_port</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE"><span class="nav-number">1.</span> <span class="nav-text">P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P2：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">2.</span> <span class="nav-text">P2：FRP日志：Parse conf error: invalid server_port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P3：FRP正常运行，Chrome报错Connection-Refused"><span class="nav-number">3.</span> <span class="nav-text">P3：FRP正常运行，Chrome报错Connection Refused</span></a></li></ol></div>
             
 
           </div>
