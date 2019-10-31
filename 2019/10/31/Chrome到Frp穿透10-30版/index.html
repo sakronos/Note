@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Server,">
+  <meta name="keywords" content="Linux,Apache,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇好了，言归正传">
-<meta name="keywords" content="Server">
+<meta name="description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
+<meta name="keywords" content="Linux,Apache">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux Terminal下如何删除带有指定字符的文件">
-<meta property="og:url" content="https://github.com/sakronos/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/index.html">
+<meta property="og:title" content="从ERR_ADDRESS_UNREACHABLE到Frp穿透">
+<meta property="og:url" content="https://github.com/sakronos/Note/2019/10/31/Chrome到Frp穿透10-30版/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇好了，言归正传">
+<meta property="og:description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-04-24T08:46:06.979Z">
+<meta property="og:updated_time" content="2019-10-31T08:02:20.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux Terminal下如何删除带有指定字符的文件">
-<meta name="twitter:description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇好了，言归正传">
+<meta name="twitter:title" content="从ERR_ADDRESS_UNREACHABLE到Frp穿透">
+<meta name="twitter:description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/sakronos/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/">
+  <link rel="canonical" href="https://github.com/sakronos/Note/2019/10/31/Chrome到Frp穿透10-30版/">
 
 
 
 
 
-  <title>Linux Terminal下如何删除带有指定字符的文件 | PERFECT BLUE</title>
+  <title>从ERR_ADDRESS_UNREACHABLE到Frp穿透 | PERFECT BLUE</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/sakronos/Note/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/sakronos/Note/Note/2019/10/31/Chrome到Frp穿透10-30版/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kronos">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux Terminal下如何删除带有指定字符的文件</h1>
+          <h1 class="post-title" itemprop="name headline">从ERR_ADDRESS_UNREACHABLE到Frp穿透</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-04-24T15:03:10+08:00">
-                2019-04-24
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-10-31T13:00:26+09:00">
+                2019-10-31
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
                   </a>
                 </span>
 
@@ -326,8 +326,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Linux/技巧/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧</span>
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
                   </a>
                 </span>
 
@@ -344,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/" itemprop="commentCount"></span>
+                <a href="/Note/2019/10/31/Chrome到Frp穿透10-30版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/10/31/Chrome到Frp穿透10-30版/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -353,7 +353,7 @@
 
           
           
-             <span id="/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/" class="leancloud_visitors" data-flag-title="Linux Terminal下如何删除带有指定字符的文件">
+             <span id="/Note/2019/10/31/Chrome到Frp穿透10-30版/" class="leancloud_visitors" data-flag-title="从ERR_ADDRESS_UNREACHABLE到Frp穿透">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  274
+                  1.2k
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  1
+                  4
                 </span>
               
             </div>
@@ -415,32 +415,48 @@
       
 
       
-        <p><strong>水一下</strong>，不然这里就完全变成没有生气的代码堆了（还乱的一批）<br>最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）<br>然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇<br>好了，言归正传</p>
+        <p>这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。<br>顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的plugin，像我们同样用的Github，同样用的HEXO和NEXT（那网站还把hexo和next的版权删了，🙂），我的博客就没有这种破事，以上。</p>
 <a id="more"></a>
-<h2 id="How-to-search-and-delete-files-who-contain-specific-string-in-name？"><a href="#How-to-search-and-delete-files-who-contain-specific-string-in-name？" class="headerlink" title="How to search and delete files who contain specific string in name？"></a>How to search and delete files who contain specific string in name？</h2><p><strong>Please be careful</strong><br>This following command with the parameter <strong>-delete</strong> deletes all the files with <strong>something</strong> in the name in the specified directory and in all subdirectories.</p>
-<hr>
-<p>Open a terminal and go to the right folder:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;your_search_starts_here&gt;</span><br></pre></td></tr></table></figure>
-<p>test with</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -name <span class="string">"*something*"</span></span><br></pre></td></tr></table></figure>
-<p>and delete with</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<p>Or a shorter version:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &lt;your_search_starts_here&gt; -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="1-For-your-home-folder"><a href="#1-For-your-home-folder" class="headerlink" title="1. For your home folder:"></a>1. For your home folder:</h3><p><strong>Warning: first run a test!!!</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -<span class="built_in">type</span> f -name <span class="string">"*something*"</span></span><br></pre></td></tr></table></figure>
-<p>and than</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<h3 id="2-For-the-whole-filesystem"><a href="#2-For-the-whole-filesystem" class="headerlink" title="2. For the whole filesystem:"></a>2. For the whole filesystem:</h3><p><strong>Warning: first run a test !!!</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find / -<span class="built_in">type</span> f -name <span class="string">"*something*"</span></span><br></pre></td></tr></table></figure>
-<p>and test again and than delete with</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find / -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<h3 id="3-Or-only-in-the-specified-directory"><a href="#3-Or-only-in-the-specified-directory" class="headerlink" title="3. Or only in the specified directory:"></a>3. Or only in the specified directory:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &lt;your_search_starts_here&gt; -maxdepth 1 -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<hr>
-<p>And because you have used the tag <strong>locate</strong>:</p>
-<p>The results of a search with <strong>locate</strong> are based on a database. This may be outdated. Start an update with <strong>sudo updatedb</strong>. <strong>find</strong> performs a true search. However, it also takes longer.</p>
-<p>出处：<a href="https://askubuntu.com/questions/625219/how-to-search-and-delete-files-who-contain-specific-string-in-name" target="_blank" rel="noopener">原文</a></p>
+<h3 id="P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE"><a href="#P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE" class="headerlink" title="P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE"></a>P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE</h3><p><strong>前情提要</strong><br>中午突然有人告诉我网页无法连上，我简单的检查了80端口的状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunlp|grep 80</span><br></pre></td></tr></table></figure></p>
+<p>结果显示Apache2正在监听。  </p>
+<p><strong>正片：</strong><br>根据<em>Use of SSL Cert results in ERR_ADDRESS_UNREACHABLE on ubuntu with apache2</em> [1]，有人提出在iptables里放行80端口可以解决该问题，尽管系统显示端口可用（原文：Ok, so strangely ssl / https/ port 443 was indeed NOT enabled on my server. Don’t know why everything tells me that https is enabled but here is how I could solve it for me.）  </p>
+<p><strong>解决方案</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p tcp --dport 443 -j ACCEPT</span><br></pre></td></tr></table></figure></p>
+<p>至此，网页恢复正常使用。</p>
+<p><strong>彩蛋</strong><br>Linux查看端口命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看指定端口或应用，可以结合grep命令：</span></span><br><span class="line">netstat -ap | grep 8080</span><br><span class="line">netstat -ap | grep frpc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以使用lsof命令：</span></span><br><span class="line">lsof -i:8888</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若要关闭使用这个端口的程序，使用kill + 对应的pid:</span></span><br><span class="line"><span class="built_in">kill</span> -9 PID号</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看指定的端口号的进程情况：</span></span><br><span class="line">netstat -tunlp |grep 端口号</span><br></pre></td></tr></table></figure></p>
+<p><strong>参考资料</strong>  </p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/50201473/use-of-ssl-cert-results-in-err-address-unreachable-on-ubuntu-with-apache2/50373181" target="_blank" rel="noopener">Use of SSL Cert results in ERR_ADDRESS_UNREACHABLE on ubuntu with apache2</a></li>
+<li><a href="https://www.cnblogs.com/fengff/p/8985129.html?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">Ubuntu终端命令–查看端口占用及关闭</a></li>
+<li><a href="https://blog.csdn.net/liulin1207/article/details/80976933?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">Linux如何查看端口</a></li>
+</ol>
+<h3 id="P2：FRP日志：Parse-conf-error-invalid-server-port"><a href="#P2：FRP日志：Parse-conf-error-invalid-server-port" class="headerlink" title="P2：FRP日志：Parse conf error: invalid server_port"></a>P2：FRP日志：Parse conf error: invalid server_port</h3><p><strong>前情提要</strong><br>网页恢复正常使用后，我们再次尝试利用FRP（0.29.0，貌似经过八月份的几个版本下来frp又开始能稳定使用了）将内网机器的80端口暴露到公网上。以前我们对SSH成功配置过FRP，这次我们在之前的基础上添加了[web]，重新运行frp后检查nohup日志时便看到了<em>Parse conf error: invalid server_port</em>.<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># frps.ini</span></span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">bind_port</span> = 端口<span class="number">1</span></span><br><span class="line"><span class="attr">vhost_http_port</span> = 端口<span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># frpc.ini</span></span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = 服务器IP地址</span><br><span class="line"><span class="attr">server_port</span> = 端口<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 省略ssh</span></span><br><span class="line"><span class="section">[ssh]</span></span><br><span class="line">······</span><br><span class="line"></span><br><span class="line"><span class="comment"># 暴露内网80端口</span></span><br><span class="line"><span class="section">[web]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">remote_port</span> = 端口<span class="number">3</span>  # 其实是用不到的吧</span><br><span class="line"><span class="attr">custom_domains</span> = 域名</span><br></pre></td></tr></table></figure>
+<p><strong>正片&amp;解决方案：</strong><br>根据<em>Frp 爆错！Parse conf error: invalid server_port</em> [1]  提出的解决方案，<strong>删掉文件中的注释后能够正常运行</strong>。我们在删除注释后，的确问题解决了（问题是现在我们的ini里又新加了行注释，结果能正常运行，玄学）。之前我们的一个Matlab程序也遇到了报语法错误的问题，经检查，报错的那行是中文注释，删掉中文注释后能够正常运行，所以中文不愧是世界最难的语言之一，连计算机遇到中文注释也会懵逼。  </p>
+<p><strong>彩蛋</strong><br>之前查看nohup.out等日志都是直接使用vim，这样只能看到运行vim时文档的内容，不能追踪，现在有了tail这个工具。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 根据文件描述符进行追踪，当文件改名或被删除，追踪停止</span></span><br><span class="line">tail -f nohup.out</span><br></pre></td></tr></table></figure></p>
+<p><em>常用操作：</em>  </p>
+<ol>
+<li>暂停刷新，使用【Ctrl】+【S】暂停终端</li>
+<li>继续终端，使用【Ctrl】+【Q】</li>
+<li>退出tail命令，直接使用【Ctrl】+【C】  </li>
+</ol>
+<p><strong>参考资料</strong>  </p>
+<ol>
+<li><a href="http://lyscholar.cn/2019/08/13/frp-爆错%EF%BC%81parse-conf-error-invalid-server_port/" target="_blank" rel="noopener">Frp 爆错！Parse conf error: invalid server_port</a></li>
+<li><a href="https://www.cnblogs.com/jackzz/p/9358213.html?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">tailf、tail -f、tail -F三者区别（转）</a></li>
+</ol>
+<h3 id="P3：FRP日志：Parse-conf-error-invalid-server-port"><a href="#P3：FRP日志：Parse-conf-error-invalid-server-port" class="headerlink" title="P3：FRP日志：Parse conf error: invalid server_port"></a>P3：FRP日志：Parse conf error: invalid server_port</h3><p><strong>前情提要</strong><br>frpc正常运行后，网页仍不能通过外网FRP服务器访问。  </p>
+<p><strong>正片：</strong><br>首先是一个老问题，你的云服务器是否放行了向你指定的端口的请求，因为防火墙和云服务提供商都有可能拒绝向几个常用端口以外端口的请求。<br>其次，根据<em>frp0.27无视NET内网穿透及要点说明</em> [1]，如果需要http穿透的话，建议客户端配置type=tcp ,如果写成type=http可能不成功。我这边用http怎么都不能访从外网问本地web服务。<br>我在更改web代理部分的type为tcp后大功告成。</p>
+<p><strong>解决方案</strong>  </p>
+<ol>
+<li>如果FRP服务器使用的是腾讯云、阿里云等服务商，要确保几个remote_port在安全组里是开放的。</li>
+<li>frpc.ini中[web]里的type改为tcp，而非http.  </li>
+</ol>
+<p><strong>参考资料</strong>  </p>
+<ol>
+<li><a href="https://ranjuan.cn/frp0-27无视net内网穿透及要点说明/?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">frp0.27无视NET内网穿透及要点说明</a> （这篇文章很良心，给颗小星星❤）</li>
+<li><a href="https://cao0507.github.io/2018/09/14/frp内网穿透实现ssh访问内网机器/" target="_blank" rel="noopener">frp内网穿透实现ssh访问内网机器</a></li>
+<li><a href="https://cao0507.github.io/2018/09/18/阿里云服务器实现frp内网穿透/" target="_blank" rel="noopener">阿里云服务器实现frp内网穿透</a></li>
+</ol>
 
       
     </div>
@@ -458,7 +474,9 @@
       
         <div class="post-tags">
           
-            <a href="/Note/tags/Server/" rel="tag"># Server</a>
+            <a href="/Note/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/Note/tags/Apache/" rel="tag"># Apache</a>
           
         </div>
       
@@ -471,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Note/2019/04/22/服务器端口笔记/" rel="next" title="服务器端口笔记">
-                <i class="fa fa-chevron-left"></i> 服务器端口笔记
+              <a href="/Note/2019/10/15/IDEA的Web项目配置JSTL/" rel="next" title="IDEA的Web项目配置JSTL问题板">
+                <i class="fa fa-chevron-left"></i> IDEA的Web项目配置JSTL问题板
               </a>
             
           </div>
@@ -480,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Note/2019/05/05/Vim使用指南/" rel="prev" title="Vim使用指南">
-                Vim使用指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -634,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-search-and-delete-files-who-contain-specific-string-in-name？"><span class="nav-number">1.</span> <span class="nav-text">How to search and delete files who contain specific string in name？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-For-your-home-folder"><span class="nav-number">1.1.</span> <span class="nav-text">1. For your home folder:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-For-the-whole-filesystem"><span class="nav-number">1.2.</span> <span class="nav-text">2. For the whole filesystem:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Or-only-in-the-specified-directory"><span class="nav-number">1.3.</span> <span class="nav-text">3. Or only in the specified directory:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE"><span class="nav-number">1.</span> <span class="nav-text">P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P2：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">2.</span> <span class="nav-text">P2：FRP日志：Parse conf error: invalid server_port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P3：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">3.</span> <span class="nav-text">P3：FRP日志：Parse conf error: invalid server_port</span></a></li></ol></div>
             
 
           </div>
