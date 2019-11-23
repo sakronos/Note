@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-10-31T08:13:44.819Z">
+<meta property="og:updated_time" content="2019-11-23T13:39:54.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从ERR_ADDRESS_UNREACHABLE到Frp穿透">
 <meta name="twitter:description" content="这个9月份开始搞的网站还真是多灾多难，29号时之前用的别人的FRP服务，现在人家的服务器到期不做了，我们只能自己动手😭，这成为接下来一系列问题的导火索，下面一一列出我的解决方法。顺便在这里吐槽一下Edge浏览器，在我写这篇文章的时候CPU占用超过60%，风扇狂转，原因是Edge里有两个github.io博客，不知道用了啥插件，老是网页未响应，佛了，这也告诫我们想要兼容性好就不要搞些花里胡哨的pl">
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  1.2k
+                  1.4k
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  4
+                  5
                 </span>
               
             </div>
@@ -457,6 +457,10 @@
 <li><a href="https://cao0507.github.io/2018/09/14/frp内网穿透实现ssh访问内网机器/" target="_blank" rel="noopener">frp内网穿透实现ssh访问内网机器</a></li>
 <li><a href="https://cao0507.github.io/2018/09/18/阿里云服务器实现frp内网穿透/" target="_blank" rel="noopener">阿里云服务器实现frp内网穿透</a></li>
 </ol>
+<h3 id="11-23更新：玄学！Frp还能这样配置？"><a href="#11-23更新：玄学！Frp还能这样配置？" class="headerlink" title="11/23更新：玄学！Frp还能这样配置？"></a>11/23更新：玄学！Frp还能这样配置？</h3><h4 id="frps-ini"><a href="#frps-ini" class="headerlink" title="frps.ini"></a>frps.ini</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span>  </span><br><span class="line"><span class="attr">bind_port</span> = <span class="number">7000</span>        #与客户端绑定的进行通信的端口  </span><br><span class="line"><span class="attr">vhost_http_port</span> = <span class="number">6081</span>  #访问客户端web服务自定义的端口号</span><br></pre></td></tr></table></figure>
+<p>这样frpc.ini里就不用指定web的remote_port</p>
+<h4 id="frpc-ini"><a href="#frpc-ini" class="headerlink" title="frpc.ini"></a>frpc.ini</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 省略前面的部分</span></span><br><span class="line"><span class="section">[web]</span>  </span><br><span class="line"><span class="attr">type</span> = http                    #访问协议  </span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span>              #内网web服务的端口号  </span><br><span class="line"><span class="attr">custom_domains</span> = 域名  #所绑定的公网服务器域名，一级、二级域名都可以</span><br></pre></td></tr></table></figure>
+<p>不晓得这个是不是在每台机器上都适用，因为这不是我直接经手配置的😂</p>
 
       
     </div>
@@ -648,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE"><span class="nav-number">1.</span> <span class="nav-text">P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P2：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">2.</span> <span class="nav-text">P2：FRP日志：Parse conf error: invalid server_port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P3：FRP正常运行，Chrome报错Connection-Refused"><span class="nav-number">3.</span> <span class="nav-text">P3：FRP正常运行，Chrome报错Connection Refused</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P1：网页无法显示，Chrome报错为ERR-ADDRESS-UNREACHABLE"><span class="nav-number">1.</span> <span class="nav-text">P1：网页无法显示，Chrome报错为ERR_ADDRESS_UNREACHABLE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P2：FRP日志：Parse-conf-error-invalid-server-port"><span class="nav-number">2.</span> <span class="nav-text">P2：FRP日志：Parse conf error: invalid server_port</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P3：FRP正常运行，Chrome报错Connection-Refused"><span class="nav-number">3.</span> <span class="nav-text">P3：FRP正常运行，Chrome报错Connection Refused</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-23更新：玄学！Frp还能这样配置？"><span class="nav-number">4.</span> <span class="nav-text">11/23更新：玄学！Frp还能这样配置？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#frps-ini"><span class="nav-number">4.1.</span> <span class="nav-text">frps.ini</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#frpc-ini"><span class="nav-number">4.2.</span> <span class="nav-text">frpc.ini</span></a></li></ol></li></ol></div>
             
 
           </div>
