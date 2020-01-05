@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="由于C语言编写的DLL文件不支持String类型，调用DLL内函数需用char类型，故需转换常用的String至char12345string str=&amp;quot;content&amp;quot;;char[] c=str.toArray();//顺便贴个char[]转字符串str=new String(c); 参考资料  VS2017中 C# dll引用(C生成dll，C++生成dll)小结 c++创">
+<meta name="description" content="一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决DLL头文件1extern &quot;C&quot; __declspec(dllexport) void printText(int year, int month, int day, int hour, char station[6]);		//不加&quot;C&quot;会出现找不到函数的问题 数据类型由于C语言编写">
 <meta name="keywords" content="C#,VisualStudio2019">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VisualStudio2019C#引用C++DLL">
 <meta property="og:url" content="https://github.com/sakronos/Note/2019/12/31/VisualStudio2019C-引用C-DLL/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="由于C语言编写的DLL文件不支持String类型，调用DLL内函数需用char类型，故需转换常用的String至char12345string str=&amp;quot;content&amp;quot;;char[] c=str.toArray();//顺便贴个char[]转字符串str=new String(c); 参考资料  VS2017中 C# dll引用(C生成dll，C++生成dll)小结 c++创">
+<meta property="og:description" content="一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决DLL头文件1extern &quot;C&quot; __declspec(dllexport) void printText(int year, int month, int day, int hour, char station[6]);		//不加&quot;C&quot;会出现找不到函数的问题 数据类型由于C语言编写">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-12-31T06:44:38.629Z">
+<meta property="og:updated_time" content="2020-01-05T04:40:40.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VisualStudio2019C#引用C++DLL">
-<meta name="twitter:description" content="由于C语言编写的DLL文件不支持String类型，调用DLL内函数需用char类型，故需转换常用的String至char12345string str=&amp;quot;content&amp;quot;;char[] c=str.toArray();//顺便贴个char[]转字符串str=new String(c); 参考资料  VS2017中 C# dll引用(C生成dll，C++生成dll)小结 c++创">
+<meta name="twitter:description" content="一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决DLL头文件1extern &quot;C&quot; __declspec(dllexport) void printText(int year, int month, int day, int hour, char station[6]);		//不加&quot;C&quot;会出现找不到函数的问题 数据类型由于C语言编写">
 
 
 
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  96
+                  180
                 </span>
               
 
@@ -415,7 +415,8 @@
       
 
       
-        <p>由于C语言编写的DLL文件不支持String类型，调用DLL内函数需用char类型，故需转换常用的String至char<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string str=&quot;content&quot;;</span><br><span class="line">char[] c=str.toArray();</span><br><span class="line"></span><br><span class="line">//顺便贴个char[]转字符串</span><br><span class="line">str=new String(c);</span><br></pre></td></tr></table></figure></p>
+        <h3 id="一定要确保解决方案平台一致（x64-x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决"><a href="#一定要确保解决方案平台一致（x64-x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决" class="headerlink" title="一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决"></a>一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决</h3><h3 id="DLL头文件"><a href="#DLL头文件" class="headerlink" title="DLL头文件"></a>DLL头文件</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> __declspec(dllexport) <span class="function"><span class="keyword">void</span> <span class="title">printText</span><span class="params">(<span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day, <span class="keyword">int</span> hour, <span class="keyword">char</span> station[<span class="number">6</span>])</span></span>;		<span class="comment">//不加"C"会出现找不到函数的问题</span></span><br></pre></td></tr></table></figure>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>由于C语言编写的DLL文件不支持String类型，调用DLL内函数需用char类型，故需转换常用的String至char<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string str=&quot;content&quot;;</span><br><span class="line">char[] c=str.toArray();</span><br><span class="line"></span><br><span class="line">//顺便贴个char[]转字符串</span><br><span class="line">str=new String(c);</span><br></pre></td></tr></table></figure></p>
 <p><strong>参考资料</strong></p>
 <ol>
 <li><a href="https://www.cnblogs.com/lonelyxmas/p/10748007.html" target="_blank" rel="noopener">VS2017中 C# dll引用(C生成dll，C++生成dll)小结</a></li>
@@ -521,8 +522,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -537,7 +547,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -598,6 +608,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一定要确保解决方案平台一致（x64-x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决"><span class="nav-number">1.</span> <span class="nav-text">一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DLL头文件"><span class="nav-number">2.</span> <span class="nav-text">DLL头文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
