@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="C#,VisualStudio2019,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="12345678910111213141516//Form1里写public string LableText&amp;#123;get&amp;#123;return this.label.Text;&amp;#125;set&amp;#123;this.label.Text = value;&amp;#125;&amp;#125;//打开form2时把自己传过去new Form2(this).Show();//Form2构造：pubilc">
+<meta name="description" content="向其他类传递Form窗体内控件的解决方案 12345678910111213141516//Form1里写public string LableText&amp;#123;get&amp;#123;return this.label.Text;&amp;#125;set&amp;#123;this.label.Text = value;&amp;#125;&amp;#125;//打开form2时把自己传过去new Form2(this).Sho">
+<meta name="keywords" content="C#,VisualStudio2019">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#窗体实现FTP上传困难小记">
 <meta property="og:url" content="https://github.com/sakronos/Note/2019/12/11/C-窗体实现FTP上传困难小记/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="12345678910111213141516//Form1里写public string LableText&amp;#123;get&amp;#123;return this.label.Text;&amp;#125;set&amp;#123;this.label.Text = value;&amp;#125;&amp;#125;//打开form2时把自己传过去new Form2(this).Show();//Form2构造：pubilc">
+<meta property="og:description" content="向其他类传递Form窗体内控件的解决方案 12345678910111213141516//Form1里写public string LableText&amp;#123;get&amp;#123;return this.label.Text;&amp;#125;set&amp;#123;this.label.Text = value;&amp;#125;&amp;#125;//打开form2时把自己传过去new Form2(this).Sho">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-12-18T13:35:09.185Z">
+<meta property="og:updated_time" content="2020-01-05T05:31:45.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#窗体实现FTP上传困难小记">
-<meta name="twitter:description" content="12345678910111213141516//Form1里写public string LableText&amp;#123;get&amp;#123;return this.label.Text;&amp;#125;set&amp;#123;this.label.Text = value;&amp;#125;&amp;#125;//打开form2时把自己传过去new Form2(this).Show();//Form2构造：pubilc">
+<meta name="twitter:description" content="向其他类传递Form窗体内控件的解决方案 12345678910111213141516//Form1里写public string LableText&amp;#123;get&amp;#123;return this.label.Text;&amp;#125;set&amp;#123;this.label.Text = value;&amp;#125;&amp;#125;//打开form2时把自己传过去new Form2(this).Sho">
 
 
 
@@ -302,6 +303,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -344,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  204
+                  221
                 </span>
               
 
@@ -381,7 +415,7 @@
       
 
       
-        <ol>
+        <h4 id="向其他类传递Form窗体内控件的解决方案"><a href="#向其他类传递Form窗体内控件的解决方案" class="headerlink" title="向其他类传递Form窗体内控件的解决方案"></a>向其他类传递Form窗体内控件的解决方案</h4><ol>
 <li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//Form1里写</span><br><span class="line">public string LableText</span><br><span class="line">&#123;</span><br><span class="line">get&#123;return this.label.Text;&#125;</span><br><span class="line">set&#123;this.label.Text = value;&#125;</span><br><span class="line">&#125;</span><br><span class="line">//打开form2时把自己传过去</span><br><span class="line">new Form2(this).Show();</span><br><span class="line"></span><br><span class="line">//Form2构造：</span><br><span class="line">pubilc Form2(Form1 f1)</span><br><span class="line">&#123;</span><br><span class="line">....</span><br><span class="line">&#125;</span><br><span class="line">//按钮事件：</span><br><span class="line">this.f1.LabelText = &quot;aaaaaaaaa&quot;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//用event </span><br><span class="line"></span><br><span class="line">Class Form1</span><br><span class="line">&#123;</span><br><span class="line">public Form1()</span><br><span class="line">&#123;</span><br><span class="line">Form2 form = new Form2();</span><br><span class="line">form.TestBtn.Click += new System.EventHandler(this.Form2ButtonClicked);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private Form2ButtonClicked(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">this.label1.Text = &quot;Clicked&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Class Form2</span><br><span class="line">&#123;</span><br><span class="line">public Button TestBtn= new Button();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -409,6 +443,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Note/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/Note/tags/VisualStudio2019/" rel="tag"># VisualStudio2019</a>
+          
+        </div>
       
 
       
@@ -486,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -502,7 +553,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -513,7 +564,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -524,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -563,6 +614,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#向其他类传递Form窗体内控件的解决方案"><span class="nav-number">1.</span> <span class="nav-text">向其他类传递Form窗体内控件的解决方案</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
