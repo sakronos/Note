@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="今天电脑又蓝屏了，似乎是ACPI.sys引起的，刚刚baidu了这个东西，似乎和核显与外接显示器有关，而且这玩意儿高资源占用和引发蓝屏似乎多发于显示器。   蓝屏了，那么就要清理错误文件；说到清理，那往往是C盘红了；C盘红了，那么常规方法往往不起作用，得来点歪门邪道。在这串毫无正常逻辑的思考的最后，我想到了这个，锵锵——重建索引。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2020-03-25T07:26:07.212Z">
+<meta property="og:updated_time" content="2020-03-31T05:04:43.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows10重建索引以释放空间">
 <meta name="twitter:description" content="今天电脑又蓝屏了，似乎是ACPI.sys引起的，刚刚baidu了这个东西，似乎和核显与外接显示器有关，而且这玩意儿高资源占用和引发蓝屏似乎多发于显示器。   蓝屏了，那么就要清理错误文件；说到清理，那往往是C盘红了；C盘红了，那么常规方法往往不起作用，得来点歪门邪道。在这串毫无正常逻辑的思考的最后，我想到了这个，锵锵——重建索引。">
@@ -292,7 +292,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-03-25T14:06:23+09:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-03-25T13:06:23+08:00">
                 2020-03-25
               </time>
             
@@ -418,17 +418,21 @@
         <p>今天电脑又蓝屏了，似乎是ACPI.sys引起的，刚刚baidu了这个东西，似乎和核显与外接显示器有关，而且这玩意儿高资源占用和引发蓝屏似乎多发于显示器。  </p>
 <p>蓝屏了，那么就要清理错误文件；说到清理，那往往是C盘红了；C盘红了，那么常规方法往往不起作用，得来点歪门邪道。在这串毫无正常逻辑的思考的最后，我想到了这个，锵锵——<strong>重建索引</strong>。</p>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h4 id="关于重建索引效果的模糊的印象"><a href="#关于重建索引效果的模糊的印象" class="headerlink" title="关于重建索引效果的模糊的印象"></a>关于重建索引效果的模糊的印象</h4><p>emmm…我记得应该是有点用的，我好像通过这个让我的C盘剩余空间从7 GB恢复到了9 GB，这和那个内置的磁盘清理比起来，相当管用。<br>因为我每次开磁盘清理，它都会告诉我什么缩略图就有几百兆，Windows更新文件备份占用上GB的空间，嗯姆，听起来清理完C盘会回复几个G吧。然而，经过漫长的等待（真的是相当漫长的等待啊），任务栏的清理程序窗口终于消失时，我满怀期待地（现在当然不会了，这当然说的是很久很久以前的我）打开<a href="&quot;至少1909时还叫这玩意儿，我其实很喜欢之前的计算机的叫法啦&quot;">此电脑</a>，查看C盘剩余空间，What the heck？这剩余空间咋几乎没变/咋只有小数点之后的那位变大了点？？说好的几个G的东西可以被清理掉呢？<br>所以，在知道这个东西后，我应该是怀着<em>这应该比那玩意儿稍微管用一点点</em>的心情试了试。唔，结果还不错。<br>当然，这个的效果因人而异，我最初看到的关于这个的帖子（emmm？我为啥下意识就打出了是在帖子上看到的）说他（她）通过重建索引释放了20 GB的空间。相对的，对于有些人的系统盘效果甚微也不是不可能。</p>
-<h4 id="嗯，那么该怎么做呢？"><a href="#嗯，那么该怎么做呢？" class="headerlink" title="嗯，那么该怎么做呢？"></a>嗯，那么该怎么做呢？</h4><p>👌，啰里啰唆了这么多，我们来说一下操作方法。<br>截图的话就懒得贴了，我只是个小菜鸡，图床什么的也不会用，我尽量用（我小学二年级语文水平程度的）中文把过程描述清楚，实在要看图就看下面引用里面的截图吧。  </p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h4 id="关于重建索引效果的模糊的印象"><a href="#关于重建索引效果的模糊的印象" class="headerlink" title="关于重建索引效果的模糊的印象"></a>关于重建索引效果的模糊的印象</h4><p>emmm…我记得应该是有点用的，我好像通过这个让我的C盘剩余空间从7 GB恢复到了9 GB，这和那个内置的磁盘清理比起来，相当管用。  </p>
+<p>因为我每次开磁盘清理，它都会告诉我什么缩略图就有几百兆，Windows更新文件备份占用上GB的空间，嗯姆，听起来清理完C盘会回复几个G吧。然而，经过漫长的等待（真的是相当漫长的等待啊），任务栏的清理程序窗口终于消失时，我满怀期待地（现在当然不会了，这当然说的是很久很久以前的我）打开<a href="#a" title="至少1909时还叫这玩意儿，我其实很喜欢之前的计算机的叫法啦">此电脑</a>，查看C盘剩余空间，What the heck？这剩余空间咋几乎没变/咋只有小数点之后的那位变大了点？？说好的几个G的东西可以被清理掉呢？  </p>
+<p>所以，在知道这个东西后，我应该是怀着<em>这应该比那玩意儿稍微管用一点点</em>的心情试了试。唔，结果还不错。  </p>
+<p>当然，这个的效果因人而异，我最初看到的关于这个的帖子（emmm？我为啥下意识就打出了是在帖子上看到的）说他（她）通过重建索引释放了20 GB的空间。相对的，对于有些人的系统盘效果甚微也不是不可能。</p>
+<h4 id="嗯，那么该怎么做呢？"><a href="#嗯，那么该怎么做呢？" class="headerlink" title="嗯，那么该怎么做呢？"></a>嗯，那么该怎么做呢？</h4><p>👌，啰里啰唆了这么多，我们来说一下操作方法。  </p>
+<p>截图的话就懒得贴了，我只是个小菜鸡，图床什么的也不会用，我尽量用（我小学二年级语文水平程度的）中文把过程描述清楚，实在要看图就看下面引用里面的截图吧。  </p>
 <ol>
-<li>打开<a href="&quot;要是之后系统更新了没这玩意儿了，那就只能想办法找出对应的东西了啦&quot;">控制面板</a>；</li>
+<li>打开<a href="#a" title="要是之后系统更新了没这玩意儿了，那就只能想办法找出对应的东西了啦">控制面板</a>；</li>
 <li><strong>查看方式</strong>选择“小图标”；</li>
-<li>找到<a href="&quot;这个要是变了，那次教程就宣告过期？&quot;">索引选项</a>并打开；</li>
+<li>找到<a href="#a" title="这个要是变了，那次教程就宣告过期？">索引选项</a>并打开；</li>
 <li>这里插句吐槽（实在忍不住嘛），你应该能够看到<strong>为这些位置建立索引</strong>，我自己在初次看到这个列表时，发现有些我的比较个人的（嘛，就是见不得人的文件夹嘛😂）文件夹也莫名其妙的在这列表上，我就把这些文件夹移除了；</li>
 <li>选择<strong>高级(D)</strong>按钮</li>
 <li>在新窗口中，你就能看到<strong>删除和重建索引</strong>啦，点击<strong>重建(R)</strong>按钮。</li>
 </ol>
-<p>流程大概就是这样了。</p>
+<p><a name="a">流程</a>大概就是这样了。</p>
 <h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><ol>
 <li><a href="https://baijiahao.baidu.com/s?id=1647003263990479686&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">win10如何删除或者重建索引</a></li>
 </ol>
@@ -471,6 +475,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Note/2020/03/31/AndroidStudio模拟器设置代理/" rel="prev" title="Android Studio 模拟器设置代理（FQ)">
+                Android Studio 模拟器设置代理（FQ) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -550,7 +558,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -561,7 +569,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -572,7 +580,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
