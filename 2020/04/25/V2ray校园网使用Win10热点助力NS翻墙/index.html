@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="下午，苦于网络速度，Switch的系统更新档下载显示要60分钟，这可咋办，我还想23点前玩到动物森友会，便想到了还有加速器这招。   因为手头没有加速器，我开始Baidu上漫无边际的检索，检索结果中突然出现了一个令人欣喜的字，酸酸乳。   于是，我便开始了这场“首先看到的别人写的教程一定不适用于我的情况的”摸索之旅。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2020-04-26T07:37:25.349Z">
+<meta property="og:updated_time" content="2020-04-26T07:54:59.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="V2ray校园网使用Win10热点助力NS翻墙">
 <meta name="twitter:description" content="下午，苦于网络速度，Switch的系统更新档下载显示要60分钟，这可咋办，我还想23点前玩到动物森友会，便想到了还有加速器这招。   因为手头没有加速器，我开始Baidu上漫无边际的检索，检索结果中突然出现了一个令人欣喜的字，酸酸乳。   于是，我便开始了这场“首先看到的别人写的教程一定不适用于我的情况的”摸索之旅。">
@@ -292,7 +292,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-25T17:46:08+09:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-04-25T16:46:08+08:00">
                 2020-04-25
               </time>
             
@@ -345,7 +345,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  619
+                  666
                 </span>
               
 
@@ -392,7 +392,7 @@
 <p>协议默认socks，UDP默认打开，这些都不用管。</p>
 <h3 id="打开V2Ray参数设置的v2rayN设置，勾选允许来自局域网的连接"><a href="#打开V2Ray参数设置的v2rayN设置，勾选允许来自局域网的连接" class="headerlink" title="打开V2Ray参数设置的v2rayN设置，勾选允许来自局域网的连接"></a>打开V2Ray参数设置的<strong>v2rayN设置</strong>，勾选<strong>允许来自局域网的连接</strong></h3><p>确认后，Windows 10会弹窗要求允许。</p>
 <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p><code>Windows 控制面板 - 系统和安全 - Windows Defender 防火墙 - 启用或关闭 Windows Defender 防火墙</code></p>
-<p>在<strong>公用网络</strong>设置中，选择<strong>关闭 Windows Defender 防火墙</strong></p>
+<p>在<strong>公用网络</strong>设置中，选择<strong>关闭 Windows Defender 防火墙</strong><br>这里还有对<strong>专用网络</strong>的设置，经过我的实验，拦截我们请求是公用网络的防火墙，所以无需关闭专用网络的防火墙。</p>
 <h3 id="至此，PC端的设置完成"><a href="#至此，PC端的设置完成" class="headerlink" title="至此，PC端的设置完成"></a>至此，PC端的设置完成</h3><h3 id="关键步骤-Switch端的设置"><a href="#关键步骤-Switch端的设置" class="headerlink" title="关键步骤 Switch端的设置"></a><strong>关键步骤</strong> Switch端的设置</h3><h4 id="获取PC在热点中的IP地址"><a href="#获取PC在热点中的IP地址" class="headerlink" title="获取PC在热点中的IP地址"></a>获取PC在热点中的IP地址</h4><p>命令提示符中输入<code>ipconfig</code>，回车，找到IPv4地址，如果有两个无线网卡，那就记下分享WIFI的无线网卡的IPv4地址。</p>
 <h4 id="关键中的关键"><a href="#关键中的关键" class="headerlink" title="关键中的关键"></a><strong>关键中的关键</strong></h4><p>本地监听端口（如：10808）需要使用支持 socks5 代理协议的软件连接。如需使用 http 代理协议连接，需要在软件托盘图标的右键菜单中点击启用http代理，<strong>http代理</strong>的端口号通常为<strong>本地监听端口号+1</strong>，比如：<code>http://192.168.137.1:10809</code></p>
 <h4 id="最后一步-NS网络设置"><a href="#最后一步-NS网络设置" class="headerlink" title="最后一步 NS网络设置"></a>最后一步 NS网络设置</h4><p>代理设置选择开启，服务器填写之前获取的IPv4地址，端口填写上一步得到的端口号</p>
