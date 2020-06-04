@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="J2EE,IntelliJ IDEA,">
+  <meta name="keywords" content="Pure-FTPD,Docker,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="这是我使用IDEA后感觉最操蛋的一次，第一次让我感受到Eclipse的NICE。好吧其实IDEA还行，只不过在我的印象中不是全方面碾压Eclipse了/(ㄒoㄒ)/~~。">
-<meta name="keywords" content="J2EE,IntelliJ IDEA">
+<meta name="description" content="按照[2]的Docker Volumes标题下面的步骤部署，Windows 10无权限访问FTP内容，且FTP文件夹未映射到容器外的文件夹。Docker内FTP文件夹权限为755，应该不存在权限问题啊。通过Windows 10的命令行FTP尝试连接，报错500 I won&amp;#39;t open a connection to 10.11.129.111 (only to *.*.*.*)，看样子又">
+<meta name="keywords" content="Pure-FTPD,Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IDEA部署Struts2问题板">
-<meta property="og:url" content="https://github.com/sakronos/Note/2019/09/19/IDEA部署Struts2问题板/index.html">
+<meta property="og:title" content="年轻人的第一个Docker容器Pure-FTPD">
+<meta property="og:url" content="https://github.com/sakronos/Note/2020/06/02/年轻人的第一个Docker容器Pure-FTPD/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="这是我使用IDEA后感觉最操蛋的一次，第一次让我感受到Eclipse的NICE。好吧其实IDEA还行，只不过在我的印象中不是全方面碾压Eclipse了/(ㄒoㄒ)/~~。">
+<meta property="og:description" content="按照[2]的Docker Volumes标题下面的步骤部署，Windows 10无权限访问FTP内容，且FTP文件夹未映射到容器外的文件夹。Docker内FTP文件夹权限为755，应该不存在权限问题啊。通过Windows 10的命令行FTP尝试连接，报错500 I won&amp;#39;t open a connection to 10.11.129.111 (only to *.*.*.*)，看样子又">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-10-16T11:00:52.570Z">
+<meta property="og:updated_time" content="2020-06-04T13:14:04.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IDEA部署Struts2问题板">
-<meta name="twitter:description" content="这是我使用IDEA后感觉最操蛋的一次，第一次让我感受到Eclipse的NICE。好吧其实IDEA还行，只不过在我的印象中不是全方面碾压Eclipse了/(ㄒoㄒ)/~~。">
+<meta name="twitter:title" content="年轻人的第一个Docker容器Pure-FTPD">
+<meta name="twitter:description" content="按照[2]的Docker Volumes标题下面的步骤部署，Windows 10无权限访问FTP内容，且FTP文件夹未映射到容器外的文件夹。Docker内FTP文件夹权限为755，应该不存在权限问题啊。通过Windows 10的命令行FTP尝试连接，报错500 I won&amp;#39;t open a connection to 10.11.129.111 (only to *.*.*.*)，看样子又">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/sakronos/Note/2019/09/19/IDEA部署Struts2问题板/">
+  <link rel="canonical" href="https://github.com/sakronos/Note/2020/06/02/年轻人的第一个Docker容器Pure-FTPD/">
 
 
 
 
 
-  <title>IDEA部署Struts2问题板 | PERFECT BLUE</title>
+  <title>年轻人的第一个Docker容器Pure-FTPD | PERFECT BLUE</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/sakronos/Note/Note/2019/09/19/IDEA部署Struts2问题板/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/sakronos/Note/Note/2020/06/02/年轻人的第一个Docker容器Pure-FTPD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kronos">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IDEA部署Struts2问题板</h1>
+          <h1 class="post-title" itemprop="name headline">年轻人的第一个Docker容器Pure-FTPD</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-09-19T17:05:46+08:00">
-                2019-09-19
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-02T21:22:48+09:00">
+                2020-06-02
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
+                  <a href="/Note/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
                   </a>
                 </span>
 
@@ -326,8 +326,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/故障/" itemprop="url" rel="index">
-                    <span itemprop="name">故障</span>
+                  <a href="/Note/categories/Docker/部署步骤记录/" itemprop="url" rel="index">
+                    <span itemprop="name">部署步骤记录</span>
                   </a>
                 </span>
 
@@ -344,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Note/2019/09/19/IDEA部署Struts2问题板/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/09/19/IDEA部署Struts2问题板/" itemprop="commentCount"></span>
+                <a href="/Note/2020/06/02/年轻人的第一个Docker容器Pure-FTPD/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2020/06/02/年轻人的第一个Docker容器Pure-FTPD/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -353,7 +353,7 @@
 
           
           
-             <span id="/Note/2019/09/19/IDEA部署Struts2问题板/" class="leancloud_visitors" data-flag-title="IDEA部署Struts2问题板">
+             <span id="/Note/2020/06/02/年轻人的第一个Docker容器Pure-FTPD/" class="leancloud_visitors" data-flag-title="年轻人的第一个Docker容器Pure-FTPD">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  251
+                  369
                 </span>
               
 
@@ -415,11 +415,19 @@
       
 
       
-        <p>这是我使用IDEA后感觉最操蛋的一次，第一次让我感受到Eclipse的NICE。<br>好吧其实IDEA还行，只不过在我的印象中不是全方面碾压Eclipse了/(ㄒoㄒ)/~~。</p>
-<a id="more"></a>
-<h3 id="P1：部署时出现ClassNotFoundException"><a href="#P1：部署时出现ClassNotFoundException" class="headerlink" title="P1：部署时出现ClassNotFoundException"></a>P1：部署时出现ClassNotFoundException</h3><p><strong>原因</strong> IDEA在创建Struts2工程时选择下载Struts2依赖包的话，会将Struts2的包放入工程下的lib文件夹下，但不会在WEB-INF下创建lib文件夹及将JAR包放入WEB-INF下的lib文件夹内（Eclipse下则会自动这么做）<br><strong>解决方案</strong>：手动复制即可<br><a href="https://blog.csdn.net/lihuan6656/article/details/53502842" target="_blank" rel="noopener"><strong>参考资料</strong></a></p>
-<h3 id="P2：解决完P1后仍然Dispatcher-initialization-failed"><a href="#P2：解决完P1后仍然Dispatcher-initialization-failed" class="headerlink" title="P2：解决完P1后仍然Dispatcher initialization failed"></a>P2：解决完P1后仍然Dispatcher initialization failed</h3><p><strong>问题分析</strong>： 好吧，这仍然是IDEA的特有问题，P1说了创建工程时选择让IDEA自己下载Struts2的JAR。<br>TMD。。。IDEA下载的Struts2居然是阉割版，里面缺少了javassist包。。。<br><strong>解决方案</strong>：搞个<a href="https://github.com/jboss-javassist/javassist/releases">Javassist</a>包放lib下即可<br><a href="https://www.iteye.com/problems/85471" target="_blank" rel="noopener"><strong>参考资料</strong></a></p>
-<h3 id="P3：有莫名其妙的错误，且之前Build并部署过的话，尝试清除out文件夹下以前生成的文件重试"><a href="#P3：有莫名其妙的错误，且之前Build并部署过的话，尝试清除out文件夹下以前生成的文件重试" class="headerlink" title="P3：有莫名其妙的错误，且之前Build并部署过的话，尝试清除out文件夹下以前生成的文件重试"></a>P3：有莫名其妙的错误，且之前Build并部署过的话，尝试清除out文件夹下以前生成的文件重试</h3>
+        <p>按照[2]的<em>Docker Volumes</em>标题下面的步骤部署，Windows 10无权限访问FTP内容，且FTP文件夹未映射到容器外的文件夹。Docker内FTP文件夹权限为755，应该不存在权限问题啊。<br>通过Windows 10的命令行FTP尝试连接，报错<code>500 I won&#39;t open a connection to 10.11.129.111 (only to *.*.*.*)</code>，看样子又是阿里云的内网问题了。</p>
+<p>stilliard/pure-ftpd内居然没法使用Vim/Vi（哭晕），只能稍微学下Cat了[3].</p>
+<blockquote>
+<p>6/3 中午<br>折腾了半天还是没搞出来，突然想起来当时似乎也遇到这种情况，当时问题出在Aliyun上面；因为阿里云VPS分配了两个IP，一个内部一个外部，且并没有优化好（现在不知道咋样了），所以需要强制使用外部IP才能解决问题；当时为了解决这个问题，我浪费了大把时间搜索，结果没记下来，解决方案也忘了是啥，好像是要在pure-ftpd的config中ForcePassiveIP（反正Pure-FTPD也不是啥好用的软件，以后再搞就用VSFTPD了，似乎那边的社区远比这个活跃）。<br>6/3 中午稍晚些时候<br>woc，好像是因为目录没有映射到本机地址，佛了。过会儿研究下怎么映射。  </p>
+</blockquote>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol>
+<li><a href="https://www.runoob.com/docker/docker-container-usage.html" target="_blank" rel="noopener">Docker 容器使用</a></li>
+<li><a href="https://hub.docker.com/r/stilliard/pure-ftpd/" target="_blank" rel="noopener">Docker Pure-ftpd Server</a>*</li>
+<li><a href="https://www.cnblogs.com/joe-four/p/cnblogs_joe_four_03.html" target="_blank" rel="noopener">Linux学习历程——Centos 7 cat命令</a></li>
+<li><a href="https://stackoverflow.com/questions/19603593/227-entering-passive-mode-124-153-94-30-242-138" target="_blank" rel="noopener">227 Entering Passive Mode (124,153,94,30,242,138)</a></li>
+<li><a href="https://www.cnblogs.com/whseay/p/3456038.html" target="_blank" rel="noopener">Windows命令行使用FTP</a></li>
+</ol>
+
       
     </div>
     
@@ -436,9 +444,9 @@
       
         <div class="post-tags">
           
-            <a href="/Note/tags/J2EE/" rel="tag"># J2EE</a>
+            <a href="/Note/tags/Pure-FTPD/" rel="tag"># Pure-FTPD</a>
           
-            <a href="/Note/tags/IntelliJ-IDEA/" rel="tag"># IntelliJ IDEA</a>
+            <a href="/Note/tags/Docker/" rel="tag"># Docker</a>
           
         </div>
       
@@ -451,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Note/2019/09/08/编写后端笔记9-8/" rel="next" title="编写后端笔记 9.8">
-                <i class="fa fa-chevron-left"></i> 编写后端笔记 9.8
+              <a href="/Note/2020/06/02/Android在Service中更新UI内容/" rel="next" title="Android在Service中更新UI内容">
+                <i class="fa fa-chevron-left"></i> Android在Service中更新UI内容
               </a>
             
           </div>
@@ -460,10 +468,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Note/2019/10/15/IDEA的Web项目配置JSTL/" rel="prev" title="IDEA的Web项目配置JSTL问题板">
-                IDEA的Web项目配置JSTL问题板 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -614,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#P1：部署时出现ClassNotFoundException"><span class="nav-number">1.</span> <span class="nav-text">P1：部署时出现ClassNotFoundException</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P2：解决完P1后仍然Dispatcher-initialization-failed"><span class="nav-number">2.</span> <span class="nav-text">P2：解决完P1后仍然Dispatcher initialization failed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P3：有莫名其妙的错误，且之前Build并部署过的话，尝试清除out文件夹下以前生成的文件重试"><span class="nav-number">3.</span> <span class="nav-text">P3：有莫名其妙的错误，且之前Build并部署过的话，尝试清除out文件夹下以前生成的文件重试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
