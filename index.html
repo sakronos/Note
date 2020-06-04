@@ -376,7 +376,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  369
+                  415
                 </span>
               
 
@@ -418,7 +418,13 @@
             <p>按照[2]的<em>Docker Volumes</em>标题下面的步骤部署，Windows 10无权限访问FTP内容，且FTP文件夹未映射到容器外的文件夹。Docker内FTP文件夹权限为755，应该不存在权限问题啊。<br>通过Windows 10的命令行FTP尝试连接，报错<code>500 I won&#39;t open a connection to 10.11.129.111 (only to *.*.*.*)</code>，看样子又是阿里云的内网问题了。</p>
 <p>stilliard/pure-ftpd内居然没法使用Vim/Vi（哭晕），只能稍微学下Cat了[3].</p>
 <blockquote>
-<p>6/3 中午<br>折腾了半天还是没搞出来，突然想起来当时似乎也遇到这种情况，当时问题出在Aliyun上面；因为阿里云VPS分配了两个IP，一个内部一个外部，且并没有优化好（现在不知道咋样了），所以需要强制使用外部IP才能解决问题；当时为了解决这个问题，我浪费了大把时间搜索，结果没记下来，解决方案也忘了是啥，好像是要在pure-ftpd的config中ForcePassiveIP（反正Pure-FTPD也不是啥好用的软件，以后再搞就用VSFTPD了，似乎那边的社区远比这个活跃）。<br>6/3 中午稍晚些时候<br>woc，好像是因为目录没有映射到本机地址，佛了。过会儿研究下怎么映射。  </p>
+<p>关于227 Entering Passive Mode (h1,h2,h3,h4,p1,p2)的解释：<br> where h1 to h4 is the Host id in format <code>h1:h2:h3:h4</code> and (p1,p2) is the port which it is blocking given in the format <code>p1*256+p2</code>.</p>
+</blockquote>
+<blockquote>
+<p>6/3 中午<br>折腾了半天还是没搞出来，突然想起来当时似乎也遇到这种情况，当时问题出在Aliyun上面；因为阿里云VPS分配了两个IP，一个内部一个外部，且并没有优化好（现在不知道咋样了），所以需要强制使用外部IP才能解决问题；当时为了解决这个问题，我浪费了大把时间搜索，结果没记下来，解决方案也忘了是啥，好像是要在pure-ftpd的config中ForcePassiveIP（反正Pure-FTPD也不是啥好用的软件，以后再搞就用VSFTPD了，似乎那边的社区远比这个活跃）。  </p>
+</blockquote>
+<blockquote>
+<p>6/3 中午稍晚些时候<br>woc，好像是因为目录没有映射到本机地址，佛了。过会儿研究下怎么映射。  </p>
 </blockquote>
 <h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol>
 <li><a href="https://www.runoob.com/docker/docker-container-usage.html" target="_blank" rel="noopener">Docker 容器使用</a></li>
