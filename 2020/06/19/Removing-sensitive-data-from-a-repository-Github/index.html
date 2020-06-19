@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-tw">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/Note/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/Note/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/Note/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Note/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Note/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Note/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/Note/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Git,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed  然后为了删掉这条commit我百度又谷歌，但直接搜删除commit搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词删除敏感信息，再次尝试。  从今天开始，告别">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Removing sensitive data from a repository in Github">
+<meta property="og:url" content="https://github.com/sakronos/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/index.html">
+<meta property="og:site_name" content="PERFECT BLUE">
+<meta property="og:description" content="作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed  然后为了删掉这条commit我百度又谷歌，但直接搜删除commit搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词删除敏感信息，再次尝试。  从今天开始，告别">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="http://image.biaobaiju.com/uploads/20180225/11/1519530361-DQkduBpvir.jpg">
+<meta property="og:updated_time" content="2020-06-19T13:40:47.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Removing sensitive data from a repository in Github">
+<meta name="twitter:description" content="作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed  然后为了删掉这条commit我百度又谷歌，但直接搜删除commit搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词删除敏感信息，再次尝试。  从今天开始，告别">
+<meta name="twitter:image" content="http://image.biaobaiju.com/uploads/20180225/11/1519530361-DQkduBpvir.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Note/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/sakronos/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/">
+
+
+
+
+
+  <title>Removing sensitive data from a repository in Github | PERFECT BLUE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Note/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PERFECT BLUE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Essays</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/Note/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/Note/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/Note/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/Note/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/Note/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            歸檔
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/sakronos/Note/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Removing sensitive data from a repository in Github</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-06-19T11:18:01+08:00">
+                2020-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Git/Github/" itemprop="url" rel="index">
+                    <span itemprop="name">Github</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/" class="leancloud_visitors" data-flag-title="Removing sensitive data from a repository in Github">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  1.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed <img src="http://image.biaobaiju.com/uploads/20180225/11/1519530361-DQkduBpvir.jpg" width="10%"></p>
+<p>然后为了删掉这条commit我百度又谷歌，但直接搜<code>删除commit</code>搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词<code>删除敏感信息</code>，再次尝试。</p>
+<hr>
+<p>从今天开始，告别Command，拥抱PowerShell😂</p>
+<a id="more"></a>
+<h1 id="移除Git敏感文件问题记录"><a href="#移除Git敏感文件问题记录" class="headerlink" title="移除Git敏感文件问题记录"></a>移除Git敏感文件问题记录</h1><h3 id="从Git中移除文件"><a href="#从Git中移除文件" class="headerlink" title="从Git中移除文件*"></a>从Git中移除文件*</h3><p>解决方法：[5]<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git rm -r -n --cached <span class="string">"FILE OR FOLDER TO BE REMOVED"</span> <span class="comment">#-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。 例子：git rm -r --cached  "bin/"</span></span><br><span class="line"></span><br><span class="line">git rm -r --cached  <span class="string">"FILE OR FOLDER TO BE REMOVED"</span>      <span class="comment">#最终执行命令. </span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"TYPE COMMIT MESSAGE HERE"</span>    <span class="comment">#提交</span></span><br><span class="line"></span><br><span class="line">git push origin master   <span class="comment">#提交到远程服务器</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="参数解释："><a href="#参数解释：" class="headerlink" title="参数解释："></a>参数解释：</h4><h5 id="n-–dry-run"><a href="#n-–dry-run" class="headerlink" title="-n –dry-run"></a>-n –dry-run</h5><p>Don’t actually remove any file(s). Instead, just show if they exist in the index and would otherwise be removed by the command.  </p>
+<h5 id="r"><a href="#r" class="headerlink" title="-r"></a>-r</h5><p>Allow recursive removal when a leading directory name is given. </p>
+<h5 id="–cached"><a href="#–cached" class="headerlink" title="–cached"></a>–cached</h5><p>Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.</p>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>针对<code>.gitignore</code>文件，再贴两个网站[6]、[7] 。</p>
+<p>我在Android Studio中添加了我要忽略的文件，但好像没有用处……把搜到的资料贴在这，以备不时之需。</p>
+<h3 id="BFG"><a href="#BFG" class="headerlink" title="BFG"></a>BFG</h3><h4 id="BFG使用方法-4"><a href="#BFG使用方法-4" class="headerlink" title="BFG使用方法[4]"></a>BFG使用方法[4]</h4><p>First clone a fresh copy of your repo, using the <code>--mirror</code> flag:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --mirror git://example.com/some-big-repo.git</span><br></pre></td></tr></table></figure>
+<p>This is a bare repo, which means your normal files won’t be visible, but it is a full copy of the Git database of your repository, and at this point you should make a backup of it to ensure you don’t lose anything.</p>
+<p>Now you can run the BFG to clean your repository up:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar bfg.jar --strip-blobs-bigger-than 100M some-big-repo.git</span><br></pre></td></tr></table></figure>
+<p>The BFG will update your commits and all branches and tags so they are clean, but it doesn’t physically delete the unwanted stuff. Examine the repo to make sure your history has been updated, and then use the standard <code>git gc</code> command to strip out the unwanted dirty data, which Git will now recognise as surplus to requirements:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> some-big-repo.git</span><br><span class="line">$ git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive</span><br></pre></td></tr></table></figure>
+<p>Finally, once you’re happy with the updated state of your repo, push it back up (note that because your clone command used the <code>--mirror</code> flag, this push will update all refs on your remote server):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<p>At this point, you’re ready for everyone to ditch their old copies of the repo and do fresh clones of the nice, new pristine data. It’s best to delete all old clones, as they’ll have dirty history that you don’t want to risk pushing back into your newly cleaned repo.</p>
+<p>到这里被筛选出来的历史Commit文件应该都已经被一串数字字符替换了（新从git版本控制中移除的文件似乎不会被BFG处理），但使用BFG会给Git的使用带来麻烦，使之Update和Merge都出现问题：<br><figure class="highlight plain"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Could Not Merge origin/master</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br><span class="line"></span><br><span class="line">Error merging</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br></pre></td></tr></table></figure></p>
+<p>总之是些分支合并问题，我这里是通过<a href="#a">允许合并Unrelated Histories</a>，并在IDE中resolve冲突后再次Commit来强行解决分支合并冲突。（这应该不是正常解决的方法吧😂）</p>
+<h4 id="使用BFG实验结果"><a href="#使用BFG实验结果" class="headerlink" title="使用BFG实验结果"></a>使用BFG实验结果</h4><p>最新Commit之前的所有Commit内容，被一行不知道是啥的东西替换。</p>
+<p><strong>Commit记录仍然保留</strong>。</p>
+<h3 id="Using-filter-branch清除Git中敏感文件的所有历史和TAG"><a href="#Using-filter-branch清除Git中敏感文件的所有历史和TAG" class="headerlink" title="Using filter-branch清除Git中敏感文件的所有历史和TAG*"></a>Using filter-branch清除Git中敏感文件的所有历史和TAG*</h3><p>通过本方法我得到了我想要的结果，而且本方法不会引起冲突。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git filter-branch --force --index-filter <span class="string">"git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA"</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">$ git push origin --force --all</span><br></pre></td></tr></table></figure>
+<p>基本上使用这两行命令就可以解决问题。详细步骤参见[2]（中文），[1]（英文）。</p>
+<h3 id="Update时出现Error"><a href="#Update时出现Error" class="headerlink" title="Update时出现Error"></a><a name="a"><font color="black">Update时出现Error</font></a></h3><h4 id="Error-merging-refusing-to-merge-unrelated-histories"><a href="#Error-merging-refusing-to-merge-unrelated-histories" class="headerlink" title="Error merging: refusing to merge unrelated histories"></a><code>Error merging: refusing to merge unrelated histories</code></h4><p>原因：因为两个分支没有取得关系[3]</p>
+<p><strong>解决方案</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge master --allow-unrelated-histories</span><br></pre></td></tr></table></figure></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>到这我终于让GitGuardian变绿了。这些应该就是我今天遇到的所有问题和其对应的解决方案了。</p>
+<p>我又在这些问题上浪费了一天（应该是一下午，包括了我追剧和吃饭的时间）。</p>
+<p>在解决这些问题的过程中，我老是想，我这学期的“软件配置管理”到底学了没有；因为这些问题有的是上机报告涉及到的，有的虽然是没涉及到的，但也是版本控制中常见的问题。</p>
+<p>课程使用的是SVN，我使用的是Git；这次的问题让我注意到了几点SVN和Git之间的区别（虽然只是表面上形式上的差别），比如SVN依赖于服务器上的版本库，但Git似乎就没有这种依赖，TortoiseSVN的GUI似乎比IDE中的Git插件提供更多选项……但相同的是，对于Merge问题我都是乱操作一通糊弄过去的😂</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li><a href="https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository" target="_blank" rel="noopener">Removing sensitive data from a repository</a></li>
+<li><a href="https://blog.csdn.net/farrellcn/article/details/56479917" target="_blank" rel="noopener">github删除敏感信息</a></li>
+<li><a href="https://blog.csdn.net/wd2014610/article/details/80854807" target="_blank" rel="noopener">解决Git中fatal: refusing to merge unrelated histories</a></li>
+<li><a href="https://rtyley.github.io/bfg-repo-cleaner/" target="_blank" rel="noopener">BFG Repo-Cleaner</a></li>
+<li><a href="https://blog.csdn.net/chenxu6/article/details/50542295" target="_blank" rel="noopener">git如何移除某文件夹的版本控制</a></li>
+<li><a href="https://www.cnblogs.com/kevingrace/p/5690241.html" target="_blank" rel="noopener">Git忽略提交规则 - .gitignore配置运维总结</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208" target="_blank" rel="noopener">忽略特殊文件</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Note/tags/Git/" rel="tag"># Git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Note/2020/06/19/Change-Git-user-in-IDEA/" rel="next" title="Change Git user in IDEA">
+                <i class="fa fa-chevron-left"></i> Change Git user in IDEA
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Note/2020/06/19/FirebaseUI使用问题记录/" rel="prev" title="FirebaseUI使用问题记录">
+                FirebaseUI使用问题记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kronos</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/Note/archives/">
+              
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/Note/categories/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Note/tags/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">標籤</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/sakronos" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:vanillamochicake@yahoo.co.jp" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移除Git敏感文件问题记录"><span class="nav-number">1.</span> <span class="nav-text">移除Git敏感文件问题记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从Git中移除文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">从Git中移除文件*</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参数解释："><span class="nav-number">1.0.1.1.</span> <span class="nav-text">参数解释：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#n-–dry-run"><span class="nav-number">1.0.1.1.1.</span> <span class="nav-text">-n –dry-run</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#r"><span class="nav-number">1.0.1.1.2.</span> <span class="nav-text">-r</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#–cached"><span class="nav-number">1.0.1.1.3.</span> <span class="nav-text">–cached</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFG"><span class="nav-number">1.0.2.</span> <span class="nav-text">BFG</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BFG使用方法-4"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">BFG使用方法[4]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用BFG实验结果"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">使用BFG实验结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-filter-branch清除Git中敏感文件的所有历史和TAG"><span class="nav-number">1.0.3.</span> <span class="nav-text">Using filter-branch清除Git中敏感文件的所有历史和TAG*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Update时出现Error"><span class="nav-number">1.0.4.</span> <span class="nav-text">Update时出现Error</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-merging-refusing-to-merge-unrelated-histories"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">Error merging: refusing to merge unrelated histories</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number">1.0.5.</span> <span class="nav-text">后记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">1.0.6.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kronos</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Note/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Note/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/Note/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/Note/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'QpTLC7WiWxYzIvmgVphmq3D5-gzGzoHsz',
+        appKey: 'eCDRIyiOPppTf20d0u80dGLd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("QpTLC7WiWxYzIvmgVphmq3D5-gzGzoHsz", "eCDRIyiOPppTf20d0u80dGLd");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
