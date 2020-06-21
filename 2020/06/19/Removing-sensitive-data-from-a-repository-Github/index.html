@@ -88,7 +88,7 @@
 <meta property="og:description" content="作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed  然后为了删掉这条commit我百度又谷歌，但直接搜删除commit搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词删除敏感信息，再次尝试。  从今天开始，告别">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="http://image.biaobaiju.com/uploads/20180225/11/1519530361-DQkduBpvir.jpg">
-<meta property="og:updated_time" content="2020-06-19T13:40:47.027Z">
+<meta property="og:updated_time" content="2020-06-19T13:57:54.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Removing sensitive data from a repository in Github">
 <meta name="twitter:description" content="作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed  然后为了删掉这条commit我百度又谷歌，但直接搜删除commit搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词删除敏感信息，再次尝试。  从今天开始，告别">
@@ -438,7 +438,7 @@
 <p>Finally, once you’re happy with the updated state of your repo, push it back up (note that because your clone command used the <code>--mirror</code> flag, this push will update all refs on your remote server):</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
 <p>At this point, you’re ready for everyone to ditch their old copies of the repo and do fresh clones of the nice, new pristine data. It’s best to delete all old clones, as they’ll have dirty history that you don’t want to risk pushing back into your newly cleaned repo.</p>
-<p>到这里被筛选出来的历史Commit文件应该都已经被一串数字字符替换了（新从git版本控制中移除的文件似乎不会被BFG处理），但使用BFG会给Git的使用带来麻烦，使之Update和Merge都出现问题：<br><figure class="highlight plain"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Could Not Merge origin/master</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br><span class="line"></span><br><span class="line">Error merging</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br></pre></td></tr></table></figure></p>
+<p>到这里被筛选出来的历史Commit文件应该都已经被一串数字字符替换了（新从git版本控制中移除的文件似乎不会被BFG处理），但使用BFG会给Git的使用带来麻烦，使之Update和Merge都出现问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Could Not Merge origin/master</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br><span class="line"></span><br><span class="line">Error merging</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br></pre></td></tr></table></figure></p>
 <p>总之是些分支合并问题，我这里是通过<a href="#a">允许合并Unrelated Histories</a>，并在IDE中resolve冲突后再次Commit来强行解决分支合并冲突。（这应该不是正常解决的方法吧😂）</p>
 <h4 id="使用BFG实验结果"><a href="#使用BFG实验结果" class="headerlink" title="使用BFG实验结果"></a>使用BFG实验结果</h4><p>最新Commit之前的所有Commit内容，被一行不知道是啥的东西替换。</p>
 <p><strong>Commit记录仍然保留</strong>。</p>
@@ -582,7 +582,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -593,7 +593,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
