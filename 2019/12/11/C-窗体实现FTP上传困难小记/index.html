@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  217
+                  221
                 </span>
               
 
@@ -416,9 +416,9 @@
 
       
         <h4 id="向其他类传递Form窗体内控件的解决方案"><a href="#向其他类传递Form窗体内控件的解决方案" class="headerlink" title="向其他类传递Form窗体内控件的解决方案"></a>向其他类传递Form窗体内控件的解决方案</h4><ol>
-<li><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Form1里写</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">string</span> LableText</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">get</span>&#123;<span class="keyword">return</span> <span class="keyword">this</span>.label.Text;&#125;</span><br><span class="line"><span class="keyword">set</span>&#123;<span class="keyword">this</span>.label.Text = <span class="keyword">value</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打开form2时把自己传过去</span></span><br><span class="line"><span class="keyword">new</span> Form2(<span class="keyword">this</span>).Show();</span><br><span class="line"></span><br><span class="line"><span class="comment">//Form2构造：</span></span><br><span class="line"><span class="function">pubilc <span class="title">Form2</span>(<span class="params">Form1 f1</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">....</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//按钮事件：</span></span><br><span class="line"><span class="keyword">this</span>.f1.LabelText = <span class="string">"aaaaaaaaa"</span>;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//Form1里写</span><br><span class="line">public string LableText</span><br><span class="line">&#123;</span><br><span class="line">get&#123;return this.label.Text;&#125;</span><br><span class="line">set&#123;this.label.Text = value;&#125;</span><br><span class="line">&#125;</span><br><span class="line">//打开form2时把自己传过去</span><br><span class="line">new Form2(this).Show();</span><br><span class="line"></span><br><span class="line">//Form2构造：</span><br><span class="line">pubilc Form2(Form1 f1)</span><br><span class="line">&#123;</span><br><span class="line">....</span><br><span class="line">&#125;</span><br><span class="line">//按钮事件：</span><br><span class="line">this.f1.LabelText = &quot;aaaaaaaaa&quot;;</span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用event </span></span><br><span class="line"></span><br><span class="line">Class Form1</span><br><span class="line">&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Form1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">Form2 form = <span class="keyword">new</span> Form2();</span><br><span class="line">form.TestBtn.Click += <span class="keyword">new</span> System.EventHandler(<span class="keyword">this</span>.Form2ButtonClicked);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Form2ButtonClicked</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">this</span>.label1.Text = <span class="string">"Clicked"</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Class Form2</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span> Button TestBtn= <span class="keyword">new</span> Button();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//用event </span><br><span class="line"></span><br><span class="line">Class Form1</span><br><span class="line">&#123;</span><br><span class="line">public Form1()</span><br><span class="line">&#123;</span><br><span class="line">Form2 form = new Form2();</span><br><span class="line">form.TestBtn.Click += new System.EventHandler(this.Form2ButtonClicked);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private Form2ButtonClicked(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">this.label1.Text = &quot;Clicked&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Class Form2</span><br><span class="line">&#123;</span><br><span class="line">public Button TestBtn= new Button();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>这只是最基本的实现方法 （当然不是好方法），等你明白event 和 delegate 以后，自己就会有更好的答案了。 </p>
@@ -553,7 +553,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -564,7 +564,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -575,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
