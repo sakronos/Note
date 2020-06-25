@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="貌似IntelliJ的产品没有GUI设置界面来更改Commit用户的地方，稍微Google了下这个[1]方法可行且还算简单。  Goto base directory of your project You will find a hidden directory called “.git” and enter into it There you will see file called “con">
+<meta name="description" content="6/25 更新Git Bash使用过程中Permission to xxxxx.git denied to xxx.问题">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Change Git user in IDEA">
 <meta property="og:url" content="https://github.com/sakronos/Note/2020/06/19/Change-Git-user-in-IDEA/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="貌似IntelliJ的产品没有GUI设置界面来更改Commit用户的地方，稍微Google了下这个[1]方法可行且还算简单。  Goto base directory of your project You will find a hidden directory called “.git” and enter into it There you will see file called “con">
+<meta property="og:description" content="6/25 更新Git Bash使用过程中Permission to xxxxx.git denied to xxx.问题">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2020-06-19T04:31:45.224Z">
+<meta property="og:updated_time" content="2020-06-25T04:49:54.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Change Git user in IDEA">
-<meta name="twitter:description" content="貌似IntelliJ的产品没有GUI设置界面来更改Commit用户的地方，稍微Google了下这个[1]方法可行且还算简单。  Goto base directory of your project You will find a hidden directory called “.git” and enter into it There you will see file called “con">
+<meta name="twitter:description" content="6/25 更新Git Bash使用过程中Permission to xxxxx.git denied to xxx.问题">
 
 
 
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  83
+                  318
                 </span>
               
 
@@ -415,15 +415,25 @@
       
 
       
-        <p>貌似IntelliJ的产品没有GUI设置界面来更改Commit用户的地方，稍微Google了下这个[1]方法可行且还算简单。</p>
+        <p>6/25 更新Git Bash使用过程中<code>Permission to xxxxx.git denied to xxx.</code>问题</p>
+<a id="more"></a>
+<h3 id="Change-Git-user-in-IDEA"><a href="#Change-Git-user-in-IDEA" class="headerlink" title="Change Git user in IDEA"></a>Change Git user in IDEA</h3><p>貌似IntelliJ的产品没有GUI设置界面来更改Commit用户的地方，稍微Google了下这个[1]方法可行且还算简单。</p>
 <ol>
 <li>Goto base directory of your project</li>
 <li>You will find a hidden directory called “.git” and enter into it</li>
 <li>There you will see file called “config” and add below code<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">      <span class="attr">name</span> = username</span><br><span class="line">      <span class="attr">email</span> = username@domaim.com</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h3 id="Permission-to-xxxxx-git-denied-to-xxx"><a href="#Permission-to-xxxxx-git-denied-to-xxx" class="headerlink" title="Permission to xxxxx.git denied to xxx."></a>Permission to xxxxx.git denied to xxx.</h3><p>我这是因为多Git用户导致的这个问题。</p>
+<p>编辑 .git/cofig中的url，将<br>[remote “origin”]中的<br><code>url = https://github.com/git的用户名/项目名称</code>改为<code>url = https://git的用户名@github.com/git的用户名/项目名称</code>。</p>
+<p>即在<code>github.com</code>前添加<code>用户名@</code></p>
+<h4 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h4><p>这次事件起因是因为我往Markdown里插入一张图片，但图片文件名中有 “ <b>) </b>“导致无法正确解析链接。</p>
+<p>其实只要使用转义符号就能解决问题，但我选择改Github仓库中的文件名，结果发现无法正常push……</p>
+<p>顺手记下：[3]<br>反斜线（<code>\</code>）用于插入在 Markdown 语法中有特殊作用的字符。</p>
 <h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol>
 <li><a href="https://stackoverflow.com/questions/28275397/change-git-user-in-intellij-idea" target="_blank" rel="noopener">Change Git user in IntelliJ IDEA</a></li>
+<li><a href="https://www.jianshu.com/p/f44ec31be799" target="_blank" rel="noopener">解决git push 中remote: Permission to xxxxx.git denied to xxx. fatal: unable to access ‘https://github.com/ xxxxx.git/‘: The requested URL returned error: 403</a></li>
+<li><a href="http://xianbai.me/learn-md/article/syntax/blackslash-escapes.html" target="_blank" rel="noopener">字符转义</a></li>
 </ol>
 
       
@@ -618,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Change-Git-user-in-IDEA"><span class="nav-number">1.</span> <span class="nav-text">Change Git user in IDEA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permission-to-xxxxx-git-denied-to-xxx"><span class="nav-number">2.</span> <span class="nav-text">Permission to xxxxx.git denied to xxx.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题外话"><span class="nav-number">2.1.</span> <span class="nav-text">题外话</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">2.2.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
             
 
           </div>
