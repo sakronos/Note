@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://github.com/sakronos/Note/"/>
-  <updated>2020-07-15T07:08:56.938Z</updated>
+  <updated>2020-07-19T13:53:51.924Z</updated>
   <id>https://github.com/sakronos/Note/</id>
   
   <author>
@@ -17,17 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>废品TP-Link再利用——WDS桥接</title>
-    <link href="https://github.com/sakronos/Note/2020/07/15/%E5%BA%9F%E5%93%81TP-Link%E5%86%8D%E5%88%A9%E7%94%A8%E2%80%94%E2%80%94WDS%E6%A1%A5%E6%8E%A5/"/>
-    <id>https://github.com/sakronos/Note/2020/07/15/%E5%BA%9F%E5%93%81TP-Link%E5%86%8D%E5%88%A9%E7%94%A8%E2%80%94%E2%80%94WDS%E6%A1%A5%E6%8E%A5/</id>
-    <published>2020-07-15T06:08:56.000Z</published>
-    <updated>2020-07-15T07:08:56.938Z</updated>
+    <title>Hexo-Next-RSS设置</title>
+    <link href="https://github.com/sakronos/Note/2020/07/19/Hexo-Next-RSSz%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://github.com/sakronos/Note/2020/07/19/Hexo-Next-RSSz%E8%AE%BE%E7%BD%AE/</id>
+    <published>2020-07-19T12:53:05.000Z</published>
+    <updated>2020-07-19T13:53:51.924Z</updated>
+    
+    <content type="html"><![CDATA[<p>可能还有<em>添加搜索功能</em></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;可能还有&lt;em&gt;添加搜索功能&lt;/em&gt;&lt;/p&gt;
+
+      
     
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>废品TP-Link再利用——WDS桥接</title>
+    <link href="https://github.com/sakronos/Note/2020/07/15/%E5%BA%9F%E5%93%81TP-Link%E5%86%8D%E5%88%A9%E7%94%A8%E2%80%94%E2%80%94WDS%E6%A1%A5%E6%8E%A5/"/>
+    <id>https://github.com/sakronos/Note/2020/07/15/%E5%BA%9F%E5%93%81TP-Link%E5%86%8D%E5%88%A9%E7%94%A8%E2%80%94%E2%80%94WDS%E6%A1%A5%E6%8E%A5/</id>
+    <published>2020-07-15T06:08:56.000Z</published>
+    <updated>2020-07-19T13:52:00.598Z</updated>
+    
+    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h2 id="1-首先要在网络参数中设置好副路由器的IP地址，要根据主路由器的IP设置（除非你一次性设置OK并不想再碰副路由器的设置面板，不然本步骤非常重要）"><a href="#1-首先要在网络参数中设置好副路由器的IP地址，要根据主路由器的IP设置（除非你一次性设置OK并不想再碰副路由器的设置面板，不然本步骤非常重要）" class="headerlink" title="1. 首先要在网络参数中设置好副路由器的IP地址，要根据主路由器的IP设置（除非你一次性设置OK并不想再碰副路由器的设置面板，不然本步骤非常重要）"></a>1. 首先要在<em>网络参数中</em>设置好副路由器的IP地址，要根据主路由器的IP设置（除非你一次性设置OK并不想再碰副路由器的设置面板，不然本步骤非常重要）</h2><h2 id="建议最后才能重启路由器，不然可能前功尽弃"><a href="#建议最后才能重启路由器，不然可能前功尽弃" class="headerlink" title="建议最后才能重启路由器，不然可能前功尽弃"></a>建议最后才能重启路由器，不然可能前功尽弃</h2><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://blog.csdn.net/cjianhu/article/details/19398595?_t=t" title="虽说没用到😄，但也有些道理" target="_blank" rel="noopener">解决无线路由器wds桥接频繁掉线的办法</a></li><li><a href="https://service.tp-link.com.cn/detail_article_873.html" title="实际上用到的" target="_blank" rel="noopener">[TL-WR745N ] 无线桥接（WDS）如何设置？</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;施工中……&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="路由器" scheme="https://github.com/sakronos/Note/categories/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+    
+      <category term="网络" scheme="https://github.com/sakronos/Note/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
@@ -382,9 +413,9 @@
       <category term="部署步骤记录" scheme="https://github.com/sakronos/Note/categories/Docker/%E9%83%A8%E7%BD%B2%E6%AD%A5%E9%AA%A4%E8%AE%B0%E5%BD%95/"/>
     
     
-      <category term="Docker" scheme="https://github.com/sakronos/Note/tags/Docker/"/>
-    
       <category term="Pure-FTPD" scheme="https://github.com/sakronos/Note/tags/Pure-FTPD/"/>
+    
+      <category term="Docker" scheme="https://github.com/sakronos/Note/tags/Docker/"/>
     
   </entry>
   
@@ -485,31 +516,6 @@
     
     
       <category term="编译原理" scheme="https://github.com/sakronos/Note/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android 课程笔记-创建通知不显示等问题两则</title>
-    <link href="https://github.com/sakronos/Note/2020/03/31/Android%E8%AF%BE%E7%A8%8B%E5%88%9B%E5%BB%BA%E9%80%9A%E7%9F%A5%E7%AC%94%E8%AE%B0/"/>
-    <id>https://github.com/sakronos/Note/2020/03/31/Android%E8%AF%BE%E7%A8%8B%E5%88%9B%E5%BB%BA%E9%80%9A%E7%9F%A5%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-03-31T04:18:37.000Z</published>
-    <updated>2020-03-31T12:54:37.492Z</updated>
-    
-    <content type="html"><![CDATA[<p>本以为能快速解决的作业，照着书本码完果真出了问题，没能让我顺利在课上解决啊。</p><a id="more"></a><h2 id="Android-课程笔记"><a href="#Android-课程笔记" class="headerlink" title="Android 课程笔记"></a>Android 课程笔记</h2><h3 id="NotificationCompat"><a href="#NotificationCompat" class="headerlink" title="NotificationCompat"></a>NotificationCompat</h3><p>看到NotificationCompat，我就有种本能的抗拒（因为第一次作业也是在Compat上翻了车），不过之后都是直接用的模板没翻过车，我也就渐渐淡忘了被Compat支配的恐惧。  </p><p>果不其然，这次Notification又出现了DEPRECATED(不推荐使用)。课上老师说Notification每个版本几乎都会重写时，我就有感觉这里可能会有点麻烦。果然麻烦还不是一点点，这篇文章的所有问题都是关于<strong><em>API等级26</em></strong>以上才有的，那些低版本的安卓入门教程可以扔一旁了。  </p><p>Android开发者手册上是这么写的：<br><code>NotificationCompat.Builder(Context context)</code><br><em>This constructor was deprecated in API level 26.1.0. use</em> <code>NotificationCompat.Builder(Context, String)</code> <em>instead. All posted Notifications must specify a NotificationChannel Id.</em></p><p>啊啊啊，必须指定一个<strong>通知渠道</strong>  </p><p>至此，IDE给 <del>Notification.Builder()</del> 划的删除线终于消失，不过您不会认为问题解决了吧？若只是照抄老教程代码后只给Builer添了个渠道ID，运行后会发现通知怎么不显示？看看上一行加粗字体，您会发现不对劲的地方，还有<strong>通知渠道</strong>需要配置。</p><h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><ol><li><a href="https://blog.csdn.net/qq_34262794/article/details/78851134?utm_source=blogxgwz0" target="_blank" rel="noopener">AndroidStudio3.0更新到API26.0之后的Notification.Builder()的方法改变</a></li><li><a href="https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html" target="_blank" rel="noopener">NotificationCompat.Builder</a></li></ol><h3 id="通知不显示"><a href="#通知不显示" class="headerlink" title="通知不显示"></a>通知不显示</h3><p>进入下一个问题，通知不显示。问题的原因在上一部分已经指出——API等级26开始所有的通知都必须分配到相应的渠道。  </p><p>找到原因，那么我们贴出我们要新增的代码，解决这个问题<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//来自Android开发者文档</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">createNotificationChannel</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Create the NotificationChannel, but only on API 26+ because</span></span><br><span class="line">    <span class="comment">// the NotificationChannel class is new and not in the support library</span></span><br><span class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</span><br><span class="line">        CharSequence name = getString(R.string.channel_name);</span><br><span class="line">        String description = getString(R.string.channel_description);</span><br><span class="line">        <span class="keyword">int</span> importance = NotificationManager.IMPORTANCE_DEFAULT;</span><br><span class="line">        NotificationChannel channel = <span class="keyword">new</span> NotificationChannel(CHANNEL_ID, name, importance);</span><br><span class="line">        channel.setDescription(description);</span><br><span class="line">        <span class="comment">// Register the channel with the system; you can't change the importance</span></span><br><span class="line">        <span class="comment">// or other notification behaviors after this</span></span><br><span class="line">        NotificationManager notificationManager = getSystemService(NotificationManager.class);</span><br><span class="line">        notificationManager.createNotificationChannel(channel);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>再贴一段工程代码，引用自帮我解决这个问题大佬的博客，这个代码我没有自己运行，只是摘了其中两句，在我看来这个并没有完全按照最新官方建议写<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">String id = <span class="string">"my_channel_01"</span>;    <span class="comment">//渠道ID</span></span><br><span class="line">String name=<span class="string">"渠道名字"</span>;</span><br><span class="line">notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);</span><br><span class="line">Notification notification = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</span><br><span class="line">    NotificationChannel mChannel = <span class="keyword">new</span> NotificationChannel(id, name, NotificationManager.IMPORTANCE_LOW);</span><br><span class="line">    Toast.makeText(<span class="keyword">this</span>, mChannel.toString(), Toast.LENGTH_SHORT).show();</span><br><span class="line">    Log.i(TAG, mChannel.toString());</span><br><span class="line">    notificationManager.createNotificationChannel(mChannel);</span><br><span class="line">    notification = <span class="keyword">new</span> Notification.Builder(<span class="keyword">this</span>)</span><br><span class="line">            .setChannelId(id)</span><br><span class="line">            .setContentTitle(<span class="string">"Title"</span>)</span><br><span class="line">            .setContentText(<span class="string">"Content"</span>)</span><br><span class="line">            .setSmallIcon(R.mipmap.ic_launcher).build();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    NotificationCompat.Builder notificationBuilder = <span class="keyword">new</span> NotificationCompat.Builder(<span class="keyword">this</span>)</span><br><span class="line">            .setContentTitle(<span class="string">"Title"</span>)</span><br><span class="line">            .setContentText(<span class="string">"Content"</span>)</span><br><span class="line">            .setSmallIcon(R.mipmap.ic_launcher)</span><br><span class="line">            .setOngoing(<span class="keyword">true</span>)</span><br><span class="line">            .setChannel(id);<span class="comment">//无效</span></span><br><span class="line">    notification = notificationBuilder.build();</span><br><span class="line">&#125;</span><br><span class="line">notificationManager.notify(<span class="number">114514</span>, notification);</span><br></pre></td></tr></table></figure></p><p>至此，通知正常在<strong>抽屉式通知栏</strong>显示。</p><h4 id="参考文献-1"><a href="#参考文献-1" class="headerlink" title="参考文献"></a>参考文献</h4><ol><li><a href="https://blog.csdn.net/qq_35749683/article/details/80451791" target="_blank" rel="noopener">解决Android 8.0 的Notification不显示问题</a></li><li><a href="https://developer.android.com/training/notify-user/build-notification#Priority" target="_blank" rel="noopener">创建渠道并设置重要性</a></li></ol><h3 id="通知音与Icon"><a href="#通知音与Icon" class="headerlink" title="通知音与Icon"></a>通知音与Icon</h3><p>到了这一部分，应该没什么大问题了（不过这得看你对大问题的定义了，对于我/课程老师要求😂来说没啥问题了），不过还有些代码的有些变动需要在这里提下。  </p><p>啊啊，我想起来一个，虽然无关但还是忍不住想提一下：使用<code>R.string</code>引用中文时由于某种原因可能会显示成编码，这时在前面加上<code>getResource()</code>就能恢复正常。  </p><h4 id="通知音效"><a href="#通知音效" class="headerlink" title="通知音效"></a>通知音效</h4><p>创建消息渠道时要求选择通知目标发布渠道的<code>importance</code>，不同的importance对通知的功能做出不同程度的限制：</p><ul><li>Urgent: Makes a sound and appears as a heads-up notification.</li><li>High: Makes a sound.</li><li>Medium: No sound.</li><li>Low: No sound and does not appear in the status bar.</li></ul><p>所以如果使通知的重要性为低的话，通知音、Heads-up notification什么的就无法实现了。现在，所有<strong>对通知的设置</strong>都变为<strong>对消息渠道的设置</strong>，至于老版教程里对通知设置通知音什么的在高版本API中似乎都已经失效。如要设置音效，我现在只发现手动通过Android系统设置来设置某个消息渠道的默认通知音。（搞不好我作业里通知重要性也是那里手动设置的，光通过代码实现我还没琢磨出来）  </p><p>如果要Heads-Up notification，代码中<code>importance</code>设为High即可，文档里面High是Makes a sound，但上文又说<em>The notification channel has high importance on devices running Android 8.0 (API level 26) and higher.</em>[2]，实验结果是High即可。</p><h4 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a>Icon</h4><p>根据[3]，<em>Large icon: This is optional (usually used only for contact photos; do not use it for your app icon) and set with <code>setLargeIcon()</code>.</em>不要在Large icon里放app icon。事实上，照抄老师课上代码在Large icon显示mipmap结果是显示Large icon的区域啥都不显示。这个的原因我也没能想明白。我换了个PNG就正常显示了。</p><h4 id="参考文献-2"><a href="#参考文献-2" class="headerlink" title="参考文献"></a>参考文献</h4><ol><li><a href="https://developer.android.com/guide/topics/ui/notifiers/notifications#importance" target="_blank" rel="noopener">Notification importance</a></li><li><a href="https://developer.android.com/guide/topics/ui/notifiers/notifications#Heads-up" target="_blank" rel="noopener">Heads-up notification</a></li><li><a href="https://developer.android.com/guide/topics/ui/notifiers/notifications#Templates" target="_blank" rel="noopener">Notification anatomy</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本以为能快速解决的作业，照着书本码完果真出了问题，没能让我顺利在课上解决啊。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Android Studio" scheme="https://github.com/sakronos/Note/categories/Android-Studio/"/>
-    
-      <category term="课程笔记" scheme="https://github.com/sakronos/Note/categories/Android-Studio/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Android" scheme="https://github.com/sakronos/Note/tags/Android/"/>
     
   </entry>
   
