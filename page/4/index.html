@@ -299,6 +299,431 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/" itemprop="url">VisualStudio2019ASP.NET引用DLL指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-01-01T16:44:49+09:00">
+                2020-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/" class="leancloud_visitors" data-flag-title="VisualStudio2019ASP.NET引用DLL指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  160
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> <strong>环境：.net Framework 4.7.2</strong></p>
+<h2 id="1-创建C-语言的DLL项目"><a href="#1-创建C-语言的DLL项目" class="headerlink" title="1. 创建C#语言的DLL项目"></a>1. 创建C#语言的DLL项目</h2><p>Visual Studio提供了多种C#语言的类库，这里ASP.NET预定使用.net Framework 4.7.2，所以我这里选择 <strong>类库（.net Framework）    C#</strong> 项目模板，这里尤其要注意的是框架版本的一致。</p>
+<h2 id="2-编写DLL"><a href="#2-编写DLL" class="headerlink" title="2. 编写DLL"></a>2. 编写DLL</h2><p>类的访问权限<br><strong><em>必须是PUBLIC</em></strong><br>默认访问权限为<em>internal</em></p>
+<h2 id="3-导入DLL"><a href="#3-导入DLL" class="headerlink" title="3. 导入DLL"></a>3. 导入DLL</h2><ol>
+<li>在ASP.NET解决方案下，右击网站，<strong>添加-&gt;引用..</strong>，添加DLL文件</li>
+<li>在需要的CS文件下添加<strong>using DLL名字</strong>和DLL文件所需的命名空间</li>
+<li>现在，只需<strong>类名.方法名</strong>即可使用所需的方法</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/12/31/相对路径中dotdot与dot的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Note/2019/12/31/相对路径中dotdot与dot的区别/" itemprop="url">相对路径中dotdot与dot的区别</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-12-31T15:37:37+09:00">
+                2019-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2019/12/31/相对路径中dotdot与dot的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/12/31/相对路径中dotdot与dot的区别/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2019/12/31/相对路径中dotdot与dot的区别/" class="leancloud_visitors" data-flag-title="相对路径中dotdot与dot的区别">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  304
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><font color="red"><em>.</em></font> means “current directory” and <font color="red"><em>..</em></font> means “parent directory”.<br><strong>For example</strong>, if your directory is <font color="pink"><em>C:\Users\Bob</em></font>, <font color="red"><em>.</em></font> refers to <font color="pink"><em>C:\Users\Bob</em></font> and <font color="red"><em>..</em></font> refers to <font color="pink"><em>C:\Users</em></font>.<br>You will find that this is universal in programming and computers in general.  </p>
+<p>C语言检查当前的current directory是什么：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* _getcwd( <span class="keyword">char</span> *buffer, <span class="keyword">int</span> maxlen );  </span><br><span class="line"><span class="comment">// 功  能 : 获得当前工作目录.</span></span><br><span class="line"><span class="comment">// 头文件 : #include &lt;direct.h&gt;</span></span><br><span class="line"><span class="comment">// 返回值 : 成功返回指向buffer的pointer</span></span><br><span class="line"><span class="comment">//          失败返回NULL，且设置errno为以下三个值之一:</span></span><br><span class="line"><span class="comment">//            ENODEV 无该设备</span></span><br><span class="line"><span class="comment">//            ENOMEM 内存不够</span></span><br><span class="line"><span class="comment">//            ERANGE 结果超出范围</span></span><br><span class="line"><span class="comment">// 注  意 : 当第一个参数为 NULL 时, 第二个参数 maxlen 长度设置无效,且函数</span></span><br><span class="line"><span class="comment">//          使用 malloc 分配足够内存, 需要将函数返回值传递给 free() 函数来</span></span><br><span class="line"><span class="comment">//          释放内存. 当第一个参数不为 NULL 时,maxlen 指定长度不够函数返回</span></span><br><span class="line"><span class="comment">//          错,设置errno为ERANGE</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//实例</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;direct.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXPATH  1024</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">    <span class="keyword">char</span> buffer[MAXPATH];</span><br><span class="line">    _getcwd(buffer,MAXPATH);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>,buffer);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Visual Studio 2019与2017的当前目录判定似乎有些不一样，2019版会将工程目录认为是当前目录，2017版则不一样。总之，开始编码前进行确认是必要的。  </p>
+<p><strong>参考资料</strong></p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/8411931/what-does-dot-and-dotdot-means" target="_blank" rel="noopener">What does dot and dotdot means</a></li>
+<li><a href="https://blog.csdn.net/u010166404/article/details/46392719#" target="_blank" rel="noopener">C语言获取当前工作路径</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/12/31/VisualStudio2019C-引用C-DLL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1949,437 +2374,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/09/19/IDEA部署Struts2问题板/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kronos">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Note/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PERFECT BLUE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Note/2019/09/19/IDEA部署Struts2问题板/" itemprop="url">IDEA部署Struts2问题板</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-09-19T18:05:46+09:00">
-                2019-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/故障/" itemprop="url" rel="index">
-                    <span itemprop="name">故障</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Note/2019/09/19/IDEA部署Struts2问题板/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/09/19/IDEA部署Struts2问题板/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Note/2019/09/19/IDEA部署Struts2问题板/" class="leancloud_visitors" data-flag-title="IDEA部署Struts2问题板">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字數統計&#58;</span>
-                
-                <span title="字數統計">
-                  251
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
-                
-                <span title="閱讀時長">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这是我使用IDEA后感觉最操蛋的一次，第一次让我感受到Eclipse的NICE。<br>好吧其实IDEA还行，只不过在我的印象中不是全方面碾压Eclipse了/(ㄒoㄒ)/~~。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Note/2019/09/19/IDEA部署Struts2问题板/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/09/08/编写后端笔记9-8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kronos">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Note/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PERFECT BLUE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Note/2019/09/08/编写后端笔记9-8/" itemprop="url">编写后端笔记 9.8</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-09-08T22:02:39+09:00">
-                2019-09-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
-                    <span itemprop="name">帮助</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Note/2019/09/08/编写后端笔记9-8/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/09/08/编写后端笔记9-8/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Note/2019/09/08/编写后端笔记9-8/" class="leancloud_visitors" data-flag-title="编写后端笔记 9.8">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字數統計&#58;</span>
-                
-                <span title="字數統計">
-                  504
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
-                
-                <span title="閱讀時長">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="P1：Linux程序不能正常运行，或不能完整运行"><a href="#P1：Linux程序不能正常运行，或不能完整运行" class="headerlink" title="P1：Linux程序不能正常运行，或不能完整运行"></a>P1：Linux程序不能正常运行，或不能完整运行</h3><p><strong>解决方案</strong>：进入程序所在文件夹下后再执行程序<br><strong>方法</strong>：以PHP为例<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell_exec(<span class="string">"cd /;python3 demo.py"</span>);</span><br></pre></td></tr></table></figure></p>
-<h3 id="P2：Ajax重新提交后未能刷新出同名图片"><a href="#P2：Ajax重新提交后未能刷新出同名图片" class="headerlink" title="P2：Ajax重新提交后未能刷新出同名图片"></a>P2：Ajax重新提交后未能刷新出同名图片</h3><p><strong>解决方案</strong>：可能是因为缓存的影响，需要图片地址后加时间戳才能更新<br><strong>方法</strong>：示例代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img=<span class="string">'image.jpg'</span>+<span class="string">'?s='</span>+(<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();</span><br></pre></td></tr></table></figure></p>
-<p>这里顺带贴下Ajax上传图片的代码示例：<a href="https://www.formget.com/ajax-image-upload-php/" target="_blank" rel="noopener">Ajax Image Upload using PHP and jQuery</a>  </p>
-<p>还有Ajax用按钮修改文本内容的示例代码,这里没有引用JQuery，是不正确的。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">loadXMLDoc</span><span class="params">()</span></span></span></span><br><span class="line"><span class="undefined">&#123;</span></span><br><span class="line"><span class="actionscript">	<span class="keyword">var</span> xmlhttp;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)</span></span><br><span class="line"><span class="undefined">	&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</span></span></span><br><span class="line"><span class="actionscript">		xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="actionscript">	<span class="keyword">else</span></span></span><br><span class="line"><span class="undefined">	&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">// IE6, IE5 浏览器执行代码</span></span></span><br><span class="line"><span class="actionscript">		xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="actionscript">	xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span><span class="params">()</span></span></span></span><br><span class="line"><span class="undefined">	&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</span></span><br><span class="line"><span class="undefined">		&#123;</span></span><br><span class="line"><span class="javascript">			<span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="actionscript">	xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"/try/ajax/ajax_info.txt"</span>,<span class="literal">true</span>);</span></span><br><span class="line"><span class="undefined">	xmlhttp.send();</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myDiv"</span>&gt;</span><span class="tag">&lt;<span class="name">h2</span>&gt;</span>使用 AJAX 修改该文本内容<span class="tag">&lt;/<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"loadXMLDoc()"</span>&gt;</span>修改内容<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="P3：Tomcat-Zip版安装（Windows环境下）"><a href="#P3：Tomcat-Zip版安装（Windows环境下）" class="headerlink" title="P3：Tomcat Zip版安装（Windows环境下）"></a>P3：Tomcat Zip版安装（Windows环境下）</h3><p><strong>方法</strong>：命令提示符进入Tomcat的bin目录，输入service.bat install后Tomcat即可正常运行。  </p>
-<p>引用CSDN上安装删除服务命令格式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service.bat install/remove [service_name]</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/liulu930507/article/details/50550072" target="_blank" rel="noopener">卸载绿色版Tomcat</a></p>
-<h3 id="P4：AJAX中URL内PHP程序不执行"><a href="#P4：AJAX中URL内PHP程序不执行" class="headerlink" title="P4：AJAX中URL内PHP程序不执行"></a>P4：AJAX中URL内PHP程序不执行</h3><p><strong>方法</strong>：将整个网页文件夹的权限改为757（应该是要统一给较高的权限），即可解决。</p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
-<li><a href="https://www.php.net/manual/zh/features.file-upload.post-method.php" target="_blank" rel="noopener">POST 方法上传</a></li>
-<li><a href="https://www.tutorialrepublic.com/php-tutorial/php-form-handling.php" target="_blank" rel="noopener">PHP Form Handling</a></li>
-<li><a href="https://blog.csdn.net/qq15577969/article/details/79516814?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">jQuery获取上传文件名的方法</a></li>
-<li><a href="https://www.cnblogs.com/deepalley/p/10762535.html" target="_blank" rel="noopener">js截取文件名不带后缀</a></li>
-<li><a href="https://blog.csdn.net/dabao87/article/details/83027532" target="_blank" rel="noopener">php与ajax交互——实现php实时返回结果给ajax，并在后台保持继续运行的方法</a></li>
-<li><a href="https://blog.csdn.net/qq_33204241/article/details/78993083" target="_blank" rel="noopener">$.ajax用法详解（后台使用php）</a></li>
-<li><a href="https://www.cnblogs.com/anniey/p/9167129.html" target="_blank" rel="noopener">前台ajax请求php后台返回成功却进error方法解决</a></li>
-<li><a href="https://www.cnblogs.com/midnight-visitor/p/8992121.html" target="_blank" rel="noopener">input type=”file”获取文件名方法</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2430,7 +2424,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2441,7 +2435,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -2452,7 +2446,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
