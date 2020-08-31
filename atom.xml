@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2020-08-17T10:23:55.912Z</updated>
+  <updated>2020-08-31T13:46:07.960Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,189 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读取RSS（Java）</title>
+    <link href="https://sakronos.github.io/Note/2020/08/31/Reading-RSS-using-Java/"/>
+    <id>https://sakronos.github.io/Note/2020/08/31/Reading-RSS-using-Java/</id>
+    <published>2020-08-31T12:07:22.000Z</published>
+    <updated>2020-08-31T13:46:07.960Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h3 id="尽量避免因为Http跳转Status-Code-301出现错误"><a href="#尽量避免因为Http跳转Status-Code-301出现错误" class="headerlink" title="尽量避免因为Http跳转Status Code 301出现错误"></a>尽量避免因为Http跳转Status Code 301出现错误</h3><p>因为代码里RSS Url为Http，没能跳转到Https导致报错（报错里还有乱码，可能是中文，但IDE设置的编码已经全改成UTF-8了，中文已经是导致编译不能通过的最大阻碍了😂）  </p><p><img src="https://i.loli.net/2020/08/31/5IXZprh2vuPnoQG.png" alt="错误"><br>如果改成<code>https</code>能解决问题，那么尽量在代码中就改掉。</p><h3 id="JAVA中实现让程序等待一段时间的方法"><a href="#JAVA中实现让程序等待一段时间的方法" class="headerlink" title="JAVA中实现让程序等待一段时间的方法"></a>JAVA中实现让程序等待一段时间的方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Thread.currentThread().sleep(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">Thread.sleep(<span class="number">2000</span>);</span><br></pre></td></tr></table></figure><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://blog.csdn.net/u014182497/article/details/102719109" target="_blank" rel="noopener">JAVA中实现让程序等待一段时间的方法</a></li><li><a href="https://yq.aliyun.com/articles/428224" target="_blank" rel="noopener">如何使用java代码获取RSS中信息</a></li><li><a href="https://blog.csdn.net/owennet78/article/details/83130874" title="暂时没用到" target="_blank" rel="noopener">关于ROME使用UTF-8编码写rss文件时出现乱码的解决方法</a></li><li><a href="https://rometools.github.io/rome/RssAndAtOMUtilitiEsROMEV0.5AndAboveTutorialsAndArticles/index.html" target="_blank" rel="noopener">ROME - Tutorials and Articles</a></li><li><a href="https://stackoverflow.com/questions/37721580/cant-read-image-url-from-rss-using-rome-api" target="_blank" rel="noopener">Can’t read image URL from RSS using Rome API</a></li><li><a href="https://rometools.github.io/rome/Modules/index.html" target="_blank" rel="noopener">The ROME Modules Subproject.</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;尽量避免因为Http跳转Status-Code-301出现错误&quot;&gt;&lt;a href=&quot;#尽量避免因为Http跳转Status-Code-301出现错误&quot; class=&quot;headerlink&quot; title=&quot;尽量避免因为Http跳转
+      
+    
+    </summary>
+    
+    
+      <category term="RSS" scheme="https://sakronos.github.io/Note/categories/RSS/"/>
+    
+      <category term="Java" scheme="https://sakronos.github.io/Note/categories/RSS/Java/"/>
+    
+    
+      <category term="Java" scheme="https://sakronos.github.io/Note/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用GSON创建嵌套的JSON</title>
+    <link href="https://sakronos.github.io/Note/2020/08/28/Create-nested-JSON-data-using-GSON/"/>
+    <id>https://sakronos.github.io/Note/2020/08/28/Create-nested-JSON-data-using-GSON/</id>
+    <published>2020-08-28T11:45:27.000Z</published>
+    <updated>2020-08-31T13:10:26.593Z</updated>
+    
+    <content type="html"><![CDATA[<p>用IDEA前一定要把系统默认的GBK改为UTF-8啊，不然写个中文注释（丢人）代码都会报错，艹<br>路径：<code>Settings - Editor - File Encodings</code>，里面的Encoding全改成<code>UTF-8</code></p><a id="more"></a><h2 id="关于IFTTT"><a href="#关于IFTTT" class="headerlink" title="关于IFTTT"></a>关于IFTTT</h2><p>IFTTT的Applet的Body<strong>似乎</strong>只能接受没有<strong>格式化</strong>的JSON，如：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"content"</span>:<span class="string">"&#123;&#123;EntryTitle&#125;&#125; at &#123;&#123;EntryPublished&#125;&#125;"</span>,<span class="attr">"embeds"</span>:[&#123;<span class="attr">"image"</span>:&#123;<span class="attr">"url"</span>:<span class="string">"&#123;&#123;EntryImageUrl&#125;&#125;"</span>&#125;&#125;]&#125;</span><br></pre></td></tr></table></figure></p><p>如果JSON格式化为下面这个样子，IFTTT便不能正常工作。<br>虽说是不能正常工作，但IFTTT的Activity里又不会报错，只是什么也不显示，也不正常推送。<br>倒是JSON格式错误的话，IFTTT反而会有FAIL的记录，不过这记录也不给你关于错误的提示，正常来说Discord应该给个<code>400 BAD REQUEST</code>啊，被你IFTTT吃了吗？</p><p><img src="https://i.loli.net/2020/08/28/yrK5l3q2BvWZwbk.png" alt="image.png"></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://stackoverflow.com/questions/19154851/how-can-i-deserialize-array-inside-of-array-google-gson" target="_blank" rel="noopener">How can I deserialize Array inside of Array google-gson</a></li><li><a href="https://stackoverflow.com/questions/19169754/parsing-nested-json-data-using-gson" target="_blank" rel="noopener">Parsing nested JSON data using GSON</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用IDEA前一定要把系统默认的GBK改为UTF-8啊，不然写个中文注释（丢人）代码都会报错，艹&lt;br&gt;路径：&lt;code&gt;Settings - Editor - File Encodings&lt;/code&gt;，里面的Encoding全改成&lt;code&gt;UTF-8&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JSON" scheme="https://sakronos.github.io/Note/categories/JSON/"/>
+    
+      <category term="IFTTT" scheme="https://sakronos.github.io/Note/categories/JSON/IFTTT/"/>
+    
+    
+      <category term="JSON" scheme="https://sakronos.github.io/Note/tags/JSON/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Discord &amp; Webhook &amp; Java</title>
+    <link href="https://sakronos.github.io/Note/2020/08/27/Discord-Webhook-OKHttp-%E6%97%A0%E8%AF%AD/"/>
+    <id>https://sakronos.github.io/Note/2020/08/27/Discord-Webhook-OKHttp-%E6%97%A0%E8%AF%AD/</id>
+    <published>2020-08-27T11:09:51.000Z</published>
+    <updated>2020-08-31T12:54:10.808Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>Discord Webhook能接受的JSON一例（已排版的）<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"embeds"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"image"</span>: </span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"https://pixiv.cat/83824016-1.jpg"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"image"</span>: </span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"https://pixiv.cat/83824016-2.jpg"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"image"</span>: </span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"https://pixiv.cat/83824016-3.jpg"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>还是用GSON来创建JSON不容易出问题。</p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://blog.csdn.net/qq_19306415/article/details/102954712" target="_blank" rel="noopener">Android OkHttp4 RequestBody.create()过时解决办法 kotlin、java版本</a></li><li><a href="https://discord.com/developers/docs/resources/webhook" target="_blank" rel="noopener">Discord - Developer Portal - WebHook</a></li><li><a href="https://stackoverflow.com/questions/56884664/java-sending-message-to-slack-webhook" target="_blank" rel="noopener">Java - Sending Message to Slack Webhook</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Discord Webhook能接受的JSON一例（已排版的）&lt;br&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://sakronos.github.io/Note/categories/Java/"/>
+    
+      <category term="Webhook" scheme="https://sakronos.github.io/Note/categories/Java/Webhook/"/>
+    
+    
+      <category term="Webhook" scheme="https://sakronos.github.io/Note/tags/Webhook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IFTTT_create_webhook_on_discord</title>
+    <link href="https://sakronos.github.io/Note/2020/08/25/IFTTT-create-webhook-on-discord/"/>
+    <id>https://sakronos.github.io/Note/2020/08/25/IFTTT-create-webhook-on-discord/</id>
+    <published>2020-08-25T13:05:39.000Z</published>
+    <updated>2020-08-25T14:12:07.048Z</updated>
+    
+    <content type="html"><![CDATA[<p>一定要检查JSON是否合法啊！<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://birdie0.github.io/discord-webhooks-guide/services/ifttt.html" target="_blank" rel="noopener">INTEGRATE WITH IFTTT</a></li><li><a href="https://robinsonweng.github.io/2020/03/10/rss_discord_hook/" target="_blank" rel="noopener">將社群軟體通知以RSS整合至Discord</a></li><li><a href="https://home.gamer.com.tw/creationDetail.php?sn=2356208" target="_blank" rel="noopener">【福利分享】使用IFTTT (Rss、Flickr ) 建立自動收圖程序 (Pixiv、ニコニコ、Tinami、yande.re)</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一定要检查JSON是否合法啊！&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Discord" scheme="https://sakronos.github.io/Note/categories/Discord/"/>
+    
+      <category term="IFTTT" scheme="https://sakronos.github.io/Note/categories/Discord/IFTTT/"/>
+    
+    
+      <category term="Webhook" scheme="https://sakronos.github.io/Note/tags/Webhook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ngrok_也是个内网穿透工具</title>
+    <link href="https://sakronos.github.io/Note/2020/08/18/ngrok-%E4%B9%9F%E6%98%AF%E4%B8%AA%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/"/>
+    <id>https://sakronos.github.io/Note/2020/08/18/ngrok-%E4%B9%9F%E6%98%AF%E4%B8%AA%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/</id>
+    <published>2020-08-18T13:30:34.000Z</published>
+    <updated>2020-08-18T14:32:21.007Z</updated>
+    
+    <content type="html"><![CDATA[<p>施工中……</p><p>听说1.0版本之后就不开源了？</p><a id="more"></a><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://aotu.io/notes/2016/02/19/ngrok/index.html" target="_blank" rel="noopener">手把手教你搭建ngrok服务－轻松外网调试本机站点</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;施工中……&lt;/p&gt;
+&lt;p&gt;听说1.0版本之后就不开源了？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="内网穿透" scheme="https://sakronos.github.io/Note/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+      <category term="ngrok" scheme="https://sakronos.github.io/Note/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/ngrok/"/>
+    
+    
+      <category term="内网穿透" scheme="https://sakronos.github.io/Note/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更改Hexo链接格式</title>
+    <link href="https://sakronos.github.io/Note/2020/08/18/%E6%9B%B4%E6%94%B9Hexo%E9%93%BE%E6%8E%A5%E6%A0%BC%E5%BC%8F/"/>
+    <id>https://sakronos.github.io/Note/2020/08/18/%E6%9B%B4%E6%94%B9Hexo%E9%93%BE%E6%8E%A5%E6%A0%BC%E5%BC%8F/</id>
+    <published>2020-08-18T09:39:37.000Z</published>
+    <updated>2020-08-18T14:28:46.310Z</updated>
+    
+    <content type="html"><![CDATA[<p>施工中……</p><p>前些天发现URL里面有中文是多么的不方便，找了找怎么改链接格式，之后可能会改掉。</p><a id="more"></a><p>评论里面看到这个，需要注意。</p><blockquote><p>If I use :title as permalink (with no trailing /) it creates hello-world with no extension instead of hello-world/index.html. It creates a download, not a web.</p></blockquote><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://hexo.io/docs/permalinks.html" target="_blank" rel="noopener">Permalinks</a></li><li><a href="https://hexo.jvaeyhcd.wang/posts/05c9df7e0c47bd64.html" target="_blank" rel="noopener">生成永久链接(Permalink) | Hexo</a></li><li><a href="https://www.wuliaole.com/2016/06/17/permalink_and_internal_link_in_hexo/" target="_blank" rel="noopener">HEXO的站内链接和永久链接</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;施工中……&lt;/p&gt;
+&lt;p&gt;前些天发现URL里面有中文是多么的不方便，找了找怎么改链接格式，之后可能会改掉。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://sakronos.github.io/Note/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://sakronos.github.io/Note/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>youtube-dl_下载最高品质影片</title>
+    <link href="https://sakronos.github.io/Note/2020/08/18/youtube-dl-%E4%B8%8B%E8%BD%BD%E6%9C%80%E9%AB%98%E5%93%81%E8%B4%A8%E5%BD%B1%E7%89%87/"/>
+    <id>https://sakronos.github.io/Note/2020/08/18/youtube-dl-%E4%B8%8B%E8%BD%BD%E6%9C%80%E9%AB%98%E5%93%81%E8%B4%A8%E5%BD%B1%E7%89%87/</id>
+    <published>2020-08-18T08:48:23.000Z</published>
+    <updated>2020-08-18T10:38:36.233Z</updated>
+    
+    <content type="html"><![CDATA[<p>现在才发现之前下的影片都是<code>720p 30fps</code>的，哭哭</p><a id="more"></a><h1 id="youtube-dl下载最高品质影片"><a href="#youtube-dl下载最高品质影片" class="headerlink" title="youtube-dl下载最高品质影片"></a>youtube-dl下载最高品质影片</h1><p>以 <a href="https://www.youtube.com/watch?v=iiCrcSAYtuU&amp;t=1s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=iiCrcSAYtuU&amp;t=1s</a> 为例</p><h3 id="1080p-60fps"><a href="#1080p-60fps" class="headerlink" title="1080p 60fps"></a>1080p 60fps</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl -f 299+140 iiCrcSAYtuU</span><br></pre></td></tr></table></figure><h3 id="一般情况下"><a href="#一般情况下" class="headerlink" title="一般情况下"></a>一般情况下</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl -f bestvideo+bestaudio iiCrcSAYtuU</span><br></pre></td></tr></table></figure><h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>如果ffmpeg没添加到系统环境变量中，下载时会提示找不到ffmpeg；需要将ffmpeg executables 添加进 $PATH</p><p>或者可以这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl url --prefer-ffmpeg --ffmpeg-location <span class="string">"C:\FFmpeg\bin\ffmpeg.exe"</span> -f <span class="string">"bestvideo+bestaudio/best"</span></span><br></pre></td></tr></table></figure></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://www.reddit.com/r/DataHoarder/comments/6x27s6/best_way_to_download_1080p60fps_videos_from/dmcihp8/" target="_blank" rel="noopener">Best way to download 1080p60fps videos from youtube?</a></li><li><a href="https://www.reddit.com/r/linuxquestions/comments/4h0kor/downloading_youtube_videos_in_best_quality_60fps/" target="_blank" rel="noopener">Downloading youtube videos in best quality 60fps in .mp4?</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在才发现之前下的影片都是&lt;code&gt;720p 30fps&lt;/code&gt;的，哭哭&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Youtube" scheme="https://sakronos.github.io/Note/categories/Youtube/"/>
+    
+      <category term="youtube-dl" scheme="https://sakronos.github.io/Note/categories/Youtube/youtube-dl/"/>
+    
+    
+      <category term="Download" scheme="https://sakronos.github.io/Note/tags/Download/"/>
+    
+  </entry>
   
   <entry>
     <title>搜索E绅士那些曾经存在过的资源</title>
@@ -247,24 +430,64 @@
     <link href="https://sakronos.github.io/Note/2020/06/30/RecyclerView%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     <id>https://sakronos.github.io/Note/2020/06/30/RecyclerView%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
     <published>2020-06-30T10:57:09.000Z</published>
-    <updated>2020-06-30T11:57:09.672Z</updated>
+    <updated>2020-08-17T12:28:10.723Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文已加入<code>闲置时间过久以至于不知道当时想些啥</code>套餐。</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;本文已加入&lt;code&gt;闲置时间过久以至于不知道当时想些啥&lt;/code&gt;套餐。&lt;/p&gt;
+
+      
     
     </summary>
     
     
+      <category term="闲置时间过久以至于不知道当时想些啥" scheme="https://sakronos.github.io/Note/categories/%E9%97%B2%E7%BD%AE%E6%97%B6%E9%97%B4%E8%BF%87%E4%B9%85%E4%BB%A5%E8%87%B3%E4%BA%8E%E4%B8%8D%E7%9F%A5%E9%81%93%E5%BD%93%E6%97%B6%E6%83%B3%E4%BA%9B%E5%95%A5/"/>
+    
+      <category term="RecyclerView" scheme="https://sakronos.github.io/Note/categories/%E9%97%B2%E7%BD%AE%E6%97%B6%E9%97%B4%E8%BF%87%E4%B9%85%E4%BB%A5%E8%87%B3%E4%BA%8E%E4%B8%8D%E7%9F%A5%E9%81%93%E5%BD%93%E6%97%B6%E6%83%B3%E4%BA%9B%E5%95%A5/RecyclerView/"/>
+    
+    
+      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
     
   </entry>
   
   <entry>
-    <title>Firebase上传图片并显示-Android课程破事其一</title>
-    <link href="https://sakronos.github.io/Note/2020/06/25/Firebase%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA-Android%E8%AF%BE%E7%A8%8B%E7%A0%B4%E4%BA%8B%E5%85%B6%E4%B8%80/"/>
-    <id>https://sakronos.github.io/Note/2020/06/25/Firebase%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%B9%B6%E6%98%BE%E7%A4%BA-Android%E8%AF%BE%E7%A8%8B%E7%A0%B4%E4%BA%8B%E5%85%B6%E4%B8%80/</id>
-    <published>2020-06-25T03:55:37.000Z</published>
-    <updated>2020-06-25T05:09:38.153Z</updated>
+    <title>关于Android全屏问题</title>
+    <link href="https://sakronos.github.io/Note/2020/06/25/%E5%85%B3%E4%BA%8EAndroid%E5%85%A8%E5%B1%8F%E9%97%AE%E9%A2%98/"/>
+    <id>https://sakronos.github.io/Note/2020/06/25/%E5%85%B3%E4%BA%8EAndroid%E5%85%A8%E5%B1%8F%E9%97%AE%E9%A2%98/</id>
+    <published>2020-06-25T10:44:12.000Z</published>
+    <updated>2020-08-17T12:22:31.481Z</updated>
     
-    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://github.com/udacity/and-nd-firebase/issues/41" target="_blank" rel="noopener">UploadTask.TaskSnapshot doesn’t have getDownloadUrl() method</a></li><li><a href="https://stackoverflow.com/questions/53319722/error-incompatible-types-taskuri-cannot-be-converted-to-uri" target="_blank" rel="noopener">error: incompatible types: Task<uri> cannot be converted to Uri [duplicate]</uri></a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>施工中……</p><p>直接利用Android Studio新建Activity，在运行后可能会发现这个Activity显示很奇怪，比如手机最上面本应显示状态栏的地方一篇漆黑，这就是本文要解决的问题。</p><a id="more"></a><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>在AndroidManifest.xml中的Activity中有<code>android:theme</code>这个属性，更改或新建一个style，并设置以下属性的值：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"windowActionBar"</span>&gt;</span>false<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"windowNoTitle"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://www.jianshu.com/p/ce65dc7b0b56" target="_blank" rel="noopener">Android沉浸式全屏讲解(状态栏、导航栏处理)</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;施工中……&lt;/p&gt;
+&lt;p&gt;直接利用Android Studio新建Activity，在运行后可能会发现这个Activity显示很奇怪，比如手机最上面本应显示状态栏的地方一篇漆黑，这就是本文要解决的问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android Studio" scheme="https://sakronos.github.io/Note/categories/Android-Studio/"/>
+    
+      <category term="课程笔记" scheme="https://sakronos.github.io/Note/categories/Android-Studio/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>emmm……还是没搞懂ConstraintLayout布局</title>
+    <link href="https://sakronos.github.io/Note/2020/06/25/emmm%E2%80%A6%E2%80%A6%E8%BF%98%E6%98%AF%E6%B2%A1%E6%90%9E%E6%87%82ConstraintLayout%E5%B8%83%E5%B1%80/"/>
+    <id>https://sakronos.github.io/Note/2020/06/25/emmm%E2%80%A6%E2%80%A6%E8%BF%98%E6%98%AF%E6%B2%A1%E6%90%9E%E6%87%82ConstraintLayout%E5%B8%83%E5%B1%80/</id>
+    <published>2020-06-25T10:40:12.000Z</published>
+    <updated>2020-08-17T11:42:11.391Z</updated>
+    
+    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://www.jianshu.com/p/502127a493fb" target="_blank" rel="noopener">ConstraintLayout 用法全解析</a></li><li><a href="https://stackoverflow.com/questions/47455203/recyclerview-in-constraintlayout-overlapping-other-elements" target="_blank" rel="noopener">RecyclerView in ConstraintLayout overlapping other elements</a></li></ol>]]></content>
     
     <summary type="html">
     
@@ -283,13 +506,13 @@
   </entry>
   
   <entry>
-    <title>Android_Glide_v4显示图片原尺寸</title>
-    <link href="https://sakronos.github.io/Note/2020/06/25/Android-Glide-v4%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E5%8E%9F%E5%B0%BA%E5%AF%B8/"/>
-    <id>https://sakronos.github.io/Note/2020/06/25/Android-Glide-v4%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E5%8E%9F%E5%B0%BA%E5%AF%B8/</id>
-    <published>2020-06-25T03:53:18.000Z</published>
-    <updated>2020-06-25T05:09:35.714Z</updated>
+    <title>用RecyclerView显示Firebase节点数据</title>
+    <link href="https://sakronos.github.io/Note/2020/06/25/%E7%94%A8RecyclerView%E6%98%BE%E7%A4%BAFirebase%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/"/>
+    <id>https://sakronos.github.io/Note/2020/06/25/%E7%94%A8RecyclerView%E6%98%BE%E7%A4%BAFirebase%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/</id>
+    <published>2020-06-25T09:20:05.000Z</published>
+    <updated>2020-08-17T13:53:39.586Z</updated>
     
-    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://blog.csdn.net/guolin_blog/article/details/78582548" target="_blank" rel="noopener">Android图片加载框架最全解析（八），带你全面了解Glide 4的用法</a></li><li><a href="https://muyangmin.github.io/glide-docs-cn/doc/targets.html#%E5%B0%BA%E5%AF%B8-sizes-and-dimensions" target="_blank" rel="noopener">尺寸 (Sizes and dimensions)</a></li><li><a href="https://www.jianshu.com/p/486419c9ee62" target="_blank" rel="noopener">Glide学习笔记</a></li><li><a href="https://github.com/bumptech/glide/issues/779" target="_blank" rel="noopener">How to use Glide load the original image?</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://stackoverflow.com/questions/41694367/how-to-display-all-childrens-from-a-firebase-node-in-a-recyclerview-in-android" target="_blank" rel="noopener">How to display all childrens from a Firebase node in a RecyclerView in Android?</a></li></ol>]]></content>
     
     <summary type="html">
     
@@ -301,216 +524,6 @@
       <category term="Android Studio" scheme="https://sakronos.github.io/Note/categories/Android-Studio/"/>
     
       <category term="课程笔记" scheme="https://sakronos.github.io/Note/categories/Android-Studio/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HEXO置顶功能配置 &amp; 测试</title>
-    <link href="https://sakronos.github.io/Note/2020/06/21/%E6%B0%B4%E5%B9%B6%E6%B5%8B%E8%AF%95%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/"/>
-    <id>https://sakronos.github.io/Note/2020/06/21/%E6%B0%B4%E5%B9%B6%E6%B5%8B%E8%AF%95%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/</id>
-    <published>2020-06-21T14:42:28.000Z</published>
-    <updated>2020-06-25T05:08:48.582Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong><a href="https://sakronos.github.io/Note/2020/06/21/%E6%94%B6%E8%97%8F%E5%A4%B9%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%B3%95/">收藏夹</a>置顶成功</strong></p><p>继前几天Gradle依赖拉取让我栽了跟头后，NPM也不出意外地无法INSTALL.</p><p>下面记载如何配置国内源。</p><font color="white">校园网&amp;国内网络真拉稀</font><a id="more"></a><h4 id="检查NPM的代理"><a href="#检查NPM的代理" class="headerlink" title="检查NPM的代理"></a>检查NPM的代理</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config get registry</span><br></pre></td></tr></table></figure><h4 id="配置阿里镜像"><a href="#配置阿里镜像" class="headerlink" title="配置阿里镜像"></a>配置阿里镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><p>有人还说无法install的话，需要更新node和npm；我这只更新了npm，node未能成功更新，但还是install成功了。</p><h4 id="配置HEXO置顶模块"><a href="#配置HEXO置顶模块" class="headerlink" title="配置HEXO置顶模块"></a>配置HEXO置顶模块</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure><p>安装完成后，在需要置顶的文章的<code>Front-matter</code>中加上<code>top: true</code>即可。</p><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://segmentfault.com/a/1190000019543613" target="_blank" rel="noopener">解决npm install卡住不动的小尴尬</a></li><li><a href="https://learnku.com/nodejs/t/40737" target="_blank" rel="noopener">NPM install 使用淘宝镜像仍然卡住的问题</a></li><li><a href="https://blog.csdn.net/qwerty200696/article/details/79010629" target="_blank" rel="noopener">hexo博客优化之文章置顶+置顶标签</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://sakronos.github.io/Note/2020/06/21/%E6%94%B6%E8%97%8F%E5%A4%B9%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%B3%95/&quot;&gt;收藏夹&lt;/a&gt;置顶成功&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;继前几天Gradle依赖拉取让我栽了跟头后，NPM也不出意外地无法INSTALL.&lt;/p&gt;
-&lt;p&gt;下面记载如何配置国内源。&lt;/p&gt;
-&lt;font color=&quot;white&quot;&gt;校园网&amp;amp;国内网络真拉稀&lt;/font&gt;
-    
-    </summary>
-    
-    
-      <category term="NPM" scheme="https://sakronos.github.io/Note/categories/NPM/"/>
-    
-      <category term="HEXO" scheme="https://sakronos.github.io/Note/categories/NPM/HEXO/"/>
-    
-    
-      <category term="水" scheme="https://sakronos.github.io/Note/tags/%E6%B0%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>收藏夹</title>
-    <link href="https://sakronos.github.io/Note/2020/06/21/%E6%94%B6%E8%97%8F%E5%A4%B9%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%B3%95/"/>
-    <id>https://sakronos.github.io/Note/2020/06/21/%E6%94%B6%E8%97%8F%E5%A4%B9%EF%BC%9A%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%B3%95/</id>
-    <published>2020-06-21T06:03:20.000Z</published>
-    <updated>2020-06-21T15:45:34.604Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><a href="http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html" target="_blank" rel="noopener">Comparison Sort: Quick Sort(快速排序法)</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="收藏夹" scheme="https://sakronos.github.io/Note/categories/%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
-    
-    
-      <category term="算法" scheme="https://sakronos.github.io/Note/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android修改Navigation中Header内容</title>
-    <link href="https://sakronos.github.io/Note/2020/06/21/Android%E4%BF%AE%E6%94%B9Navigation%E4%B8%ADHeader%E5%86%85%E5%AE%B9/"/>
-    <id>https://sakronos.github.io/Note/2020/06/21/Android%E4%BF%AE%E6%94%B9Navigation%E4%B8%ADHeader%E5%86%85%E5%AE%B9/</id>
-    <published>2020-06-21T05:10:03.000Z</published>
-    <updated>2020-06-21T06:14:15.969Z</updated>
-    
-    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);</span><br><span class="line"><span class="keyword">if</span>(navigationView.getHeaderCount() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        View header = navigationView.getHeaderView(<span class="number">0</span>);</span><br><span class="line">        TextView un = (TextView) header.findViewById(R.id.mainUsername);</span><br><span class="line">        un.setText(username);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://blog.csdn.net/xuelanlingying/article/details/79884592" target="_blank" rel="noopener">Android编程笔记 2——侧滑栏修改用户信息（修改Navigation里header的TextView / Navigation drawer 中取出 headerview）</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;施工中……&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://sakronos.github.io/Note/categories/Android/"/>
-    
-      <category term="编程笔记" scheme="https://sakronos.github.io/Note/categories/Android/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FirebaseUI使用问题记录</title>
-    <link href="https://sakronos.github.io/Note/2020/06/19/FirebaseUI%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>https://sakronos.github.io/Note/2020/06/19/FirebaseUI%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
-    <published>2020-06-19T12:41:56.000Z</published>
-    <updated>2020-06-19T14:23:51.410Z</updated>
-    
-    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h3 id="使用-Firebase-Assistant-添加-Firebase"><a href="#使用-Firebase-Assistant-添加-Firebase" class="headerlink" title="使用 Firebase Assistant 添加 Firebase"></a>使用 Firebase Assistant 添加 Firebase</h3><h3 id="AuthUI的-enableEmailLinkSignIn-问题"><a href="#AuthUI的-enableEmailLinkSignIn-问题" class="headerlink" title="AuthUI的.enableEmailLinkSignIn()问题"></a>AuthUI的<code>.enableEmailLinkSignIn()</code>问题</h3><p>Firebase不允许同时开启Email链接登录与邮箱密码认证，而且官方不认为这个是Bug</p><p>所以在看到Github上那个issue后，还为了这行代码耗了一天的我是SB</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">startActivityForResult(</span><br><span class="line">                            AuthUI.getInstance()</span><br><span class="line">                                    .createSignInIntentBuilder()</span><br><span class="line">                                    .setIsSmartLockEnabled(<span class="keyword">false</span>)</span><br><span class="line">                                    .setAvailableProviders(Arrays.asList(</span><br><span class="line">                                            <span class="keyword">new</span> AuthUI.IdpConfig.EmailBuilder()</span><br><span class="line">                                                    <span class="comment">//.enableEmailLinkSignIn()      这行有毒，加了没法登录注册</span></span><br><span class="line">                                                    .setAllowNewAccounts(<span class="keyword">true</span>)</span><br><span class="line">                                                    .setActionCodeSettings(actionCodeSettings)</span><br><span class="line">                                                    .build()</span><br><span class="line">                                            <span class="comment">//new AuthUI.IdpConfig.GoogleBuilder().build()      Google登录</span></span><br><span class="line">                                            ))</span><br><span class="line">                                    .build(),</span><br><span class="line">                            RC_SIGN_IN);</span><br></pre></td></tr></table></figure><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol><li><a href="https://github.com/firebase/snippets-android/blob/6d5b0ed89f1730cd98758c0583cce8c44da10dd8/auth/app/src/main/java/com/google/firebase/quickstart/auth/FirebaseUIActivity.java#L31-L45" target="_blank" rel="noopener">firebase/snippets-android</a></li><li><a href="https://firebase.google.com/docs/android/setup?hl=zh-cn#assistant" target="_blank" rel="noopener">选项 2：使用 Firebase Assistant 添加 Firebase</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;施工中……&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Firebase" scheme="https://sakronos.github.io/Note/categories/Firebase/"/>
-    
-      <category term="FirebaseUI" scheme="https://sakronos.github.io/Note/categories/Firebase/FirebaseUI/"/>
-    
-    
-      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
-    
-      <category term="Firebase" scheme="https://sakronos.github.io/Note/tags/Firebase/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Removing sensitive data from a repository in Github</title>
-    <link href="https://sakronos.github.io/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/"/>
-    <id>https://sakronos.github.io/Note/2020/06/19/Removing-sensitive-data-from-a-repository-Github/</id>
-    <published>2020-06-19T03:18:01.000Z</published>
-    <updated>2020-06-19T13:57:54.493Z</updated>
-    
-    <content type="html"><![CDATA[<p>作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed <img src="http://image.biaobaiju.com/uploads/20180225/11/1519530361-DQkduBpvir.jpg" width="10%"></p><p>然后为了删掉这条commit我百度又谷歌，但直接搜<code>删除commit</code>搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词<code>删除敏感信息</code>，再次尝试。</p><hr><p>从今天开始，告别Command，拥抱PowerShell😂</p><a id="more"></a><h1 id="移除Git敏感文件问题记录"><a href="#移除Git敏感文件问题记录" class="headerlink" title="移除Git敏感文件问题记录"></a>移除Git敏感文件问题记录</h1><h3 id="从Git中移除文件"><a href="#从Git中移除文件" class="headerlink" title="从Git中移除文件*"></a>从Git中移除文件*</h3><p>解决方法：[5]<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git rm -r -n --cached <span class="string">"FILE OR FOLDER TO BE REMOVED"</span> <span class="comment">#-n：加上这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览。 例子：git rm -r --cached  "bin/"</span></span><br><span class="line"></span><br><span class="line">git rm -r --cached  <span class="string">"FILE OR FOLDER TO BE REMOVED"</span>      <span class="comment">#最终执行命令. </span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"TYPE COMMIT MESSAGE HERE"</span>    <span class="comment">#提交</span></span><br><span class="line"></span><br><span class="line">git push origin master   <span class="comment">#提交到远程服务器</span></span><br></pre></td></tr></table></figure></p><h4 id="参数解释："><a href="#参数解释：" class="headerlink" title="参数解释："></a>参数解释：</h4><h5 id="n-–dry-run"><a href="#n-–dry-run" class="headerlink" title="-n –dry-run"></a>-n –dry-run</h5><p>Don’t actually remove any file(s). Instead, just show if they exist in the index and would otherwise be removed by the command.  </p><h5 id="r"><a href="#r" class="headerlink" title="-r"></a>-r</h5><p>Allow recursive removal when a leading directory name is given. </p><h5 id="–cached"><a href="#–cached" class="headerlink" title="–cached"></a>–cached</h5><p>Use this option to unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone.</p><h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>针对<code>.gitignore</code>文件，再贴两个网站[6]、[7] 。</p><p>我在Android Studio中添加了我要忽略的文件，但好像没有用处……把搜到的资料贴在这，以备不时之需。</p><h3 id="BFG"><a href="#BFG" class="headerlink" title="BFG"></a>BFG</h3><h4 id="BFG使用方法-4"><a href="#BFG使用方法-4" class="headerlink" title="BFG使用方法[4]"></a>BFG使用方法[4]</h4><p>First clone a fresh copy of your repo, using the <code>--mirror</code> flag:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --mirror git://example.com/some-big-repo.git</span><br></pre></td></tr></table></figure><p>This is a bare repo, which means your normal files won’t be visible, but it is a full copy of the Git database of your repository, and at this point you should make a backup of it to ensure you don’t lose anything.</p><p>Now you can run the BFG to clean your repository up:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar bfg.jar --strip-blobs-bigger-than 100M some-big-repo.git</span><br></pre></td></tr></table></figure><p>The BFG will update your commits and all branches and tags so they are clean, but it doesn’t physically delete the unwanted stuff. Examine the repo to make sure your history has been updated, and then use the standard <code>git gc</code> command to strip out the unwanted dirty data, which Git will now recognise as surplus to requirements:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> some-big-repo.git</span><br><span class="line">$ git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive</span><br></pre></td></tr></table></figure><p>Finally, once you’re happy with the updated state of your repo, push it back up (note that because your clone command used the <code>--mirror</code> flag, this push will update all refs on your remote server):</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure><p>At this point, you’re ready for everyone to ditch their old copies of the repo and do fresh clones of the nice, new pristine data. It’s best to delete all old clones, as they’ll have dirty history that you don’t want to risk pushing back into your newly cleaned repo.</p><p>到这里被筛选出来的历史Commit文件应该都已经被一串数字字符替换了（新从git版本控制中移除的文件似乎不会被BFG处理），但使用BFG会给Git的使用带来麻烦，使之Update和Merge都出现问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Could Not Merge origin/master</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br><span class="line"></span><br><span class="line">Error merging</span><br><span class="line">You have not concluded your merge (MERGE_HEAD exists).</span><br><span class="line">Please, commit your changes before you merge.</span><br></pre></td></tr></table></figure></p><p>总之是些分支合并问题，我这里是通过<a href="#a">允许合并Unrelated Histories</a>，并在IDE中resolve冲突后再次Commit来强行解决分支合并冲突。（这应该不是正常解决的方法吧😂）</p><h4 id="使用BFG实验结果"><a href="#使用BFG实验结果" class="headerlink" title="使用BFG实验结果"></a>使用BFG实验结果</h4><p>最新Commit之前的所有Commit内容，被一行不知道是啥的东西替换。</p><p><strong>Commit记录仍然保留</strong>。</p><h3 id="Using-filter-branch清除Git中敏感文件的所有历史和TAG"><a href="#Using-filter-branch清除Git中敏感文件的所有历史和TAG" class="headerlink" title="Using filter-branch清除Git中敏感文件的所有历史和TAG*"></a>Using filter-branch清除Git中敏感文件的所有历史和TAG*</h3><p>通过本方法我得到了我想要的结果，而且本方法不会引起冲突。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git filter-branch --force --index-filter <span class="string">"git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA"</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">$ git push origin --force --all</span><br></pre></td></tr></table></figure><p>基本上使用这两行命令就可以解决问题。详细步骤参见[2]（中文），[1]（英文）。</p><h3 id="Update时出现Error"><a href="#Update时出现Error" class="headerlink" title="Update时出现Error"></a><a name="a"><font color="black">Update时出现Error</font></a></h3><h4 id="Error-merging-refusing-to-merge-unrelated-histories"><a href="#Error-merging-refusing-to-merge-unrelated-histories" class="headerlink" title="Error merging: refusing to merge unrelated histories"></a><code>Error merging: refusing to merge unrelated histories</code></h4><p>原因：因为两个分支没有取得关系[3]</p><p><strong>解决方案</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge master --allow-unrelated-histories</span><br></pre></td></tr></table></figure></p><h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>到这我终于让GitGuardian变绿了。这些应该就是我今天遇到的所有问题和其对应的解决方案了。</p><p>我又在这些问题上浪费了一天（应该是一下午，包括了我追剧和吃饭的时间）。</p><p>在解决这些问题的过程中，我老是想，我这学期的“软件配置管理”到底学了没有；因为这些问题有的是上机报告涉及到的，有的虽然是没涉及到的，但也是版本控制中常见的问题。</p><p>课程使用的是SVN，我使用的是Git；这次的问题让我注意到了几点SVN和Git之间的区别（虽然只是表面上形式上的差别），比如SVN依赖于服务器上的版本库，但Git似乎就没有这种依赖，TortoiseSVN的GUI似乎比IDE中的Git插件提供更多选项……但相同的是，对于Merge问题我都是乱操作一通糊弄过去的😂</p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol><li><a href="https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository" target="_blank" rel="noopener">Removing sensitive data from a repository</a></li><li><a href="https://blog.csdn.net/farrellcn/article/details/56479917" target="_blank" rel="noopener">github删除敏感信息</a></li><li><a href="https://blog.csdn.net/wd2014610/article/details/80854807" target="_blank" rel="noopener">解决Git中fatal: refusing to merge unrelated histories</a></li><li><a href="https://rtyley.github.io/bfg-repo-cleaner/" target="_blank" rel="noopener">BFG Repo-Cleaner</a></li><li><a href="https://blog.csdn.net/chenxu6/article/details/50542295" target="_blank" rel="noopener">git如何移除某文件夹的版本控制</a></li><li><a href="https://www.cnblogs.com/kevingrace/p/5690241.html" target="_blank" rel="noopener">Git忽略提交规则 - .gitignore配置运维总结</a></li><li><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208" target="_blank" rel="noopener">忽略特殊文件</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作死把API key传到Public Repository里了，然后邮箱里就收到一封邮件告诉我apikey exposed &lt;img src=&quot;http://image.biaobaiju.com/uploads/20180225/11/1519530361-DQkduBpvir.jpg&quot; width=&quot;10%&quot;&gt;&lt;/p&gt;
-&lt;p&gt;然后为了删掉这条commit我百度又谷歌，但直接搜&lt;code&gt;删除commit&lt;/code&gt;搜不出什么（都不能直接删除Initial Commit，佛了，我在Initial Commit就上传这API了，但又懒得删除这个Repository）。换了个关键词&lt;code&gt;删除敏感信息&lt;/code&gt;，再次尝试。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;从今天开始，告别Command，拥抱PowerShell😂&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://sakronos.github.io/Note/categories/Git/"/>
-    
-      <category term="Github" scheme="https://sakronos.github.io/Note/categories/Git/Github/"/>
-    
-    
-      <category term="Git" scheme="https://sakronos.github.io/Note/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Change Git user in IDEA</title>
-    <link href="https://sakronos.github.io/Note/2020/06/19/Change-Git-user-in-IDEA/"/>
-    <id>https://sakronos.github.io/Note/2020/06/19/Change-Git-user-in-IDEA/</id>
-    <published>2020-06-19T02:52:09.000Z</published>
-    <updated>2020-06-25T04:49:54.106Z</updated>
-    
-    <content type="html"><![CDATA[<p>6/25 更新Git Bash使用过程中<code>Permission to xxxxx.git denied to xxx.</code>问题</p><a id="more"></a><h3 id="Change-Git-user-in-IDEA"><a href="#Change-Git-user-in-IDEA" class="headerlink" title="Change Git user in IDEA"></a>Change Git user in IDEA</h3><p>貌似IntelliJ的产品没有GUI设置界面来更改Commit用户的地方，稍微Google了下这个[1]方法可行且还算简单。</p><ol><li>Goto base directory of your project</li><li>You will find a hidden directory called “.git” and enter into it</li><li>There you will see file called “config” and add below code<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">      <span class="attr">name</span> = username</span><br><span class="line">      <span class="attr">email</span> = username@domaim.com</span><br></pre></td></tr></table></figure></li></ol><h3 id="Permission-to-xxxxx-git-denied-to-xxx"><a href="#Permission-to-xxxxx-git-denied-to-xxx" class="headerlink" title="Permission to xxxxx.git denied to xxx."></a>Permission to xxxxx.git denied to xxx.</h3><p>我这是因为多Git用户导致的这个问题。</p><p>编辑 .git/cofig中的url，将<br>[remote “origin”]中的<br><code>url = https://github.com/git的用户名/项目名称</code>改为<code>url = https://git的用户名@github.com/git的用户名/项目名称</code>。</p><p>即在<code>github.com</code>前添加<code>用户名@</code></p><h4 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h4><p>这次事件起因是因为我往Markdown里插入一张图片，但图片文件名中有 “ <b>) </b>“导致无法正确解析链接。</p><p>其实只要使用转义符号就能解决问题，但我选择改Github仓库中的文件名，结果发现无法正常push……</p><p>顺手记下：[3]<br>反斜线（<code>\</code>）用于插入在 Markdown 语法中有特殊作用的字符。</p><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://stackoverflow.com/questions/28275397/change-git-user-in-intellij-idea" target="_blank" rel="noopener">Change Git user in IntelliJ IDEA</a></li><li><a href="https://www.jianshu.com/p/f44ec31be799" target="_blank" rel="noopener">解决git push 中remote: Permission to xxxxx.git denied to xxx. fatal: unable to access ‘https://github.com/ xxxxx.git/‘: The requested URL returned error: 403</a></li><li><a href="http://xianbai.me/learn-md/article/syntax/blackslash-escapes.html" target="_blank" rel="noopener">字符转义</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;6/25 更新Git Bash使用过程中&lt;code&gt;Permission to xxxxx.git denied to xxx.&lt;/code&gt;问题&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="IntelliJ" scheme="https://sakronos.github.io/Note/categories/IntelliJ/"/>
-    
-      <category term="Git" scheme="https://sakronos.github.io/Note/categories/IntelliJ/Git/"/>
-    
-    
-      <category term="Git" scheme="https://sakronos.github.io/Note/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>点击RecyclerView选项以创建新Intent</title>
-    <link href="https://sakronos.github.io/Note/2020/06/17/%E7%82%B9%E5%87%BBRecyclerView%E9%80%89%E9%A1%B9%E4%BB%A5%E5%88%9B%E5%BB%BA%E6%96%B0Intent/"/>
-    <id>https://sakronos.github.io/Note/2020/06/17/%E7%82%B9%E5%87%BBRecyclerView%E9%80%89%E9%A1%B9%E4%BB%A5%E5%88%9B%E5%BB%BA%E6%96%B0Intent/</id>
-    <published>2020-06-17T09:38:05.000Z</published>
-    <updated>2020-08-17T10:39:16.697Z</updated>
-    
-    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://stackoverflow.com/questions/27559021/recyclerview-onlistitemclick-to-create-new-intent/27559665" target="_blank" rel="noopener">RecyclerView onListItemClick to create new intent</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;施工中……&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Android Studio" scheme="https://sakronos.github.io/Note/categories/Android-Studio/"/>
-    
-      <category term="课程笔记" scheme="https://sakronos.github.io/Note/categories/Android-Studio/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gradle依赖根本下不下来的解决方法</title>
-    <link href="https://sakronos.github.io/Note/2020/06/17/Gradle%E4%BE%9D%E8%B5%96%E6%A0%B9%E6%9C%AC%E4%B8%8B%E4%B8%8D%E4%B8%8B%E6%9D%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>https://sakronos.github.io/Note/2020/06/17/Gradle%E4%BE%9D%E8%B5%96%E6%A0%B9%E6%9C%AC%E4%B8%8B%E4%B8%8D%E4%B8%8B%E6%9D%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
-    <published>2020-06-17T01:40:06.000Z</published>
-    <updated>2020-06-18T15:40:05.450Z</updated>
-    
-    <content type="html"><![CDATA[<p>果然只有国内源才能救中国😂</p><a id="more"></a><p>[1]的方法在Android Studio 4.0中测试无效。<br>使用[2]的方法更换国内源才成功下载这个包（这个包的名字我怕是能记一辈子）</p><p>虽然更换了国内源，但我还是下载了四十多分钟……</p><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://blog.csdn.net/qq_40067488/article/details/104896201" target="_blank" rel="noopener">【Android studio】Gradle download:kotlin-compiler-embeddable-1.3.70.jar下载太慢或者失败解决办法</a></li><li><a href="https://www.jianshu.com/p/ab1f5e5f5f5c" target="_blank" rel="noopener">完美解决gradle依赖库导致build慢的问题</a>*</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;果然只有国内源才能救中国😂&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Gradle" scheme="https://sakronos.github.io/Note/categories/Gradle/"/>
-    
-      <category term="编程笔记" scheme="https://sakronos.github.io/Note/categories/Gradle/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
