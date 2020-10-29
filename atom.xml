@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2020-10-24T14:21:15.139Z</updated>
+  <updated>2020-10-29T04:39:19.915Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>异域镇魂曲增强版GOG版上手指南</title>
+    <link href="https://sakronos.github.io/Note/2020/10/29/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2%E5%A2%9E%E5%BC%BA%E7%89%88GOG%E7%89%88%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/"/>
+    <id>https://sakronos.github.io/Note/2020/10/29/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2%E5%A2%9E%E5%BC%BA%E7%89%88GOG%E7%89%88%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</id>
+    <published>2020-10-29T02:37:46.000Z</published>
+    <updated>2020-10-29T04:39:19.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>Planescape:Torment上手第一天，问题不少</p><a id="more"></a><h3 id="缺少OpenAL32-dll，游戏无法启动的正确解决方法"><a href="#缺少OpenAL32-dll，游戏无法启动的正确解决方法" class="headerlink" title="缺少OpenAL32.dll，游戏无法启动的正确解决方法"></a>缺少OpenAL32.dll，游戏无法启动的正确解决方法</h3><p>网上随便下个OpenAL32.dll放C盘System里或游戏文件夹里后，游戏都能运行，但是游戏会没有声音，下面帖子写了正确的解决方法。</p><p><a href="https://forums.beamdog.com/discussion/72058/all-games-yet-another-no-sound-fix/p1" target="_blank" rel="noopener">[ALL GAMES] Yet another no sound fix</a></p><h3 id="启用控制台"><a href="#启用控制台" class="headerlink" title="启用控制台"></a>启用控制台</h3><p><a href="https://forums.beamdog.com/discussion/61900/how-to-enable-the-console-in-bgee-sod-bg2ee-in-version-2-0-and-later#latest" target="_blank" rel="noopener">How to Enable the console in BGEE/SoD/BG2EE in version 2.0 and later</a></p><p>在LUA文件中写入这行，启动游戏后按组合键<code>Ctrl</code>+<code>Enter</code>即可启动控制台。</p><p>需要注意的是，GOG版在加入这行代码后，启动时会报一次脚本错误，无需理会，这并不影响游戏的正常运行和控制台的使用。<br>还有，组合键<code>Ctrl</code>+<code>Space</code>也能启动控制台，但我玩的版本中这个组合键并不能关闭控制台。</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetPrivateProfileString(<span class="string">'Program Options'</span>,<span class="string">'Debug Mode'</span>,<span class="string">'1'</span>)</span><br></pre></td></tr></table></figure><h4 id="控制台代码"><a href="#控制台代码" class="headerlink" title="控制台代码"></a>控制台代码</h4><p><a href="https://forums.beamdog.com/discussion/64483/pst-ee-console-commands-and-codes-how-to#latest" target="_blank" rel="noopener">PST:EE console, commands and codes how-to</a></p><h3 id="漢化、攻略与MOD"><a href="#漢化、攻略与MOD" class="headerlink" title="漢化、攻略与MOD"></a>漢化、攻略与MOD</h3><ol><li><a href="https://trow.cc/board/showtopic=29321" target="_blank" rel="noopener">【更新1.19】《异域镇魂曲：加强版》中文补丁, By『哪个括号老爷汉化组』，版本号1.19</a></li><li><a href="https://forums.beamdog.com/discussion/64309/mods-for-pst-ee" target="_blank" rel="noopener">Mods for PST:EE</a></li><li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=937193014" target="_blank" rel="noopener">异域镇魂曲完整攻略 by:daogra</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Planescape:Torment上手第一天，问题不少&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="异域镇魂曲" scheme="https://sakronos.github.io/Note/categories/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2/"/>
+    
+      <category term="GOG" scheme="https://sakronos.github.io/Note/categories/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2/GOG/"/>
+    
+    
+      <category term="异域镇魂曲" scheme="https://sakronos.github.io/Note/tags/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>OkHttp添加Cookie</title>
@@ -505,32 +530,6 @@
     
     
       <category term="Webhook" scheme="https://sakronos.github.io/Note/tags/Webhook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ngrok_也是个内网穿透工具</title>
-    <link href="https://sakronos.github.io/Note/2020/08/18/ngrok-%E4%B9%9F%E6%98%AF%E4%B8%AA%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/"/>
-    <id>https://sakronos.github.io/Note/2020/08/18/ngrok-%E4%B9%9F%E6%98%AF%E4%B8%AA%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7/</id>
-    <published>2020-08-18T13:30:34.000Z</published>
-    <updated>2020-08-18T14:32:21.007Z</updated>
-    
-    <content type="html"><![CDATA[<p>施工中……</p><p>听说1.0版本之后就不开源了？</p><a id="more"></a><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://aotu.io/notes/2016/02/19/ngrok/index.html" target="_blank" rel="noopener">手把手教你搭建ngrok服务－轻松外网调试本机站点</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;施工中……&lt;/p&gt;
-&lt;p&gt;听说1.0版本之后就不开源了？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="内网穿透" scheme="https://sakronos.github.io/Note/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
-    
-      <category term="ngrok" scheme="https://sakronos.github.io/Note/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/ngrok/"/>
-    
-    
-      <category term="内网穿透" scheme="https://sakronos.github.io/Note/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
   </entry>
   
