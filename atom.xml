@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2020-10-29T04:39:19.915Z</updated>
+  <updated>2020-12-28T08:25:23.946Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -17,13 +17,66 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>想要成为TeX Star吗？突然兴起的第一篇</title>
+    <link href="https://sakronos.github.io/Note/2020/12/27/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BATeX-Star%E5%90%97%EF%BC%9F%E7%AA%81%E7%84%B6%E5%85%B4%E8%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>https://sakronos.github.io/Note/2020/12/27/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BATeX-Star%E5%90%97%EF%BC%9F%E7%AA%81%E7%84%B6%E5%85%B4%E8%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</id>
+    <published>2020-12-27T13:52:56.000Z</published>
+    <updated>2020-12-28T08:25:23.946Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="想要成为TeX-Star吗？"><a href="#想要成为TeX-Star吗？" class="headerlink" title="想要成为TeX Star吗？"></a>想要成为TeX Star吗？</h1><h2 id="——突然兴起的第一篇"><a href="#——突然兴起的第一篇" class="headerlink" title="——突然兴起的第一篇"></a>——突然兴起的第一篇</h2><h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>为了解决一些问题网上找了不少教程，LaTeX小白我将其中代码复制到<code>TeXStudio</code>中却发现代码编译错误，或是发生如下图所示的<code>unrecognized command</code><br><img src="https://i.loli.net/2020/12/27/3V4rk9PdbDaNpLz.png" alt="image.png"><br>这其中有能在XeLaTeX下编译通过的（这里的黑体就能正常使用，但我不是很懂为什么编辑器认不出这个命令<a href="其中\kaishu、\heiti、\fangsong、\lishu、\youyuan、\songti是ctex已定义好的可以直接使用。(参考资料3)">^1</a>），但更多的是因为那些文章笔者的环境与我不同而导致的错误（点名批评使用<code>CTeX套装</code>却不说明的），还有不写清楚用的包的……</p><p>因此，我在此写清楚我的环境：  </p><h4 id="TeXLive-2020-XeLaTeX-TeXStudio"><a href="#TeXLive-2020-XeLaTeX-TeXStudio" class="headerlink" title="TeXLive 2020+XeLaTeX+TeXStudio"></a><strong>TeXLive 2020</strong>+<strong>XeLaTeX</strong>+<strong>TeXStudio</strong></h4><h3 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h3><p>用中文在搜索引擎里搜LatTeX的相关内容效率低的一笔，而且很多东西都是转载来的，没有新内容。本文中我将尝试只把最简洁、最实用、最针对症结的中文参考资料列入，本人上手TeX第一天且能力有限，如有建议请发送邮件给我，谢谢。</p><h3 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h3><ol><li><a href="http://math.ecnu.edu.cn/~jypan/Latex/Latex_Talk2018.pdf" target="_blank" rel="noopener">LATEX 科技排版入门 - 华东师范大学数学系</a></li></ol><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://liam.page/2014/09/08/latex-introduction/#%E5%AE%9E%E7%8E%B0%E4%B8%AD%E8%8B%B1%E6%96%87%E6%B7%B7%E6%8E%92/" target="_blank" rel="noopener">一份其实很短的 LaTeX 入门文档</a></li><li><a href="https://blog.csdn.net/xiazdong/article/details/8892070" target="_blank" rel="noopener">【LaTeX入门】03、设置字体相关命令</a></li><li><a href="https://blog.csdn.net/ProgramChangesWorld/article/details/51429138" target="_blank" rel="noopener">LaTeX技巧001：ctex下使用其他中文字体</a></li><li><a href="https://blog.csdn.net/u010297791/article/details/54232542" target="_blank" rel="noopener">【Latex】Latex调整行间距</a></li></ol><h2 id="问题整理"><a href="#问题整理" class="headerlink" title="问题整理"></a>问题整理</h2><h4 id="修改论文题目字体大小"><a href="#修改论文题目字体大小" class="headerlink" title="修改论文题目字体大小"></a>修改论文题目字体大小</h4><p><code>\title{\huge 你的论文题目}</code>，修改<code>\huge</code>部分 改变字体大小</p><ol><li><a href="https://www.zhihu.com/question/37744505" target="_blank" rel="noopener">请问latex里怎么修改论文题目的字体大小？</a></li></ol><h4 id="空格怎么打"><a href="#空格怎么打" class="headerlink" title="空格怎么打"></a>空格怎么打</h4><p>老老实实一个一个<code>\</code>打。</p><ol><li><a href="https://bbs.pinggu.org/thread-3181818-1-1.html" target="_blank" rel="noopener">latex空格怎么打_latex空格</a></li><li><a href="https://blog.csdn.net/luolang_103/article/details/81289529" target="_blank" rel="noopener">LaTex中输入空格以及换行</a></li></ol><h4 id="页码设置-删除页码"><a href="#页码设置-删除页码" class="headerlink" title="页码设置/删除页码"></a>页码设置/删除页码</h4><p><code>\pagestyle{type}</code>和<code>\thispagestyle{type}</code>命令用于设置页面样式（页眉和页脚）。<code>\pagestyle{type}</code>和<code>\thispagestyle{type}</code>的主要区别在于<code>\pagestyle{type}</code>对后续所有页面都有效，而<code>\thispagestyle{type}</code>仅仅对当前页面有效。在LaTeX中，默认提供了以下五种页面样式：</p><ul><li>empty - 没有页眉和页脚</li><li>plain - 没有页眉，页脚包含一个居中的页码</li><li>headings - 没有页脚，页眉包含章/节或者字节的名字和页码</li><li>myheadings - 没有页脚，页眉包含有页码</li></ul><p><strong>导言区设置了<code>\pagestyle{empty}</code>后，第一页底部仍有可能有页码，这时在<code>\maketitle</code>后再添加一次<code>\thispagestyle{empty}</code>应该能解决问题。</strong></p><ol><li><a href="https://blog.csdn.net/japinli/article/details/51418977" target="_blank" rel="noopener">LaTeX页码设置</a></li></ol><h4 id="这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"><a href="#这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接" class="headerlink" title="这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"></a>这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接</h4><ol><li><a href="https://taozhaojun.github.io/2016/10/17/latex-summary/" target="_blank" rel="noopener">LATEX使用总结</a></li><li><a href="https://kingdomhe.wordpress.com/2016/03/29/chinese-typing-within-the-latex-xelatex-mode/" target="_blank" rel="noopener">如何在Latex中输入中文</a></li></ol><h4 id="去掉title中默认的日期"><a href="#去掉title中默认的日期" class="headerlink" title="去掉title中默认的日期"></a>去掉title中默认的日期</h4><p>使用<code>\date</code>关键字并将<code>{}</code>里的内容置空即可，即：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\date&#123;&#125;</span><br></pre></td></tr></table></figure></p><ol><li><a href="https://blog.csdn.net/GarfieldEr007/article/details/51619768" target="_blank" rel="noopener">LaTeX去掉默认显示日期时间</a></li></ol><h4 id="设置页边距"><a href="#设置页边距" class="headerlink" title="设置页边距"></a>设置页边距</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;geometry&#125;</span><br><span class="line">\geometry&#123;a4paper,scale=0.8&#125;</span><br><span class="line"></span><br><span class="line">% 上面命令设置了纸张为a4 纸，并且版心占页面长度的比例为80%；scale也可以改为ratio，表示版面边距占页面长度的比例。该宏包还可以设置页面的上下左右边距，例如：</span><br><span class="line">% \geometry&#123;a4paper,left=2cm,right=2cm,top=1cm,bottom=1cm&#125;</span><br></pre></td></tr></table></figure><ol><li><a href="https://blog.csdn.net/robert_chen1988/article/details/52746354" target="_blank" rel="noopener">latex设置页面边距，页面大小，页边距，geometry宏包</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;想要成为TeX-Star吗？&quot;&gt;&lt;a href=&quot;#想要成为TeX-Star吗？&quot; class=&quot;headerlink&quot; title=&quot;想要成为TeX Star吗？&quot;&gt;&lt;/a&gt;想要成为TeX Star吗？&lt;/h1&gt;&lt;h2 id=&quot;——突然兴起的第一篇&quot;&gt;&lt;a hr
+      
+    
+    </summary>
+    
+    
+      <category term="入门" scheme="https://sakronos.github.io/Note/categories/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="TeX" scheme="https://sakronos.github.io/Note/categories/%E5%85%A5%E9%97%A8/TeX/"/>
+    
+    
+      <category term="TeX" scheme="https://sakronos.github.io/Note/tags/TeX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++重载Vector的输出流操作符</title>
+    <link href="https://sakronos.github.io/Note/2020/11/05/C-%E9%87%8D%E8%BD%BDVector%E7%9A%84%E8%BE%93%E5%87%BA%E6%B5%81%E6%93%8D%E4%BD%9C%E7%AC%A6/"/>
+    <id>https://sakronos.github.io/Note/2020/11/05/C-%E9%87%8D%E8%BD%BDVector%E7%9A%84%E8%BE%93%E5%87%BA%E6%B5%81%E6%93%8D%E4%BD%9C%E7%AC%A6/</id>
+    <published>2020-11-05T05:31:40.000Z</published>
+    <updated>2020-11-05T12:24:18.696Z</updated>
+    
+    <content type="html"><![CDATA[<p>重点参考<a href="#anchor">1</a></p><a id="more"></a><p>So, instead of</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="function">istream <span class="title">ReadFile</span><span class="params">(<span class="built_in">std</span>::istream &amp;iStream)</span></span></span><br></pre></td></tr></table></figure><p>… do<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="function">istream&amp; <span class="title">ReadFile</span><span class="params">(<span class="built_in">std</span>::istream&amp; iStream)</span></span></span><br></pre></td></tr></table></figure></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><div id="anchor"><ol><li><a href="https://stackoverflow.com/questions/25827924/function-cannot-be-referenced-as-it-is-a-deleted-function" target="_blank" rel="noopener">Function cannot be referenced as it is a deleted function</a></li><li><a href="https://stackoverflow.com/questions/4077609/overloading-output-stream-operator-for-vectort" target="_blank" rel="noopener">Overloading output stream operator for vector<t></t></a></li></ol></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;重点参考&lt;a href=&quot;#anchor&quot;&gt;1&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://sakronos.github.io/Note/categories/C/"/>
+    
+      <category term="Override" scheme="https://sakronos.github.io/Note/categories/C/Override/"/>
+    
+    
+      <category term="C++" scheme="https://sakronos.github.io/Note/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>异域镇魂曲增强版GOG版上手指南</title>
     <link href="https://sakronos.github.io/Note/2020/10/29/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2%E5%A2%9E%E5%BC%BA%E7%89%88GOG%E7%89%88%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/"/>
     <id>https://sakronos.github.io/Note/2020/10/29/%E5%BC%82%E5%9F%9F%E9%95%87%E9%AD%82%E6%9B%B2%E5%A2%9E%E5%BC%BA%E7%89%88GOG%E7%89%88%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/</id>
     <published>2020-10-29T02:37:46.000Z</published>
-    <updated>2020-10-29T04:39:19.915Z</updated>
+    <updated>2020-10-29T04:48:59.547Z</updated>
     
-    <content type="html"><![CDATA[<p>Planescape:Torment上手第一天，问题不少</p><a id="more"></a><h3 id="缺少OpenAL32-dll，游戏无法启动的正确解决方法"><a href="#缺少OpenAL32-dll，游戏无法启动的正确解决方法" class="headerlink" title="缺少OpenAL32.dll，游戏无法启动的正确解决方法"></a>缺少OpenAL32.dll，游戏无法启动的正确解决方法</h3><p>网上随便下个OpenAL32.dll放C盘System里或游戏文件夹里后，游戏都能运行，但是游戏会没有声音，下面帖子写了正确的解决方法。</p><p><a href="https://forums.beamdog.com/discussion/72058/all-games-yet-another-no-sound-fix/p1" target="_blank" rel="noopener">[ALL GAMES] Yet another no sound fix</a></p><h3 id="启用控制台"><a href="#启用控制台" class="headerlink" title="启用控制台"></a>启用控制台</h3><p><a href="https://forums.beamdog.com/discussion/61900/how-to-enable-the-console-in-bgee-sod-bg2ee-in-version-2-0-and-later#latest" target="_blank" rel="noopener">How to Enable the console in BGEE/SoD/BG2EE in version 2.0 and later</a></p><p>在LUA文件中写入这行，启动游戏后按组合键<code>Ctrl</code>+<code>Enter</code>即可启动控制台。</p><p>需要注意的是，GOG版在加入这行代码后，启动时会报一次脚本错误，无需理会，这并不影响游戏的正常运行和控制台的使用。<br>还有，组合键<code>Ctrl</code>+<code>Space</code>也能启动控制台，但我玩的版本中这个组合键并不能关闭控制台。</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetPrivateProfileString(<span class="string">'Program Options'</span>,<span class="string">'Debug Mode'</span>,<span class="string">'1'</span>)</span><br></pre></td></tr></table></figure><h4 id="控制台代码"><a href="#控制台代码" class="headerlink" title="控制台代码"></a>控制台代码</h4><p><a href="https://forums.beamdog.com/discussion/64483/pst-ee-console-commands-and-codes-how-to#latest" target="_blank" rel="noopener">PST:EE console, commands and codes how-to</a></p><h3 id="漢化、攻略与MOD"><a href="#漢化、攻略与MOD" class="headerlink" title="漢化、攻略与MOD"></a>漢化、攻略与MOD</h3><ol><li><a href="https://trow.cc/board/showtopic=29321" target="_blank" rel="noopener">【更新1.19】《异域镇魂曲：加强版》中文补丁, By『哪个括号老爷汉化组』，版本号1.19</a></li><li><a href="https://forums.beamdog.com/discussion/64309/mods-for-pst-ee" target="_blank" rel="noopener">Mods for PST:EE</a></li><li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=937193014" target="_blank" rel="noopener">异域镇魂曲完整攻略 by:daogra</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>Planescape:Torment上手第一天，问题不少</p><a id="more"></a><h3 id="缺少OpenAL32-dll，游戏无法启动的正确解决方法"><a href="#缺少OpenAL32-dll，游戏无法启动的正确解决方法" class="headerlink" title="缺少OpenAL32.dll，游戏无法启动的正确解决方法"></a>缺少OpenAL32.dll，游戏无法启动的正确解决方法</h3><p>网上随便下个OpenAL32.dll放C盘System里或游戏文件夹里后，游戏都能运行，但是游戏会没有声音，下面帖子写了正确的解决方法。</p><p><a href="https://forums.beamdog.com/discussion/72058/all-games-yet-another-no-sound-fix/p1" target="_blank" rel="noopener">[ALL GAMES] Yet another no sound fix</a></p><h3 id="启用控制台"><a href="#启用控制台" class="headerlink" title="启用控制台"></a>启用控制台</h3><p><a href="https://forums.beamdog.com/discussion/61900/how-to-enable-the-console-in-bgee-sod-bg2ee-in-version-2-0-and-later#latest" target="_blank" rel="noopener">How to Enable the console in BGEE/SoD/BG2EE in version 2.0 and later</a></p><p>在LUA文件中写入这行，启动游戏后按组合键<code>Ctrl</code>+<code>Enter</code>即可启动控制台。</p><p>需要注意的是，GOG版在加入这行代码后，启动时会报一次脚本错误，无需理会，这并不影响游戏的正常运行和控制台的使用。<br>还有，组合键<code>Ctrl</code>+<code>Space</code>也能启动控制台，但我玩的版本中这个组合键并不能关闭控制台。</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetPrivateProfileString(<span class="string">'Program Options'</span>,<span class="string">'Debug Mode'</span>,<span class="string">'1'</span>)</span><br></pre></td></tr></table></figure><h4 id="控制台代码"><a href="#控制台代码" class="headerlink" title="控制台代码"></a>控制台代码</h4><p><a href="https://forums.beamdog.com/discussion/64483/pst-ee-console-commands-and-codes-how-to#latest" target="_blank" rel="noopener">PST:EE console, commands and codes how-to</a></p><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><code>加强版</code>的快捷键并不和之前版本的完全一致，上面说的控制台的快捷键似乎就是不一样的，在以后的游玩中若发现<code>不一样的</code>或<code>有用的</code>的快捷键，会写在下面。</p><ul><li>显示坐标 <code>X</code>（加强版专用）</li><li>攻击 <code>A</code></li></ul><h3 id="漢化、攻略与MOD"><a href="#漢化、攻略与MOD" class="headerlink" title="漢化、攻略与MOD"></a>漢化、攻略与MOD</h3><ol><li><a href="https://trow.cc/board/showtopic=29321" target="_blank" rel="noopener">【更新1.19】《异域镇魂曲：加强版》中文补丁, By『哪个括号老爷汉化组』，版本号1.19</a></li><li><a href="https://forums.beamdog.com/discussion/64309/mods-for-pst-ee" target="_blank" rel="noopener">Mods for PST:EE</a></li><li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=937193014" target="_blank" rel="noopener">异域镇魂曲完整攻略 by:daogra</a></li></ol>]]></content>
     
     <summary type="html">
     
@@ -476,60 +529,6 @@
     
     
       <category term="JSON" scheme="https://sakronos.github.io/Note/tags/JSON/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Discord &amp; Webhook &amp; Java</title>
-    <link href="https://sakronos.github.io/Note/2020/08/27/Discord-Webhook-OKHttp-%E6%97%A0%E8%AF%AD/"/>
-    <id>https://sakronos.github.io/Note/2020/08/27/Discord-Webhook-OKHttp-%E6%97%A0%E8%AF%AD/</id>
-    <published>2020-08-27T11:09:51.000Z</published>
-    <updated>2020-08-31T12:54:10.808Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><p>Discord Webhook能接受的JSON一例（已排版的）<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"embeds"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"image"</span>: </span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"https://pixiv.cat/83824016-1.jpg"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"image"</span>: </span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"https://pixiv.cat/83824016-2.jpg"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"image"</span>: </span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"https://pixiv.cat/83824016-3.jpg"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>还是用GSON来创建JSON不容易出问题。</p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://blog.csdn.net/qq_19306415/article/details/102954712" target="_blank" rel="noopener">Android OkHttp4 RequestBody.create()过时解决办法 kotlin、java版本</a></li><li><a href="https://discord.com/developers/docs/resources/webhook" target="_blank" rel="noopener">Discord - Developer Portal - WebHook</a></li><li><a href="https://stackoverflow.com/questions/56884664/java-sending-message-to-slack-webhook" target="_blank" rel="noopener">Java - Sending Message to Slack Webhook</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;Discord Webhook能接受的JSON一例（已排版的）&lt;br&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://sakronos.github.io/Note/categories/Java/"/>
-    
-      <category term="Webhook" scheme="https://sakronos.github.io/Note/categories/Java/Webhook/"/>
-    
-    
-      <category term="Webhook" scheme="https://sakronos.github.io/Note/tags/Webhook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IFTTT_create_webhook_on_discord</title>
-    <link href="https://sakronos.github.io/Note/2020/08/25/IFTTT-create-webhook-on-discord/"/>
-    <id>https://sakronos.github.io/Note/2020/08/25/IFTTT-create-webhook-on-discord/</id>
-    <published>2020-08-25T13:05:39.000Z</published>
-    <updated>2020-09-08T08:33:52.826Z</updated>
-    
-    <content type="html"><![CDATA[<p>一定要检查JSON是否合法啊！<br><a id="more"></a><br><a href="https://leovoel.github.io/embed-visualizer/" target="_blank" rel="noopener">embed-visualizer</a></p><p>这个可以凑合着用。</p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://birdie0.github.io/discord-webhooks-guide/services/ifttt.html" target="_blank" rel="noopener">INTEGRATE WITH IFTTT</a></li><li><a href="https://robinsonweng.github.io/2020/03/10/rss_discord_hook/" target="_blank" rel="noopener">將社群軟體通知以RSS整合至Discord</a></li><li><a href="https://home.gamer.com.tw/creationDetail.php?sn=2356208" target="_blank" rel="noopener">【福利分享】使用IFTTT (Rss、Flickr ) 建立自動收圖程序 (Pixiv、ニコニコ、Tinami、yande.re)</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一定要检查JSON是否合法啊！&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Discord" scheme="https://sakronos.github.io/Note/categories/Discord/"/>
-    
-      <category term="IFTTT" scheme="https://sakronos.github.io/Note/categories/Discord/IFTTT/"/>
-    
-    
-      <category term="Webhook" scheme="https://sakronos.github.io/Note/tags/Webhook/"/>
     
   </entry>
   
