@@ -90,7 +90,7 @@
 <meta property="og:description" content="想要成为TeX Star吗？——突然兴起的第一篇声明为了解决一些问题网上找了不少教程，LaTeX小白我将其中代码复制到TeXStudio中却发现代码编译错误，或是发生如下图所示的unrecognized command这其中有能在XeLaTeX下编译通过的（这里的黑体就能正常使用，但我不是很懂为什么编辑器认不出这个命令^1），但更多的是因为那些文章笔者的环境与我不同而导致的错误（点名批评使用CTe">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://i.loli.net/2020/12/27/3V4rk9PdbDaNpLz.png">
-<meta property="og:updated_time" content="2020-12-28T08:42:16.936Z">
+<meta property="og:updated_time" content="2020-12-28T09:17:53.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="想要成为TeX Star吗？突然兴起的第一篇">
 <meta name="twitter:description" content="想要成为TeX Star吗？——突然兴起的第一篇声明为了解决一些问题网上找了不少教程，LaTeX小白我将其中代码复制到TeXStudio中却发现代码编译错误，或是发生如下图所示的unrecognized command这其中有能在XeLaTeX下编译通过的（这里的黑体就能正常使用，但我不是很懂为什么编辑器认不出这个命令^1），但更多的是因为那些文章笔者的环境与我不同而导致的错误（点名批评使用CTe">
@@ -420,7 +420,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  809
+                  1k
                 </span>
               
 
@@ -436,7 +436,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  2
+                  3
                 </span>
               
             </div>
@@ -490,7 +490,8 @@
 <ol>
 <li><a href="https://blog.csdn.net/japinli/article/details/51418977" target="_blank" rel="noopener">LaTeX页码设置</a></li>
 </ol>
-<h4 id="这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"><a href="#这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接" class="headerlink" title="这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"></a>这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接</h4><ol>
+<h4 id="这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"><a href="#这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接" class="headerlink" title="这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"></a>这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接</h4><p><strong><em>用处不明，建议读者跳过</em></strong></p>
+<ol>
 <li><a href="https://taozhaojun.github.io/2016/10/17/latex-summary/" target="_blank" rel="noopener">LATEX使用总结</a></li>
 <li><a href="https://kingdomhe.wordpress.com/2016/03/29/chinese-typing-within-the-latex-xelatex-mode/" target="_blank" rel="noopener">如何在Latex中输入中文</a></li>
 </ol>
@@ -501,6 +502,21 @@
 <h4 id="设置页边距"><a href="#设置页边距" class="headerlink" title="设置页边距"></a>设置页边距</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;geometry&#125;</span><br><span class="line">\geometry&#123;a4paper,scale=0.8&#125;</span><br><span class="line"></span><br><span class="line">% 上面命令设置了纸张为a4 纸，并且版心占页面长度的比例为80%；scale也可以改为ratio，表示版面边距占页面长度的比例。该宏包还可以设置页面的上下左右边距，例如：</span><br><span class="line">% \geometry&#123;a4paper,left=2cm,right=2cm,top=1cm,bottom=1cm&#125;</span><br></pre></td></tr></table></figure>
 <ol>
 <li><a href="https://blog.csdn.net/robert_chen1988/article/details/52746354" target="_blank" rel="noopener">latex设置页面边距，页面大小，页边距，geometry宏包</a></li>
+</ol>
+<h4 id="设置正文文本格式"><a href="#设置正文文本格式" class="headerlink" title="设置正文文本格式"></a>设置正文文本格式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[a4paper,zihao=-4,UTF8]&#123;ctexart&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">现在字体是小四号</span><br><span class="line">\end&#123;document&#125;</span><br><span class="line"></span><br><span class="line">% 这个可能也能起作用\renewcommand&#123;\normalsize&#125;&#123;\fontsize&#123;20&#125;&#123;20&#125;\selectfont&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><a href="https://www.zhihu.com/question/310609918" target="_blank" rel="noopener">请问，在LaTeX中如何全局设置字号大小？</a></li>
+</ol>
+<h4 id="TEX标题与正文间距，标题与上下文距离调整（我没用到，Google到的，我实际想搜的是下一条）"><a href="#TEX标题与正文间距，标题与上下文距离调整（我没用到，Google到的，我实际想搜的是下一条）" class="headerlink" title="TEX标题与正文间距，标题与上下文距离调整（我没用到，Google到的，我实际想搜的是下一条）"></a>TEX标题与正文间距，标题与上下文距离调整（我没用到，Google到的，我实际想搜的是下一条）</h4><p><strong><em>用处不明，建议读者跳过</em></strong></p>
+<p>以后可能用得到吧……</p>
+<ol>
+<li><a href="http://blog.sina.com.cn/s/blog_4a4927c70100pmmv.html" target="_blank" rel="noopener">TEX标题与正文间距，标题与上下文距离调整</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_5e16f1770100gvxk.html" target="_blank" rel="noopener">LaTeX杂谈：实践——LaTeX按需排版 </a></li>
+<li><a href="https://www.jianshu.com/p/d7848f815e5f" target="_blank" rel="noopener">latex 标题、段落及行距</a></li>
+</ol>
+<h4 id="去掉论文Title上边距"><a href="#去掉论文Title上边距" class="headerlink" title="去掉论文Title上边距"></a>去掉论文Title上边距</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\title&#123;\vspace&#123;-1.5cm&#125;题目&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><a href="https://tex.stackexchange.com/questions/88388/how-to-have-the-title-at-the-top-of-a-latex-document" target="_blank" rel="noopener">How to have the title at the top of a LaTeX document?</a></li>
 </ol>
 
       
@@ -698,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#想要成为TeX-Star吗？"><span class="nav-number">1.</span> <span class="nav-text">想要成为TeX Star吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#——突然兴起的第一篇"><span class="nav-number">1.1.</span> <span class="nav-text">——突然兴起的第一篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">1.2.</span> <span class="nav-text">声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TeXLive-2020-XeLaTeX-TeXStudio"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">TeXLive 2020+XeLaTeX+TeXStudio</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#吐槽"><span class="nav-number">1.2.1.</span> <span class="nav-text">吐槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#入门"><span class="nav-number">1.2.2.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题整理"><span class="nav-number">1.3.</span> <span class="nav-text">问题整理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改论文题目字体大小"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">修改论文题目字体大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空格怎么打"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">空格怎么打</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页码设置-删除页码"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">页码设置/删除页码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#去掉title中默认的日期"><span class="nav-number">1.3.0.5.</span> <span class="nav-text">去掉title中默认的日期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置页边距"><span class="nav-number">1.3.0.6.</span> <span class="nav-text">设置页边距</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#想要成为TeX-Star吗？"><span class="nav-number">1.</span> <span class="nav-text">想要成为TeX Star吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#——突然兴起的第一篇"><span class="nav-number">1.1.</span> <span class="nav-text">——突然兴起的第一篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">1.2.</span> <span class="nav-text">声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TeXLive-2020-XeLaTeX-TeXStudio"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">TeXLive 2020+XeLaTeX+TeXStudio</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#吐槽"><span class="nav-number">1.2.1.</span> <span class="nav-text">吐槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#入门"><span class="nav-number">1.2.2.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题整理"><span class="nav-number">1.3.</span> <span class="nav-text">问题整理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改论文题目字体大小"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">修改论文题目字体大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空格怎么打"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">空格怎么打</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页码设置-删除页码"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">页码设置/删除页码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">这两个链接里有常用的中文字体名，我也很犹豫要不要只为了这个目的放这两个链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#去掉title中默认的日期"><span class="nav-number">1.3.0.5.</span> <span class="nav-text">去掉title中默认的日期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置页边距"><span class="nav-number">1.3.0.6.</span> <span class="nav-text">设置页边距</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置正文文本格式"><span class="nav-number">1.3.0.7.</span> <span class="nav-text">设置正文文本格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TEX标题与正文间距，标题与上下文距离调整（我没用到，Google到的，我实际想搜的是下一条）"><span class="nav-number">1.3.0.8.</span> <span class="nav-text">TEX标题与正文间距，标题与上下文距离调整（我没用到，Google到的，我实际想搜的是下一条）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#去掉论文Title上边距"><span class="nav-number">1.3.0.9.</span> <span class="nav-text">去掉论文Title上边距</span></a></li></ol></li></ol></div>
             
 
           </div>
