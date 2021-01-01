@@ -299,6 +299,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/" itemprop="url">VisualStudio2019ASP.NET引用DLL指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-01-01T16:44:49+09:00">
+                2020-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/" class="leancloud_visitors" data-flag-title="VisualStudio2019ASP.NET引用DLL指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  160
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> <strong>环境：.net Framework 4.7.2</strong></p>
+<h2 id="1-创建C-语言的DLL项目"><a href="#1-创建C-语言的DLL项目" class="headerlink" title="1. 创建C#语言的DLL项目"></a>1. 创建C#语言的DLL项目</h2><p>Visual Studio提供了多种C#语言的类库，这里ASP.NET预定使用.net Framework 4.7.2，所以我这里选择 <strong>类库（.net Framework）    C#</strong> 项目模板，这里尤其要注意的是框架版本的一致。</p>
+<h2 id="2-编写DLL"><a href="#2-编写DLL" class="headerlink" title="2. 编写DLL"></a>2. 编写DLL</h2><p>类的访问权限<br><strong><em>必须是PUBLIC</em></strong><br>默认访问权限为<em>internal</em></p>
+<h2 id="3-导入DLL"><a href="#3-导入DLL" class="headerlink" title="3. 导入DLL"></a>3. 导入DLL</h2><ol>
+<li>在ASP.NET解决方案下，右击网站，<strong>添加-&gt;引用..</strong>，添加DLL文件</li>
+<li>在需要的CS文件下添加<strong>using DLL名字</strong>和DLL文件所需的命名空间</li>
+<li>现在，只需<strong>类名.方法名</strong>即可使用所需的方法</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/12/31/相对路径中dotdot与dot的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2162,215 +2374,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/09/19/IDEA部署Struts2问题板/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kronos">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Note/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PERFECT BLUE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Note/2019/09/19/IDEA部署Struts2问题板/" itemprop="url">IDEA部署Struts2问题板</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-09-19T18:05:46+09:00">
-                2019-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/故障/" itemprop="url" rel="index">
-                    <span itemprop="name">故障</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Note/2019/09/19/IDEA部署Struts2问题板/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/09/19/IDEA部署Struts2问题板/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Note/2019/09/19/IDEA部署Struts2问题板/" class="leancloud_visitors" data-flag-title="IDEA部署Struts2问题板">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字數統計&#58;</span>
-                
-                <span title="字數統計">
-                  251
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
-                
-                <span title="閱讀時長">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这是我使用IDEA后感觉最操蛋的一次，第一次让我感受到Eclipse的NICE。<br>好吧其实IDEA还行，只不过在我的印象中不是全方面碾压Eclipse了/(ㄒoㄒ)/~~。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Note/2019/09/19/IDEA部署Struts2问题板/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2421,7 +2424,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2432,7 +2435,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">96</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -2443,7 +2446,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -2503,7 +2506,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
