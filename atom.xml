@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-01-06T15:04:37.136Z</updated>
+  <updated>2021-01-11T08:54:10.140Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>flutter试水</title>
+    <link href="https://sakronos.github.io/Note/2021/01/11/flutter%E8%AF%95%E6%B0%B4/"/>
+    <id>https://sakronos.github.io/Note/2021/01/11/flutter%E8%AF%95%E6%B0%B4/</id>
+    <published>2021-01-11T07:00:48.000Z</published>
+    <updated>2021-01-11T08:54:10.140Z</updated>
+    
+    <content type="html"><![CDATA[<p>显然，这儿遇到的问题很中国特色。</p><a id="more"></a><h3 id="Flutter-upgrade升级一直停留在-Running-pub-upgrade"><a href="#Flutter-upgrade升级一直停留在-Running-pub-upgrade" class="headerlink" title="Flutter upgrade升级一直停留在 Running pub upgrade"></a><a href="http://www.5imoban.net/jiaocheng/hbuilder/2020/0914/3963.html" target="_blank" rel="noopener">Flutter upgrade升级一直停留在 Running pub upgrade</a></h3><p>执行<code>flutter doctor</code>，却卡在<code>Running pub upgrade</code>。挂了代理，Terminal里也设过走Http代理，就是没有用。</p><h5 id="解决方法：加两个系统环境变量，让程序从中国的镜像下载。"><a href="#解决方法：加两个系统环境变量，让程序从中国的镜像下载。" class="headerlink" title="解决方法：加两个系统环境变量，让程序从中国的镜像下载。"></a>解决方法：加两个系统环境变量，让程序从中国的镜像下载。</h5><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>PUB_HOSTED_URL</td><td><a href="https://pub.flutter-io.cn" target="_blank" rel="noopener">https://pub.flutter-io.cn</a></td></tr><tr><td>FLUTTER_STORAGE_BASE_URL</td><td><a href="https://storage.flutter-io.cn" target="_blank" rel="noopener">https://storage.flutter-io.cn</a></td></tr></tbody></table><h3 id="flutter-doctor不要在Windows商店下的Windows-Terminal-Preview里执行"><a href="#flutter-doctor不要在Windows商店下的Windows-Terminal-Preview里执行" class="headerlink" title="flutter doctor不要在Windows商店下的Windows Terminal Preview里执行"></a><code>flutter doctor</code>不要在Windows商店下的<code>Windows Terminal Preview</code>里执行</h3><p>这狗屎应用在执行<code>flutter doctor</code>时检测不到已经在运行的安卓模拟器。</p><p>TIP：改了环境变量，重启下应用总没错。</p><h3 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h3><p><img src="https://flutter.dev/assets/tools/android-studio/main-toolbar-8f8e4ce1c7a5ec70c4a288837aa3ea083fe03deef28d99567a391ef005a59c3f.png" alt="Target Selector"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;显然，这儿遇到的问题很中国特色。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="flutter" scheme="https://sakronos.github.io/Note/categories/flutter/"/>
+    
+      <category term="Android" scheme="https://sakronos.github.io/Note/categories/flutter/Android/"/>
+    
+    
+      <category term="flutter" scheme="https://sakronos.github.io/Note/tags/flutter/"/>
+    
+  </entry>
   
   <entry>
     <title>腾讯云与Docker与MariaDB</title>
@@ -498,31 +523,6 @@
       <category term="Java" scheme="https://sakronos.github.io/Note/categories/Java/"/>
     
       <category term="log4j" scheme="https://sakronos.github.io/Note/categories/Java/log4j/"/>
-    
-    
-      <category term="Java" scheme="https://sakronos.github.io/Note/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java中使用系统代理</title>
-    <link href="https://sakronos.github.io/Note/2020/09/01/Java%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/"/>
-    <id>https://sakronos.github.io/Note/2020/09/01/Java%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/</id>
-    <published>2020-09-01T02:53:55.000Z</published>
-    <updated>2020-09-01T09:32:40.104Z</updated>
-    
-    <content type="html"><![CDATA[<p>施工中……<br><a id="more"></a></p><h2 id="应用内通过-setProperty-临时-进行设置（这种有缺陷，中间一段时间相当于全局代理）"><a href="#应用内通过-setProperty-临时-进行设置（这种有缺陷，中间一段时间相当于全局代理）" class="headerlink" title="应用内通过 setProperty 临时 进行设置（这种有缺陷，中间一段时间相当于全局代理）"></a>应用内通过 <strong>setProperty 临时</strong> 进行设置（这种有缺陷，中间一段时间相当于全局代理）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">System.setProperty(<span class="string">"http.proxyHost"</span>, proxyHost);</span><br><span class="line">System.setProperty(<span class="string">"http.proxyPort"</span>, proxyPort);</span><br><span class="line">System.setProperty(<span class="string">"https.proxyHost"</span>, proxyHost);</span><br><span class="line">System.setProperty(<span class="string">"https.proxyPort"</span>, proxyPort);</span><br><span class="line"></span><br><span class="line">System.clearProperty(<span class="string">"http.proxyHost"</span>);</span><br></pre></td></tr></table></figure><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="http://www.winseliu.com/blog/2018/01/26/proxy-on-java-via-shandowsocks/" target="_blank" rel="noopener">Java中使用代理-基于Shandowsocks</a></li><li><a href="https://blog.csdn.net/john1337/article/details/77295341" target="_blank" rel="noopener">Java程序通过代理访问网络</a></li><li><a href="https://blog.csdn.net/cheng545/article/details/72868781" target="_blank" rel="noopener">gradle设置代理</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;施工中……&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="代理" scheme="https://sakronos.github.io/Note/categories/%E4%BB%A3%E7%90%86/"/>
-    
-      <category term="Java" scheme="https://sakronos.github.io/Note/categories/%E4%BB%A3%E7%90%86/Java/"/>
     
     
       <category term="Java" scheme="https://sakronos.github.io/Note/tags/Java/"/>
