@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-01-14T14:14:55.170Z</updated>
+  <updated>2021-01-17T03:13:35.304Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本站检索功能故障，大概是不会修复了</title>
+    <link href="https://sakronos.github.io/Note/2021/01/17/%E6%9C%AC%E7%AB%99%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%95%85%E9%9A%9C%EF%BC%8C%E5%A4%A7%E6%A6%82%E6%98%AF%E4%B8%8D%E4%BC%9A%E4%BF%AE%E5%A4%8D%E4%BA%86/"/>
+    <id>https://sakronos.github.io/Note/2021/01/17/%E6%9C%AC%E7%AB%99%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%95%85%E9%9A%9C%EF%BC%8C%E5%A4%A7%E6%A6%82%E6%98%AF%E4%B8%8D%E4%BC%9A%E4%BF%AE%E5%A4%8D%E4%BA%86/</id>
+    <published>2021-01-17T02:09:52.000Z</published>
+    <updated>2021-01-17T03:13:35.304Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR [hexo-algolia] Record at the position 37 objectID=ff24**************f is too big size=3******** bytes. Contact us <span class="keyword">if</span> you need an extended quota</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="公告" scheme="https://sakronos.github.io/Note/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+      <category term="公告" scheme="https://sakronos.github.io/Note/tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>GithubPages_strict-origin-when-cross-origin</title>
@@ -502,31 +528,6 @@
     
     
       <category term="Windows-10" scheme="https://sakronos.github.io/Note/tags/Windows-10/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>给IDEA分配更大堆内存以加快启动速度</title>
-    <link href="https://sakronos.github.io/Note/2020/09/08/%E7%BB%99IDEA%E5%88%86%E9%85%8D%E6%9B%B4%E5%A4%A7%E5%A0%86%E5%86%85%E5%AD%98%E4%BB%A5%E5%8A%A0%E5%BF%AB%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6/"/>
-    <id>https://sakronos.github.io/Note/2020/09/08/%E7%BB%99IDEA%E5%88%86%E9%85%8D%E6%9B%B4%E5%A4%A7%E5%A0%86%E5%86%85%E5%AD%98%E4%BB%A5%E5%8A%A0%E5%BF%AB%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6/</id>
-    <published>2020-09-08T01:27:32.000Z</published>
-    <updated>2020-09-08T03:00:26.297Z</updated>
-    
-    <content type="html"><![CDATA[<p>改成4G后也没见IDEA变得多快嘛，有效性待验证。<br><a id="more"></a></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://blog.csdn.net/iCopper_/article/details/81142384" target="_blank" rel="noopener">解决IntelliJ IDEA启动缓慢</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;改成4G后也没见IDEA变得多快嘛，有效性待验证。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="IDEA" scheme="https://sakronos.github.io/Note/categories/IDEA/"/>
-    
-      <category term="Java" scheme="https://sakronos.github.io/Note/categories/IDEA/Java/"/>
-    
-    
-      <category term="IDEA" scheme="https://sakronos.github.io/Note/tags/IDEA/"/>
     
   </entry>
   
