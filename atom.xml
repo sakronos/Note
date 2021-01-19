@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-01-17T03:13:35.304Z</updated>
+  <updated>2021-01-19T08:41:21.550Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio Code界面模糊解决方案</title>
+    <link href="https://sakronos.github.io/Note/2021/01/19/VisualStudioCode-%E7%95%8C%E9%9D%A2%E6%A8%A1%E7%B3%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://sakronos.github.io/Note/2021/01/19/VisualStudioCode-%E7%95%8C%E9%9D%A2%E6%A8%A1%E7%B3%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2021-01-19T07:19:27.000Z</published>
+    <updated>2021-01-19T08:41:21.550Z</updated>
+    
+    <content type="html"><![CDATA[<p>受够了VSC动不动就模糊，搞得人家以为自己撸多了。</p><p>搜解决方案时发现，看样子不止VSC有这破问题。</p><a id="more"></a><h3 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h3><p>运行VSC一阵子后，VSC会变模糊，文本部分，菜单栏部分都有这种现象。</p><h3 id="诊断"><a href="#诊断" class="headerlink" title="诊断"></a>诊断</h3><p><code>是Hardware Acceleration的问题，但是VSCode本身没有这个选项。</code></p><p><code>罪魁祸首是英伟达控制面板中的FXAA选项，只要设置为关闭，就再也不模糊了。</code>（出自参考资料1）</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol><li>关闭NVIDIA控制面板中的FXAA选项；</li></ol><p>或</p><ol start="2"><li><del>将程序使用的<code>首选图形处理器</code>设为<code>集成显卡</code>；</del>（效果存疑）<br><img src="https://pic1.zhimg.com/v2-2939a7a19ac2f57e08e16bdb801c308c_r.jpg" alt="管理3D设置"></li></ol><p>或</p><ol start="3"><li>VSCode 解决办法是在启动时加 <code>--disable-gpu</code> 参数，如： <code>&quot;C:\Program Files (x86)\Microsoft VS Code\Code.exe&quot; --disable-gpu</code> （<strong>注意，参数的<code>--</code>前有一个空格</strong>）。</li></ol><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol><li><a href="https://www.zhihu.com/question/57583720" target="_blank" rel="noopener">atom，vs2017、vscode 在 win10 下界面显示模糊怎么办？</a></li><li><a href="https://blog.csdn.net/lk1822791193/article/details/90338901" target="_blank" rel="noopener">vs code 启动一段时间字体模糊</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;受够了VSC动不动就模糊，搞得人家以为自己撸多了。&lt;/p&gt;
+&lt;p&gt;搜解决方案时发现，看样子不止VSC有这破问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="故障&amp;解决方案" scheme="https://sakronos.github.io/Note/categories/%E6%95%85%E9%9A%9C-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+      <category term="Visual-Studio-Code" scheme="https://sakronos.github.io/Note/categories/%E6%95%85%E9%9A%9C-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Visual-Studio-Code/"/>
+    
+    
+      <category term="计算机常见故障" scheme="https://sakronos.github.io/Note/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>本站检索功能故障，大概是不会修复了</title>
@@ -72,9 +98,9 @@
     <link href="https://sakronos.github.io/Note/2021/01/11/flutter%E8%AF%95%E6%B0%B4/"/>
     <id>https://sakronos.github.io/Note/2021/01/11/flutter%E8%AF%95%E6%B0%B4/</id>
     <published>2021-01-11T07:00:48.000Z</published>
-    <updated>2021-01-11T12:10:56.426Z</updated>
+    <updated>2021-01-17T06:57:06.582Z</updated>
     
-    <content type="html"><![CDATA[<p>显然，这儿遇到的问题很中国特色。</p><p>TIP：改了环境变量，重启下应用总没错。</p><a id="more"></a><h3 id="Flutter-upgrade升级一直停留在-Running-pub-upgrade"><a href="#Flutter-upgrade升级一直停留在-Running-pub-upgrade" class="headerlink" title="Flutter upgrade升级一直停留在 Running pub upgrade"></a><a href="http://www.5imoban.net/jiaocheng/hbuilder/2020/0914/3963.html" target="_blank" rel="noopener">Flutter upgrade升级一直停留在 Running pub upgrade</a></h3><p>执行<code>flutter doctor</code>，却卡在<code>Running pub upgrade</code>。挂了代理，Terminal里也设过走Http代理，就是没有用。</p><h5 id="解决方法：加两个系统环境变量，让程序从中国的镜像下载。"><a href="#解决方法：加两个系统环境变量，让程序从中国的镜像下载。" class="headerlink" title="解决方法：加两个系统环境变量，让程序从中国的镜像下载。"></a>解决方法：加两个系统环境变量，让程序从中国的镜像下载。</h5><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>PUB_HOSTED_URL</td><td><a href="https://pub.flutter-io.cn" target="_blank" rel="noopener">https://pub.flutter-io.cn</a></td></tr><tr><td>FLUTTER_STORAGE_BASE_URL</td><td><a href="https://storage.flutter-io.cn" target="_blank" rel="noopener">https://storage.flutter-io.cn</a></td></tr></tbody></table><h3 id="flutter-doctor不要在Windows商店下的Windows-Terminal-Preview里执行"><a href="#flutter-doctor不要在Windows商店下的Windows-Terminal-Preview里执行" class="headerlink" title="flutter doctor不要在Windows商店下的Windows Terminal Preview里执行"></a><code>flutter doctor</code>不要在Windows商店下的<code>Windows Terminal Preview</code>里执行</h3><p>这狗屎应用在执行<code>flutter doctor</code>时检测不到已经在运行的安卓模拟器。</p><h3 id="Android-Studio-Target-selector-处显示no-device"><a href="#Android-Studio-Target-selector-处显示no-device" class="headerlink" title="Android Studio Target selector 处显示no device"></a>Android Studio <code>Target selector</code> 处显示no device</h3><p><img src="https://flutter.dev/assets/tools/android-studio/main-toolbar-8f8e4ce1c7a5ec70c4a288837aa3ea083fe03deef28d99567a391ef005a59c3f.png" alt="Target Selector"></p><p>解决方法：Project structure -&gt; 在<code>Project SDK</code>默认没有选择SDK，选中ANDROID API即可解决问题。</p><p><img src="https://i.stack.imgur.com/GGAw0.png" alt></p><p>参考资料：<a href="https://stackoverflow.com/questions/49045393/flutter-run-no-connected-devices" target="_blank" rel="noopener">flutter run: No connected devices</a></p><h3 id="Android-Studio-installing-Devtools卡住"><a href="#Android-Studio-installing-Devtools卡住" class="headerlink" title="Android Studio installing Devtools卡住"></a>Android Studio installing Devtools卡住</h3><p>这个我也不大清楚我解决了没，现在不显示了，那就默认它解决了。以下为解决方案：</p><p>我尝试在CMD里执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter pub global activate devtools</span><br><span class="line"><span class="comment"># 参见:https://flutter.cn/docs/development/tools/devtools/cli</span></span><br></pre></td></tr></table></figure></p><p><strong>注意</strong>：这里建议墙内的开发者关掉梯子，按照问题一的解决方式设置环境变量，走国内镜像下载。</p><p>下载完DevTools后可能会提示以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Warning: Pub installs executables into ~\flutter\.pub-cache\bin, which is not on your path.</span><br><span class="line">You can fix that by adding that directory to your system&apos;s &quot;Path&quot; environment variable.</span><br></pre></td></tr></table></figure></p><p>那就按照它的要求，将以上路径添加到环境变量的<code>Path</code>中。</p><p>再次Run的时候，过一会儿installing DevTools应该就会消失。</p><h3 id="AndroidStudio-pubspec-yaml增加第三方packages的问题"><a href="#AndroidStudio-pubspec-yaml增加第三方packages的问题" class="headerlink" title="AndroidStudio pubspec.yaml增加第三方packages的问题"></a>AndroidStudio pubspec.yaml增加第三方packages的问题</h3><p>新增dependencies后，<code>Pub get</code>, <code>Pub upgrade</code>……卡在<code>Running &quot;flutter packages get&quot; in flutter_project_name...</code>咋办？</p><p>全局，翻墙。</p><p>我这网络差，改了系统变量直连根本没用。</p><p>希望你能有个好的网络环境，不会遇到我这破问题。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol><li>这儿有篇比较老的文章，可能以后会有用，故放这<br><a href="https://zhuanlan.zhihu.com/p/52464029" target="_blank" rel="noopener">Flutter填坑全面总结</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>显然，这儿遇到的问题很中国特色。</p><p>TIP：改了环境变量，重启下应用总没错。</p><a id="more"></a><h3 id="Flutter-upgrade升级一直停留在-Running-pub-upgrade"><a href="#Flutter-upgrade升级一直停留在-Running-pub-upgrade" class="headerlink" title="Flutter upgrade升级一直停留在 Running pub upgrade"></a><a href="http://www.5imoban.net/jiaocheng/hbuilder/2020/0914/3963.html" target="_blank" rel="noopener">Flutter upgrade升级一直停留在 Running pub upgrade</a></h3><p>执行<code>flutter doctor</code>，却卡在<code>Running pub upgrade</code>。挂了代理，Terminal里也设过走Http代理，就是没有用。</p><h5 id="解决方法：加两个系统环境变量，让程序从中国的镜像下载。"><a href="#解决方法：加两个系统环境变量，让程序从中国的镜像下载。" class="headerlink" title="解决方法：加两个系统环境变量，让程序从中国的镜像下载。"></a>解决方法：加两个系统环境变量，让程序从中国的镜像下载。</h5><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>PUB_HOSTED_URL</td><td><a href="https://pub.flutter-io.cn" target="_blank" rel="noopener">https://pub.flutter-io.cn</a></td></tr><tr><td>FLUTTER_STORAGE_BASE_URL</td><td><a href="https://storage.flutter-io.cn" target="_blank" rel="noopener">https://storage.flutter-io.cn</a></td></tr></tbody></table><h3 id="flutter-doctor不要在Windows商店下的Windows-Terminal-Preview里执行"><a href="#flutter-doctor不要在Windows商店下的Windows-Terminal-Preview里执行" class="headerlink" title="flutter doctor不要在Windows商店下的Windows Terminal Preview里执行"></a><code>flutter doctor</code>不要在Windows商店下的<code>Windows Terminal Preview</code>里执行</h3><p>这应用在执行<code>flutter doctor</code>时检测不到已经在运行的安卓模拟器。（截止2021/01/11）</p><h3 id="Android-Studio-Target-selector-处显示no-device"><a href="#Android-Studio-Target-selector-处显示no-device" class="headerlink" title="Android Studio Target selector 处显示no device"></a>Android Studio <code>Target selector</code> 处显示no device</h3><p><img src="https://flutter.dev/assets/tools/android-studio/main-toolbar-8f8e4ce1c7a5ec70c4a288837aa3ea083fe03deef28d99567a391ef005a59c3f.png" alt="Target Selector"></p><p>解决方法：Project structure -&gt; 在<code>Project SDK</code>默认没有选择SDK，选中ANDROID API即可解决问题。</p><p><img src="https://i.stack.imgur.com/GGAw0.png" alt></p><p>参考资料：<a href="https://stackoverflow.com/questions/49045393/flutter-run-no-connected-devices" target="_blank" rel="noopener">flutter run: No connected devices</a></p><h3 id="Android-Studio-installing-Devtools卡住"><a href="#Android-Studio-installing-Devtools卡住" class="headerlink" title="Android Studio installing Devtools卡住"></a>Android Studio installing Devtools卡住</h3><p>这个我也不大清楚我解决了没，现在不显示了，那就默认它解决了。以下为解决方案：</p><p>我尝试在CMD里执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter pub global activate devtools</span><br><span class="line"><span class="comment"># 参见:https://flutter.cn/docs/development/tools/devtools/cli</span></span><br></pre></td></tr></table></figure></p><p><strong>注意</strong>：这里建议墙内的开发者关掉梯子，按照问题一的解决方式设置环境变量，走国内镜像下载。</p><p>下载完DevTools后可能会提示以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Warning: Pub installs executables into ~\flutter\.pub-cache\bin, which is not on your path.</span><br><span class="line">You can fix that by adding that directory to your system&apos;s &quot;Path&quot; environment variable.</span><br></pre></td></tr></table></figure></p><p>那就按照它的要求，将以上路径添加到环境变量的<code>Path</code>中。</p><p>再次Run的时候，过一会儿installing DevTools应该就会消失。</p><h3 id="AndroidStudio-pubspec-yaml增加第三方packages的问题"><a href="#AndroidStudio-pubspec-yaml增加第三方packages的问题" class="headerlink" title="AndroidStudio pubspec.yaml增加第三方packages的问题"></a>AndroidStudio pubspec.yaml增加第三方packages的问题</h3><p>新增dependencies后，<code>Pub get</code>, <code>Pub upgrade</code>……卡在<code>Running &quot;flutter packages get&quot; in flutter_project_name...</code>咋办？</p><p>全局，翻墙。</p><p>我这网络差，改了系统变量直连根本没用。</p><p>希望你能有个好的网络环境，不会遇到我这破问题。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol><li>这儿有篇比较老的文章，可能以后会有用，故放这<br><a href="https://zhuanlan.zhihu.com/p/52464029" target="_blank" rel="noopener">Flutter填坑全面总结</a></li></ol>]]></content>
     
     <summary type="html">
     
@@ -503,31 +529,6 @@
     
     
       <category term="IntelliJ IDEA" scheme="https://sakronos.github.io/Note/tags/IntelliJ-IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更改Windows_10系统编码为UTF-8</title>
-    <link href="https://sakronos.github.io/Note/2020/09/08/%E6%9B%B4%E6%94%B9Windows-10%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/"/>
-    <id>https://sakronos.github.io/Note/2020/09/08/%E6%9B%B4%E6%94%B9Windows-10%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/</id>
-    <published>2020-09-08T02:08:35.000Z</published>
-    <updated>2020-09-28T12:32:48.719Z</updated>
-    
-    <content type="html"><![CDATA[<p>改完我的记事本里的中文全变<strong>�</strong>了…</p><a id="more"></a><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://jingyan.baidu.com/article/25648fc1471e6a9191fd002e.html" target="_blank" rel="noopener">win10 设置系统默认编码为utf-8</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;改完我的记事本里的中文全变&lt;strong&gt;�&lt;/strong&gt;了…&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Windows" scheme="https://sakronos.github.io/Note/categories/Windows/"/>
-    
-      <category term="乱码" scheme="https://sakronos.github.io/Note/categories/Windows/%E4%B9%B1%E7%A0%81/"/>
-    
-    
-      <category term="Windows-10" scheme="https://sakronos.github.io/Note/tags/Windows-10/"/>
     
   </entry>
   
