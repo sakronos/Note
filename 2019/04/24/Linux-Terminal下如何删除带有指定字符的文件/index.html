@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇好了，言归正传">
+<meta name="description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇（2021年初观光：学个吊毛，写个吊毛，起来看番啊） 好了，言归正传">
 <meta name="keywords" content="Server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux Terminal下如何删除带有指定字符的文件">
 <meta property="og:url" content="https://sakronos.github.io/Note/2019/04/24/Linux-Terminal下如何删除带有指定字符的文件/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇好了，言归正传">
+<meta property="og:description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇（2021年初观光：学个吊毛，写个吊毛，起来看番啊） 好了，言归正传">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-04-24T08:46:06.979Z">
+<meta property="og:updated_time" content="2021-01-19T13:36:43.407Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Terminal下如何删除带有指定字符的文件">
-<meta name="twitter:description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇好了，言归正传">
+<meta name="twitter:description" content="水一下，不然这里就完全变成没有生气的代码堆了（还乱的一批）最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇（2021年初观光：学个吊毛，写个吊毛，起来看番啊） 好了，言归正传">
 
 
 
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  274
+                  309
                 </span>
               
 
@@ -455,7 +455,8 @@
       
 
       
-        <p><strong>水一下</strong>，不然这里就完全变成没有生气的代码堆了（还乱的一批）<br>最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）<br>然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇<br>好了，言归正传</p>
+        <p><strong>水一下</strong>，不然这里就完全变成没有生气的代码堆了（还乱的一批）<br>最近几周实在太浪了，完全没学习（=￣ω￣=大概是的吧）<br><del>然后这个博客的硬货数量也还停留在一篇，近期应该再会写一篇</del><br>（2021年初观光：学个吊毛，写个吊毛，起来看番啊）</p>
+<p>好了，言归正传</p>
 <a id="more"></a>
 <h2 id="How-to-search-and-delete-files-who-contain-specific-string-in-name？"><a href="#How-to-search-and-delete-files-who-contain-specific-string-in-name？" class="headerlink" title="How to search and delete files who contain specific string in name？"></a>How to search and delete files who contain specific string in name？</h2><p><strong>Please be careful</strong><br>This following command with the parameter <strong>-delete</strong> deletes all the files with <strong>something</strong> in the name in the specified directory and in all subdirectories.</p>
 <hr>
@@ -470,13 +471,13 @@
 <hr>
 <h3 id="1-For-your-home-folder"><a href="#1-For-your-home-folder" class="headerlink" title="1. For your home folder:"></a>1. For your home folder:</h3><p><strong>Warning: first run a test!!!</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -<span class="built_in">type</span> f -name <span class="string">"*something*"</span></span><br></pre></td></tr></table></figure>
-<p>and than</p>
+<p>and then</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<h3 id="2-For-the-whole-filesystem"><a href="#2-For-the-whole-filesystem" class="headerlink" title="2. For the whole filesystem:"></a>2. For the whole filesystem:</h3><p><strong>Warning: first run a test !!!</strong></p>
+<h3 id="2-For-the-whole-filesystem（从根目录开始搜索）"><a href="#2-For-the-whole-filesystem（从根目录开始搜索）" class="headerlink" title="2. For the whole filesystem（从根目录开始搜索）:"></a>2. For the whole filesystem（从根目录开始搜索）:</h3><p><strong>Warning: first run a test !!!</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find / -<span class="built_in">type</span> f -name <span class="string">"*something*"</span></span><br></pre></td></tr></table></figure>
 <p>and test again and than delete with</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo find / -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
-<h3 id="3-Or-only-in-the-specified-directory"><a href="#3-Or-only-in-the-specified-directory" class="headerlink" title="3. Or only in the specified directory:"></a>3. Or only in the specified directory:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &lt;your_search_starts_here&gt; -maxdepth 1 -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
+<h3 id="3-Or-only-in-the-specified-directory（在指定文件夹下搜索）"><a href="#3-Or-only-in-the-specified-directory（在指定文件夹下搜索）" class="headerlink" title="3. Or only in the specified directory（在指定文件夹下搜索）:"></a>3. Or only in the specified directory（在指定文件夹下搜索）:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &lt;your_search_starts_here&gt; -maxdepth 1 -<span class="built_in">type</span> f -name <span class="string">"*something*"</span> -delete</span><br></pre></td></tr></table></figure>
 <hr>
 <p>And because you have used the tag <strong>locate</strong>:</p>
 <p>The results of a search with <strong>locate</strong> are based on a database. This may be outdated. Start an update with <strong>sudo updatedb</strong>. <strong>find</strong> performs a true search. However, it also takes longer.</p>
@@ -603,7 +604,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">91</span>
+                  <span class="site-state-item-count">92</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -614,7 +615,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -681,7 +682,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-search-and-delete-files-who-contain-specific-string-in-name？"><span class="nav-number">1.</span> <span class="nav-text">How to search and delete files who contain specific string in name？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-For-your-home-folder"><span class="nav-number">1.1.</span> <span class="nav-text">1. For your home folder:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-For-the-whole-filesystem"><span class="nav-number">1.2.</span> <span class="nav-text">2. For the whole filesystem:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Or-only-in-the-specified-directory"><span class="nav-number">1.3.</span> <span class="nav-text">3. Or only in the specified directory:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-search-and-delete-files-who-contain-specific-string-in-name？"><span class="nav-number">1.</span> <span class="nav-text">How to search and delete files who contain specific string in name？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-For-your-home-folder"><span class="nav-number">1.1.</span> <span class="nav-text">1. For your home folder:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-For-the-whole-filesystem（从根目录开始搜索）"><span class="nav-number">1.2.</span> <span class="nav-text">2. For the whole filesystem（从根目录开始搜索）:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Or-only-in-the-specified-directory（在指定文件夹下搜索）"><span class="nav-number">1.3.</span> <span class="nav-text">3. Or only in the specified directory（在指定文件夹下搜索）:</span></a></li></ol></li></ol></div>
             
 
           </div>
