@@ -90,7 +90,7 @@
 <meta property="og:description" content="上回我们说到，SB疼逊云轻量应用服务器只能从这儿进，我迟迟没能找到入口，导致我白嫖的1个月只剩十天左右可用了。但是，让人蛋疼的还不止这一点。">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://sakronos.github.io/Note/2021/01/24/纯吐槽：SB疼逊云轻量应用服务器/img/changepassword.png">
-<meta property="og:updated_time" content="2021-01-24T13:49:58.722Z">
+<meta property="og:updated_time" content="2021-01-24T13:55:59.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="纯吐槽：SB疼逊云轻量应用服务器">
 <meta name="twitter:description" content="上回我们说到，SB疼逊云轻量应用服务器只能从这儿进，我迟迟没能找到入口，导致我白嫖的1个月只剩十天左右可用了。但是，让人蛋疼的还不止这一点。">
@@ -420,7 +420,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  379
+                  514
                 </span>
               
 
@@ -436,7 +436,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  1
+                  2
                 </span>
               
             </div>
@@ -461,6 +461,10 @@
 <a id="more"></a>
 <h2 id="SB疼逊云轻量应用服务器"><a href="#SB疼逊云轻量应用服务器" class="headerlink" title="SB疼逊云轻量应用服务器"></a>SB疼逊云轻量应用服务器</h2><h2 id="1-重置密码默认不是重置root密码"><a href="#1-重置密码默认不是重置root密码" class="headerlink" title="1. 重置密码默认不是重置root密码"></a>1. 重置密码默认不是重置root密码</h2><p><img src="img/changepassword.png" alt><br>虽然，虽然，我好像能够理解疼逊的做法，但是，但是，我从别的地方都是这么过来的呀……</p>
 <p>我输了三回密码，都不对，回来一看，这默认改的是啥密码啊，默认用户不是<code>lighthouse</code>吗？默默地选择指定用户名，把root密码改了。（后来发现文档里说<code>sudo passwd root</code>命令可以直接改root密码，我感到害怕和自己的无知）</p>
+<p>关于为啥这边能够执行这个命令，下面这段话解释得不错：</p>
+<p><code>The missing piece of this puzzle is that not everyone is allowed to use sudo. In fact, the way that sudo is configured by default, only one group of users is allowed to do that. The user you created when you installed the system is automatically put into that group, but you can create users who aren&#39;t. You can even take yourself out of that group if you really want to. You can even set sudo up so that some users (or groups of users) are only allowed to do certain specific things.</code></p>
+<p>来源：<a href="https://askubuntu.com/questions/249598/why-does-sudo-passwd-root-reset-my-root-password-is-this-a-security-risk" target="_blank" rel="noopener">Why does <code>sudo passwd root</code> reset my root password? Is this a security risk?
+</a></p>
 <h2 id="2-使用-Ubuntu-镜像创建的实例默认禁用-root-用户名通过密码的方式登录实例。"><a href="#2-使用-Ubuntu-镜像创建的实例默认禁用-root-用户名通过密码的方式登录实例。" class="headerlink" title="2. 使用 Ubuntu 镜像创建的实例默认禁用 root 用户名通过密码的方式登录实例。"></a>2. 使用 Ubuntu 镜像创建的实例默认禁用 root 用户名通过密码的方式登录实例。</h2><p>参见<a href="https://cloud.tencent.com/document/product/1207/44578" target="_blank" rel="noopener">注意事项</a></p>
 <p>啊这，这好像也有点多此一举，隔壁CVM都没有这限制，别的地方也一般不限制这个啊，比如阿里的轻量应用服务器就是不限制的说。</p>
 <p>启用root用户密码登录的方法参见下面链接：<br><a href="https://cloud.tencent.com/document/product/1207/44569#ubuntu-.E7.B3.BB.E7.BB.9F.E5.A6.82.E4.BD.95.E4.BD.BF.E7.94.A8-root-.E7.94.A8.E6.88.B7.E7.99.BB.E5.BD.95.E5.AE.9E.E4.BE.8B.EF.BC.9F" target="_blank" rel="noopener">Ubuntu 系统如何使用 root 用户登录实例？</a></p>
@@ -504,6 +508,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Note/2021/01/27/Resilio-Sync/" rel="prev" title="Resilio Sync">
+                Resilio Sync <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -583,7 +591,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">96</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -594,7 +602,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">114</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -605,7 +613,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
