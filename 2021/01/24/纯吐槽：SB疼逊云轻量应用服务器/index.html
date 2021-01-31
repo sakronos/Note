@@ -89,12 +89,12 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="上回我们说到，SB疼逊云轻量应用服务器只能从这儿进，我迟迟没能找到入口，导致我白嫖的1个月只剩十天左右可用了。但是，让人蛋疼的还不止这一点。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://sakronos.github.io/Note/2021/01/24/img/changepassword.png">
-<meta property="og:updated_time" content="2021-01-31T03:46:15.772Z">
+<meta property="og:image" content="https://sakronos.github.io/Note/2021/01/24/Note/img/changepassword.png">
+<meta property="og:updated_time" content="2021-01-31T03:54:16.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="纯吐槽：SB疼逊云轻量应用服务器">
 <meta name="twitter:description" content="上回我们说到，SB疼逊云轻量应用服务器只能从这儿进，我迟迟没能找到入口，导致我白嫖的1个月只剩十天左右可用了。但是，让人蛋疼的还不止这一点。">
-<meta name="twitter:image" content="https://sakronos.github.io/Note/2021/01/24/img/changepassword.png">
+<meta name="twitter:image" content="https://sakronos.github.io/Note/2021/01/24/Note/img/changepassword.png">
 
 
 
@@ -459,7 +459,7 @@
       
         <p>上回我们说到，SB疼逊云轻量应用服务器只能从<a href="https://console.cloud.tencent.com/lighthouse/" target="_blank" rel="noopener">这儿进</a>，我迟迟没能找到入口，导致我白嫖的1个月只剩十天左右可用了。但是，让人蛋疼的还不止这一点。</p>
 <a id="more"></a>
-<h2 id="SB疼逊云轻量应用服务器"><a href="#SB疼逊云轻量应用服务器" class="headerlink" title="SB疼逊云轻量应用服务器"></a>SB疼逊云轻量应用服务器</h2><h2 id="1-重置密码默认不是重置root密码"><a href="#1-重置密码默认不是重置root密码" class="headerlink" title="1. 重置密码默认不是重置root密码"></a>1. 重置密码默认不是重置root密码</h2><p><img src="../img/changepassword.png" alt><br>虽然，虽然，我好像能够理解疼逊的做法，但是，但是，我从别的地方都是这么过来的呀……</p>
+<h2 id="SB疼逊云轻量应用服务器"><a href="#SB疼逊云轻量应用服务器" class="headerlink" title="SB疼逊云轻量应用服务器"></a>SB疼逊云轻量应用服务器</h2><h2 id="1-重置密码默认不是重置root密码"><a href="#1-重置密码默认不是重置root密码" class="headerlink" title="1. 重置密码默认不是重置root密码"></a>1. 重置密码默认不是重置root密码</h2><p><img src="../Note/img/changepassword.png" alt><br>虽然，虽然，我好像能够理解疼逊的做法，但是，但是，我从别的地方都是这么过来的呀……</p>
 <p>我输了三回密码，都不对，回来一看，这默认改的是啥密码啊，默认用户不是<code>lighthouse</code>吗？默默地选择指定用户名，把root密码改了。（后来发现文档里说<code>sudo passwd root</code>命令可以直接改root密码，我感到害怕和自己的无知）</p>
 <p>关于为啥这边能够执行这个命令，下面这段话解释得不错：</p>
 <p><code>The missing piece of this puzzle is that not everyone is allowed to use sudo. In fact, the way that sudo is configured by default, only one group of users is allowed to do that. The user you created when you installed the system is automatically put into that group, but you can create users who aren&#39;t. You can even take yourself out of that group if you really want to. You can even set sudo up so that some users (or groups of users) are only allowed to do certain specific things.</code></p>
