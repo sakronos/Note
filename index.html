@@ -709,7 +709,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Note/2021/03/06/使用Clash-APIj切换节点/" itemprop="url">使用Clash-APIj切换节点</a></h1>
+                <a class="post-title-link" href="/Note/2021/03/06/使用Clash-APIj切换节点/" itemprop="url">使用Clash-API切换节点</a></h1>
         
 
         <div class="post-meta">
@@ -782,7 +782,7 @@
 
           
           
-             <span id="/Note/2021/03/06/使用Clash-APIj切换节点/" class="leancloud_visitors" data-flag-title="使用Clash-APIj切换节点">
+             <span id="/Note/2021/03/06/使用Clash-APIj切换节点/" class="leancloud_visitors" data-flag-title="使用Clash-API切换节点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1016,7 +1016,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  8.7k
+                  8.8k
                 </span>
               
 
@@ -1032,7 +1032,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  34
+                  35
                 </span>
               
             </div>
@@ -1073,7 +1073,8 @@
 <p>果断把之前信邪设的国内源全部删掉（这条命令是在<code>/etc/pacman.d/mirrorlist</code>的注释里找到的，当时照着Arch Wiki以为这里面会有很多镜像，结果发现我的里面只剩5条China源了，可能与我执行过<code>pacman-mirrors -c China -m rank</code>有关）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman-mirrors -c all</span><br></pre></td></tr></table></figure>
 <p>会花上不少时间，大部分都是Timeout，但别慌，最后能留下来不少正常的源。</p>
-<p>又跑了遍<code>pacman -Syyu</code>(Reference:<a href="https://wiki.archlinux.org/index.php/Mirrors_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="noopener">强制 pacman 刷新软件包列表</a>#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8))，去睡觉了，起床后重启下，要是又崩了，我TM这辈子都不滚动更新了。</p>
+<p>又跑了遍<code>pacman -Syyu</code>（Reference:<a href="https://bit.ly/38iWbjA" target="_blank" rel="noopener">强制 pacman 刷新软件包列表</a>），去睡觉了，起床后重启下，要是又崩了，我TM这辈子都不滚动更新了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">上一段中的链接有英文括号，Hexo不能正常解析，故换成了新浪的短链接。原链接在这里：</span><br><span class="line"></span><br><span class="line">https://wiki.archlinux.org/index.php/Mirrors_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8</span><br><span class="line"></span><br><span class="line">英文版链接：https://wiki.archlinux.org/index.php/Mirrors</span><br></pre></td></tr></table></figure>
 <p>哦，还有。之前听Arch Wiki中文版建议，LANG设了en_SG.UTF-8，发现大大的没必要。直接设en_US算了。毕竟建议的原因说单位货币之类的能单独改。</p>
 <p>装Wine-QQ本来指望能防止QQ扫盘的，现在看来只有qq只扫C盘时能起到防护作用。WIne直接把<code>HOME</code>暴露成<code>Y:</code>，<code>/</code>暴露成<code>Z:</code>。</p>
 <h4 id="2021-02-10-下午晚些时候"><a href="#2021-02-10-下午晚些时候" class="headerlink" title="2021/02/10 下午晚些时候"></a>2021/02/10 下午晚些时候</h4><p>滚动更新没炸，好耶，又可以继续作死了。</p>
