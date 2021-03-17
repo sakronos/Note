@@ -118,20 +118,48 @@
   </entry>
   
   <entry>
+    <title>iOS TG进入受限群组（转载）</title>
+    <link href="https://sakronos.github.io/Note/2021/03/07/%E7%A7%BB%E5%8A%A8%E7%AB%AFTG%E8%BF%9B%E5%85%A5%E5%8F%97%E9%99%90%E7%BE%A4%E7%BB%84/"/>
+    <id>https://sakronos.github.io/Note/2021/03/07/%E7%A7%BB%E5%8A%A8%E7%AB%AFTG%E8%BF%9B%E5%85%A5%E5%8F%97%E9%99%90%E7%BE%A4%E7%BB%84/</id>
+    <published>2021-03-07T05:38:34.000Z</published>
+    <updated>2021-03-17T08:42:24.239Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="通过Windows客户端解除iOS端限制"><a href="#通过Windows客户端解除iOS端限制" class="headerlink" title="通过Windows客户端解除iOS端限制"></a>通过Windows客户端解除iOS端限制</h2><p>在<code>Windows</code>上将 Telegram 电脑客户端更新至 <code>V1.9.3</code>及以上版本，点击 <code>Setting&gt;&gt;&gt;&gt;Privacy And Security&gt;&gt;&gt;&gt;Sensitive content</code>，开启 <code>Disable filtering</code></p><p>在苹果手机上将 Telegram 客户端更新至最新版本，后台关掉客户端重启，即可进入被封禁的开车群组/频道。但是，仍然进不了因为版权被封禁的群组/频道。</p><p>原文中还可以通过网页版解除限制等等别的奇技淫巧，可以直接看下文链接。</p><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://aneeo.com/3508.html" target="_blank" rel="noopener">苹果（iOS）进入Telegram受限群组/频道教程</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;通过Windows客户端解除iOS端限制&quot;&gt;&lt;a href=&quot;#通过Windows客户端解除iOS端限制&quot; class=&quot;headerlink&quot; title=&quot;通过Windows客户端解除iOS端限制&quot;&gt;&lt;/a&gt;通过Windows客户端解除iOS端限制&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="受限" scheme="https://sakronos.github.io/Note/categories/%E5%8F%97%E9%99%90/"/>
+    
+      <category term="Telegram" scheme="https://sakronos.github.io/Note/categories/%E5%8F%97%E9%99%90/Telegram/"/>
+    
+    
+      <category term="Telegram" scheme="https://sakronos.github.io/Note/tags/Telegram/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Youtube关闭视频标题自动翻译</title>
     <link href="https://sakronos.github.io/Note/2021/03/07/Youtube%E5%85%B3%E9%97%AD%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91/"/>
     <id>https://sakronos.github.io/Note/2021/03/07/Youtube%E5%85%B3%E9%97%AD%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91/</id>
     <published>2021-03-07T05:38:09.000Z</published>
-    <updated>2021-03-17T08:40:15.440Z</updated>
+    <updated>2021-03-17T08:42:28.331Z</updated>
     
-    <content type="html"><![CDATA[<p>这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）</p>]]></content>
+    <content type="html"><![CDATA[<p>这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）</p><p>通过Youtube图标左边的导视ICON，进入Youtube设置，这里的<code>总是显示字幕</code>默认是勾选的，将其取消勾选。现在，主页的视频标题可能会恢复成原来的语言。</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）&lt;/p&gt;
-
+&lt;p&gt;通过Youtube图标左边的导视ICON，进入Youtube设置，这里的&lt;code&gt;总是显示字幕&lt;/code&gt;默认是勾选的，将其取消勾选。现在，主页的视频标题可能会恢复成原来的语言
       
     
     </summary>
@@ -552,32 +580,6 @@
     
     
       <category term="计算机常见故障" scheme="https://sakronos.github.io/Note/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>本站检索功能故障，大概是不会修复了</title>
-    <link href="https://sakronos.github.io/Note/2021/01/17/%E6%9C%AC%E7%AB%99%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%95%85%E9%9A%9C%EF%BC%8C%E5%A4%A7%E6%A6%82%E6%98%AF%E4%B8%8D%E4%BC%9A%E4%BF%AE%E5%A4%8D%E4%BA%86/"/>
-    <id>https://sakronos.github.io/Note/2021/01/17/%E6%9C%AC%E7%AB%99%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%95%85%E9%9A%9C%EF%BC%8C%E5%A4%A7%E6%A6%82%E6%98%AF%E4%B8%8D%E4%BC%9A%E4%BF%AE%E5%A4%8D%E4%BA%86/</id>
-    <published>2021-01-17T02:09:52.000Z</published>
-    <updated>2021-01-17T03:13:35.304Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR [hexo-algolia] Record at the position 37 objectID=ff24**************f is too big size=3******** bytes. Contact us <span class="keyword">if</span> you need an extended quota</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
-      
-    
-    </summary>
-    
-    
-      <category term="公告" scheme="https://sakronos.github.io/Note/categories/%E5%85%AC%E5%91%8A/"/>
-    
-    
-      <category term="公告" scheme="https://sakronos.github.io/Note/tags/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   
