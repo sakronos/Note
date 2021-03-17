@@ -118,32 +118,29 @@
   </entry>
   
   <entry>
-    <title>移动端TG进入受限群组</title>
-    <link href="https://sakronos.github.io/Note/2021/03/07/%E7%A7%BB%E5%8A%A8%E7%AB%AFTG%E8%BF%9B%E5%85%A5%E5%8F%97%E9%99%90%E7%BE%A4%E7%BB%84/"/>
-    <id>https://sakronos.github.io/Note/2021/03/07/%E7%A7%BB%E5%8A%A8%E7%AB%AFTG%E8%BF%9B%E5%85%A5%E5%8F%97%E9%99%90%E7%BE%A4%E7%BB%84/</id>
-    <published>2021-03-07T05:38:34.000Z</published>
-    <updated>2021-03-07T06:38:34.556Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Youtube关闭视频标题自动翻译</title>
     <link href="https://sakronos.github.io/Note/2021/03/07/Youtube%E5%85%B3%E9%97%AD%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91/"/>
     <id>https://sakronos.github.io/Note/2021/03/07/Youtube%E5%85%B3%E9%97%AD%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91/</id>
     <published>2021-03-07T05:38:09.000Z</published>
-    <updated>2021-03-07T06:38:09.788Z</updated>
+    <updated>2021-03-17T08:40:15.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）&lt;/p&gt;
+
+      
     
     </summary>
     
     
+      <category term="Youtube" scheme="https://sakronos.github.io/Note/categories/Youtube/"/>
+    
+    
+      <category term="Youtube" scheme="https://sakronos.github.io/Note/tags/Youtube/"/>
     
   </entry>
   
@@ -555,6 +552,32 @@
     
     
       <category term="计算机常见故障" scheme="https://sakronos.github.io/Note/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本站检索功能故障，大概是不会修复了</title>
+    <link href="https://sakronos.github.io/Note/2021/01/17/%E6%9C%AC%E7%AB%99%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%95%85%E9%9A%9C%EF%BC%8C%E5%A4%A7%E6%A6%82%E6%98%AF%E4%B8%8D%E4%BC%9A%E4%BF%AE%E5%A4%8D%E4%BA%86/"/>
+    <id>https://sakronos.github.io/Note/2021/01/17/%E6%9C%AC%E7%AB%99%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%E6%95%85%E9%9A%9C%EF%BC%8C%E5%A4%A7%E6%A6%82%E6%98%AF%E4%B8%8D%E4%BC%9A%E4%BF%AE%E5%A4%8D%E4%BA%86/</id>
+    <published>2021-01-17T02:09:52.000Z</published>
+    <updated>2021-01-17T03:13:35.304Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR [hexo-algolia] Record at the position 37 objectID=ff24**************f is too big size=3******** bytes. Contact us <span class="keyword">if</span> you need an extended quota</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="公告" scheme="https://sakronos.github.io/Note/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+      <category term="公告" scheme="https://sakronos.github.io/Note/tags/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   
