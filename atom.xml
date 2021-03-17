@@ -150,17 +150,13 @@
     <link href="https://sakronos.github.io/Note/2021/03/07/Youtube%E5%85%B3%E9%97%AD%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91/"/>
     <id>https://sakronos.github.io/Note/2021/03/07/Youtube%E5%85%B3%E9%97%AD%E8%A7%86%E9%A2%91%E6%A0%87%E9%A2%98%E8%87%AA%E5%8A%A8%E7%BF%BB%E8%AF%91/</id>
     <published>2021-03-07T05:38:09.000Z</published>
-    <updated>2021-03-17T08:42:28.331Z</updated>
+    <updated>2021-03-17T08:59:55.477Z</updated>
     
-    <content type="html"><![CDATA[<p>这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）</p><p>通过Youtube图标左边的导视ICON，进入Youtube设置，这里的<code>总是显示字幕</code>默认是勾选的，将其取消勾选。现在，主页的视频标题可能会恢复成原来的语言。</p>]]></content>
+    <content type="html"><![CDATA[<p>这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）</p><a id="more"></a><p>通过Youtube图标左边的导视ICON，进入Youtube设置，这里的<code>总是显示字幕</code>默认是勾选的，将其取消勾选。现在，主页的视频标题可能会恢复成原来的语言。</p><p><img src="https://sakronos.github.io/Note/img/youtube-02-2021.png" alt></p><p>改完之后，Manjaro Firefox上的YouTube偶尔还能看到中文机翻的标题，但的确有部分标题变回<code>我认为的原文了</code>（因为我的确不知道视频投稿时标题是什么文字）。</p><h6 id="2021-03-更新"><a href="#2021-03-更新" class="headerlink" title="2021/03 更新"></a>2021/03 更新</h6><p>今天发现<code>播放和效果</code>页和上图已经不大一样了，不清楚是地区差异还是网页改版了。（上图为Manjaro Firefox 简中，今天看则是Windows Chrome 繁中；我之前取消勾选的<code>总是显示字幕</code>变成了<code>永远显示原文字幕</code>，且显示勾选）</p><p><img src="https://sakronos.github.io/Note/img/youtube-03-2021.png" alt></p><p>今天我又看了看之前的韩国油管主视频标题，标题变成英文了……（不过总比机翻中文好，至少眼不见为净）</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）&lt;/p&gt;
-&lt;p&gt;通过Youtube图标左边的导视ICON，进入Youtube设置，这里的&lt;code&gt;总是显示字幕&lt;/code&gt;默认是勾选的，将其取消勾选。现在，主页的视频标题可能会恢复成原来的语言
-      
+      &lt;p&gt;这个……好像很难办，不过可以试试下面的方法。或许、可能有用……（完全没有底气）&lt;/p&gt;
     
     </summary>
     
