@@ -73,17 +73,28 @@
   </entry>
   
   <entry>
-    <title>插入图片</title>
+    <title>Latex 插入图片</title>
     <link href="https://sakronos.github.io/Note/2021/03/07/Latex%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>https://sakronos.github.io/Note/2021/03/07/Latex%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
     <published>2021-03-07T05:39:23.000Z</published>
-    <updated>2021-03-07T06:39:23.247Z</updated>
+    <updated>2021-03-18T09:14:03.959Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Latex-插入图片（Mark，还没看）"><a href="#Latex-插入图片（Mark，还没看）" class="headerlink" title="Latex 插入图片（Mark，还没看）"></a>Latex 插入图片（Mark，还没看）</h3><ol><li><a href="[https://zhuanlan.zhihu.com/p/32925549](https://zhuanlan.zhihu.com/p/32925549">LaTeX排版札记：part 4—插入图片（并排显示、自定义编号）</a>)</li><li><a href="[https://tex.stackexchange.com/questions/139401/how-to-use-graphicspath](https://tex.stackexchange.com/questions/139401/how-to-use-graphicspath">How to use \graphicspath?</a>)</li></ol>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Latex-插入图片（Mark，还没看）&quot;&gt;&lt;a href=&quot;#Latex-插入图片（Mark，还没看）&quot; class=&quot;headerlink&quot; title=&quot;Latex 插入图片（Mark，还没看）&quot;&gt;&lt;/a&gt;Latex 插入图片（Mark，还没看）&lt;/h3&gt;&lt;
+      
     
     </summary>
     
     
+      <category term="TeX" scheme="https://sakronos.github.io/Note/categories/TeX/"/>
+    
+    
+      <category term="TeX" scheme="https://sakronos.github.io/Note/tags/TeX/"/>
     
   </entry>
   
@@ -116,17 +127,31 @@
   </entry>
   
   <entry>
-    <title>精度丢失</title>
+    <title>Java 精度丢失</title>
     <link href="https://sakronos.github.io/Note/2021/03/07/Java%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1/"/>
     <id>https://sakronos.github.io/Note/2021/03/07/Java%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1/</id>
     <published>2021-03-07T05:38:49.000Z</published>
-    <updated>2021-03-07T06:38:49.627Z</updated>
+    <updated>2021-03-18T09:11:26.179Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Java-精度丢失（转载）"><a href="#Java-精度丢失（转载）" class="headerlink" title="Java 精度丢失（转载）"></a>Java 精度丢失（转载）</h3><ol><li><a href="[https://blog.csdn.net/tomcat_2014/article/details/51453988](https://blog.csdn.net/tomcat_2014/article/details/51453988">java数值范围以及float与double精度丢失问题</a>)（这个比较实用）</li><li><a href="[https://www.cnblogs.com/backwords/p/9826773.html](https://www.cnblogs.com/backwords/p/9826773.html">Java 浮点数精度丢失</a>)</li></ol>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Java-精度丢失（转载）&quot;&gt;&lt;a href=&quot;#Java-精度丢失（转载）&quot; class=&quot;headerlink&quot; title=&quot;Java 精度丢失（转载）&quot;&gt;&lt;/a&gt;Java 精度丢失（转载）&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;[https://bl
+      
     
     </summary>
     
     
+      <category term="编程" scheme="https://sakronos.github.io/Note/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Java" scheme="https://sakronos.github.io/Note/categories/%E7%BC%96%E7%A8%8B/Java/"/>
+    
+    
+      <category term="Java" scheme="https://sakronos.github.io/Note/tags/Java/"/>
     
   </entry>
   
