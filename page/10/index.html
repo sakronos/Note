@@ -299,6 +299,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/12/31/VisualStudio2019C-引用C-DLL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Note/2019/12/31/VisualStudio2019C-引用C-DLL/" itemprop="url">VisualStudio2019C#引用C++DLL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-12-31T12:19:13+09:00">
+                2019-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2019/12/31/VisualStudio2019C-引用C-DLL/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/12/31/VisualStudio2019C-引用C-DLL/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2019/12/31/VisualStudio2019C-引用C-DLL/" class="leancloud_visitors" data-flag-title="VisualStudio2019C#引用C++DLL">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  178
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一定要确保解决方案平台一致（x64-x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决"><a href="#一定要确保解决方案平台一致（x64-x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决" class="headerlink" title="一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决"></a>一定要确保解决方案平台一致（x64/x86），这个可能会导致很多不同的问题形式，但只要设定为一样的平台，即可解决</h3><h3 id="DLL头文件"><a href="#DLL头文件" class="headerlink" title="DLL头文件"></a>DLL头文件</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> __declspec(dllexport) <span class="function"><span class="keyword">void</span> <span class="title">printText</span><span class="params">(<span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day, <span class="keyword">int</span> hour, <span class="keyword">char</span> station[<span class="number">6</span>])</span></span>;		<span class="comment">//不加"C"会出现找不到函数的问题</span></span><br></pre></td></tr></table></figure>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>由于C语言编写的DLL文件不支持String类型，调用DLL内函数需用char类型，故需转换常用的String至char<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> str=<span class="string">"content"</span>;</span><br><span class="line"><span class="keyword">char</span>[] c=str.toArray();</span><br><span class="line"></span><br><span class="line"><span class="comment">//顺便贴个char[]转字符串</span></span><br><span class="line">str=<span class="keyword">new</span> String(c);</span><br></pre></td></tr></table></figure></p>
+<p><strong>参考资料</strong></p>
+<ol>
+<li><a href="https://www.cnblogs.com/lonelyxmas/p/10748007.html" target="_blank" rel="noopener">VS2017中 C# dll引用(C生成dll，C++生成dll)小结</a></li>
+<li><a href="https://blog.csdn.net/lwwl12/article/details/86655488" target="_blank" rel="noopener">c++创建dll导出函数名称</a></li>
+<li><a href="https://www.cnblogs.com/xinyunyishui/p/10777353.html" target="_blank" rel="noopener">c# char[]数组和字符串之间互转</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/12/19/IDEA项目配置Hibernate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2168,215 +2380,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/06/28/Eclipse使用帮助/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kronos">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Note/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PERFECT BLUE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Note/2019/06/28/Eclipse使用帮助/" itemprop="url">Eclipse使用帮助</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-06-28T10:27:00+09:00">
-                2019-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
-                    <span itemprop="name">帮助</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Note/2019/06/28/Eclipse使用帮助/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/06/28/Eclipse使用帮助/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Note/2019/06/28/Eclipse使用帮助/" class="leancloud_visitors" data-flag-title="Eclipse使用帮助">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字數統計&#58;</span>
-                
-                <span title="字數統計">
-                  169
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
-                
-                <span title="閱讀時長">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>N久没有使用Eclipse与SWT了，记录下上手时遇到的问题。<br>Note拖更的第N+1天…<br>突然想起来之前Hexo推送报错的原因是代码没有 <strong><em>指定语言</em></strong>，借这里记一下，虽说基本上不会找到这的说。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Note/2019/06/28/Eclipse使用帮助/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2427,7 +2430,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-count">114</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2438,7 +2441,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">132</span>
+                  <span class="site-state-item-count">133</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -2449,7 +2452,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>

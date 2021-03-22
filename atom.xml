@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-03-20T15:52:37.047Z</updated>
+  <updated>2021-03-21T06:14:41.064Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>QQ发送图片，预览为黑底</title>
+    <link href="https://sakronos.github.io/Note/2021/03/21/QQ%E5%8F%91%E9%80%81%E5%9B%BE%E7%89%87%EF%BC%8C%E9%A2%84%E8%A7%88%E4%B8%BA%E9%BB%91%E5%BA%95/"/>
+    <id>https://sakronos.github.io/Note/2021/03/21/QQ%E5%8F%91%E9%80%81%E5%9B%BE%E7%89%87%EF%BC%8C%E9%A2%84%E8%A7%88%E4%B8%BA%E9%BB%91%E5%BA%95/</id>
+    <published>2021-03-21T01:52:46.000Z</published>
+    <updated>2021-03-21T06:14:41.064Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天去网上找贴图，发现webp或png格式的图片复制到电脑QQ上，背景都变成黑色的，这还能看吗？于是去搜索QQ能够保留透明背景的传图方式/图片处理方式（直接把透明部分变成能接受的白色）。</p><p>搜到了这篇文章，摘录其中作为结论的一句话。</p><blockquote><p><strong>只有手机QQ才能传高清大图，电脑QQ要传就要传文件或者压缩包</strong></p></blockquote><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol><li><a href="https://blog.csdn.net/qq_34146694/article/details/81327276" target="_blank" rel="noopener">探索qq发送png透明通道丢失的问题</a></li></ol><p>题外话，webp格式的图片电脑端PC看不到，只有手机端能看到……</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天去网上找贴图，发现webp或png格式的图片复制到电脑QQ上，背景都变成黑色的，这还能看吗？于是去搜索QQ能够保留透明背景的传图方式/图片处理方式（直接把透明部分变成能接受的白色）。&lt;/p&gt;
+&lt;p&gt;搜到了这篇文章，摘录其中作为结论的一句话。&lt;/p&gt;
+&lt;blockquot
+      
+    
+    </summary>
+    
+    
+      <category term="技巧" scheme="https://sakronos.github.io/Note/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="QQ" scheme="https://sakronos.github.io/Note/categories/%E6%8A%80%E5%B7%A7/QQ/"/>
+    
+    
+      <category term="QQ" scheme="https://sakronos.github.io/Note/tags/QQ/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AndroidStudio配置模拟器AVD存放路径（转载）</title>
     <link href="https://sakronos.github.io/Note/2021/03/20/AndroidStudio%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%8B%9F%E5%99%A8AVD%E5%AD%98%E6%94%BE%E8%B7%AF%E5%BE%84/"/>
     <id>https://sakronos.github.io/Note/2021/03/20/AndroidStudio%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%8B%9F%E5%99%A8AVD%E5%AD%98%E6%94%BE%E8%B7%AF%E5%BE%84/</id>
     <published>2021-03-20T14:29:25.000Z</published>
-    <updated>2021-03-20T15:52:37.047Z</updated>
+    <updated>2021-03-21T02:24:27.312Z</updated>
     
     <content type="html"><![CDATA[<p>模拟器卡死了，删了重开。考虑到之前把<code>.android</code>移动到了D盘，可能会出现问题。又去搜索了一遍移动模拟器到D盘的教程。</p><p>虽然没有遇到问题，但还是找到一篇和记忆中类似的博文，贴在这里。</p><h5 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h5><p>在贴完博文后，我发现我的情况和正文部分不大一样。我重新创建的模拟器直接放在了我D盘的一个文件夹中，<code>.ini</code>文件也无需更改就和正文中改过的一样。</p><p>我忘了当时是怎么设置的了，当时也没记录下来，真是可惜。<br><a id="more"></a></p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>Android Studio 安装之后，默认的会给我们创建一个 Nexus 的模拟器，这个模拟器的镜像文件放在了<code>C:\Users\Administrator\.android</code>中。</p><p>其中的<code>*.avd</code>文件夹就是用来存放，模拟器镜像文件的。</p><p>进入<code>C:\Users\Administrator\.android\avd</code>。<br><img src="https://img-blog.csdn.net/20150222214057597?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDk0MDMwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p><p>现在,你只需要将 <code>Nexus_5_API_21_x86.avd</code>文件夹移出c盘，然后配置<code>Nexus_5_API_21_x86.ini</code>文件即可</p><p>将<code>Nexus_5_API_21_x86.avd</code>文件夹剪切到目标目录中，<br><img src="https://img-blog.csdn.net/20150222214641705?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDk0MDMwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p><p>现在，修改<code>Nexus_5_API_21_x86.ini</code>文件，修改图中 标记部分<br><img src="https://img-blog.csdn.net/20150222215029525?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDk0MDMwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p><p>原先的内容是<code>C:\Users\Administrator\.android\avd\</code></p><p>修改为你要存放的路径，例如：</p><p><code>D:\BaiduYunDownload\AndroidStudio-AVD\</code></p><p>保存。</p><p>然后打开 android studio 开启AVD如果显示了 默认创建的Nexus5模拟器，则成功。<br><img src="https://img-blog.csdn.net/20150222215940612?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDk0MDMwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p><h4 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h4><ol><li><a href="https://blog.csdn.net/u010940300/article/details/43909509" target="_blank" rel="noopener">Android Studio 配置模拟器AVD存放路径（默认在c盘，解决c盘空间不够问题）</a></li></ol><h4 id="别的解决方式"><a href="#别的解决方式" class="headerlink" title="别的解决方式"></a>别的解决方式</h4><ol><li><a href="https://blog.csdn.net/chb_1_2/article/details/89632214" target="_blank" rel="noopener">解决AndroidStudio 安卓模拟器安装在D盘问题</a></li></ol><p>大家知道安卓的模拟器位置默认是放在C盘的，这样比较占空间，可以通过创建<code>符号链接</code>的方式来“欺骗”AS，从而创建到D盘：</p><p>以管理员身份打开命令提示符，输入以下命令：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /D C:\Users\xxx\.android\avd D:\AndroidStudio\androidC\avd</span><br></pre></td></tr></table></figure></p><p>其中<code>C:\Users\xxx\.android\avd</code>是默认的安装位置，<code>xxx</code>是你的用户名</p><p><code>D:\AndroidStudio\androidC\avd</code> 是你要创建到的位置</p><p>PS:如果提示文件已存在时，无法创建该文件 ，那是因为   C:\Users\xxx.android\avd  中的avd已存在，删了就好（备份好）</p>]]></content>
     
@@ -35,6 +65,12 @@
     </summary>
     
     
+      <category term="Android Studio" scheme="https://sakronos.github.io/Note/categories/Android-Studio/"/>
+    
+      <category term="问题" scheme="https://sakronos.github.io/Note/categories/Android-Studio/%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="Android Studio" scheme="https://sakronos.github.io/Note/tags/Android-Studio/"/>
     
   </entry>
   
@@ -579,32 +615,6 @@
 &lt;/ol&gt;
 &lt;p&gt;似乎修复在今早8点已经提交，等待下个版本更新再看到底好了没。&lt;/p&gt;
 &lt;h1 id=&quot;原文&quot;&gt;&lt;a href=&quot;#原文&quot; class=&quot;headerlink&quot; title=&quot;原文&quot;&gt;&lt;/a&gt;原文&lt;/h1&gt;&lt;p&gt;这个问题已经忍无可忍了（当然，要是解决不了，还得忍(bgm38)）之第二篇。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Windows" scheme="https://sakronos.github.io/Note/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="https://sakronos.github.io/Note/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Win10下显示模糊新添一员-YU-NO</title>
-    <link href="https://sakronos.github.io/Note/2021/01/22/Win10%E4%B8%8B%E6%98%BE%E7%A4%BA%E6%A8%A1%E7%B3%8A%E6%96%B0%E6%B7%BB%E4%B8%80%E5%91%98-YU-NO/"/>
-    <id>https://sakronos.github.io/Note/2021/01/22/Win10%E4%B8%8B%E6%98%BE%E7%A4%BA%E6%A8%A1%E7%B3%8A%E6%96%B0%E6%B7%BB%E4%B8%80%E5%91%98-YU-NO/</id>
-    <published>2021-01-22T06:03:53.000Z</published>
-    <updated>2021-01-22T08:30:14.914Z</updated>
-    
-    <content type="html"><![CDATA[<p>刚解决完VSC的模糊问题，这边有的新的模糊到看不清的应用了。好像还不止这个应用。得找个办法一劳永逸得解决掉这破问题才是。</p><p>这个问题已经忍无可忍了（当然，要是解决不了，还得忍(bgm38)）之第三篇。</p><p>回家后，连上显示器后的新问题。之前学校里双屏没这问题呀。</p><p>这几天真是受够了Windows了（和中国移动大墙中墙）。我☀。</p><a id="more"></a><h2 id="我的应对方式"><a href="#我的应对方式" class="headerlink" title="我的应对方式"></a>我的应对方式</h2><ol><li>终于忍不下去了，打开NVIDIA控制面板，把FXAA关了。</li><li>得知Windows有这么个玩意儿，<br><a href="https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-10-%E4%B8%AD%E4%BF%AE%E5%A4%8D%E6%98%BE%E7%A4%BA%E6%A8%A1%E7%B3%8A%E7%9A%84%E5%BA%94%E7%94%A8-e9fe34ab-e7e7-bc6f-6695-cb169b51de0f" target="_blank" rel="noopener">在 Windows 10 中修复显示模糊的应用</a>，看了下，是默认开着的，果断关了。</li></ol><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>没有任何用处。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>YU-NO无论是在大屏还是小屏上都糊，小屏上要好些。<strong>但是</strong>，在大屏上YU-NO全屏模式下游戏，完全不糊……</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;刚解决完VSC的模糊问题，这边有的新的模糊到看不清的应用了。好像还不止这个应用。得找个办法一劳永逸得解决掉这破问题才是。&lt;/p&gt;
-&lt;p&gt;这个问题已经忍无可忍了（当然，要是解决不了，还得忍(bgm38)）之第三篇。&lt;/p&gt;
-&lt;p&gt;回家后，连上显示器后的新问题。之前学校里双屏没这问题呀。&lt;/p&gt;
-&lt;p&gt;这几天真是受够了Windows了（和中国移动大墙中墙）。我☀。&lt;/p&gt;
     
     </summary>
     
