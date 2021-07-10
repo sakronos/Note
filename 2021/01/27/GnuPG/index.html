@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="施工中……">
+<meta name="description" content="Github Verifed标志GET！">
 <meta name="keywords" content="GPG">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GnuPG">
 <meta property="og:url" content="https://sakronos.github.io/Note/2021/01/27/GnuPG/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="施工中……">
+<meta property="og:description" content="Github Verifed标志GET！">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2021-01-27T11:19:16.453Z">
+<meta property="og:updated_time" content="2021-07-10T15:00:11.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GnuPG">
-<meta name="twitter:description" content="施工中……">
+<meta name="twitter:description" content="Github Verifed标志GET！">
 
 
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  7
+                  288
                 </span>
               
 
@@ -444,7 +444,23 @@
       
 
       
-        <p>施工中……<br><a id="more"></a><br><a href="https://gnupg.org/" target="_blank" rel="noopener">The GNU Privacy Guard</a></p>
+        <p>Github <code>Verifed</code>标志GET！<br><a id="more"></a></p>
+<h1 id="GPG"><a href="#GPG" class="headerlink" title="GPG"></a>GPG</h1><p><a href="https://gnupg.org/" target="_blank" rel="noopener">The GNU Privacy Guard</a></p>
+<h3 id="Verify-Github-Commit-signatures"><a href="#Verify-Github-Commit-signatures" class="headerlink" title="Verify Github Commit signatures"></a>Verify Github Commit signatures</h3><p>生成GPG并为Git签名的方法，参考以下几个网站：</p>
+<ol>
+<li><a href="https://blog.spencerwoo.com/2020/08/wait-this-is-not-my-commit" target="_blank" rel="noopener">震惊！竟然有人在 GitHub 上冒充我的身份！</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/344198727" target="_blank" rel="noopener">2021年，用更现代的方法使用PGP（上）</a></li>
+<li><a href="https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key" target="_blank" rel="noopener">Generating a new GPG key</a></li>
+<li><a href="https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/signing-commits" target="_blank" rel="noopener">Signing commits</a></li>
+</ol>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>Git Commit的用户邮箱、Github认证邮箱和GPG邮箱三者相同时，Commit才会被标注为<code>Verified</code>。</p>
+<p>Git的邮箱的更改方式参见以下博客：<br><a href="https://blog.csdn.net/xingbaozhen1210/article/details/80342212" target="_blank" rel="noopener">git配置用户名和邮箱</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email useremail@qq.com</span><br></pre></td></tr></table></figure>
+<p>你还可能在Commit时遇到以下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gpg: skipped <span class="string">"xxxxxxx"</span>: secret key not available</span><br><span class="line">gpg: signing failed: No secret key</span><br><span class="line">error: gpg failed to sign the tag</span><br><span class="line">error: unable to sign the tag</span><br></pre></td></tr></table></figure></p>
+<p>这可能是没有为Git配置使用的GPG程序的位置，正确配置GPG程序位置可以解决该问题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config –global gpg.program “location of gpg.exe”</span><br></pre></td></tr></table></figure></p>
+<p>Windows系统中，一般你可以在“C:\Program Files (x86)”下找到GPG程序文件夹。</p>
+<p>参考文献：<a href="https://blog.csdn.net/sh21_/article/details/71082422" target="_blank" rel="noopener">gpg: skipped “xxx”: secret key not available的一种解决方法</a></p>
+<p>当然，你也可能想要隐藏你的真实邮箱，请参考这篇博文：<br><a href="https://blog.walterlv.com/post/remove-personal-emails-from-public-repos.html" target="_blank" rel="noopener">在 GitHub 公开仓库中隐藏自己的私人邮箱地址</a></p>
 
       
     </div>
@@ -542,8 +558,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -626,6 +651,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GPG"><span class="nav-number">1.</span> <span class="nav-text">GPG</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Verify-Github-Commit-signatures"><span class="nav-number">1.0.1.</span> <span class="nav-text">Verify Github Commit signatures</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
