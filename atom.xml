@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-06-14T16:47:03.383Z</updated>
+  <updated>2021-07-10T15:11:21.551Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git Bash使用方法</title>
+    <link href="https://sakronos.github.io/Note/2021/07/10/Git-Bash%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0/"/>
+    <id>https://sakronos.github.io/Note/2021/07/10/Git-Bash%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0/</id>
+    <published>2021-07-10T14:06:48.000Z</published>
+    <updated>2021-07-10T15:11:21.551Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git命令老是忘记，干脆直接贴这里。<br><a id="more"></a></p><p>参考博文：<a href="https://blog.csdn.net/qq_36667170/article/details/79085301" target="_blank" rel="noopener">https://blog.csdn.net/qq_36667170/article/details/79085301</a></p><p><img src="https://img-blog.csdnimg.cn/20200425223427978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjY3MTcw,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20200425223427978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjY3MTcw,size_16,color_FFFFFF,t_70"></p><p>这里选择SSH方式的话，相比HTTPS，可以不用配置WorkFlow，并使用SSH Key验证。比起HTTPS方式常常Connection Reset或10054端口错误，SSH方式省心很多。</p><p>关于配置WorkFlow：</p><ol><li><a href="https://blog.walterlv.com/post/github-push-failed-without-workflow-scope.html" target="_blank" rel="noopener">https://blog.walterlv.com/post/github-push-failed-without-workflow-scope.html</a></li><li><a href="https://stackoverflow.com/questions/64059610/how-to-resolve-refusing-to-allow-an-oauth-app-to-create-or-update-workflow-on" target="_blank" rel="noopener">https://stackoverflow.com/questions/64059610/how-to-resolve-refusing-to-allow-an-oauth-app-to-create-or-update-workflow-on</a></li></ol><h3 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h3><p>最近Github老是push失败，不知道为啥，校园网也奇差无比。</p><p>今天因为push失败，想更新Git for Windows，还是因为网络问题更新失败：<a href="https://stackoverflow.com/questions/13790592/how-to-upgrade-git-on-windows-to-the-latest-version" target="_blank" rel="noopener">https://stackoverflow.com/questions/13790592/how-to-upgrade-git-on-windows-to-the-latest-version</a></p><h3 id="打tag"><a href="#打tag" class="headerlink" title="打tag"></a>打tag</h3><p><a href="https://git-scm.com/book/zh/v2/Git-基础-打标签" target="_blank" rel="noopener">Git 基础 - 打标签</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git命令老是忘记，干脆直接贴这里。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://sakronos.github.io/Note/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="https://sakronos.github.io/Note/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>玄学：国区AppleMusic听国区不存在的歌</title>
@@ -529,31 +552,6 @@
     
     
       <category term="Youtube" scheme="https://sakronos.github.io/Note/tags/Youtube/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Clash-API切换节点</title>
-    <link href="https://sakronos.github.io/Note/2021/03/06/%E4%BD%BF%E7%94%A8Clash-APIj%E5%88%87%E6%8D%A2%E8%8A%82%E7%82%B9/"/>
-    <id>https://sakronos.github.io/Note/2021/03/06/%E4%BD%BF%E7%94%A8Clash-APIj%E5%88%87%E6%8D%A2%E8%8A%82%E7%82%B9/</id>
-    <published>2021-03-06T14:34:22.000Z</published>
-    <updated>2021-03-06T15:52:20.772Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近网络很差，机场节点随时可能爆炸。这在电脑重启后很致命，因为像<a href="http://yacd.haishan.me/#/proxies" target="_blank" rel="noopener">YACD</a>这样的DashBoard需要联网后才能使用，我又懒得搞个本地的Dashboard。我的解决方案是利用<code>curl</code>与Clash的RESTful API。</p><a id="more"></a><h3 id="首先，阅读Clash的API的文档"><a href="#首先，阅读Clash的API的文档" class="headerlink" title="首先，阅读Clash的API的文档"></a>首先，阅读Clash的API的文档</h3><p><a href="https://clash.gitbook.io/doc/restful-api/proxies" target="_blank" rel="noopener">RESTful - Proxies</a></p><h5 id="GET-获取所有代理"><a href="#GET-获取所有代理" class="headerlink" title="GET 获取所有代理"></a><code>GET</code> 获取所有代理</h5><p><code>/proxies</code></p><h5 id="PUT-切换-Selector-中选中的代理"><a href="#PUT-切换-Selector-中选中的代理" class="headerlink" title="PUT 切换 Selector 中选中的代理"></a><code>PUT</code> 切换 Selector 中选中的代理</h5><p><code>/proxies/:name</code></p><p>（这边的<code>:name</code>可以为节点名称，也可以为Selector。只要在<code>proxies/</code>后直接加上字符串就可以，不需要引号或者<code>:</code>）</p><p>当前接口只支持切换 Selector 中的代理</p><table><thead><tr><th>Path Parameters</th><th>Body Parameters</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>name</code></td></tr><tr><td><code>string</code></td><td><code>string</code></td></tr><tr><td>代理Selector名称（大小写敏感）</td><td>要切换的代理名字</td></tr></tbody></table><h3 id="接着，curl使用指南"><a href="#接着，curl使用指南" class="headerlink" title="接着，curl使用指南"></a>接着，<code>curl</code>使用指南</h3><p><a href="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html" target="_blank" rel="noopener">curl 的用法指南</a></p><h3 id="最后，使用curl切换节点"><a href="#最后，使用curl切换节点" class="headerlink" title="最后，使用curl切换节点"></a>最后，使用<code>curl</code>切换节点</h3><p>使用<code>/proxies</code>获取所有可用代理，然后<code>curl</code>发送PUT请求解决战斗。</p><h6 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X PUT -H <span class="string">"Content-Type: application/json"</span> -d <span class="string">'&#123;"name":"节点名"&#125;'</span> http://localhost:port/proxies/:Selector</span><br></pre></td></tr></table></figure><p><code>-H</code> 添加 HTTP 请求的标头<code>Content-Type: application/json</code>，根据链接2，不设置标头为<code>application/json</code>可能会有问题。</p><p><code>-d</code> 参数用于发送 POST 请求的数据体。</p><p>最后的网址为clash的<code>external-controller</code>的网址端口，最后Selector为要选择的<code>proxy-groups</code>的名称。</p><p>实际指令类似下面这条：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X PUT -H <span class="string">"Content-Type: application/json"</span> -d <span class="string">'&#123;"name":"HongKong"&#125;'</span> http://127.0.0.1:9090/proxies/Proxy</span><br></pre></td></tr></table></figure><h6 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h6><ol><li><a href="https://github.com/Dreamacro/clash/issues/213" target="_blank" rel="noopener">put / proxies/:name 报错 body invalid  #213</a></li><li><a href="https://github.com/Dreamacro/clash/issues/440" target="_blank" rel="noopener">rest full api 如何重新加载配置文件  #440</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近网络很差，机场节点随时可能爆炸。这在电脑重启后很致命，因为像&lt;a href=&quot;http://yacd.haishan.me/#/proxies&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YACD&lt;/a&gt;这样的DashBoard需要联网后才能使用，我又懒得搞个本地的Dashboard。我的解决方案是利用&lt;code&gt;curl&lt;/code&gt;与Clash的RESTful API。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="翻墙" scheme="https://sakronos.github.io/Note/categories/%E7%BF%BB%E5%A2%99/"/>
-    
-      <category term="Clash" scheme="https://sakronos.github.io/Note/categories/%E7%BF%BB%E5%A2%99/Clash/"/>
-    
-    
-      <category term="Clash" scheme="https://sakronos.github.io/Note/tags/Clash/"/>
     
   </entry>
   
