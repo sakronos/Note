@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:description" content="1ERROR [hexo-algolia] Record at the position 37 objectID=ff24**************f is too big size=3******** bytes. Contact us if you need an extended quota Algolia 有免费和付费服务两种，免费的服务对索引的数量和索引内容的字数有限制比如一篇文章字数">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2021-07-10T15:22:08.363Z">
+<meta property="og:updated_time" content="2021-07-16T14:44:33.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【已修复】 本站检索功能故障，大概是不会修复了">
 <meta name="twitter:description" content="1ERROR [hexo-algolia] Record at the position 37 objectID=ff24**************f is too big size=3******** bytes. Contact us if you need an extended quota Algolia 有免费和付费服务两种，免费的服务对索引的数量和索引内容的字数有限制比如一篇文章字数">
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  242
+                  254
                 </span>
               
 
@@ -450,7 +450,7 @@
 <h2 id="2021-6-15-修复"><a href="#2021-6-15-修复" class="headerlink" title="2021.6.15 修复"></a>2021.6.15 修复</h2><p>检索功能能恢复有两方面的原因：</p>
 <ul>
 <li>Algolia似乎现在能够在报错的情况下还能更新部分索引</li>
-<li>找到问题根源：导致故障的文章的<strong>阅读全文前的文字里有体积较大的图片</strong>，这次暴力调整more标识符的位置，将其放在图片前，强行解决该问题。</li>
+<li>找到问题根源：导致故障的文章的<strong>阅读全文前的文字里有体积较大的图片（可能是我直接插入的base64图片）</strong>，这次暴力调整more标识符的位置，将其放在图片前，强行解决该问题。</li>
 </ul>
 
       
