@@ -299,6 +299,221 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2020/01/05/dotNET-WinForms调用C语言DLL等问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Note/2020/01/05/dotNET-WinForms调用C语言DLL等问题/" itemprop="url">dotNET_WinForms调用C语言DLL等问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-01-05T13:13:10+09:00">
+                2020-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
+                    <span itemprop="name">Program</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Program/帮助/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2020/01/05/dotNET-WinForms调用C语言DLL等问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2020/01/05/dotNET-WinForms调用C语言DLL等问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2020/01/05/dotNET-WinForms调用C语言DLL等问题/" class="leancloud_visitors" data-flag-title="dotNET_WinForms调用C语言DLL等问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  120
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="System-BadImageFormatException”类型的未经处理的异常在-xx-exe-中发生"><a href="#System-BadImageFormatException”类型的未经处理的异常在-xx-exe-中发生" class="headerlink" title="System.BadImageFormatException”类型的未经处理的异常在 xx.exe 中发生"></a>System.BadImageFormatException”类型的未经处理的异常在 xx.exe 中发生</h2><ol>
+<li>有很大的可能性是因为平台目标（X86、X64）不一致</li>
+<li>配置文件版本问题</li>
+</ol>
+<h2 id="读取文本内容"><a href="#读取文本内容" class="headerlink" title="读取文本内容"></a>读取文本内容</h2><pre><code>一次将文本内容全部读完，并返回一个包含全部文本内容的字符串
+</code></pre><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> str = File.ReadAllText(<span class="string">@"c:\temp\ascii.txt"</span>, Encoding.ASCII);</span><br></pre></td></tr></table></figure>
+<p><strong>参考资料</strong></p>
+<ol>
+<li><a href="https://www.cnblogs.com/yinmu/p/10994947.html" target="_blank" rel="noopener">C# winfrom 读取txt文本内容</a></li>
+<li><a href="https://www.cnblogs.com/liaojianwang/p/9377074.html" target="_blank" rel="noopener">System.BadImageFormatException”类型的未经处理的异常在 xx.exe 中发生</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2020/01/01/VisualStudio2019ASP-NET引用DLL指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2165,215 +2380,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2019/10/15/IDEA的Web项目配置JSTL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kronos">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Note/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PERFECT BLUE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Note/2019/10/15/IDEA的Web项目配置JSTL/" itemprop="url">IDEA的Web项目配置JSTL问题板</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-10-15T23:01:31+09:00">
-                2019-10-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/Program/故障/" itemprop="url" rel="index">
-                    <span itemprop="name">故障</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Note/2019/10/15/IDEA的Web项目配置JSTL/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2019/10/15/IDEA的Web项目配置JSTL/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Note/2019/10/15/IDEA的Web项目配置JSTL/" class="leancloud_visitors" data-flag-title="IDEA的Web项目配置JSTL问题板">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字數統計&#58;</span>
-                
-                <span title="字數統計">
-                  479
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
-                
-                <span title="閱讀時長">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这是我使用IDEA后感觉最操蛋的一次（没错这段话是从上一篇文章复制过来的），第二次让我感受到Eclipse的NICE。<br>这次知道了MyEclipse本体自带插件是真的在我不知道的地方帮我做了很多配置工作，以至于我在使用MyEclipse写这类东西的时候丝毫没有磕磕绊绊。<br>最操蛋的是，我网页500页TM是日语的，什么鬼。。。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Note/2019/10/15/IDEA的Web项目配置JSTL/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2424,7 +2430,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">126</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2435,7 +2441,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">142</span>
+                  <span class="site-state-item-count">143</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -2446,7 +2452,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
