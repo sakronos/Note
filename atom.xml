@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-08-01T15:00:34.663Z</updated>
+  <updated>2021-08-20T15:10:32.372Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Manjaro_Desktop_Effects_Suspended</title>
+    <link href="https://sakronos.github.io/Note/2021/08/20/Manjaro-Desktop-Effects-Suspended/"/>
+    <id>https://sakronos.github.io/Note/2021/08/20/Manjaro-Desktop-Effects-Suspended/</id>
+    <published>2021-08-20T14:06:12.000Z</published>
+    <updated>2021-08-20T15:10:32.372Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近一次滚完更新后，发现开机后TG的窗口怪怪的，窗口四周有一圈白色的边框。因缘际会下在<code>Notifications</code>里看到了这条通知：<code>Desktop effects have been suspended by another application. You can resume using the ‘Alt+Shift+F12’ shortcut</code>，无脑按完再打开TG时发现窗口正常了。</p><p>但是接下来几次开机后都遇到了这个情况，不能忍，找到解决方案如下：</p><p>进入系统设置(System Settings) - Workspace Behavior - Desktop Effects，在Appearance栏下有一个选项为“Background contrast”，将其启用。以后开机就不会遇到上述问题了。</p><p><img src="https://sakronos.github.io/Note/img/Manjaro_Background_Contrast.png" alt></p><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://forum.manjaro.org/t/desktop-effects-have-been-suspended-kde-plasma/30705" target="_blank" rel="noopener">Desktop effects have been suspended KDE Plasma</a>           </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近一次滚完更新后，发现开机后TG的窗口怪怪的，窗口四周有一圈白色的边框。因缘际会下在&lt;code&gt;Notifications&lt;/code&gt;里看到了这条通知：&lt;code&gt;Desktop effects have been suspended by another applic
+      
+    
+    </summary>
+    
+    
+      <category term="Manjaro" scheme="https://sakronos.github.io/Note/categories/Manjaro/"/>
+    
+      <category term="KDE Plasma" scheme="https://sakronos.github.io/Note/categories/Manjaro/KDE-Plasma/"/>
+    
+    
+      <category term="KDE Plasma" scheme="https://sakronos.github.io/Note/tags/KDE-Plasma/"/>
+    
+  </entry>
   
   <entry>
     <title>pip安装包或更新pip时出现check_hostname requires server_hostname 错误</title>
@@ -512,32 +540,6 @@
     
     
       <category term="Nintendo" scheme="https://sakronos.github.io/Note/tags/Nintendo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Latex 插入图片</title>
-    <link href="https://sakronos.github.io/Note/2021/03/07/Latex%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
-    <id>https://sakronos.github.io/Note/2021/03/07/Latex%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
-    <published>2021-03-07T05:39:23.000Z</published>
-    <updated>2021-03-18T09:14:03.959Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Latex-插入图片（Mark，还没看）"><a href="#Latex-插入图片（Mark，还没看）" class="headerlink" title="Latex 插入图片（Mark，还没看）"></a>Latex 插入图片（Mark，还没看）</h3><ol><li><a href="[https://zhuanlan.zhihu.com/p/32925549](https://zhuanlan.zhihu.com/p/32925549">LaTeX排版札记：part 4—插入图片（并排显示、自定义编号）</a>)</li><li><a href="[https://tex.stackexchange.com/questions/139401/how-to-use-graphicspath](https://tex.stackexchange.com/questions/139401/how-to-use-graphicspath">How to use \graphicspath?</a>)</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Latex-插入图片（Mark，还没看）&quot;&gt;&lt;a href=&quot;#Latex-插入图片（Mark，还没看）&quot; class=&quot;headerlink&quot; title=&quot;Latex 插入图片（Mark，还没看）&quot;&gt;&lt;/a&gt;Latex 插入图片（Mark，还没看）&lt;/h3&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="TeX" scheme="https://sakronos.github.io/Note/categories/TeX/"/>
-    
-    
-      <category term="TeX" scheme="https://sakronos.github.io/Note/tags/TeX/"/>
     
   </entry>
   
