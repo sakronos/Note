@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-08-20T15:18:15.153Z</updated>
+  <updated>2021-09-10T12:47:01.396Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从DOCX文件中提取内嵌的PDF文件</title>
+    <link href="https://sakronos.github.io/Note/2021/09/09/%E4%BB%8EDOCX%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E5%86%85%E5%B5%8C%E7%9A%84PDF%E6%96%87%E4%BB%B6/"/>
+    <id>https://sakronos.github.io/Note/2021/09/09/%E4%BB%8EDOCX%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E5%86%85%E5%B5%8C%E7%9A%84PDF%E6%96%87%E4%BB%B6/</id>
+    <published>2021-09-09T05:20:31.000Z</published>
+    <updated>2021-09-10T12:47:01.396Z</updated>
+    
+    <content type="html"><![CDATA[<p>收到一个内嵌<strong><em>PDF和Word</em></strong>的Word文档（DOCX），内嵌的Word文档能够正常打开，但是PDF文档死活开不出来。</p><p>Word提示要使用Acrobat打开PDF文档（因为创建者是使用Acrobat嵌入PDF文档的），可是我电脑上已经正常安装了Acrobat DC但打不开，我一气之下卸掉Acrobat DC后，Word的报错变成电脑上没安装Acrobat了……总之还是打不开。</p><p>笔者换了台电脑，安装Acrobat Reader后，在Word中能够直接打开PDF文件，在Acrobat中文档另存为即可提取文件。</p><p>但是笔者就是不想安装Acrobat，所以本文提供一种无需依赖Acrobat的解决方案。</p><p>笔者电脑使用Microsoft 365版本的Word。</p><a id="more"></a><h1 id="从Word文档中提取内嵌的PDF文件（DOCX）"><a href="#从Word文档中提取内嵌的PDF文件（DOCX）" class="headerlink" title="从Word文档中提取内嵌的PDF文件（DOCX）"></a>从Word文档中提取内嵌的PDF文件（DOCX）</h1><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol><li>将DOCX文件的后缀名改为ZIP；</li><li>解压ZIP文件；</li><li>进入<code>word\embeddings</code>文件夹，如图所示；</li><li>PDF文件的文件名类似<code>oleObjext数字.bin</code>，如果存在多个文件，需要判断哪个文件是您需要的；</li><li>使用十六进制编辑器（比如HxD）打开文件；</li><li>找到形如<code>%PDF-1.5</code>的一行，将其上面的所有内容删除，并保存；</li><li>将该文件后缀名改为<code>.pdf</code>。</li></ol><p><img src="https://www.howtogeek.com/wp-content/uploads/2016/03/12_embeddings_folder.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" alt></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://www.howtogeek.com/50628/easily-extract-images-text-and-embedded-files-from-an-office-2007-document/" target="_blank" rel="noopener">How to Extract Images, Text, and Embedded Files from Word, Excel, and PowerPoint Documents</a></li><li><a href="https://blog.yowko.com/extract-embedded-file-in-word/" target="_blank" rel="noopener">取得 Word(.docx) 中的內嵌檔案</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;收到一个内嵌&lt;strong&gt;&lt;em&gt;PDF和Word&lt;/em&gt;&lt;/strong&gt;的Word文档（DOCX），内嵌的Word文档能够正常打开，但是PDF文档死活开不出来。&lt;/p&gt;
+&lt;p&gt;Word提示要使用Acrobat打开PDF文档（因为创建者是使用Acrobat嵌入PDF文档的），可是我电脑上已经正常安装了Acrobat DC但打不开，我一气之下卸掉Acrobat DC后，Word的报错变成电脑上没安装Acrobat了……总之还是打不开。&lt;/p&gt;
+&lt;p&gt;笔者换了台电脑，安装Acrobat Reader后，在Word中能够直接打开PDF文件，在Acrobat中文档另存为即可提取文件。&lt;/p&gt;
+&lt;p&gt;但是笔者就是不想安装Acrobat，所以本文提供一种无需依赖Acrobat的解决方案。&lt;/p&gt;
+&lt;p&gt;笔者电脑使用Microsoft 365版本的Word。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Microsoft Word" scheme="https://sakronos.github.io/Note/categories/Microsoft-Word/"/>
+    
+    
+      <category term="DOCX" scheme="https://sakronos.github.io/Note/tags/DOCX/"/>
+    
+  </entry>
   
   <entry>
     <title>Manjaro iPhone USB hotspot limited connectivity</title>
@@ -514,35 +541,6 @@
     
     
       <category term="JavaScript" scheme="https://sakronos.github.io/Note/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KDE-Connect</title>
-    <link href="https://sakronos.github.io/Note/2021/03/18/KDE-Connection/"/>
-    <id>https://sakronos.github.io/Note/2021/03/18/KDE-Connection/</id>
-    <published>2021-03-18T08:26:13.000Z</published>
-    <updated>2021-03-18T15:37:39.126Z</updated>
-    
-    <content type="html"><![CDATA[<p>为了给老手机传输Amiibo的数据，看来看去最方便的就数KDE-Connect了。</p><ol><li>手机和PC连接同一个无线网路</li><li>手机端<code>KDE 连线装置</code>在<code>可连结的装置</code>中搜索PC并发起配对</li><li>PC端会收到申请配对的消息，选择同意（PC上发起申请不知道为何手机上收不到），配对成功</li><li>如果手机端之前没有给过储存权限，需要在在APP界面申请储存权限</li><li>电脑端可以发送文件了</li></ol><p>不过，手机接收文件需要等很久，传送速度也不快（不知道是不是和手机有关）。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;为了给老手机传输Amiibo的数据，看来看去最方便的就数KDE-Connect了。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;手机和PC连接同一个无线网路&lt;/li&gt;
-&lt;li&gt;手机端&lt;code&gt;KDE 连线装置&lt;/code&gt;在&lt;code&gt;可连结的装置&lt;/code&gt;中搜索PC并发起配对&lt;/li
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://sakronos.github.io/Note/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="KDE" scheme="https://sakronos.github.io/Note/tags/KDE/"/>
     
   </entry>
   
