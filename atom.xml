@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-10-07T12:58:09.609Z</updated>
+  <updated>2021-10-07T13:07:40.745Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为啥同样的手机热点，一台电脑能上B站，另一台上不了而且A站很慢？</title>
+    <link href="https://sakronos.github.io/Note/2021/10/07/%E4%B8%BA%E5%95%A5%E5%90%8C%E6%A0%B7%E7%9A%84%E6%89%8B%E6%9C%BA%E7%83%AD%E7%82%B9%EF%BC%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E8%83%BD%E4%B8%8AB%E7%AB%99%EF%BC%8C%E5%8F%A6%E4%B8%80%E5%8F%B0%E4%B8%8A%E4%B8%8D%E4%BA%86%E8%80%8C%E4%B8%94A%E7%AB%99%E5%BE%88%E6%85%A2%EF%BC%9F/"/>
+    <id>https://sakronos.github.io/Note/2021/10/07/%E4%B8%BA%E5%95%A5%E5%90%8C%E6%A0%B7%E7%9A%84%E6%89%8B%E6%9C%BA%E7%83%AD%E7%82%B9%EF%BC%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E8%83%BD%E4%B8%8AB%E7%AB%99%EF%BC%8C%E5%8F%A6%E4%B8%80%E5%8F%B0%E4%B8%8A%E4%B8%8D%E4%BA%86%E8%80%8C%E4%B8%94A%E7%AB%99%E5%BE%88%E6%85%A2%EF%BC%9F/</id>
+    <published>2021-10-07T12:06:28.000Z</published>
+    <updated>2021-10-07T13:07:40.745Z</updated>
+    
+    <content type="html"><![CDATA[<p>开热点的设备：iPhone  11，iOS 14.7，中国移动</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;开热点的设备：iPhone  11，iOS 14.7，中国移动&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="网络问题" scheme="https://sakronos.github.io/Note/categories/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="热点" scheme="https://sakronos.github.io/Note/categories/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/%E7%83%AD%E7%82%B9/"/>
+    
+    
+      <category term="热点" scheme="https://sakronos.github.io/Note/tags/%E7%83%AD%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>恢复iTunes购买的歌曲</title>
@@ -46,13 +75,23 @@
     <link href="https://sakronos.github.io/Note/2021/10/07/%E4%BD%BF%E7%94%A8JoyCon%E6%B8%B8%E7%8E%A9Steam%E7%9A%84%E6%B8%B8%E6%88%8F/"/>
     <id>https://sakronos.github.io/Note/2021/10/07/%E4%BD%BF%E7%94%A8JoyCon%E6%B8%B8%E7%8E%A9Steam%E7%9A%84%E6%B8%B8%E6%88%8F/</id>
     <published>2021-10-07T04:58:11.000Z</published>
-    <updated>2021-10-07T05:58:11.338Z</updated>
+    <updated>2021-10-07T14:06:08.855Z</updated>
+    
+    <content type="html"><![CDATA[<p>出门没带Xbox手柄，但Steam上还有想打且想用手柄打的游戏咋办？NS正好在手边，用Joy-Con凑合下了。</p><a id="more"></a><h2 id="前面的话"><a href="#前面的话" class="headerlink" title="前面的话"></a>前面的话</h2><p>在尝试XJoy之前，我我先尝试过了<em>JoyCon-Driver</em>。网上使用JoyCon-Driver的教程有很多，搜索引擎排名也很高，但是我根据其中一篇教程配置好后发现JoyCon-Driver并不能直接将一对Joy-Con模拟为Steam能够识别的Xbox手柄（我辛辛苦苦一个键一个键配置好映射结果发现Steam不认识……气死我了），所以我放弃了这个方案。XJoy配置完毕后，在Steam中可以直接使用，默认的配置文件也符合直觉，因此本文推荐XJoy。</p><p>松鼠病患者还是要把JoyCon-Driver的相关教程贴上来的，但是没找到我配置时用的那篇……第一篇比较详细的介绍了两只Joy-Con与Windows 10配对的过程，不会的兄弟们可以参考一下。</p><ol><li><a href="https://sspai.com/post/43982" target="_blank" rel="noopener">将你的任天堂 Switch Joy-Con 变成电脑手柄</a></li><li><a href="https://github.com/fossephate/JoyCon-Driver" target="_blank" rel="noopener">JoyCon-Driver - Github</a></li><li><a href="https://github.com/Stents-/XOutput" target="_blank" rel="noopener">XOutput</a></li></ol><h2 id="XJoy使用方法"><a href="#XJoy使用方法" class="headerlink" title="XJoy使用方法"></a>XJoy使用方法</h2><ol><li>安装<a href="https://github.com/ViGEm/ViGEmBus/releases/tag/v1.16.112" target="_blank" rel="noopener">ViGEm Bus Driver</a></li><li>安装Visual C++ Redistributable for Visual Studio 2017</li><li>将两只Joy-Con与Windows配对</li><li>运行XJoy.exe</li></ol><p>尽情游玩吧！</p><p>值得一提的是，断开连接后的Joy-Con似乎每次都得重新与Windows配对，我目前没找到Windows 10能够自动连上之前配对过的Joy-Con的方法。</p><h3 id="默认按键映射"><a href="#默认按键映射" class="headerlink" title="默认按键映射"></a>默认按键映射</h3><table><thead><tr><th>Joy-Con Button</th><th>Xbox Button</th></tr></thead><tbody><tr><td>A</td><td>B</td></tr><tr><td>B</td><td>A</td></tr><tr><td>X</td><td>Y</td></tr><tr><td>Y</td><td>X</td></tr><tr><td>Left Trigger</td><td>Left Trigger</td></tr><tr><td>Right Trigger</td><td>Right Trigger</td></tr><tr><td>Left Shoulder</td><td>Left Shoulder</td></tr><tr><td>Right Shoulder</td><td>Right Shoulder</td></tr><tr><td>D-PAD</td><td>D-PAD</td></tr><tr><td>Left Analog</td><td>Left Analog</td></tr><tr><td>Right Analog</td><td>Right Analog</td></tr><tr><td>Left Stick</td><td>Left Thumb</td></tr><tr><td>Right Stick</td><td>Right Thumb</td></tr><tr><td>Home</td><td>Start</td></tr><tr><td>Capture</td><td>Back</td></tr><tr><td>Plus</td><td>Start</td></tr><tr><td>Minus</td><td>Back</td></tr></tbody></table><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://github.com/sam0x17/XJoy" target="_blank" rel="noopener">XJoy - Github</a></li></ol>]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;出门没带Xbox手柄，但Steam上还有想打且想用手柄打的游戏咋办？NS正好在手边，用Joy-Con凑合下了。&lt;/p&gt;
     
     </summary>
     
     
+      <category term="JoyCon" scheme="https://sakronos.github.io/Note/categories/JoyCon/"/>
+    
+      <category term="Steam" scheme="https://sakronos.github.io/Note/categories/JoyCon/Steam/"/>
+    
+    
+      <category term="Steam" scheme="https://sakronos.github.io/Note/tags/Steam/"/>
     
   </entry>
   
@@ -497,36 +536,6 @@
     
     
       <category term="Vim" scheme="https://sakronos.github.io/Note/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QQ发送图片，预览为黑底</title>
-    <link href="https://sakronos.github.io/Note/2021/03/21/QQ%E5%8F%91%E9%80%81%E5%9B%BE%E7%89%87%EF%BC%8C%E9%A2%84%E8%A7%88%E4%B8%BA%E9%BB%91%E5%BA%95/"/>
-    <id>https://sakronos.github.io/Note/2021/03/21/QQ%E5%8F%91%E9%80%81%E5%9B%BE%E7%89%87%EF%BC%8C%E9%A2%84%E8%A7%88%E4%B8%BA%E9%BB%91%E5%BA%95/</id>
-    <published>2021-03-21T01:52:46.000Z</published>
-    <updated>2021-03-21T06:14:41.064Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天去网上找贴图，发现webp或png格式的图片复制到电脑QQ上，背景都变成黑色的，这还能看吗？于是去搜索QQ能够保留透明背景的传图方式/图片处理方式（直接把透明部分变成能接受的白色）。</p><p>搜到了这篇文章，摘录其中作为结论的一句话。</p><blockquote><p><strong>只有手机QQ才能传高清大图，电脑QQ要传就要传文件或者压缩包</strong></p></blockquote><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol><li><a href="https://blog.csdn.net/qq_34146694/article/details/81327276" target="_blank" rel="noopener">探索qq发送png透明通道丢失的问题</a></li></ol><p>题外话，webp格式的图片电脑端PC看不到，只有手机端能看到……</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;今天去网上找贴图，发现webp或png格式的图片复制到电脑QQ上，背景都变成黑色的，这还能看吗？于是去搜索QQ能够保留透明背景的传图方式/图片处理方式（直接把透明部分变成能接受的白色）。&lt;/p&gt;
-&lt;p&gt;搜到了这篇文章，摘录其中作为结论的一句话。&lt;/p&gt;
-&lt;blockquot
-      
-    
-    </summary>
-    
-    
-      <category term="技巧" scheme="https://sakronos.github.io/Note/categories/%E6%8A%80%E5%B7%A7/"/>
-    
-      <category term="QQ" scheme="https://sakronos.github.io/Note/categories/%E6%8A%80%E5%B7%A7/QQ/"/>
-    
-    
-      <category term="QQ" scheme="https://sakronos.github.io/Note/tags/QQ/"/>
     
   </entry>
   

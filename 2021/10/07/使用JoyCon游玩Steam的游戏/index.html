@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Steam,">
 
 
 
@@ -81,14 +81,18 @@
 
 
 
+<meta name="description" content="出门没带Xbox手柄，但Steam上还有想打且想用手柄打的游戏咋办？NS正好在手边，用Joy-Con凑合下了。">
+<meta name="keywords" content="Steam">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用JoyCon游玩Steam的游戏">
 <meta property="og:url" content="https://sakronos.github.io/Note/2021/10/07/使用JoyCon游玩Steam的游戏/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
+<meta property="og:description" content="出门没带Xbox手柄，但Steam上还有想打且想用手柄打的游戏咋办？NS正好在手边，用Joy-Con凑合下了。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2021-10-07T05:58:11.338Z">
+<meta property="og:updated_time" content="2021-10-07T14:06:08.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用JoyCon游玩Steam的游戏">
+<meta name="twitter:description" content="出门没带Xbox手柄，但Steam上还有想打且想用手柄打的游戏咋办？NS正好在手边，用Joy-Con凑合下了。">
 
 
 
@@ -328,7 +332,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2021-10-07T13:58:11+09:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2021-10-07T12:58:11+08:00">
                 2021-10-07
               </time>
             
@@ -338,6 +342,39 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/JoyCon/" itemprop="url" rel="index">
+                    <span itemprop="name">JoyCon</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/JoyCon/Steam/" itemprop="url" rel="index">
+                    <span itemprop="name">Steam</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -381,7 +418,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  0
+                  428
                 </span>
               
 
@@ -418,7 +455,105 @@
       
 
       
-        
+        <p>出门没带Xbox手柄，但Steam上还有想打且想用手柄打的游戏咋办？NS正好在手边，用Joy-Con凑合下了。</p>
+<a id="more"></a>
+<h2 id="前面的话"><a href="#前面的话" class="headerlink" title="前面的话"></a>前面的话</h2><p>在尝试XJoy之前，我我先尝试过了<em>JoyCon-Driver</em>。网上使用JoyCon-Driver的教程有很多，搜索引擎排名也很高，但是我根据其中一篇教程配置好后发现JoyCon-Driver并不能直接将一对Joy-Con模拟为Steam能够识别的Xbox手柄（我辛辛苦苦一个键一个键配置好映射结果发现Steam不认识……气死我了），所以我放弃了这个方案。XJoy配置完毕后，在Steam中可以直接使用，默认的配置文件也符合直觉，因此本文推荐XJoy。</p>
+<p>松鼠病患者还是要把JoyCon-Driver的相关教程贴上来的，但是没找到我配置时用的那篇……第一篇比较详细的介绍了两只Joy-Con与Windows 10配对的过程，不会的兄弟们可以参考一下。</p>
+<ol>
+<li><a href="https://sspai.com/post/43982" target="_blank" rel="noopener">将你的任天堂 Switch Joy-Con 变成电脑手柄</a></li>
+<li><a href="https://github.com/fossephate/JoyCon-Driver" target="_blank" rel="noopener">JoyCon-Driver - Github</a></li>
+<li><a href="https://github.com/Stents-/XOutput" target="_blank" rel="noopener">XOutput</a></li>
+</ol>
+<h2 id="XJoy使用方法"><a href="#XJoy使用方法" class="headerlink" title="XJoy使用方法"></a>XJoy使用方法</h2><ol>
+<li>安装<a href="https://github.com/ViGEm/ViGEmBus/releases/tag/v1.16.112" target="_blank" rel="noopener">ViGEm Bus Driver</a></li>
+<li>安装Visual C++ Redistributable for Visual Studio 2017</li>
+<li>将两只Joy-Con与Windows配对</li>
+<li>运行XJoy.exe</li>
+</ol>
+<p>尽情游玩吧！</p>
+<p>值得一提的是，断开连接后的Joy-Con似乎每次都得重新与Windows配对，我目前没找到Windows 10能够自动连上之前配对过的Joy-Con的方法。</p>
+<h3 id="默认按键映射"><a href="#默认按键映射" class="headerlink" title="默认按键映射"></a>默认按键映射</h3><table>
+<thead>
+<tr>
+<th>Joy-Con Button</th>
+<th>Xbox Button</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>B</td>
+<td>A</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Left Trigger</td>
+<td>Left Trigger</td>
+</tr>
+<tr>
+<td>Right Trigger</td>
+<td>Right Trigger</td>
+</tr>
+<tr>
+<td>Left Shoulder</td>
+<td>Left Shoulder</td>
+</tr>
+<tr>
+<td>Right Shoulder</td>
+<td>Right Shoulder</td>
+</tr>
+<tr>
+<td>D-PAD</td>
+<td>D-PAD</td>
+</tr>
+<tr>
+<td>Left Analog</td>
+<td>Left Analog</td>
+</tr>
+<tr>
+<td>Right Analog</td>
+<td>Right Analog</td>
+</tr>
+<tr>
+<td>Left Stick</td>
+<td>Left Thumb</td>
+</tr>
+<tr>
+<td>Right Stick</td>
+<td>Right Thumb</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Start</td>
+</tr>
+<tr>
+<td>Capture</td>
+<td>Back</td>
+</tr>
+<tr>
+<td>Plus</td>
+<td>Start</td>
+</tr>
+<tr>
+<td>Minus</td>
+<td>Back</td>
+</tr>
+</tbody>
+</table>
+<h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol>
+<li><a href="https://github.com/sam0x17/XJoy" target="_blank" rel="noopener">XJoy - Github</a></li>
+</ol>
+
       
     </div>
     
@@ -432,6 +567,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Note/tags/Steam/" rel="tag"># Steam</a>
+          
+        </div>
       
 
       
@@ -509,8 +650,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,7 +675,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">133</span>
+                  <span class="site-state-item-count">134</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -536,7 +686,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">149</span>
+                  <span class="site-state-item-count">153</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -547,7 +697,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Note/tags/index.html">
-                  <span class="site-state-item-count">77</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -593,6 +743,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前面的话"><span class="nav-number">1.</span> <span class="nav-text">前面的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XJoy使用方法"><span class="nav-number">2.</span> <span class="nav-text">XJoy使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认按键映射"><span class="nav-number">2.1.</span> <span class="nav-text">默认按键映射</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料："><span class="nav-number">2.1.1.</span> <span class="nav-text">参考资料：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
