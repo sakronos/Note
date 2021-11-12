@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="第一次爬虫笔记（Python，Requests库）第一次写爬虫，边看入门书边写，现学现卖，现在应该勉强能爬些静态网站这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）爬虫的代码放在仓库里了下面写些在写爬虫时遇到的问题">
+<meta name="description" content="第一次爬虫笔记（Python，Requests库）第一次写爬虫，边看入门书边写，现学现卖，现在应该勉强能爬些静态网站这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）下面写些在写爬虫时遇到的问题">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一次爬虫笔记（Python，Requests库）">
 <meta property="og:url" content="https://sakronos.github.io/Note/2019/05/08/第一次爬虫笔记/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
-<meta property="og:description" content="第一次爬虫笔记（Python，Requests库）第一次写爬虫，边看入门书边写，现学现卖，现在应该勉强能爬些静态网站这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）爬虫的代码放在仓库里了下面写些在写爬虫时遇到的问题">
+<meta property="og:description" content="第一次爬虫笔记（Python，Requests库）第一次写爬虫，边看入门书边写，现学现卖，现在应该勉强能爬些静态网站这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）下面写些在写爬虫时遇到的问题">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2021-11-12T15:45:02.887Z">
+<meta property="og:updated_time" content="2021-11-12T15:46:03.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次爬虫笔记（Python，Requests库）">
-<meta name="twitter:description" content="第一次爬虫笔记（Python，Requests库）第一次写爬虫，边看入门书边写，现学现卖，现在应该勉强能爬些静态网站这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）爬虫的代码放在仓库里了下面写些在写爬虫时遇到的问题">
+<meta name="twitter:description" content="第一次爬虫笔记（Python，Requests库）第一次写爬虫，边看入门书边写，现学现卖，现在应该勉强能爬些静态网站这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）下面写些在写爬虫时遇到的问题">
 
 
 
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  427
+                  416
                 </span>
               
 
@@ -455,7 +455,7 @@
       
 
       
-        <h3 id="第一次爬虫笔记（Python，Requests库）"><a href="#第一次爬虫笔记（Python，Requests库）" class="headerlink" title="第一次爬虫笔记（Python，Requests库）"></a>第一次爬虫笔记（Python，Requests库）</h3><p>第一次写爬虫，边看<a href="htttps://sakronos.github.io/Note" title="待会我去看看这书叫啥">入门书</a>边写，现学现卖，现在应该勉强能爬些静态网站<br>这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）<br>爬虫的代码放在<a href="https://github.com/sakronos/teachers_scs_nuist_crawler" target="_blank" rel="noopener">仓库</a>里了<br>下面写些在写爬虫时遇到的问题</p>
+        <h3 id="第一次爬虫笔记（Python，Requests库）"><a href="#第一次爬虫笔记（Python，Requests库）" class="headerlink" title="第一次爬虫笔记（Python，Requests库）"></a>第一次爬虫笔记（Python，Requests库）</h3><p>第一次写爬虫，边看<a href="htttps://sakronos.github.io/Note" title="待会我去看看这书叫啥">入门书</a>边写，现学现卖，现在应该勉强能爬些静态网站<br>这次学习爬虫是因为想查下学校老师的研究方向（学校网站的检索功能太差了）<br>下面写些在写爬虫时遇到的问题</p>
 <a id="more"></a>
 <h4 id="分析文本的XPATH"><a href="#分析文本的XPATH" class="headerlink" title="分析文本的XPATH"></a>分析文本的XPATH</h4><p>最初看书以为无脑Copy XPATH就能定位到文字的位置，但调试时发现有时这样做根本获取不到list，后来发现如\<span>、\<td>、\<div>等跟文本相关的标签<br>etree的XPATH解析不能，所以在分析XPATH时得确认自己找的路径是不是在文本内，如果是的话要向上去找找</div></td></span></p>
 <h4 id="分析图片的URL"><a href="#分析图片的URL" class="headerlink" title="分析图片的URL"></a>分析图片的URL</h4><h5 id="Example："><a href="#Example：" class="headerlink" title="Example："></a>Example：</h5><p><a href="https://docs.microsoft.com/zh-cn/windows/desktop/Multimedia/resource-interchange-file-format-services" target="_blank" rel="noopener">Resource Interchange File Format Services</a></p>
