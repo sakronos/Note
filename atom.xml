@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2021-12-18T15:22:00.465Z</updated>
+  <updated>2022-03-21T15:36:45.167Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LINE贴图与APNG</title>
+    <link href="https://sakronos.github.io/Note/2022/03/21/LINE%E8%B4%B4%E5%9B%BE%E4%B8%8EAPNG/"/>
+    <id>https://sakronos.github.io/Note/2022/03/21/LINE%E8%B4%B4%E5%9B%BE%E4%B8%8EAPNG/</id>
+    <published>2022-03-21T13:27:22.000Z</published>
+    <updated>2022-03-21T15:36:45.167Z</updated>
+    
+    <content type="html"><![CDATA[<p>找贴图！找会动的贴图！找可爱的贴图！</p><p>又心血来潮开始找贴图了，过年的时候用的<a href="https://whatsticker.online/c/home/HK/zh" target="_blank" rel="noopener">WhatSticker</a>，这次又上去逛了一圈，感觉没有什么有新意的贴图。想了想，还是到LINE上去找找吧。</p><p>上次去LINE上找贴图感觉已经是好久之前的事情了，只模糊的记得要先提取一个贴图包的ID，然后拼出一个下载网址，然后就可以下到贴图了。这次Google了一下如何提取LINE贴图，感觉相关的教程比之前难检索了……</p><p>不过，搜了一晚上，总算是有点成果，在此全部搬运到这儿，以备不时之需。<br>（其实全是根据参考链接四里找到的）</p><a id="more"></a><h1 id="LINE-动态贴图下载（GIF）"><a href="#LINE-动态贴图下载（GIF）" class="headerlink" title="LINE 动态贴图下载（GIF）"></a>LINE 动态贴图下载（GIF）</h1><p>LINE贴图包下载还是很简单的，而且方法很稳定，好像很久没有变过了：</p><h2 id="Download-the-sticker-files"><a href="#Download-the-sticker-files" class="headerlink" title="Download the sticker files"></a>Download the sticker files</h2><p>For regular sticker type, visit:<br><a href="dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickers@2x.zip">dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickers@2x.zip</a></p><p>For other sticker types, visit:<br><a href="dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickerpack@2x.zip">dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickerpack@2x.zip</a></p><p><b> If the links above are not working, you can also try to download them through the secure site here:  </b></p><p>For regular sticker type:<br><a href="https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickers@2x.zip" target="_blank" rel="noopener">https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickers@2x.zip</a></p><p>For other sticker types:<br><a href="https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickerpack@2x.zip" target="_blank" rel="noopener">https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickerpack@2x.zip</a></p><p>一般来说，上面前两个链接救OK了，[ID]的获取方法参见参考链接一。</p><p><strong>懒人福音</strong>：如果实在懒得研究怎么拼链接，可以直接试一下参考链接二的Chrome插件。</p><h2 id="Find-the-sticker-image-files"><a href="#Find-the-sticker-image-files" class="headerlink" title="Find the sticker image files"></a>Find the sticker image files</h2><p>You can find the image file of the sticker in the following folders:</p><ul><li>Regular sticker: . (root)</li><li>Animated sticker, either with sound or not, iPhone version: “animation@2x”</li><li>Animated sticker, either with sound or not, Android version: “animation”</li><li>Pop up sticker, either with sound or not: “popup”</li></ul><h2 id="The-file-format-that-LINE-used-is-APNG"><a href="#The-file-format-that-LINE-used-is-APNG" class="headerlink" title="The file format that LINE used is APNG"></a>The file format that LINE used is APNG</h2><p>最后一步，把下载得到的APNG文件转换为喜闻乐见的GIF。</p><p>参考链接三的Repository下载到本地，将待转换文件复制到Repository文件夹中，执行BAT脚本。</p><p>GIF GET！</p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://isamunoheya.blogspot.com/2016/10/how-to-download-line-stickers-on-pc.html" target="_blank" rel="noopener">Tutorial: How to download LINE sticker files to computer</a></li><li><a href="https://chrome.google.com/webstore/detail/stickers-packer/bngfikljchleddkelnfgohdfcobkggin" target="_blank" rel="noopener">LINE 贴图打包</a></li><li><a href="https://github.com/miyouzi/apng2gif" target="_blank" rel="noopener">miyouzi - apng2gif</a></li><li><a href="http://www.acg12.net/?p=7884" target="_blank" rel="noopener">Line动态表情包apng转换为gif|line sticker apng to gif</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;找贴图！找会动的贴图！找可爱的贴图！&lt;/p&gt;
+&lt;p&gt;又心血来潮开始找贴图了，过年的时候用的&lt;a href=&quot;https://whatsticker.online/c/home/HK/zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WhatSticker&lt;/a&gt;，这次又上去逛了一圈，感觉没有什么有新意的贴图。想了想，还是到LINE上去找找吧。&lt;/p&gt;
+&lt;p&gt;上次去LINE上找贴图感觉已经是好久之前的事情了，只模糊的记得要先提取一个贴图包的ID，然后拼出一个下载网址，然后就可以下到贴图了。这次Google了一下如何提取LINE贴图，感觉相关的教程比之前难检索了……&lt;/p&gt;
+&lt;p&gt;不过，搜了一晚上，总算是有点成果，在此全部搬运到这儿，以备不时之需。&lt;br&gt;（其实全是根据参考链接四里找到的）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="APNG" scheme="https://sakronos.github.io/Note/categories/APNG/"/>
+    
+      <category term="LINE贴图" scheme="https://sakronos.github.io/Note/categories/APNG/LINE%E8%B4%B4%E5%9B%BE/"/>
+    
+    
+      <category term="APNG" scheme="https://sakronos.github.io/Note/tags/APNG/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA Console乱码</title>
@@ -496,32 +524,6 @@
     
     
       <category term="Manjaro" scheme="https://sakronos.github.io/Note/tags/Manjaro/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android手机投屏至电脑</title>
-    <link href="https://sakronos.github.io/Note/2021/06/14/Android%E6%89%8B%E6%9C%BA%E6%8A%95%E5%B1%8F/"/>
-    <id>https://sakronos.github.io/Note/2021/06/14/Android%E6%89%8B%E6%9C%BA%E6%8A%95%E5%B1%8F/</id>
-    <published>2021-06-14T15:26:38.000Z</published>
-    <updated>2021-06-14T16:36:19.374Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Linux下，Android手机投屏"><a href="#Linux下，Android手机投屏" class="headerlink" title="Linux下，Android手机投屏"></a>Linux下，Android手机投屏</h2><p>使用<strong><a href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener">scrcpy</a></strong>。</p><p>不少Android系统都自带无线投屏到电脑的功能（可以使用 Windows 10下的连接）。这个固然可以使用，但是在手机开启酸酸乳后，该功能不知为何无法正常使用。且<strong>手机连接电脑开启的热点</strong>也有可能导致 Windows 10 无法搜索到手机……所以需要这个可以通过有线方式投屏的程序。</p><h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a href="https://www.dianbanjiu.com/post/android-%E6%89%8B%E6%9C%BA%E6%8A%95%E5%B1%8F%E5%88%B0-linux-%E4%B8%8B/" target="_blank" rel="noopener">https://www.dianbanjiu.com/post/android-手机投屏到-linux-下/</a></p><p><a href="https://archived.forum.manjaro.org/t/android-tools-adb-complains-of-missing-libprotobuf-lite-so-22/150878/19" target="_blank" rel="noopener">https://archived.forum.manjaro.org/t/android-tools-adb-complains-of-missing-libprotobuf-lite-so-22/150878/19</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Linux下，Android手机投屏&quot;&gt;&lt;a href=&quot;#Linux下，Android手机投屏&quot; class=&quot;headerlink&quot; title=&quot;Linux下，Android手机投屏&quot;&gt;&lt;/a&gt;Linux下，Android手机投屏&lt;/h2&gt;&lt;p&gt;使用&lt;str
-      
-    
-    </summary>
-    
-    
-      <category term="生活小技巧" scheme="https://sakronos.github.io/Note/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    
-    
-      <category term="Android" scheme="https://sakronos.github.io/Note/tags/Android/"/>
     
   </entry>
   
