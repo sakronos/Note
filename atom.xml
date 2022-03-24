@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2022-03-21T15:36:45.167Z</updated>
+  <updated>2022-03-24T12:41:37.768Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>导入微信透明贴图</title>
+    <link href="https://sakronos.github.io/Note/2022/03/23/%E5%AF%BC%E5%85%A5%E5%BE%AE%E4%BF%A1%E9%80%8F%E6%98%8E%E8%B4%B4%E5%9B%BE/"/>
+    <id>https://sakronos.github.io/Note/2022/03/23/%E5%AF%BC%E5%85%A5%E5%BE%AE%E4%BF%A1%E9%80%8F%E6%98%8E%E8%B4%B4%E5%9B%BE/</id>
+    <published>2022-03-23T14:41:36.000Z</published>
+    <updated>2022-03-24T12:41:37.768Z</updated>
+    
+    <content type="html"><![CDATA[<p>微信的贴图与直接传送图片不同，可以做到不显示透明的背景，而直接传送有透明背景的PNG或是WEBP则会有白色或者黑色的背景，来看看怎么做吧。（题外话：QQ在聊天界面会把PNG的透明背景显示为白色）</p><p><img src="http://www.leawo.cn/attachment/201909/27/5015878_15695725308dFZ.jpg" alt></p><a id="more"></a><ol><li>首先，搞到一张背景为透明的PNG（根据参考资料一显示，GIF好像也可以）</li><li>点开收藏表情包界面，点击加号，然后导入图片。导入图片的时间有点长，可能有2~3秒吧</li><li>导入的图片就会变成没有背景的贴图，完成！</li></ol><p><img src="http://www.leawo.cn/attachment/201909/27/5015878_15695752133iw8.jpg" alt></p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://jingyan.baidu.com/article/cd4c29793ba33f756e6e60c0.html" target="_blank" rel="noopener">微信透明表情发出去是黑底？怎样发做透明表情</a></li><li><a href="http://www.leawo.cn/space-5015878-do-thread-id-79131.html" target="_blank" rel="noopener">微信透明表情包怎么做 表情包图片去白底|jpg表情图片怎么变透明背景导入微信表情</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;微信的贴图与直接传送图片不同，可以做到不显示透明的背景，而直接传送有透明背景的PNG或是WEBP则会有白色或者黑色的背景，来看看怎么做吧。（题外话：QQ在聊天界面会把PNG的透明背景显示为白色）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.leawo.cn/attachment/201909/27/5015878_15695725308dFZ.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="贴图" scheme="https://sakronos.github.io/Note/categories/%E8%B4%B4%E5%9B%BE/"/>
+    
+      <category term="微信" scheme="https://sakronos.github.io/Note/categories/%E8%B4%B4%E5%9B%BE/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+      <category term="贴图" scheme="https://sakronos.github.io/Note/tags/%E8%B4%B4%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>LINE贴图与APNG</title>
@@ -496,34 +522,6 @@
     
     
       <category term="Windows" scheme="https://sakronos.github.io/Note/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PACMAN 安装软件报404</title>
-    <link href="https://sakronos.github.io/Note/2021/06/14/pacman404/"/>
-    <id>https://sakronos.github.io/Note/2021/06/14/pacman404/</id>
-    <published>2021-06-14T15:37:01.000Z</published>
-    <updated>2021-06-14T16:38:37.282Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="pacman-安装软件报错404"><a href="#pacman-安装软件报错404" class="headerlink" title="pacman 安装软件报错404"></a>pacman 安装软件报错404</h2><p>有可能是你的镜像源没有更新，直接运行下面一行，然后重新安装即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Sy</span><br></pre></td></tr></table></figure><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="https://www.greenhtml.com/archives/archlinux-pacman--S-404.html" target="_blank" rel="noopener">https://www.greenhtml.com/archives/archlinux-pacman–S-404.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;pacman-安装软件报错404&quot;&gt;&lt;a href=&quot;#pacman-安装软件报错404&quot; class=&quot;headerlink&quot; title=&quot;pacman 安装软件报错404&quot;&gt;&lt;/a&gt;pacman 安装软件报错404&lt;/h2&gt;&lt;p&gt;有可能是你的镜像源没有更新，
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://sakronos.github.io/Note/categories/Linux/"/>
-    
-      <category term="Manjaro" scheme="https://sakronos.github.io/Note/categories/Linux/Manjaro/"/>
-    
-    
-      <category term="Manjaro" scheme="https://sakronos.github.io/Note/tags/Manjaro/"/>
     
   </entry>
   
