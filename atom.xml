@@ -104,16 +104,13 @@
     <link href="https://sakronos.github.io/Note/2021/12/18/%E6%89%BE%E5%9B%9EChrome%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%9A%84%E9%80%9A%E8%BF%87Google%E6%90%9C%E7%B4%A2%E5%9B%BE%E7%89%87/"/>
     <id>https://sakronos.github.io/Note/2021/12/18/%E6%89%BE%E5%9B%9EChrome%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%9A%84%E9%80%9A%E8%BF%87Google%E6%90%9C%E7%B4%A2%E5%9B%BE%E7%89%87/</id>
     <published>2021-12-18T14:08:52.000Z</published>
-    <updated>2021-12-18T15:11:25.377Z</updated>
+    <updated>2022-03-31T14:12:52.188Z</updated>
     
-    <content type="html"><![CDATA[<p>在網址列輸入 <code>chrome://flags</code> 開啟Chrome Flags 進階功能選項，在上方搜尋欄位輸入 Google Lens 做為搜尋關鍵字就會看到「Search your screen with Google Lens」功能，將後方的開關設定為禁用（Disabled）狀態。</p><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ol><li><a href="https://free.com.tw/search-your-screen-with-google-lens" target="_blank" rel="noopener">在Chrome 開啟Google Lens 智慧鏡頭，搜尋網頁裡任何視覺內容</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>Google Chrome是有多喜欢Google Lens啊！</p><a id="more"></a><h4 id="2022-03-31更新"><a href="#2022-03-31更新" class="headerlink" title="2022/03/31更新"></a>2022/03/31更新</h4><p>在Chrome 99版本中，原文的方法似乎已经失效。Chrome虽然还保留了「Search your screen with Google Lens」的选项，但是设置为 <strong>Disabled</strong> 并不能恢复「通过Google搜索图片」右键按钮。</p><p>到了100版本后，Chrome取消了Experiments的「Search your screen with Google Lens」选项，取而代之的是<a href="chrome://flags/#enable-lens-standalone" target="_blank" rel="noopener">「Enable Lens features in Chrome」</a>。将该选项设置为<strong>Disabled</strong>即可找回「通过Google搜索图片」右键按钮。</p><h4 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h4><p>在網址列輸入 <code>chrome://flags</code> 開啟Chrome Flags 進階功能選項，在上方搜尋欄位輸入 Google Lens 做為搜尋關鍵字就會看到「Search your screen with Google Lens」功能，將後方的開關設定為禁用（Disabled）狀態。</p><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ol><li><a href="https://free.com.tw/search-your-screen-with-google-lens" target="_blank" rel="noopener">在Chrome 開啟Google Lens 智慧鏡頭，搜尋網頁裡任何視覺內容</a></li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;在網址列輸入 &lt;code&gt;chrome://flags&lt;/code&gt; 開啟Chrome Flags 進階功能選項，在上方搜尋欄位輸入 Google Lens 做為搜尋關鍵字就會看到「Search your screen with Google Lens」功能，將後方的開關設
-      
+      &lt;p&gt;Google Chrome是有多喜欢Google Lens啊！&lt;/p&gt;
     
     </summary>
     
