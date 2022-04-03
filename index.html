@@ -461,11 +461,224 @@
 <h5 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h5><ul>
 <li><a href="https://www.youtube.com/watch?v=fbzhHSexzpY" target="_blank" rel="noopener">How I Got My Mom to Play Through Plants vs. Zombies</a>（中文版：<a href="https://www.bilibili.com/video/BV1fv41147Fr?t=1607" target="_blank" rel="noopener">游戏教程设计 与 现实中的教学 学习</a>）</li>
 </ul>
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul>
 <li><a href="https://survivesjtu.gitbook.io/survivesjtumanual/" target="_blank" rel="noopener">上海交通大学生存手册</a></li>
 </ul>
 
           
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2022/04/03/Hexo配置Google-Analytics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Note/2022/04/03/Hexo配置Google-Analytics/" itemprop="url">Hexo配置Google Analytics</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2022-04-03T18:07:21+09:00">
+                2022-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Google-Analytics/" itemprop="url" rel="index">
+                    <span itemprop="name">Google Analytics</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Google-Analytics/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2022/04/03/Hexo配置Google-Analytics/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2022/04/03/Hexo配置Google-Analytics/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Note/2022/04/03/Hexo配置Google-Analytics/" class="leancloud_visitors" data-flag-title="Hexo配置Google Analytics">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  365
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近心血来潮，又想配置一下Google Analytics，这次终于配成功了。</p>
+<p>其实配这个本身很简单，在config文件预留的地方加上追踪 ID 就OK了，</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### As follows is part of the NexT config file</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Google Analytics</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line"><span class="attr">  tracking_id:</span> <span class="string">UA-XXXXXXXX-X</span></span><br></pre></td></tr></table></figure>
+<p>但是NexT主题需要 UA 开头的追踪 ID ，我之前一直卡在了这一步（因为网上的教程都略过了讲如何获取UA开头的追踪 ID，连NexT官方文档都说<code>Google track ID always starts with UA-</code>，真是令人智熄……）。</p>
+<p>嘛，不过<code>Universal Analytics properties will stop processing data on July 1, 2023</code>……</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Note/2022/04/03/Hexo配置Google-Analytics/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2146,215 +2359,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2021/10/07/恢复iTunes购买的歌曲/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kronos">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/Note/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PERFECT BLUE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Note/2021/10/07/恢复iTunes购买的歌曲/" itemprop="url">恢复iTunes购买的歌曲</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2021-10-07T13:59:07+09:00">
-                2021-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/iTunes/" itemprop="url" rel="index">
-                    <span itemprop="name">iTunes</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Note/categories/iTunes/Window-10/" itemprop="url" rel="index">
-                    <span itemprop="name">Window 10</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Note/2021/10/07/恢复iTunes购买的歌曲/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2021/10/07/恢复iTunes购买的歌曲/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Note/2021/10/07/恢复iTunes购买的歌曲/" class="leancloud_visitors" data-flag-title="恢复iTunes购买的歌曲">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字數統計&#58;</span>
-                
-                <span title="字數統計">
-                  281
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
-                
-                <span title="閱讀時長">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>手机上失手删掉了一首iTunes买的歌，结果发现这首歌被扔到“非表示”里去了（Apple ID日区）。作为一个强迫症患者，当然要补救回来啦。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Note/2021/10/07/恢复iTunes购买的歌曲/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2405,7 +2409,7 @@
               
                 <a href="/Note/archives/">
               
-                  <span class="site-state-item-count">141</span>
+                  <span class="site-state-item-count">142</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2416,7 +2420,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/Note/categories/index.html">
-                  <span class="site-state-item-count">160</span>
+                  <span class="site-state-item-count">162</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
