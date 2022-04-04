@@ -83,7 +83,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="PERFECT BLUE">
-<meta property="og:url" content="https://sakronos.github.io/Note/tags/Hexo/index.html">
+<meta property="og:url" content="https://sakronos.github.io/Note/tags/hexo/index.html">
 <meta property="og:site_name" content="PERFECT BLUE">
 <meta property="og:locale" content="zh-tw">
 <meta name="twitter:card" content="summary">
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="https://sakronos.github.io/Note/tags/Hexo/">
+  <link rel="canonical" href="https://sakronos.github.io/Note/tags/hexo/">
 
 
 
 
 
-  <title>標籤: Hexo | PERFECT BLUE</title>
+  <title>標籤: hexo | PERFECT BLUE</title>
   
 
 
@@ -236,6 +236,26 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/Note/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站點地圖
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/Note/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -300,7 +320,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>Hexo<small>標籤</small>
+        <h2>hexo<small>標籤</small>
         </h2>
       </div>
 
@@ -312,95 +332,17 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/Note/2022/04/03/Hexo配置Google-Analytics/" itemprop="url">
+            <a class="post-title-link" href="/Note/2019/03/15/页面锚点测试/" itemprop="url">
               
-                <span itemprop="name">Hexo配置Google Analytics</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2022-04-03T18:07:21+09:00" content="2022-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/Note/2021/01/31/图片相对路径测试/" itemprop="url">
-              
-                <span itemprop="name">图片相对路径测试</span>
+                <span itemprop="name">页面锚点测试</span>
               
             </a>
         
       </h3>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-01-31T12:39:10+09:00" content="2021-01-31">
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/Note/2020/08/18/更改Hexo链接格式/" itemprop="url">
-              
-                <span itemprop="name">更改Hexo链接格式</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-08-18T18:39:37+09:00" content="2020-08-18">
-          08-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/Note/2020/07/19/Hexo-Next-RSSz设置/" itemprop="url">
-              
-                <span itemprop="name">Hexo-Next-RSS设置</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-07-19T21:53:05+09:00" content="2020-07-19">
-          07-19
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-15T17:00:50+09:00" content="2019-03-15">
+          03-15
         </time>
       </div>
 
@@ -809,6 +751,83 @@
                 $('<i>').addClass('fa fa-users')
               )
               ).append($('<span>').text('閱讀次數 ' + count))
+          )
+        }
+      }
+
+      var db = firebase.firestore()
+      var articles = db.collection('articles')
+
+      //https://hexo.io/zh-tw/docs/variables.html
+      var isPost = ''.length > 0
+      var isArchive = '' === 'true'
+      var isCategory = ''.length > 0
+      var isTag = ''.length > 0
+
+      if (isPost) { //is article page
+        var title = ''
+        var doc = articles.doc(title)
+
+        getCount(doc, true).then(appendCountTo($('.post-meta')))
+      }
+      else if (!isArchive && !isCategory && !isTag) { //is index page
+        var titles = [] //array to titles
+
+        var postsstr = 'titles.push("页面锚点测试");' //if you have a better way to get titles of posts, please change it
+        eval(postsstr)
+
+        var promises = titles.map(function (title) {
+          return articles.doc(title)
+        }).map(function (doc) {
+          return getCount(doc)
+        })
+        Promise.all(promises).then(function (counts) {
+          var metas = $('.post-meta')
+          counts.forEach(function (val, idx) {
+            appendCountTo(metas[idx])(val)
+          })
+        })
+      }
+    })()
+  </script>
+
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
+      ).append($('<span>').text('閱讀次數 ' + count))
           )
         }
       }
