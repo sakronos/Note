@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://github.com/sakronos/WareHouse/blob/master/AndroidProxy.png?raw=true">
 <meta property="og:image" content="https://sakronos.github.io/Note/img/as22032021.png">
-<meta property="og:updated_time" content="2021-03-22T03:39:03.855Z">
+<meta property="og:updated_time" content="2022-04-04T08:58:45.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio 模拟器设置代理（FQ)">
 <meta name="twitter:description" content="VSC我日你先人MD我打开VSC后右侧的预览字体又变成宋体了，丑的一比，吓死本宝宝了。检查过设置后没发现啥问题，VSC也没更新过，尝试重启VSC后才正常。。。   VSC我日你先人。   前言很好，安卓作业出了点问题，以为是网络问题导致模拟器未正确设置引发的问题。  （虽然网络弄好了也并未解决作业的问题） 于是乎我便踏上了为Android Studio自带模拟器设置代理的漫漫长路。">
@@ -430,7 +430,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  880
+                  878
                 </span>
               
 
@@ -480,7 +480,7 @@
 <li>Android Emulator内设置WiFi代理（成功，但经历了些波折）</li>
 </ul>
 <p>如果想了解更多方法，参见参考文献[1]，这篇整理的很全。</p>
-<h4 id="模拟器Settings-gt-Proxy中手动设置代理"><a href="#模拟器Settings-gt-Proxy中手动设置代理" class="headerlink" title="模拟器Settings-&gt;Proxy中手动设置代理"></a>模拟器Settings-&gt;Proxy中手动设置代理</h4><p>关于这个为啥没用我也想不通，我应用设置时它明明显示Success的说，不过有个Bug让我很不爽：<strong>使用小键盘输入Host name和Port number时每次键入一个字符会出来两个</strong>，害得我以为笔记本键盘也坏了。<br>这里写下我是用的IDE：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Android Studio 3.6.1</span><br><span class="line">Build #AI-192.7142.36.36.6241897, built on February 27, 2020</span><br><span class="line">Runtime version: 1.8.0_212-release-1586-b04 amd64</span><br><span class="line">VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o</span><br><span class="line">Windows 10 10.0</span><br><span class="line"></span><br><span class="line">Android Emulator 30.0.0</span><br></pre></td></tr></table></figure></p>
+<h4 id="模拟器Settings-gt-Proxy中手动设置代理"><a href="#模拟器Settings-gt-Proxy中手动设置代理" class="headerlink" title="模拟器Settings-&gt;Proxy中手动设置代理"></a>模拟器Settings-&gt;Proxy中手动设置代理</h4><p>关于这个为啥没用我也想不通，我应用设置时它明明显示Success的说，不过有个Bug让我很不爽：<strong>使用小键盘输入Host name和Port number时每次键入一个字符会出来两个</strong>，害得我以为笔记本键盘也坏了。<br>下面是我的环境：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Android Studio 3.6.1</span><br><span class="line">Build #AI-192.7142.36.36.6241897, built on February 27, 2020</span><br><span class="line">Runtime version: 1.8.0_212-release-1586-b04 amd64</span><br><span class="line">VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o</span><br><span class="line">Windows 10 10.0</span><br><span class="line"></span><br><span class="line">Android Emulator 30.0.0</span><br></pre></td></tr></table></figure></p>
 <h4 id="Android内设置WiFi代理"><a href="#Android内设置WiFi代理" class="headerlink" title="Android内设置WiFi代理"></a>Android内设置WiFi代理</h4><ol>
 <li>首先确保代理开启本地代理，SSR-Windows版本默认不开启本地代理</li>
 <li>设置Android连接的WiFi的代理，填写本机回环接口和本地代理的端口。这里要注意的是，因为模拟器在虚拟路由器后面运行[2]，所以主机回环接口的特殊别名（即，开发计算机上的 127.0.0.1）是<strong>10.0.2.2</strong>，所以主机名填写的是10.0.2.2，这点非常重要，再次感谢参考文献[1].</li>
@@ -887,7 +887,7 @@
 
 
 
-  <script src="/Note/js/av-min.js"></script>
+  <script src="//sakronos.github.io/js/av-min.js"></script>
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
