@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-tw">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/Note/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/Note/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/Note/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Note/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Note/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Note/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/Note/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/Note/atom.xml" title="PERFECT BLUE" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="这一篇很早之前就应该写好的，结果从5月拖到了7月……原因是！Lockdown！ 这次Lockdown真的要把吾辈搞疯了，5月的时候吾辈感觉上还没什么问题。当时把这篇blog所需的材料都找齐后，然后就是例行拖延症……结果拖了一阵子后，发现整个人做什么事情都提不起兴趣，Switch都没有兴趣碰了。那阵子吾辈整天干的事情就是睡觉，和看Youtube木棉花TW的无限《ワンパンマン》马拉松…… 最近作息稍稍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VLC同时显示两条Subtitle">
+<meta property="og:url" content="https://sakronos.github.io/Note/2022/05/14/VLC同时显示两条Subtitle/index.html">
+<meta property="og:site_name" content="PERFECT BLUE">
+<meta property="og:description" content="这一篇很早之前就应该写好的，结果从5月拖到了7月……原因是！Lockdown！ 这次Lockdown真的要把吾辈搞疯了，5月的时候吾辈感觉上还没什么问题。当时把这篇blog所需的材料都找齐后，然后就是例行拖延症……结果拖了一阵子后，发现整个人做什么事情都提不起兴趣，Switch都没有兴趣碰了。那阵子吾辈整天干的事情就是睡觉，和看Youtube木棉花TW的无限《ワンパンマン》马拉松…… 最近作息稍稍">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://sakronos.github.io/Note/img/20220717190316RM_RF_TILDE.png">
+<meta property="og:updated_time" content="2022-07-24T13:32:10.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VLC同时显示两条Subtitle">
+<meta name="twitter:description" content="这一篇很早之前就应该写好的，结果从5月拖到了7月……原因是！Lockdown！ 这次Lockdown真的要把吾辈搞疯了，5月的时候吾辈感觉上还没什么问题。当时把这篇blog所需的材料都找齐后，然后就是例行拖延症……结果拖了一阵子后，发现整个人做什么事情都提不起兴趣，Switch都没有兴趣碰了。那阵子吾辈整天干的事情就是睡觉，和看Youtube木棉花TW的无限《ワンパンマン》马拉松…… 最近作息稍稍">
+<meta name="twitter:image" content="https://sakronos.github.io/Note/img/20220717190316RM_RF_TILDE.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Note/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '2K5OLOSN8K',
+      apiKey: '842af51ad89175e6f2e3afe02c0b5b87',
+      indexName: 'Note',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sakronos.github.io/Note/2022/05/14/VLC同时显示两条Subtitle/">
+
+
+
+
+
+  <title>VLC同时显示两条Subtitle | PERFECT BLUE</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-202535369-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Note/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PERFECT BLUE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Essays</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/Note/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/Note/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/Note/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/Note/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/Note/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/Note/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站點地圖
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            檢索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2022/05/14/VLC同时显示两条Subtitle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">VLC同时显示两条Subtitle</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2022-05-14T18:30:29+09:00">
+                2022-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2022/05/14/VLC同时显示两条Subtitle/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2022/05/14/VLC同时显示两条Subtitle/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  1.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一篇很早之前就应该写好的，结果从5月拖到了7月……原因是！Lockdown！</p>
+<p>这次Lockdown真的要把吾辈搞疯了，5月的时候吾辈感觉上还没什么问题。当时把这篇blog所需的材料都找齐后，然后就是例行拖延症……结果拖了一阵子后，发现整个人做什么事情都提不起兴趣，Switch都没有兴趣碰了。那阵子吾辈整天干的事情就是睡觉，和看Youtube木棉花TW的无限《ワンパンマン》马拉松……</p>
+<p>最近作息稍稍恢复了点，虽然身体和心理状态没有恢复到Lockdown之前的状态，但好歹是能写一些字了。</p>
+<p>其实今天吾辈会又想起要补上这篇是有个契机的。吾辈在写这些文字的时候其实已经是7/18了，昨天干了件很蠢的事情：本来想用<code>~/</code>来写winston的transports路径的，结果没得到想要的效果，看了眼结果在Source目录下新建了一个<code>~</code>目录；当时没动脑子，直接<code>rm -rf ~</code> <code>Enter</code>一气呵成，结果执行了几秒发现还没结束，当时就发现不对了，赶紧<code>Control+C</code>……</p>
+<p>rm执行了大概8s，还是删了不少东西的，由于没有日志，具体损失不明[爆哭]，案发现场如下图：<br><img src="https://sakronos.github.io/Note/img/20220717190316RM_RF_TILDE.png" alt></p>
+<p>经此一役，吾辈立下几个flag：  </p>
+<ol>
+<li>从今以后再敲<code>rm -rf</code> 剁手</li>
+<li>从今以后出门一定穿袜子（MD，吾辈今天出门因为懒没穿袜子，脚又被磨破了）</li>
+</ol>
+<p>好吧，第二条和上面说的事完全无关。</p>
+<p>虽然这次误删的东西应该不涉及吾辈的生命财产安全，但是以防万一，还是有必要清理一下历史遗产。</p>
+<p>好！开始说正题！</p>
+<p>之前脑子抽风，想要看双语对照字幕，就像《丸子与银河龙》提供的那样，这就是本文的起源。</p>
+<p>这次搞到的视频文件内嵌了多语字幕，原材料是不用再去找了，剩下的全是加工的问题了，本文分两步走：提取内嵌字幕、在VLC中显示两条字幕。</p>
+<p>本文唯一指定播放器：VLC media player</p>
+<h2 id="提取内嵌字幕"><a href="#提取内嵌字幕" class="headerlink" title="提取内嵌字幕"></a>提取内嵌字幕</h2><p>啊，时间有点久了，我记得应该是这样吧：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i Movie.mkv -map 0:s:0 subs.srt</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i: Input file URL/path.</span></span><br><span class="line"><span class="comment"># -map: Designate one or more input streams as a source for the output file.</span></span><br><span class="line"><span class="comment"># s:0: Select the subtitle stream.</span></span><br><span class="line"><span class="comment"># This would download the first subtitle track. If there are several, use 0:s:1 to download the second one, 0:s:2 to download the third one, and so on. </span></span><br><span class="line"><span class="comment"># To extract more subtitles at once you have to duplicate the -map parameters for each file. Also include -c copy so that it just extracts the file without trying to process it: ffmpeg -i Movie.mkv -c copy -map 0:s:0 subs.01.srt -c copy -map 0:s:1 subs.02.srt. Anyway it will take long time because ffmpeg must read whole video file to find all parts of the subtitle streams.</span></span><br></pre></td></tr></table></figure>
+<p>如果还有问题请参考下面的Reference，当时这条解决了我的问题。</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a href="https://superuser.com/questions/583393/how-to-extract-subtitle-from-video-using-ffmpeg" target="_blank" rel="noopener">How to extract subtitle from video using ffmpeg?</a></li>
+</ol>
+<h2 id="字幕插件：Subtitler-lite-mod"><a href="#字幕插件：Subtitler-lite-mod" class="headerlink" title="字幕插件：Subtitler lite mod"></a>字幕插件：Subtitler lite mod</h2><p>Source &amp; Manual: <a href="https://addons.videolan.org/p/1154027/" target="_blank" rel="noopener">Subtitler lite mod v1.3</a></p>
+<p>从上面的链接下载Subtitler lite mod，并放到指定位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">INSTALLATION:</span><br><span class="line">- extract (unzip) the .lua file and put it in the VLC subdir /lua/extensions, by default:</span><br><span class="line">* Windows (all users): %ProgramFiles%\VideoLAN\VLC\lua\extensions\</span><br><span class="line">* Windows (current user): %APPDATA%\VLC\lua\extensions\</span><br><span class="line">* Linux (all users): /usr/lib/vlc/lua/extensions/</span><br><span class="line">* Linux (current user): ~/.local/share/vlc/lua/extensions/</span><br><span class="line">* Mac OS X (all users): /Applications/VLC.app/Contents/MacOS/share/lua/extensions/</span><br><span class="line">* Mac OS X (current user): /Users/%your_name%/Library/Application Support/org.videolan.vlc/lua/extensions/</span><br><span class="line">(create directories if they don&apos;t exist)</span><br><span class="line">- Restart VLC or just reload extensions (Tools &gt; Plugins and extensions &gt; Active Extensions tab: Reload extensions button).</span><br></pre></td></tr></table></figure></p>
+<p>至此，Subtitler lite mod安装完毕，使用方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Then you simply start the extension in VLC menu &quot;View&quot; or &quot;Vlc &gt; Extensions&quot; on Mac OS.</span><br><span class="line"></span><br><span class="line">The extension will try to load SRT subtitle file of the same name and location as a playing media (&quot;d:\films\film.avi&quot; --&gt; &quot;d:\films\film.srt&quot;).</span><br><span class="line"></span><br><span class="line">Then you need to keep pressing the [Refresh] button in the dialog box.</span><br></pre></td></tr></table></figure></p>
+<p>如果插件显示的文字是乱码的话，用户需要根据需求改一下插件的lua脚本。脚本开头定义了编码格式参数，默认应该是<code>Windows-1250</code>。</p>
+<h3 id="但是，一直按「Refresh」也太蠢了吧！"><a href="#但是，一直按「Refresh」也太蠢了吧！" class="headerlink" title="但是，一直按「Refresh」也太蠢了吧！"></a>但是，一直按「Refresh」也太蠢了吧！</h3><p>所以，插件的Description中，作者贴心地提供了各种系统下的Key Sender：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">You rather use some button presser / key sender. Following ones are included in the package:</span><br><span class="line">- &quot;keypresser(Windows).vbs&quot;, a simple VBScript for Windows users;</span><br><span class="line">- &quot;buttonpresser(Mac).applescript&quot;, a simple AppleScript for Mac OS X users</span><br><span class="line">http://addons.videolan.org/content/show.php?content=152364&amp;forumpage=1#c473169</span><br><span class="line">- &quot;keeping-press-enter(Linux).sh&quot; - Linux, xdotool - A shell script:</span><br><span class="line">http://wikiwiki.jp/disklessfun/?misc1#e976f4fa</span><br><span class="line">&quot;sleep 0.1&quot; or &quot;usleep 100000&quot; instead of &quot;sleep 1&quot;?</span><br><span class="line">- &quot;subtitlerlite.ahk&quot; - AutoHotkey script for Windows:</span><br><span class="line">https://forum.videolan.org/viewtopic.php?f=29&amp;t=97791&amp;start=40#p407054</span><br></pre></td></tr></table></figure></p>
+<p>下面讲一下Linux下的操作。</p>
+<p>作者提供的Linux下的脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">TITLE=<span class="string">"Subtitler \(lite\) mod"</span></span><br><span class="line">MSG=<span class="string">"Pressing Enter key"</span></span><br><span class="line">FLG=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">zenity --progress --pulsate --no-cancel --text=<span class="string">"<span class="variable">$&#123;MSG&#125;</span>"</span> \</span><br><span class="line">--title=<span class="string">"<span class="variable">$&#123;MSG&#125;</span>"</span> &amp;</span><br><span class="line">SPID=$!</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> `ps --pid <span class="variable">$&#123;SPID&#125;</span>|wc -l` -le 1; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">break</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">xdotool search --name <span class="string">"<span class="variable">$&#123;TITLE&#125;</span>"</span> windowactivate</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> $? -eq 0 &amp;&amp; <span class="variable">$FLG</span>; <span class="keyword">then</span></span><br><span class="line">xdotool getactivewindow windowmove 0 0</span><br><span class="line">FLG=<span class="literal">false</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">xdotool search --name <span class="string">"<span class="variable">$&#123;TITLE&#125;</span>"</span> key <span class="string">"Return"</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> $? -ne 0; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">kill</span> <span class="variable">$&#123;SPID&#125;</span> 2&gt;/dev/null</span><br><span class="line"><span class="built_in">break</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">sleep 1</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<p>将脚本下载到任意位置（因为以后也不会直接运行这个脚本，Manjaro下直接在Terminal运行这个脚本的话，Terminal会不停地变成最前面的窗口，这还怎么看视频？），并为这个脚本创建launcher。</p>
+<p>Create <code>*.desktop</code> file, location depends on if it is for personal use or all users. If these directories do not exist, create them.</p>
+<p>For personal use, <code>~/.local/share/applications</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit ~/.<span class="built_in">local</span>/share/applications/subtitler.desktop</span><br></pre></td></tr></table></figure>
+<p>然后编辑该文件，贴上以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Categories=AudioVideo;Player;Recorder;</span><br><span class="line">Comment=Use with Subtitler (lite) mod. Keep pressing the [Refresh] button in the dialog box.</span><br><span class="line">Exec=~/Desktop/subtitler-keeping-press-enter.sh</span><br><span class="line">GenericName=Use with Subtitler (lite) mod. Keep pressing the [Refresh] button in the dialog box.</span><br><span class="line">Icon=map-globe</span><br><span class="line">Keywords=Player;Subtitle;</span><br><span class="line">Name=Subtitler Press</span><br><span class="line">StartupNotify=true</span><br><span class="line">Terminal=false</span><br><span class="line">Type=Application</span><br><span class="line">Version=1.0</span><br></pre></td></tr></table></figure>
+<p><strong>Edit <code>Icon=</code> and <code>Exec=</code></strong><br>Exec填上刚刚脚本下载到的路径；Icon嘛，有兴趣的话选上自己喜欢的Icon，其实也可以不填。</p>
+<p>至此，大功告成！</p>
+<p>然后就可以愉快的打开视频，在VLC内选好第一条与视频文件名不一样的字幕，打开Subtitler lite mod，再打开刚才创建的launcher，再次愉快的看视频了（原谅吾辈的辞藻匮乏，用了两次愉快……）</p>
+<h3 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a href="http://wikiwiki.jp/disklessfun/?misc1#e976f4fa" target="_blank" rel="noopener">A shell script for Subtitler (lite) mod (VLC 2.1+ extention)</a></li>
+<li><a href="https://askubuntu.com/questions/141229/how-to-add-a-shell-script-to-launcher-as-shortcut" target="_blank" rel="noopener">How to add a shell script to launcher as shortcut</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author：</strong>
+    Kronos
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link：</strong>
+    <a href="https://sakronos.github.io/Note/2022/05/14/VLC同时显示两条Subtitle/" title="VLC同时显示两条Subtitle">https://sakronos.github.io/Note/2022/05/14/VLC同时显示两条Subtitle/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice： </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Note/2022/04/05/hexo-配置sitemap/" rel="next" title="hexo_配置sitemap">
+                <i class="fa fa-chevron-left"></i> hexo_配置sitemap
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Note/2022/05/28/日区iOS账号使用腾讯会议/" rel="prev" title="日区iOS账号使用腾讯会议">
+                日区iOS账号使用腾讯会议 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kronos</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/Note/archives/">
+              
+                  <span class="site-state-item-count">146</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/Note/categories/index.html">
+                  <span class="site-state-item-count">163</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Note/tags/index.html">
+                  <span class="site-state-item-count">82</span>
+                  <span class="site-state-item-name">標籤</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/Note/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/sakronos" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:vanillamochicake@yahoo.co.jp" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#提取内嵌字幕"><span class="nav-number">1.</span> <span class="nav-text">提取内嵌字幕</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.1.</span> <span class="nav-text">Reference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字幕插件：Subtitler-lite-mod"><span class="nav-number">2.</span> <span class="nav-text">字幕插件：Subtitler lite mod</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#但是，一直按「Refresh」也太蠢了吧！"><span class="nav-number">2.1.</span> <span class="nav-text">但是，一直按「Refresh」也太蠢了吧！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference-1"><span class="nav-number">2.2.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kronos</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Note/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Note/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/Note/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/Note/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//unpkg.com/leancloud-storage@3.15.0/dist/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'QpTLC7WiWxYzIvmgVphmq3D5-gzGzoHsz',
+        appKey: 'eCDRIyiOPppTf20d0u80dGLd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/Note/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/Note/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/Note/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+  
+  <script>
+    (function () {
+
+      firebase.initializeApp({
+        apiKey: 'AIzaSyAPeKOWT5_ZbGrzRcGyqWp9tJn6EI-Jba8',
+        projectId: 'gh-pages-note'
+      })
+
+      function getCount(doc, increaseCount) {
+        //increaseCount will be false when not in article page
+
+        return doc.get().then(function (d) {
+          var count
+          if (!d.exists) { //has no data, initialize count
+            if (increaseCount) {
+              doc.set({
+                count: 1
+              })
+              count = 1
+            }
+            else {
+              count = 0
+            }
+          }
+          else { //has data
+            count = d.data().count
+            if (increaseCount) {
+              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
+                doc.set({ //increase count
+                  count: count + 1
+                })
+                count++
+              }
+            }
+          }
+          if (window.localStorage && increaseCount) { //mark as visited
+            localStorage.setItem(title, true)
+          }
+
+          return count
+        })
+      }
+
+      function appendCountTo(el) {
+        return function (count) {
+          $(el).append(
+            $('<span>').addClass('post-visitors-count').append(
+              $('<span>').addClass('post-meta-divider').text('|')
+            ).append(
+              $('<span>').addClass('post-meta-item-icon').append(
+                $('<i>').addClass('fa fa-users')
+              )
+              ).append($('<span>').text('閱讀次數 ' + count))
+          )
+        }
+      }
+
+      var db = firebase.firestore()
+      var articles = db.collection('articles')
+
+      //https://hexo.io/zh-tw/docs/variables.html
+      var isPost = 'VLC同时显示两条Subtitle'.length > 0
+      var isArchive = '' === 'true'
+      var isCategory = ''.length > 0
+      var isTag = ''.length > 0
+
+      if (isPost) { //is article page
+        var title = 'VLC同时显示两条Subtitle'
+        var doc = articles.doc(title)
+
+        getCount(doc, true).then(appendCountTo($('.post-meta')))
+      }
+      else if (!isArchive && !isCategory && !isTag) { //is index page
+        var titles = [] //array to titles
+
+        var postsstr = '' //if you have a better way to get titles of posts, please change it
+        eval(postsstr)
+
+        var promises = titles.map(function (title) {
+          return articles.doc(title)
+        }).map(function (doc) {
+          return getCount(doc)
+        })
+        Promise.all(promises).then(function (counts) {
+          var metas = $('.post-meta')
+          counts.forEach(function (val, idx) {
+            appendCountTo(metas[idx])(val)
+          })
+        })
+      }
+    })()
+  </script>
+
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

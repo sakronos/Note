@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2022-04-03T10:38:15.864Z</updated>
+  <updated>2022-07-16T16:35:32.802Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【转载】C# Process运行程序时Console Output的中文乱码</title>
+    <link href="https://sakronos.github.io/Note/2022/07/16/C-Process%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8FConsole-Output%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/"/>
+    <id>https://sakronos.github.io/Note/2022/07/16/C-Process%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8FConsole-Output%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</id>
+    <published>2022-07-16T14:08:02.000Z</published>
+    <updated>2022-07-16T16:35:32.802Z</updated>
+    
+    <content type="html"><![CDATA[<p>在听 - <a href="https://youtu.be/LVpYT6r4Pis" target="_blank" rel="noopener">周杰倫 蒲公英的约定</a></p><p>最近睡眠质量不是很好，晚上23点困得不行，经常会怀念之前的时光，说话常常词不达意……大概是上了年纪吧。</p><p>Jay Chou发新专了，不是很对我的胃口。点开油管，他的老歌倒是很动听，今晚油管还推了杨丞琳和张韶涵的歌，emmm……是心动的感觉。</p><p>啊这，怎么这个点了，Lycoris和白皇都更新了……</p><p>嘛，赶紧复制黏贴完，洗洗上床看Lycoris，反正这篇的情况和我的一模一样。</p><a id="more"></a><p>是这样的，我嘛希望在C# Windows Form中打印控制台程序的Output，在Powershell里中文显示的好好的，到了C#程序里变成中文乱码了。</p><p>好久没处理乱码的情况了，用乱码恢复看了眼，是用GBK编码处理UTF-8编码产生的乱码，本来想反过来用GBK编码重新读入字符串后用UTF-8重新处理bytes，但是处理后得到的字符串中有部分文字已经无法恢复[🤦‍捂脸]，反手打开搜索引擎，找到一篇情况和我的一模一样的。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>process（class Process）加上标准输出的格式就可以了。<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process.StartInfo.StandardOutputEncoding = Encoding.UTF8;</span><br></pre></td></tr></table></figure></p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol><li><a href="https://www.cnblogs.com/zjxyz2008zhangjuan/p/7246646.html" target="_blank" rel="noopener">C# 运行控制台程序中文乱码</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.process?view=net-6.0" target="_blank" rel="noopener">Process Class (System.Diagnostics) - Microsoft Docs</a></li></ol><font color="white">好耶，复制完了，白皇更新了[🤦‍sad]</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在听 - &lt;a href=&quot;https://youtu.be/LVpYT6r4Pis&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;周杰倫 蒲公英的约定&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最近睡眠质量不是很好，晚上23点困得不行，经常会怀念之前的时光，说话常常词不达意……大概是上了年纪吧。&lt;/p&gt;
+&lt;p&gt;Jay Chou发新专了，不是很对我的胃口。点开油管，他的老歌倒是很动听，今晚油管还推了杨丞琳和张韶涵的歌，emmm……是心动的感觉。&lt;/p&gt;
+&lt;p&gt;啊这，怎么这个点了，Lycoris和白皇都更新了……&lt;/p&gt;
+&lt;p&gt;嘛，赶紧复制黏贴完，洗洗上床看Lycoris，反正这篇的情况和我的一模一样。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Program" scheme="https://sakronos.github.io/Note/categories/Program/"/>
+    
+    
+      <category term="C#" scheme="https://sakronos.github.io/Note/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日区iOS账号使用腾讯会议</title>
+    <link href="https://sakronos.github.io/Note/2022/05/28/%E6%97%A5%E5%8C%BAiOS%E8%B4%A6%E5%8F%B7%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE/"/>
+    <id>https://sakronos.github.io/Note/2022/05/28/%E6%97%A5%E5%8C%BAiOS%E8%B4%A6%E5%8F%B7%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE/</id>
+    <published>2022-05-28T10:29:28.000Z</published>
+    <updated>2022-05-28T11:59:12.732Z</updated>
+    
+    <content type="html"><![CDATA[<p>辣鸡腾讯会议没有在App Store日区商店上架，使用Wechat小程序進入會議的話無法自由收發訊息。艸了，開個會還得想個法子……</p><a id="more"></a><p>既然iOS日區無法下載大陸版的騰訊會議，那麽國際版走起！國際版VooV（騰訊會議國際版的名稱）可以自由參加國内版的騰訊會議的會議。</p><p>在App Store下載VooV，使用Google賬號登錄即可。</p><p>VooV無法使用大陸微信或者大陸手機號注冊，未登錄狀態參加會議會要求驗證手機號，因此需要使用Google賬號登錄來避開驗證手機號的步驟。使用Apple賬號登錄可能也可以避開驗證手機號，但筆者還沒有驗證可行性。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;辣鸡腾讯会议没有在App Store日区商店上架，使用Wechat小程序進入會議的話無法自由收發訊息。艸了，開個會還得想個法子……&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="https://sakronos.github.io/Note/categories/iOS/"/>
+    
+      <category term="腾讯会议" scheme="https://sakronos.github.io/Note/categories/iOS/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE/"/>
+    
+    
+      <category term="iOS" scheme="https://sakronos.github.io/Note/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VLC同时显示两条Subtitle</title>
+    <link href="https://sakronos.github.io/Note/2022/05/14/VLC%E5%90%8C%E6%97%B6%E6%98%BE%E7%A4%BA%E4%B8%A4%E6%9D%A1Subtitle/"/>
+    <id>https://sakronos.github.io/Note/2022/05/14/VLC%E5%90%8C%E6%97%B6%E6%98%BE%E7%A4%BA%E4%B8%A4%E6%9D%A1Subtitle/</id>
+    <published>2022-05-14T09:30:29.000Z</published>
+    <updated>2022-07-24T13:32:10.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>这一篇很早之前就应该写好的，结果从5月拖到了7月……原因是！Lockdown！</p><p>这次Lockdown真的要把吾辈搞疯了，5月的时候吾辈感觉上还没什么问题。当时把这篇blog所需的材料都找齐后，然后就是例行拖延症……结果拖了一阵子后，发现整个人做什么事情都提不起兴趣，Switch都没有兴趣碰了。那阵子吾辈整天干的事情就是睡觉，和看Youtube木棉花TW的无限《ワンパンマン》马拉松……</p><p>最近作息稍稍恢复了点，虽然身体和心理状态没有恢复到Lockdown之前的状态，但好歹是能写一些字了。</p><p>其实今天吾辈会又想起要补上这篇是有个契机的。吾辈在写这些文字的时候其实已经是7/18了，昨天干了件很蠢的事情：本来想用<code>~/</code>来写winston的transports路径的，结果没得到想要的效果，看了眼结果在Source目录下新建了一个<code>~</code>目录；当时没动脑子，直接<code>rm -rf ~</code> <code>Enter</code>一气呵成，结果执行了几秒发现还没结束，当时就发现不对了，赶紧<code>Control+C</code>……</p><p>rm执行了大概8s，还是删了不少东西的，由于没有日志，具体损失不明[爆哭]，案发现场如下图：<br><img src="https://sakronos.github.io/Note/img/20220717190316RM_RF_TILDE.png" alt></p><p>经此一役，吾辈立下几个flag：  </p><ol><li>从今以后再敲<code>rm -rf</code> 剁手</li><li>从今以后出门一定穿袜子（MD，吾辈今天出门因为懒没穿袜子，脚又被磨破了）</li></ol><p>好吧，第二条和上面说的事完全无关。</p><p>虽然这次误删的东西应该不涉及吾辈的生命财产安全，但是以防万一，还是有必要清理一下历史遗产。</p><p>好！开始说正题！</p><p>之前脑子抽风，想要看双语对照字幕，就像《丸子与银河龙》提供的那样，这就是本文的起源。</p><p>这次搞到的视频文件内嵌了多语字幕，原材料是不用再去找了，剩下的全是加工的问题了，本文分两步走：提取内嵌字幕、在VLC中显示两条字幕。</p><p>本文唯一指定播放器：VLC media player</p><h2 id="提取内嵌字幕"><a href="#提取内嵌字幕" class="headerlink" title="提取内嵌字幕"></a>提取内嵌字幕</h2><p>啊，时间有点久了，我记得应该是这样吧：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i Movie.mkv -map 0:s:0 subs.srt</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i: Input file URL/path.</span></span><br><span class="line"><span class="comment"># -map: Designate one or more input streams as a source for the output file.</span></span><br><span class="line"><span class="comment"># s:0: Select the subtitle stream.</span></span><br><span class="line"><span class="comment"># This would download the first subtitle track. If there are several, use 0:s:1 to download the second one, 0:s:2 to download the third one, and so on. </span></span><br><span class="line"><span class="comment"># To extract more subtitles at once you have to duplicate the -map parameters for each file. Also include -c copy so that it just extracts the file without trying to process it: ffmpeg -i Movie.mkv -c copy -map 0:s:0 subs.01.srt -c copy -map 0:s:1 subs.02.srt. Anyway it will take long time because ffmpeg must read whole video file to find all parts of the subtitle streams.</span></span><br></pre></td></tr></table></figure><p>如果还有问题请参考下面的Reference，当时这条解决了我的问题。</p><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol><li><a href="https://superuser.com/questions/583393/how-to-extract-subtitle-from-video-using-ffmpeg" target="_blank" rel="noopener">How to extract subtitle from video using ffmpeg?</a></li></ol><h2 id="字幕插件：Subtitler-lite-mod"><a href="#字幕插件：Subtitler-lite-mod" class="headerlink" title="字幕插件：Subtitler lite mod"></a>字幕插件：Subtitler lite mod</h2><p>Source &amp; Manual: <a href="https://addons.videolan.org/p/1154027/" target="_blank" rel="noopener">Subtitler lite mod v1.3</a></p><p>从上面的链接下载Subtitler lite mod，并放到指定位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">INSTALLATION:</span><br><span class="line">- extract (unzip) the .lua file and put it in the VLC subdir /lua/extensions, by default:</span><br><span class="line">* Windows (all users): %ProgramFiles%\VideoLAN\VLC\lua\extensions\</span><br><span class="line">* Windows (current user): %APPDATA%\VLC\lua\extensions\</span><br><span class="line">* Linux (all users): /usr/lib/vlc/lua/extensions/</span><br><span class="line">* Linux (current user): ~/.local/share/vlc/lua/extensions/</span><br><span class="line">* Mac OS X (all users): /Applications/VLC.app/Contents/MacOS/share/lua/extensions/</span><br><span class="line">* Mac OS X (current user): /Users/%your_name%/Library/Application Support/org.videolan.vlc/lua/extensions/</span><br><span class="line">(create directories if they don&apos;t exist)</span><br><span class="line">- Restart VLC or just reload extensions (Tools &gt; Plugins and extensions &gt; Active Extensions tab: Reload extensions button).</span><br></pre></td></tr></table></figure></p><p>至此，Subtitler lite mod安装完毕，使用方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Then you simply start the extension in VLC menu &quot;View&quot; or &quot;Vlc &gt; Extensions&quot; on Mac OS.</span><br><span class="line"></span><br><span class="line">The extension will try to load SRT subtitle file of the same name and location as a playing media (&quot;d:\films\film.avi&quot; --&gt; &quot;d:\films\film.srt&quot;).</span><br><span class="line"></span><br><span class="line">Then you need to keep pressing the [Refresh] button in the dialog box.</span><br></pre></td></tr></table></figure></p><p>如果插件显示的文字是乱码的话，用户需要根据需求改一下插件的lua脚本。脚本开头定义了编码格式参数，默认应该是<code>Windows-1250</code>。</p><h3 id="但是，一直按「Refresh」也太蠢了吧！"><a href="#但是，一直按「Refresh」也太蠢了吧！" class="headerlink" title="但是，一直按「Refresh」也太蠢了吧！"></a>但是，一直按「Refresh」也太蠢了吧！</h3><p>所以，插件的Description中，作者贴心地提供了各种系统下的Key Sender：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">You rather use some button presser / key sender. Following ones are included in the package:</span><br><span class="line">- &quot;keypresser(Windows).vbs&quot;, a simple VBScript for Windows users;</span><br><span class="line">- &quot;buttonpresser(Mac).applescript&quot;, a simple AppleScript for Mac OS X users</span><br><span class="line">http://addons.videolan.org/content/show.php?content=152364&amp;forumpage=1#c473169</span><br><span class="line">- &quot;keeping-press-enter(Linux).sh&quot; - Linux, xdotool - A shell script:</span><br><span class="line">http://wikiwiki.jp/disklessfun/?misc1#e976f4fa</span><br><span class="line">&quot;sleep 0.1&quot; or &quot;usleep 100000&quot; instead of &quot;sleep 1&quot;?</span><br><span class="line">- &quot;subtitlerlite.ahk&quot; - AutoHotkey script for Windows:</span><br><span class="line">https://forum.videolan.org/viewtopic.php?f=29&amp;t=97791&amp;start=40#p407054</span><br></pre></td></tr></table></figure></p><p>下面讲一下Linux下的操作。</p><p>作者提供的Linux下的脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">TITLE=<span class="string">"Subtitler \(lite\) mod"</span></span><br><span class="line">MSG=<span class="string">"Pressing Enter key"</span></span><br><span class="line">FLG=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">zenity --progress --pulsate --no-cancel --text=<span class="string">"<span class="variable">$&#123;MSG&#125;</span>"</span> \</span><br><span class="line">--title=<span class="string">"<span class="variable">$&#123;MSG&#125;</span>"</span> &amp;</span><br><span class="line">SPID=$!</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> `ps --pid <span class="variable">$&#123;SPID&#125;</span>|wc -l` -le 1; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">break</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">xdotool search --name <span class="string">"<span class="variable">$&#123;TITLE&#125;</span>"</span> windowactivate</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> $? -eq 0 &amp;&amp; <span class="variable">$FLG</span>; <span class="keyword">then</span></span><br><span class="line">xdotool getactivewindow windowmove 0 0</span><br><span class="line">FLG=<span class="literal">false</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">xdotool search --name <span class="string">"<span class="variable">$&#123;TITLE&#125;</span>"</span> key <span class="string">"Return"</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> $? -ne 0; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">kill</span> <span class="variable">$&#123;SPID&#125;</span> 2&gt;/dev/null</span><br><span class="line"><span class="built_in">break</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">sleep 1</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p><p>将脚本下载到任意位置（因为以后也不会直接运行这个脚本，Manjaro下直接在Terminal运行这个脚本的话，Terminal会不停地变成最前面的窗口，这还怎么看视频？），并为这个脚本创建launcher。</p><p>Create <code>*.desktop</code> file, location depends on if it is for personal use or all users. If these directories do not exist, create them.</p><p>For personal use, <code>~/.local/share/applications</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit ~/.<span class="built_in">local</span>/share/applications/subtitler.desktop</span><br></pre></td></tr></table></figure><p>然后编辑该文件，贴上以下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Categories=AudioVideo;Player;Recorder;</span><br><span class="line">Comment=Use with Subtitler (lite) mod. Keep pressing the [Refresh] button in the dialog box.</span><br><span class="line">Exec=~/Desktop/subtitler-keeping-press-enter.sh</span><br><span class="line">GenericName=Use with Subtitler (lite) mod. Keep pressing the [Refresh] button in the dialog box.</span><br><span class="line">Icon=map-globe</span><br><span class="line">Keywords=Player;Subtitle;</span><br><span class="line">Name=Subtitler Press</span><br><span class="line">StartupNotify=true</span><br><span class="line">Terminal=false</span><br><span class="line">Type=Application</span><br><span class="line">Version=1.0</span><br></pre></td></tr></table></figure><p><strong>Edit <code>Icon=</code> and <code>Exec=</code></strong><br>Exec填上刚刚脚本下载到的路径；Icon嘛，有兴趣的话选上自己喜欢的Icon，其实也可以不填。</p><p>至此，大功告成！</p><p>然后就可以愉快的打开视频，在VLC内选好第一条与视频文件名不一样的字幕，打开Subtitler lite mod，再打开刚才创建的launcher，再次愉快的看视频了（原谅吾辈的辞藻匮乏，用了两次愉快……）</p><h3 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h3><ol><li><a href="http://wikiwiki.jp/disklessfun/?misc1#e976f4fa" target="_blank" rel="noopener">A shell script for Subtitler (lite) mod (VLC 2.1+ extention)</a></li><li><a href="https://askubuntu.com/questions/141229/how-to-add-a-shell-script-to-launcher-as-shortcut" target="_blank" rel="noopener">How to add a shell script to launcher as shortcut</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这一篇很早之前就应该写好的，结果从5月拖到了7月……原因是！Lockdown！&lt;/p&gt;
+&lt;p&gt;这次Lockdown真的要把吾辈搞疯了，5月的时候吾辈感觉上还没什么问题。当时把这篇blog所需的材料都找齐后，然后就是例行拖延症……结果拖了一阵子后，发现整个人做什么事情都提不起
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo_配置sitemap</title>
+    <link href="https://sakronos.github.io/Note/2022/04/05/hexo-%E9%85%8D%E7%BD%AEsitemap/"/>
+    <id>https://sakronos.github.io/Note/2022/04/05/hexo-%E9%85%8D%E7%BD%AEsitemap/</id>
+    <published>2022-04-05T15:16:17.000Z</published>
+    <updated>2022-04-05T16:16:18.036Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo配置Google Analytics</title>
@@ -76,9 +166,9 @@
     <link href="https://sakronos.github.io/Note/2022/03/21/LINE%E8%B4%B4%E5%9B%BE%E4%B8%8EAPNG/"/>
     <id>https://sakronos.github.io/Note/2022/03/21/LINE%E8%B4%B4%E5%9B%BE%E4%B8%8EAPNG/</id>
     <published>2022-03-21T13:27:22.000Z</published>
-    <updated>2022-03-21T15:36:45.167Z</updated>
+    <updated>2022-04-09T08:17:54.754Z</updated>
     
-    <content type="html"><![CDATA[<p>找贴图！找会动的贴图！找可爱的贴图！</p><p>又心血来潮开始找贴图了，过年的时候用的<a href="https://whatsticker.online/c/home/HK/zh" target="_blank" rel="noopener">WhatSticker</a>，这次又上去逛了一圈，感觉没有什么有新意的贴图。想了想，还是到LINE上去找找吧。</p><p>上次去LINE上找贴图感觉已经是好久之前的事情了，只模糊的记得要先提取一个贴图包的ID，然后拼出一个下载网址，然后就可以下到贴图了。这次Google了一下如何提取LINE贴图，感觉相关的教程比之前难检索了……</p><p>不过，搜了一晚上，总算是有点成果，在此全部搬运到这儿，以备不时之需。<br>（其实全是根据参考链接四里找到的）</p><a id="more"></a><h1 id="LINE-动态贴图下载（GIF）"><a href="#LINE-动态贴图下载（GIF）" class="headerlink" title="LINE 动态贴图下载（GIF）"></a>LINE 动态贴图下载（GIF）</h1><p>LINE贴图包下载还是很简单的，而且方法很稳定，好像很久没有变过了：</p><h2 id="Download-the-sticker-files"><a href="#Download-the-sticker-files" class="headerlink" title="Download the sticker files"></a>Download the sticker files</h2><p>For regular sticker type, visit:<br><a href="dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickers@2x.zip">dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickers@2x.zip</a></p><p>For other sticker types, visit:<br><a href="dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickerpack@2x.zip">dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickerpack@2x.zip</a></p><p><b> If the links above are not working, you can also try to download them through the secure site here:  </b></p><p>For regular sticker type:<br><a href="https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickers@2x.zip" target="_blank" rel="noopener">https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickers@2x.zip</a></p><p>For other sticker types:<br><a href="https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickerpack@2x.zip" target="_blank" rel="noopener">https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickerpack@2x.zip</a></p><p>一般来说，上面前两个链接救OK了，[ID]的获取方法参见参考链接一。</p><p><strong>懒人福音</strong>：如果实在懒得研究怎么拼链接，可以直接试一下参考链接二的Chrome插件。</p><h2 id="Find-the-sticker-image-files"><a href="#Find-the-sticker-image-files" class="headerlink" title="Find the sticker image files"></a>Find the sticker image files</h2><p>You can find the image file of the sticker in the following folders:</p><ul><li>Regular sticker: . (root)</li><li>Animated sticker, either with sound or not, iPhone version: “animation@2x”</li><li>Animated sticker, either with sound or not, Android version: “animation”</li><li>Pop up sticker, either with sound or not: “popup”</li></ul><h2 id="The-file-format-that-LINE-used-is-APNG"><a href="#The-file-format-that-LINE-used-is-APNG" class="headerlink" title="The file format that LINE used is APNG"></a>The file format that LINE used is APNG</h2><p>最后一步，把下载得到的APNG文件转换为喜闻乐见的GIF。</p><p>参考链接三的Repository下载到本地，将待转换文件复制到Repository文件夹中，执行BAT脚本。</p><p>GIF GET！</p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://isamunoheya.blogspot.com/2016/10/how-to-download-line-stickers-on-pc.html" target="_blank" rel="noopener">Tutorial: How to download LINE sticker files to computer</a></li><li><a href="https://chrome.google.com/webstore/detail/stickers-packer/bngfikljchleddkelnfgohdfcobkggin" target="_blank" rel="noopener">LINE 贴图打包</a></li><li><a href="https://github.com/miyouzi/apng2gif" target="_blank" rel="noopener">miyouzi - apng2gif</a></li><li><a href="http://www.acg12.net/?p=7884" target="_blank" rel="noopener">Line动态表情包apng转换为gif|line sticker apng to gif</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>找贴图！找会动的贴图！找可爱的贴图！</p><p>又心血来潮开始找贴图了，过年的时候用的<a href="https://whatsticker.online/c/home/HK/zh" target="_blank" rel="noopener">WhatSticker</a>，这次又上去逛了一圈，感觉没有什么有新意的贴图。想了想，还是到LINE上去找找吧。</p><p>上次去LINE上找贴图感觉已经是好久之前的事情了，只模糊的记得要先提取一个贴图包的ID，然后拼出一个下载网址，然后就可以下到贴图了。这次Google了一下如何提取LINE贴图，感觉相关的教程比之前难检索了……</p><p>不过，搜了一晚上，总算是有点成果，在此全部搬运到这儿，以备不时之需。<br>（其实全是根据参考链接四里找到的）</p><a id="more"></a><h1 id="LINE-动态贴图下载（GIF）"><a href="#LINE-动态贴图下载（GIF）" class="headerlink" title="LINE 动态贴图下载（GIF）"></a>LINE 动态贴图下载（GIF）</h1><p>LINE贴图包下载还是很简单的，而且方法很稳定，好像很久没有变过了：</p><h2 id="Download-the-sticker-files"><a href="#Download-the-sticker-files" class="headerlink" title="Download the sticker files"></a>Download the sticker files</h2><p>For regular sticker type, visit:<br><a href="dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickers@2x.zip">dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickers@2x.zip</a></p><p>For other sticker types, visit:<br><a href="dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickerpack@2x.zip">dl.stickershop.line.naver.jp/products/0/0/1/[ID]/iphone/stickerpack@2x.zip</a></p><p><b> If the links above are not working, you can also try to download them through the secure site here:  </b></p><p>For regular sticker type:<br><a href="https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickers@2x.zip" target="_blank" rel="noopener">https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickers@2x.zip</a></p><p>For other sticker types:<br><a href="https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickerpack@2x.zip" target="_blank" rel="noopener">https://stickershop.line-scdn.net/stickershop/v1/product/[ID]/iphone/stickerpack@2x.zip</a></p><p>一般来说，上面前两个链接救OK了，[ID]的获取方法参见参考链接一。</p><p><strong>懒人福音</strong>：如果实在懒得研究怎么拼链接，可以直接试一下参考链接二的Chrome插件。</p><h2 id="Find-the-sticker-image-files"><a href="#Find-the-sticker-image-files" class="headerlink" title="Find the sticker image files"></a>Find the sticker image files</h2><p>You can find the image file of the sticker in the following folders:</p><ul><li>Regular sticker: . (root)</li><li>Animated sticker, either with sound or not, iPhone version: “animation@2x”</li><li>Animated sticker, either with sound or not, Android version: “animation”</li><li>Pop up sticker, either with sound or not: “popup”</li></ul><h2 id="The-file-format-that-LINE-used-is-APNG"><a href="#The-file-format-that-LINE-used-is-APNG" class="headerlink" title="The file format that LINE used is APNG"></a>The file format that LINE used is APNG</h2><p>最后一步，把下载得到的APNG文件转换为喜闻乐见的GIF。</p><h3 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a>通用方法</h3><p>使用ImageMagick（ImageMagick 7或更新的版本）將APNG轉換爲GIF。</p><p>需要注意的是，指定源文件的時候需要說明源文件爲APNG圖片, e.g. apng:animate.png</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick APNG:image.png image.gif</span><br></pre></td></tr></table></figure><h3 id="Windows-Platform"><a href="#Windows-Platform" class="headerlink" title="Windows Platform"></a>Windows Platform</h3><p>参考链接三的Repository下载到本地，将待转换文件复制到Repository文件夹中，执行BAT脚本。</p><p>GIF GET！</p><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><a href="https://isamunoheya.blogspot.com/2016/10/how-to-download-line-stickers-on-pc.html" target="_blank" rel="noopener">Tutorial: How to download LINE sticker files to computer</a></li><li><a href="https://chrome.google.com/webstore/detail/stickers-packer/bngfikljchleddkelnfgohdfcobkggin" target="_blank" rel="noopener">LINE 贴图打包</a></li><li><a href="https://github.com/miyouzi/apng2gif" target="_blank" rel="noopener">miyouzi - apng2gif</a></li><li><a href="http://www.acg12.net/?p=7884" target="_blank" rel="noopener">Line动态表情包apng转换为gif|line sticker apng to gif</a></li><li><a href="https://github.com/ImageMagick/ImageMagick/issues/24#issuecomment-799780569" target="_blank" rel="noopener">ImageMagick 7, now supports APNG since version 7.0.10-31</a></li></ol>]]></content>
     
     <summary type="html">
     
@@ -444,98 +534,6 @@
     
     
       <category term="pip" scheme="https://sakronos.github.io/Note/tags/pip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vim粘贴（转载）</title>
-    <link href="https://sakronos.github.io/Note/2021/07/16/vim%E7%B2%98%E8%B4%B4%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/"/>
-    <id>https://sakronos.github.io/Note/2021/07/16/vim%E7%B2%98%E8%B4%B4%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/</id>
-    <published>2021-07-16T13:21:41.000Z</published>
-    <updated>2021-08-01T09:18:32.827Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文转载自<a href="https://www.cbug.org/vim/vim-copy-paste.html" target="_blank" rel="noopener">Vim 复制粘帖格式错乱问题的解决办法</a></p><a id="more"></a><p>有时候，复制文本（尤其是代码）到 Vim，会出现格式错乱的问题。看样子，应该是自动缩进惹的祸。本文不去深究原因，直接给出解决方法。</p><h2 id="paste-模式"><a href="#paste-模式" class="headerlink" title="paste 模式"></a>paste 模式</h2><p>运行如下命令，进入 <code>paste</code> 模式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> paste</span><br></pre></td></tr></table></figure><p>进入 paste 模式后，按 i 键进入插入模式，然后再粘帖，文本格式不会错乱了。但粘帖后还需要按 <esc> 进入普通模式并执行如下命令结束 paste 模式：</esc></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> nopaste</span><br></pre></td></tr></table></figure><p>显然，这样非常麻烦。下面我们进行改进。</p><h2 id="快捷键一"><a href="#快捷键一" class="headerlink" title="快捷键一"></a>快捷键一</h2><p>我们可以利用设置快捷键来简化上面的两个命令。在 <code>~/.vimrc</code> 中加入如下两行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map &lt;F10&gt;:<span class="built_in">set</span> paste&lt;CR&gt;</span><br><span class="line">map &lt;F11&gt;:<span class="built_in">set</span> nopaste&lt;CR&gt;</span><br></pre></td></tr></table></figure><p>这样，在普通模式下按 F10 （你也可以用自己喜欢的按键）就会进入 paste 模式，按 i 进入插入模式后粘帖，然后按 <esc> 回到普通模式，再按 F11 结束 paste 模式。</esc></p><p>这样虽然方便了，但占用了两个按键。下面我们继续改进。</p><h2 id="快捷键二"><a href="#快捷键二" class="headerlink" title="快捷键二"></a>快捷键二</h2><p>在 <code>~/.vimrc</code> 中加入如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set pastetoggle=&lt;F11&gt;</span><br></pre></td></tr></table></figure><p>这样就可以把上面的 F10 和 F11 合并为一个快捷键来切换 paste 模式了。</p><p>还有更好的办法么？当然！</p><h2 id="Vim-寄存器一"><a href="#Vim-寄存器一" class="headerlink" title="Vim 寄存器一"></a>Vim 寄存器一</h2><p>关于 Vim 寄存器的详细信息请执行命令 <code>:help registers</code> 查看。</p><p>对于 “剪切板” 这个概念，Linux 下有两个东西：一个叫做 <strong>选择缓冲区 (X11 selection buffer</strong> )，另一个才是 <strong>剪切板 (clipboard)</strong> 。</p><p>鼠标或键盘选择内容时，内容实时进入缓冲区，然后按中键将内容插入光标所在位置；</p><p>鼠标或键盘选择内容后，按 Ctrl-C（或 Shift-Ctrl-C）或菜单中的 “复制”，内容进入剪切板，然后按 Ctrl-V（或 Shift-Ctrl-V）或菜单中的“粘帖” 将内容插入光标所在位置。关于这两者的详细信息，请自行搜索，此处不深究。</p><p>Vim 的寄存器 <code>&quot;*</code> 对应系统缓冲区， 寄存器 <code>&quot;+</code> 对应系统剪切板。</p><p>如果你是把选择的内容（在系统缓冲区中）粘帖到 Vim ，只需在普通模式下执行<code>&quot;*p</code>命令；</p><p>对应的，如果你是把复制的内容（在系统剪切板中）粘帖到 Vim，只需在普通模式下执行<code>&quot;+p</code>命令。</p><p>怎么样？格式没有错乱了吧？</p><p>这样虽然简便很多了，但还是需要输入三个字母，并且这三个字母都得使用右手小拇指输入，甚至其中的两个字母还需要 shift 键配合！</p><p>还有更简单的办法。</p><h2 id="Vim-寄存器二"><a href="#Vim-寄存器二" class="headerlink" title="Vim 寄存器二"></a>Vim 寄存器二</h2><p>在 ~/.vimrc 里加入如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set clipboard=unnamed</span><br></pre></td></tr></table></figure><p>然后只需在普通模式下按 p 即可把系统缓冲区中的内容粘帖到 Vim 中，就像粘帖用 yy 命令得到的内容一样，并且格式不错乱。</p><p>如果把上面的一行换成如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set clipboard=unnamedplus</span><br></pre></td></tr></table></figure><p>普通模式下按 p 粘帖的内容就是系统剪切板里的内容了。</p><p>这已经足够简便了。在搜索此问题的过程中，我还看到了另外一些办法。</p><h2 id="快捷键三"><a href="#快捷键三" class="headerlink" title="快捷键三"></a>快捷键三</h2><p>在 <code>~/.vimrc</code> 里加入如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inoremap &lt;S-Insert&gt;&lt;ESC&gt;:setl paste&lt;CR&gt;gi&lt;C-R&gt;+&lt;ESC&gt;:setl nopaste&lt;CR&gt;gi</span><br></pre></td></tr></table></figure><p>这样，你就可以在插入模式下使用 Shift-Insert 快捷键在粘帖系统剪贴板中的内容了。</p><p>把上面一行替换成如下内容同样可以达到相同的效果：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inoremap &lt;S-Insert&gt;&lt;ESC&gt;&quot;+p`]a</span><br></pre></td></tr></table></figure><p>注意，这可是在插入模式下哦！比起第 5 节提到的方法，这种方法省去了一次 <esc> 按键进入普通模式和一次 i 按键重新回到插入模式。</esc></p><p>至此，你需要做的只是：</p><ol><li>复制你想要的内容；</li><li>回到 Vim 并按 Shift-Insert 快捷键；</li><li>继续编辑其他内容。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文转载自&lt;a href=&quot;https://www.cbug.org/vim/vim-copy-paste.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Vim 复制粘帖格式错乱问题的解决办法&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Vim" scheme="https://sakronos.github.io/Note/categories/Vim/"/>
-    
-    
-      <category term="Vim" scheme="https://sakronos.github.io/Note/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python正则表达式修饰符 &amp; Python读取GBK文件 两篇</title>
-    <link href="https://sakronos.github.io/Note/2021/07/16/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BF%AE%E9%A5%B0%E7%AC%A6%E4%B8%8E%E8%AF%BB%E5%8F%96GBK%E6%96%87%E4%BB%B6/"/>
-    <id>https://sakronos.github.io/Note/2021/07/16/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BF%AE%E9%A5%B0%E7%AC%A6%E4%B8%8E%E8%AF%BB%E5%8F%96GBK%E6%96%87%E4%BB%B6/</id>
-    <published>2021-07-16T12:22:05.000Z</published>
-    <updated>2021-07-16T13:46:33.616Z</updated>
-    
-    <content type="html"><![CDATA[<p>唔姆，这两个标签页在电脑上挂了好久了，把它们扔到这就可以关掉了，好！</p><a id="more"></a><h1 id="Python正则表达式-re模块"><a href="#Python正则表达式-re模块" class="headerlink" title="Python正则表达式 re模块"></a>Python正则表达式 re模块</h1><p>re的<code>match</code>和<code>search</code>等方法都有一个参数flag（标志位），下面是它的使用方式：</p><h2 id="正则表达式修饰符-可选标志"><a href="#正则表达式修饰符-可选标志" class="headerlink" title="正则表达式修饰符 - 可选标志"></a>正则表达式修饰符 - 可选标志</h2><p>正则表达式可以包含一些可选标志修饰符来控制匹配的模式。修饰符被指定为一个可选的标志。多个标志可以通过按位 OR(|) 它们来指定。如 re.I | re.M 被设置成 I 和 M 标志：</p><table><thead><tr><th>修饰符</th><th>描述</th></tr></thead><tbody><tr><td>re.A</td><td>只匹配ASCII</td></tr><tr><td>re.I</td><td>使匹配对大小写不敏感</td></tr><tr><td>re.L</td><td>做本地化识别（locale-aware）匹配</td></tr><tr><td>re.M</td><td>多行匹配，影响 ^ 和 $</td></tr><tr><td>re.S</td><td>使 . 匹配包括换行在内的所有字符</td></tr><tr><td>re.U</td><td>根据Unicode字符集解析字符。这个标志影响 \w, \W, \b, \B</td></tr><tr><td>re.X</td><td>该标志通过给予你更灵活的格式以便你将正则表达式写得更易于理解。</td></tr></tbody></table><h4 id="转载自"><a href="#转载自" class="headerlink" title="转载自"></a>转载自</h4><ol><li><a href="https://www.runoob.com/python/python-reg-expressions.html#flags" target="_blank" rel="noopener">正则表达式修饰符 - 可选标志</a></li></ol><h1 id="关于python编码问题无法读取GBK文件"><a href="#关于python编码问题无法读取GBK文件" class="headerlink" title="关于python编码问题无法读取GBK文件"></a>关于python编码问题无法读取GBK文件</h1><p>emmm……想读取txt文件内容，python却报了如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UnicodeDecodeError: <span class="string">'gbk'</span> codec can<span class="string">'t decode byte 0xae in position 4040: illegal multibyte sequence</span></span><br></pre></td></tr></table></figure></p><h2 id="解决方案代码示例"><a href="#解决方案代码示例" class="headerlink" title="解决方案代码示例"></a>解决方案代码示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line"> </span><br><span class="line">fileHandler = open(<span class="string">'test.txt'</span>, mode=<span class="string">'r'</span>, encoding=<span class="string">'UTF-8'</span>)</span><br><span class="line">report_lines = fileHandler.readlines()</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> report_lines:</span><br><span class="line">    log=line.rstrip()</span><br><span class="line">    print(log)</span><br></pre></td></tr></table></figure><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://blog.csdn.net/u012814696/article/details/58585687" target="_blank" rel="noopener">关于python编码问题无法读取GBK文件</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;唔姆，这两个标签页在电脑上挂了好久了，把它们扔到这就可以关掉了，好！&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://sakronos.github.io/Note/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://sakronos.github.io/Note/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git Bash使用方法</title>
-    <link href="https://sakronos.github.io/Note/2021/07/10/Git-Bash%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0/"/>
-    <id>https://sakronos.github.io/Note/2021/07/10/Git-Bash%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%A4%8D%E4%B9%A0/</id>
-    <published>2021-07-10T14:06:48.000Z</published>
-    <updated>2021-07-10T15:11:21.551Z</updated>
-    
-    <content type="html"><![CDATA[<p>Git命令老是忘记，干脆直接贴这里。<br><a id="more"></a></p><p>参考博文：<a href="https://blog.csdn.net/qq_36667170/article/details/79085301" target="_blank" rel="noopener">https://blog.csdn.net/qq_36667170/article/details/79085301</a></p><p><img src="https://img-blog.csdnimg.cn/20200425223427978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjY3MTcw,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20200425223427978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjY3MTcw,size_16,color_FFFFFF,t_70"></p><p>这里选择SSH方式的话，相比HTTPS，可以不用配置WorkFlow，并使用SSH Key验证。比起HTTPS方式常常Connection Reset或10054端口错误，SSH方式省心很多。</p><p>关于配置WorkFlow：</p><ol><li><a href="https://blog.walterlv.com/post/github-push-failed-without-workflow-scope.html" target="_blank" rel="noopener">https://blog.walterlv.com/post/github-push-failed-without-workflow-scope.html</a></li><li><a href="https://stackoverflow.com/questions/64059610/how-to-resolve-refusing-to-allow-an-oauth-app-to-create-or-update-workflow-on" target="_blank" rel="noopener">https://stackoverflow.com/questions/64059610/how-to-resolve-refusing-to-allow-an-oauth-app-to-create-or-update-workflow-on</a></li></ol><h3 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h3><p>最近Github老是push失败，不知道为啥，校园网也奇差无比。</p><p>今天因为push失败，想更新Git for Windows，还是因为网络问题更新失败：<a href="https://stackoverflow.com/questions/13790592/how-to-upgrade-git-on-windows-to-the-latest-version" target="_blank" rel="noopener">https://stackoverflow.com/questions/13790592/how-to-upgrade-git-on-windows-to-the-latest-version</a></p><h3 id="打tag"><a href="#打tag" class="headerlink" title="打tag"></a>打tag</h3><p><a href="https://git-scm.com/book/zh/v2/Git-基础-打标签" target="_blank" rel="noopener">Git 基础 - 打标签</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Git命令老是忘记，干脆直接贴这里。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://sakronos.github.io/Note/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="https://sakronos.github.io/Note/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>玄学：国区AppleMusic听国区不存在的歌</title>
-    <link href="https://sakronos.github.io/Note/2021/06/14/%E7%8E%84%E5%AD%A6%EF%BC%9A%E5%9B%BD%E5%8C%BAAppleMusic%E5%90%AC%E5%9B%BD%E5%8C%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C/"/>
-    <id>https://sakronos.github.io/Note/2021/06/14/%E7%8E%84%E5%AD%A6%EF%BC%9A%E5%9B%BD%E5%8C%BAAppleMusic%E5%90%AC%E5%9B%BD%E5%8C%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C/</id>
-    <published>2021-06-14T15:43:48.000Z</published>
-    <updated>2021-06-14T16:47:03.383Z</updated>
-    
-    <content type="html"><![CDATA[<p>室友试出来的，因为没有多个设备和账号，无法保证下文方法一定有效。（就算当时有效以后也有可能被修复，甚至这个可能根本就是不存在的问题）</p><a id="more"></a><h2 id="国区Apple-Music卡出国区没有的歌"><a href="#国区Apple-Music卡出国区没有的歌" class="headerlink" title="国区Apple Music卡出国区没有的歌"></a>国区Apple Music卡出国区没有的歌</h2><p>外区好友分享歌曲给你后，将其加入资料库。播放，显示不能播放。点击广播，等待一会儿会跳出转换区域，选择转区。再回到资料库，发现这首歌能听了。有少数歌曲无法通过此方法卡出来（国区没有的专辑里面的歌无法卡出来，Apple Music错误弹窗的内容都不一样），还有每首外区的歌都得操作一遍才能听，操作过的歌可以一直听。</p><p>并未尝试在国区直接通过搜索方式搜这首歌，以上都是通过我的日区Music发给同学的国区Music，不排除可以直接听的情况。</p><p>这次发现国区Music的曲库远比我搞AM时全了，试了很多歌，发现国区都有，只有少数歌要通过以上方式卡出来。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;室友试出来的，因为没有多个设备和账号，无法保证下文方法一定有效。（就算当时有效以后也有可能被修复，甚至这个可能根本就是不存在的问题）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Apple Music" scheme="https://sakronos.github.io/Note/categories/Apple-Music/"/>
-    
-    
-      <category term="Apple Music" scheme="https://sakronos.github.io/Note/tags/Apple-Music/"/>
     
   </entry>
   
