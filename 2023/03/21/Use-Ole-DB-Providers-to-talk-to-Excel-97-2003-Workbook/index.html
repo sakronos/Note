@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-tw">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/Note/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/Note/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/Note/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Note/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Note/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Note/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/Note/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C#,">
+
+
+
+
+
+  <link rel="alternate" href="/Note/atom.xml" title="PERFECT BLUE" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="施工中……  好久，好久，好久没有写东西了，见谅。 Outline  Jet and ACE  1.1. connectionString  XLS query string  2.1. &amp;lt;&amp;gt; is not null  2.2. carriage  2.3. AS  2.4. SheetName$A1:F(0)  2.5. select ‘’2022”  2.6. F1,F2  2.7">
+<meta name="keywords" content="C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use Ole DB Providers to talk to Excel 97-2003 Workbook">
+<meta property="og:url" content="https://sakronos.github.io/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/index.html">
+<meta property="og:site_name" content="PERFECT BLUE">
+<meta property="og:description" content="施工中……  好久，好久，好久没有写东西了，见谅。 Outline  Jet and ACE  1.1. connectionString  XLS query string  2.1. &amp;lt;&amp;gt; is not null  2.2. carriage  2.3. AS  2.4. SheetName$A1:F(0)  2.5. select ‘’2022”  2.6. F1,F2  2.7">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://sakronos.github.io/Note/img/工事中.png">
+<meta property="og:image" content="https://sakronos.github.io/Note/img/20230321-02.png">
+<meta property="og:image" content="https://sakronos.github.io/Note/img/20230321-01.png">
+<meta property="og:image" content="https://sakronos.github.io/Note/img/20230321-03.png">
+<meta property="og:updated_time" content="2023-03-21T15:59:00.402Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Use Ole DB Providers to talk to Excel 97-2003 Workbook">
+<meta name="twitter:description" content="施工中……  好久，好久，好久没有写东西了，见谅。 Outline  Jet and ACE  1.1. connectionString  XLS query string  2.1. &amp;lt;&amp;gt; is not null  2.2. carriage  2.3. AS  2.4. SheetName$A1:F(0)  2.5. select ‘’2022”  2.6. F1,F2  2.7">
+<meta name="twitter:image" content="https://sakronos.github.io/Note/img/工事中.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Note/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '2K5OLOSN8K',
+      apiKey: '842af51ad89175e6f2e3afe02c0b5b87',
+      indexName: 'Note',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sakronos.github.io/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/">
+
+
+
+
+
+  <title>Use Ole DB Providers to talk to Excel 97-2003 Workbook | PERFECT BLUE</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-202535369-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Note/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PERFECT BLUE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Essays</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/Note/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/Note/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/Note/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/Note/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/Note/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/Note/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站點地圖
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            檢索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sakronos.github.io/Note/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kronos">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Note/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PERFECT BLUE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Use Ole DB Providers to talk to Excel 97-2003 Workbook</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2023-03-21T20:46:31+09:00">
+                2023-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/OleDB/" itemprop="url" rel="index">
+                    <span itemprop="name">OleDB</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/OleDB/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>施工中……</p>
+<p><img src="https://sakronos.github.io/Note/img/工事中.png" alt="工事中"></p>
+<p>好久，好久，好久没有写东西了，见谅。</p>
+<p>Outline</p>
+<ol>
+<li><p>Jet and ACE</p>
+<p> 1.1. connectionString</p>
+</li>
+<li><p>XLS query string</p>
+<p> 2.1. &lt;&gt; is not null</p>
+<p> 2.2. carriage</p>
+<p> 2.3. AS</p>
+<p> 2.4. SheetName$A1:F(0)</p>
+<p> 2.5. select ‘’2022”</p>
+<p> 2.6. F1,F2</p>
+<p> 2.7. LIKE %</p>
+</li>
+<li><p>运行速度/性能问题？</p>
+</li>
+<li><p>C# DataTable</p>
+<p> 4.1. LINQ Cartesian Product</p>
+<p> 4.2. Merge DataTable with same column number but different column name</p>
+</li>
+</ol>
+<a id="more"></a>
+<h1 id="Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook"><a href="#Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook" class="headerlink" title="Use Ole DB Providers to talk to Excel 97-2003 Workbook"></a>Use Ole DB Providers to talk to Excel 97-2003 Workbook</h1><p>最近需要处理Excel 97-2003 Workbook(.xls文件),之前一直使用的ClosedXML并不支持这个格式的文件,只能另请高明了。😂</p>
+<p>面向搜索引擎编程，搜索到了这篇《C#: Read and Write Excel (<em>.xls and </em>.xlsx) Files Content without Excel Automation (using NPOI and ADO.NET)》[2]，文章推荐了Ole DB和Third Party Library两种方式,NPOI看起来有很多Dependency，笔者不是很喜欢。笔者又搜索了一下其他的第三方库,基本上是要收费的,告辞……</p>
+<p>COM Interop嘛，想想就觉得不仅写起来麻烦，跑起来还慢，拜拜。</p>
+<p>那就只剩Ole DB了,之前倒也不是没用过,不过当时处理的是XLSX格式的,当时代码也写完了,但是最后发现需要把Platform Target设定为x64才能运行(小问题,当时好像找到解决方法,需要额外安装x86的Driver,好麻烦不想装),而且运行一次查询后程序需要很久才会退出(大问题,因为需要查询很多很多次,没找到好的解决方法),于是就放弃了.</p>
+<p>而这次需要处理的是XLS文件,笔者印象中之前研究Ole DB方法时好像运行过,还挺快的,这次便决定用Ole DB来做.</p>
+<h2 id="Dev-Environment"><a href="#Dev-Environment" class="headerlink" title="Dev Environment"></a>Dev Environment</h2><ul>
+<li>Windows 10 Enterprise Version 21H2</li>
+<li>Microsoft Office Professional Plus 2016 (x64)</li>
+<li>Microsoft Visual Studio 2022 (x64)</li>
+</ul>
+<p><strong>附加限制</strong>:不希望装其他软件</p>
+<p>本次需要的Provider之一<code>Microsoft.Jet.OleDb.4.0</code>是随Windows系统安装的,因此没有问题.</p>
+<blockquote>
+<p>It is pre-installed on Windows 2000 and later.[2]</p>
+</blockquote>
+<h2 id="ConnectionString"><a href="#ConnectionString" class="headerlink" title="ConnectionString"></a>ConnectionString</h2><p>网上搜到的很多文章都会写:</p>
+<blockquote>
+<p>Normal ConnectionString: (work for xls files)<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;Provider=Microsoft.Jet.OLEDB<span class="number">.4</span><span class="number">.0</span>;Data Source=&#123;XLS_FILENAME&#125;;Extended Properties=<span class="string">"Excel 8.0;HDR=YES;"</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>XLSX文件需要使用<code>Microsoft.ACE.OLEDB.12.0</code>.反正笔者读完的反应是“XLS只能用Jet,XLSX只能用XLSX”……其实,Microsoft.ACE.OLEDB.12.0完全具备处理XLS文件的能力:</p>
+<blockquote>
+<p>When you you have ACE drivers, there is no reason to use the old deprecated JET drivers—even for older versions of Microsoft Access and Excel. A common mistake I see, even with seasoned developers, is to drop to JET for .mdb and .xls files when you don’t need to. I have made this mistake myself past.[1]</p>
+</blockquote>
+<p>因此我们完全可以使用以下连接字符串：<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>但是这里有几点需要注意：</p>
+<ol>
+<li><code>Microsoft.Jet.OleDb.4.0</code>只支持32位，64位程序使用该Provider会出现错误（如下图）：<blockquote>
+<p>The ‘Microsoft.Jet.OLEDB.4.0’ provider is not registered on the machine.</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="https://sakronos.github.io/Note/img/20230321-02.png" alt="The &#39;Microsoft.Jet.OLEDB.4.0&#39; provider is not registered on the machine."></p>
+<ol start="2">
+<li><code>Microsoft.ACE.OLEDB.12.0</code>由多种软件包提供【待补充】，因此使用时需要注意系统中是否已安装相关软件包，及注意软件包的Bit-ness，否则还是有可能会出现<code>provider is not registered on the machine</code>的问题，下图便是x86程序使用64位的provider触发的错误（这台电脑的<code>Microsoft.ACE.OLEDB.12.0</code>是Office 2016(x64)提供的）：</li>
+</ol>
+<p><img src="https://sakronos.github.io/Note/img/20230321-01.png" alt="‘ACE.OLEDB.12.0’ not registered"></p>
+<p>在Powershell中使用下面的命令可以检查电脑中OLEDB支持的providers：<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://sakronos.github.io/Note/img/20230321-03.png" alt="‘ACE.OLEDB.12.0’ not registered"></p>
+<p>可以看到这台电脑在x86的Powershell中列出了’Microsoft.Jet.OLEDB.4.0’，x64的Powershell中列出了<code>Microsoft.ACE.OLEDB.12.0</code>。</p>
+<p>由于笔者需要尽可能使程序在64位和32位下都能运行，因此笔者在程序中进行了判断，根据Bit-ness使用不同的连接字符串：<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="Query-String"><a href="#Query-String" class="headerlink" title="Query String"></a>Query String</h2><p>下面是几个关于Query String的语法，以供参考。</p>
+<h3 id="不等于"><a href="#不等于" class="headerlink" title="不等于"></a>不等于</h3><p>//    //cmd.CommandText = “SELECT ‘应收’,’名称）/_个体’,’质押财产描述/异议登记陈述/注销说明’ From [“ +”应收$”+ “] where 序号 &lt;&gt; null”;</p>
+<pre><code>DataTable dt1 = new DataTable(&quot;dt1&quot;);
+
+DataTable dt2 = new DataTable(&quot;dt2&quot;);
+
+dt1.Columns.Add(&quot;a&quot;);
+
+dt1.Columns.Add(&quot;b&quot;);
+
+dt2.Columns.Add(&quot;c&quot;);
+
+dt2.Columns.Add(&quot;d&quot;);
+
+dt2.Columns.Add(&quot;e&quot;);
+
+
+
+dt1.Rows.Add(&quot;1&quot;, &quot;2&quot;);
+
+dt2.Rows.Add(&quot;3&quot;, &quot;4&quot;, &quot;5&quot;);
+
+dt2.Rows.Add(&quot;6&quot;, &quot;7&quot;, &quot;8&quot;);
+
+
+
+dt1.AcceptChanges();
+
+dt2.AcceptChanges();
+
+
+
+var query3 = from x in dt1.AsEnumerable()
+
+             from y in dt2.AsEnumerable()
+
+             select new
+
+             {
+
+                 x,
+
+                 y
+
+             };
+
+    DataTable dt3 = new DataTable(&quot;dt3&quot;);
+
+    dt3.Columns.Add(&quot;a&quot;);
+
+    dt3.Columns.Add(&quot;b&quot;);
+
+    dt3.Columns.Add(&quot;c&quot;);
+
+    dt3.Columns.Add(&quot;d&quot;);
+
+    dt3.Columns.Add(&quot;e&quot;);
+
+    dt3.AcceptChanges();
+
+    foreach (var r3 in query3)
+
+    {
+
+        dt3.Rows.Add(r3.x.ItemArray.Concat(r3.y.ItemArray).ToArray());
+
+    }
+
+    dt3.AcceptChanges();
+
+
+
+    stbQuery.Append(&quot;SELECT F1,F9,F5,F17,F18,F20,F8 FROM [&quot; + &quot;Sheet1&quot; + &quot;$A6:AC0] WHERE F9 LIKE &apos;%&quot; + &quot;02222333&quot; + &quot;&apos;&quot;);
+</code></pre><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol>
+<li><p><a href="https://devblogs.microsoft.com/scripting/use-ace-drivers-and-powershell-to-talk-to-access-and-excel/" target="_blank" rel="noopener">Use ACE Drivers and PowerShell to Talk to Access and Excel</a></p>
+</li>
+<li><p><a href="https://www.codeproject.com/tips/813187/csharp-read-and-write-excel-xls-and-xlsx-files-con" target="_blank" rel="noopener">C#: Read and Write Excel (<em>.xls and </em>.xlsx) Files Content without Excel Automation (using NPOI and ADO.NET)</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author：</strong>
+    Kronos
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link：</strong>
+    <a href="https://sakronos.github.io/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/" title="Use Ole DB Providers to talk to Excel 97-2003 Workbook">https://sakronos.github.io/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice： </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Note/tags/C/" rel="tag"># C#</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Note/2022/07/16/C-Process运行程序Console-Output中文乱码/" rel="next" title="【转载】C# Process运行程序时Console Output的中文乱码">
+                <i class="fa fa-chevron-left"></i> 【转载】C# Process运行程序时Console Output的中文乱码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Note/2023/03/21/今日-gitignore不生效？/" rel="prev" title="今日.gitignore不生效？">
+                今日.gitignore不生效？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kronos</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/Note/archives/">
+              
+                  <span class="site-state-item-count">148</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/Note/categories/index.html">
+                  <span class="site-state-item-count">165</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Note/tags/index.html">
+                  <span class="site-state-item-count">82</span>
+                  <span class="site-state-item-name">標籤</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/Note/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/sakronos" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:vanillamochicake@yahoo.co.jp" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook"><span class="nav-number">1.</span> <span class="nav-text">Use Ole DB Providers to talk to Excel 97-2003 Workbook</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dev-Environment"><span class="nav-number">1.1.</span> <span class="nav-text">Dev Environment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ConnectionString"><span class="nav-number">1.2.</span> <span class="nav-text">ConnectionString</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Query-String"><span class="nav-number">1.3.</span> <span class="nav-text">Query String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不等于"><span class="nav-number">1.3.1.</span> <span class="nav-text">不等于</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料："><span class="nav-number">1.3.1.1.</span> <span class="nav-text">参考资料：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kronos</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Note/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Note/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Note/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/Note/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/Note/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/Note/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//unpkg.com/leancloud-storage@3.15.0/dist/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'QpTLC7WiWxYzIvmgVphmq3D5-gzGzoHsz',
+        appKey: 'eCDRIyiOPppTf20d0u80dGLd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/Note/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/Note/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/Note/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+  
+  <script>
+    (function () {
+
+      firebase.initializeApp({
+        apiKey: 'AIzaSyAPeKOWT5_ZbGrzRcGyqWp9tJn6EI-Jba8',
+        projectId: 'gh-pages-note'
+      })
+
+      function getCount(doc, increaseCount) {
+        //increaseCount will be false when not in article page
+
+        return doc.get().then(function (d) {
+          var count
+          if (!d.exists) { //has no data, initialize count
+            if (increaseCount) {
+              doc.set({
+                count: 1
+              })
+              count = 1
+            }
+            else {
+              count = 0
+            }
+          }
+          else { //has data
+            count = d.data().count
+            if (increaseCount) {
+              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
+                doc.set({ //increase count
+                  count: count + 1
+                })
+                count++
+              }
+            }
+          }
+          if (window.localStorage && increaseCount) { //mark as visited
+            localStorage.setItem(title, true)
+          }
+
+          return count
+        })
+      }
+
+      function appendCountTo(el) {
+        return function (count) {
+          $(el).append(
+            $('<span>').addClass('post-visitors-count').append(
+              $('<span>').addClass('post-meta-divider').text('|')
+            ).append(
+              $('<span>').addClass('post-meta-item-icon').append(
+                $('<i>').addClass('fa fa-users')
+              )
+              ).append($('<span>').text('閱讀次數 ' + count))
+          )
+        }
+      }
+
+      var db = firebase.firestore()
+      var articles = db.collection('articles')
+
+      //https://hexo.io/zh-tw/docs/variables.html
+      var isPost = 'Use Ole DB Providers to talk to Excel 97-2003 Workbook'.length > 0
+      var isArchive = '' === 'true'
+      var isCategory = ''.length > 0
+      var isTag = ''.length > 0
+
+      if (isPost) { //is article page
+        var title = 'Use Ole DB Providers to talk to Excel 97-2003 Workbook'
+        var doc = articles.doc(title)
+
+        getCount(doc, true).then(appendCountTo($('.post-meta')))
+      }
+      else if (!isArchive && !isCategory && !isTag) { //is index page
+        var titles = [] //array to titles
+
+        var postsstr = '' //if you have a better way to get titles of posts, please change it
+        eval(postsstr)
+
+        var promises = titles.map(function (title) {
+          return articles.doc(title)
+        }).map(function (doc) {
+          return getCount(doc)
+        })
+        Promise.all(promises).then(function (counts) {
+          var metas = $('.post-meta')
+          counts.forEach(function (val, idx) {
+            appendCountTo(metas[idx])(val)
+          })
+        })
+      }
+    })()
+  </script>
+
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

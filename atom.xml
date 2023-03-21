@@ -6,7 +6,7 @@
   <link href="/Note/atom.xml" rel="self"/>
   
   <link href="https://sakronos.github.io/Note/"/>
-  <updated>2022-07-16T16:35:32.802Z</updated>
+  <updated>2023-03-21T12:53:44.980Z</updated>
   <id>https://sakronos.github.io/Note/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>今日.gitignore不生效？</title>
+    <link href="https://sakronos.github.io/Note/2023/03/21/%E4%BB%8A%E6%97%A5-gitignore%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F/"/>
+    <id>https://sakronos.github.io/Note/2023/03/21/%E4%BB%8A%E6%97%A5-gitignore%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F/</id>
+    <published>2023-03-21T11:53:44.000Z</published>
+    <updated>2023-03-21T12:53:44.980Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Use Ole DB Providers to talk to Excel 97-2003 Workbook</title>
+    <link href="https://sakronos.github.io/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/"/>
+    <id>https://sakronos.github.io/Note/2023/03/21/Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook/</id>
+    <published>2023-03-21T11:46:31.000Z</published>
+    <updated>2023-03-21T15:59:00.402Z</updated>
+    
+    <content type="html"><![CDATA[<p>施工中……</p><p><img src="https://sakronos.github.io/Note/img/工事中.png" alt="工事中"></p><p>好久，好久，好久没有写东西了，见谅。</p><p>Outline</p><ol><li><p>Jet and ACE</p><p> 1.1. connectionString</p></li><li><p>XLS query string</p><p> 2.1. &lt;&gt; is not null</p><p> 2.2. carriage</p><p> 2.3. AS</p><p> 2.4. SheetName$A1:F(0)</p><p> 2.5. select ‘’2022”</p><p> 2.6. F1,F2</p><p> 2.7. LIKE %</p></li><li><p>运行速度/性能问题？</p></li><li><p>C# DataTable</p><p> 4.1. LINQ Cartesian Product</p><p> 4.2. Merge DataTable with same column number but different column name</p></li></ol><a id="more"></a><h1 id="Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook"><a href="#Use-Ole-DB-Providers-to-talk-to-Excel-97-2003-Workbook" class="headerlink" title="Use Ole DB Providers to talk to Excel 97-2003 Workbook"></a>Use Ole DB Providers to talk to Excel 97-2003 Workbook</h1><p>最近需要处理Excel 97-2003 Workbook(.xls文件),之前一直使用的ClosedXML并不支持这个格式的文件,只能另请高明了。😂</p><p>面向搜索引擎编程，搜索到了这篇《C#: Read and Write Excel (<em>.xls and </em>.xlsx) Files Content without Excel Automation (using NPOI and ADO.NET)》[2]，文章推荐了Ole DB和Third Party Library两种方式,NPOI看起来有很多Dependency，笔者不是很喜欢。笔者又搜索了一下其他的第三方库,基本上是要收费的,告辞……</p><p>COM Interop嘛，想想就觉得不仅写起来麻烦，跑起来还慢，拜拜。</p><p>那就只剩Ole DB了,之前倒也不是没用过,不过当时处理的是XLSX格式的,当时代码也写完了,但是最后发现需要把Platform Target设定为x64才能运行(小问题,当时好像找到解决方法,需要额外安装x86的Driver,好麻烦不想装),而且运行一次查询后程序需要很久才会退出(大问题,因为需要查询很多很多次,没找到好的解决方法),于是就放弃了.</p><p>而这次需要处理的是XLS文件,笔者印象中之前研究Ole DB方法时好像运行过,还挺快的,这次便决定用Ole DB来做.</p><h2 id="Dev-Environment"><a href="#Dev-Environment" class="headerlink" title="Dev Environment"></a>Dev Environment</h2><ul><li>Windows 10 Enterprise Version 21H2</li><li>Microsoft Office Professional Plus 2016 (x64)</li><li>Microsoft Visual Studio 2022 (x64)</li></ul><p><strong>附加限制</strong>:不希望装其他软件</p><p>本次需要的Provider之一<code>Microsoft.Jet.OleDb.4.0</code>是随Windows系统安装的,因此没有问题.</p><blockquote><p>It is pre-installed on Windows 2000 and later.[2]</p></blockquote><h2 id="ConnectionString"><a href="#ConnectionString" class="headerlink" title="ConnectionString"></a>ConnectionString</h2><p>网上搜到的很多文章都会写:</p><blockquote><p>Normal ConnectionString: (work for xls files)<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;Provider=Microsoft.Jet.OLEDB<span class="number">.4</span><span class="number">.0</span>;Data Source=&#123;XLS_FILENAME&#125;;Extended Properties=<span class="string">"Excel 8.0;HDR=YES;"</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p></blockquote><p>XLSX文件需要使用<code>Microsoft.ACE.OLEDB.12.0</code>.反正笔者读完的反应是“XLS只能用Jet,XLSX只能用XLSX”……其实,Microsoft.ACE.OLEDB.12.0完全具备处理XLS文件的能力:</p><blockquote><p>When you you have ACE drivers, there is no reason to use the old deprecated JET drivers—even for older versions of Microsoft Access and Excel. A common mistake I see, even with seasoned developers, is to drop to JET for .mdb and .xls files when you don’t need to. I have made this mistake myself past.[1]</p></blockquote><p>因此我们完全可以使用以下连接字符串：<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p>但是这里有几点需要注意：</p><ol><li><code>Microsoft.Jet.OleDb.4.0</code>只支持32位，64位程序使用该Provider会出现错误（如下图）：<blockquote><p>The ‘Microsoft.Jet.OLEDB.4.0’ provider is not registered on the machine.</p></blockquote></li></ol><p><img src="https://sakronos.github.io/Note/img/20230321-02.png" alt="The &#39;Microsoft.Jet.OLEDB.4.0&#39; provider is not registered on the machine."></p><ol start="2"><li><code>Microsoft.ACE.OLEDB.12.0</code>由多种软件包提供【待补充】，因此使用时需要注意系统中是否已安装相关软件包，及注意软件包的Bit-ness，否则还是有可能会出现<code>provider is not registered on the machine</code>的问题，下图便是x86程序使用64位的provider触发的错误（这台电脑的<code>Microsoft.ACE.OLEDB.12.0</code>是Office 2016(x64)提供的）：</li></ol><p><img src="https://sakronos.github.io/Note/img/20230321-01.png" alt="‘ACE.OLEDB.12.0’ not registered"></p><p>在Powershell中使用下面的命令可以检查电脑中OLEDB支持的providers：<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p><img src="https://sakronos.github.io/Note/img/20230321-03.png" alt="‘ACE.OLEDB.12.0’ not registered"></p><p>可以看到这台电脑在x86的Powershell中列出了’Microsoft.Jet.OLEDB.4.0’，x64的Powershell中列出了<code>Microsoft.ACE.OLEDB.12.0</code>。</p><p>由于笔者需要尽可能使程序在64位和32位下都能运行，因此笔者在程序中进行了判断，根据Bit-ness使用不同的连接字符串：<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><h2 id="Query-String"><a href="#Query-String" class="headerlink" title="Query String"></a>Query String</h2><p>下面是几个关于Query String的语法，以供参考。</p><h3 id="不等于"><a href="#不等于" class="headerlink" title="不等于"></a>不等于</h3><p>//    //cmd.CommandText = “SELECT ‘应收’,’名称）/_个体’,’质押财产描述/异议登记陈述/注销说明’ From [“ +”应收$”+ “] where 序号 &lt;&gt; null”;</p><pre><code>DataTable dt1 = new DataTable(&quot;dt1&quot;);DataTable dt2 = new DataTable(&quot;dt2&quot;);dt1.Columns.Add(&quot;a&quot;);dt1.Columns.Add(&quot;b&quot;);dt2.Columns.Add(&quot;c&quot;);dt2.Columns.Add(&quot;d&quot;);dt2.Columns.Add(&quot;e&quot;);dt1.Rows.Add(&quot;1&quot;, &quot;2&quot;);dt2.Rows.Add(&quot;3&quot;, &quot;4&quot;, &quot;5&quot;);dt2.Rows.Add(&quot;6&quot;, &quot;7&quot;, &quot;8&quot;);dt1.AcceptChanges();dt2.AcceptChanges();var query3 = from x in dt1.AsEnumerable()             from y in dt2.AsEnumerable()             select new             {                 x,                 y             };    DataTable dt3 = new DataTable(&quot;dt3&quot;);    dt3.Columns.Add(&quot;a&quot;);    dt3.Columns.Add(&quot;b&quot;);    dt3.Columns.Add(&quot;c&quot;);    dt3.Columns.Add(&quot;d&quot;);    dt3.Columns.Add(&quot;e&quot;);    dt3.AcceptChanges();    foreach (var r3 in query3)    {        dt3.Rows.Add(r3.x.ItemArray.Concat(r3.y.ItemArray).ToArray());    }    dt3.AcceptChanges();    stbQuery.Append(&quot;SELECT F1,F9,F5,F17,F18,F20,F8 FROM [&quot; + &quot;Sheet1&quot; + &quot;$A6:AC0] WHERE F9 LIKE &apos;%&quot; + &quot;02222333&quot; + &quot;&apos;&quot;);</code></pre><h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><ol><li><p><a href="https://devblogs.microsoft.com/scripting/use-ace-drivers-and-powershell-to-talk-to-access-and-excel/" target="_blank" rel="noopener">Use ACE Drivers and PowerShell to Talk to Access and Excel</a></p></li><li><p><a href="https://www.codeproject.com/tips/813187/csharp-read-and-write-excel-xls-and-xlsx-files-con" target="_blank" rel="noopener">C#: Read and Write Excel (<em>.xls and </em>.xlsx) Files Content without Excel Automation (using NPOI and ADO.NET)</a></p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;施工中……&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://sakronos.github.io/Note/img/工事中.png&quot; alt=&quot;工事中&quot;&gt;&lt;/p&gt;
+&lt;p&gt;好久，好久，好久没有写东西了，见谅。&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Jet and ACE&lt;/p&gt;
+&lt;p&gt; 1.1. connectionString&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;XLS query string&lt;/p&gt;
+&lt;p&gt; 2.1. &amp;lt;&amp;gt; is not null&lt;/p&gt;
+&lt;p&gt; 2.2. carriage&lt;/p&gt;
+&lt;p&gt; 2.3. AS&lt;/p&gt;
+&lt;p&gt; 2.4. SheetName$A1:F(0)&lt;/p&gt;
+&lt;p&gt; 2.5. select ‘’2022”&lt;/p&gt;
+&lt;p&gt; 2.6. F1,F2&lt;/p&gt;
+&lt;p&gt; 2.7. LIKE %&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;运行速度/性能问题？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;C# DataTable&lt;/p&gt;
+&lt;p&gt; 4.1. LINQ Cartesian Product&lt;/p&gt;
+&lt;p&gt; 4.2. Merge DataTable with same column number but different column name&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="OleDB" scheme="https://sakronos.github.io/Note/categories/OleDB/"/>
+    
+      <category term="C#" scheme="https://sakronos.github.io/Note/categories/OleDB/C/"/>
+    
+    
+      <category term="C#" scheme="https://sakronos.github.io/Note/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>【转载】C# Process运行程序时Console Output的中文乱码</title>
@@ -483,57 +546,6 @@
     
     
       <category term="Manjaro" scheme="https://sakronos.github.io/Note/tags/Manjaro/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Manjaro Desktop effects have been suspended</title>
-    <link href="https://sakronos.github.io/Note/2021/08/20/Manjaro-Desktop-Effects-Suspended/"/>
-    <id>https://sakronos.github.io/Note/2021/08/20/Manjaro-Desktop-Effects-Suspended/</id>
-    <published>2021-08-20T14:06:12.000Z</published>
-    <updated>2021-08-20T15:13:48.105Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近一次滚完更新后，发现开机后TG的窗口怪怪的，窗口四周有一圈白色的边框。因缘际会下在<code>Notifications</code>里看到了这条通知：<code>Desktop effects have been suspended by another application. You can resume using the ‘Alt+Shift+F12’ shortcut</code>，无脑按完再打开TG时发现窗口正常了。</p><p>但是接下来几次开机后都遇到了这个情况，不能忍，找到解决方案如下：</p><p>进入系统设置(System Settings) - Workspace Behavior - Desktop Effects，在Appearance栏下有一个选项为“Background contrast”，将其启用。以后开机就不会遇到上述问题了。</p><p><img src="https://sakronos.github.io/Note/img/Manjaro_Background_Contrast.png" alt></p><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://forum.manjaro.org/t/desktop-effects-have-been-suspended-kde-plasma/30705" target="_blank" rel="noopener">Desktop effects have been suspended KDE Plasma</a>           </li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近一次滚完更新后，发现开机后TG的窗口怪怪的，窗口四周有一圈白色的边框。因缘际会下在&lt;code&gt;Notifications&lt;/code&gt;里看到了这条通知：&lt;code&gt;Desktop effects have been suspended by another applic
-      
-    
-    </summary>
-    
-    
-      <category term="Manjaro" scheme="https://sakronos.github.io/Note/categories/Manjaro/"/>
-    
-      <category term="KDE Plasma" scheme="https://sakronos.github.io/Note/categories/Manjaro/KDE-Plasma/"/>
-    
-    
-      <category term="KDE Plasma" scheme="https://sakronos.github.io/Note/tags/KDE-Plasma/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pip安装包或更新pip时出现check_hostname requires server_hostname 错误</title>
-    <link href="https://sakronos.github.io/Note/2021/08/01/pip%E5%AE%89%E8%A3%85%E6%88%96%E6%9B%B4%E6%96%B0%E5%87%BA%E7%8E%B0check-hostname-requires-server-hostname/"/>
-    <id>https://sakronos.github.io/Note/2021/08/01/pip%E5%AE%89%E8%A3%85%E6%88%96%E6%9B%B4%E6%96%B0%E5%87%BA%E7%8E%B0check-hostname-requires-server-hostname/</id>
-    <published>2021-08-01T13:58:02.000Z</published>
-    <updated>2021-08-01T15:00:34.663Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="pip安装包或更新pip时出现-ValueError-check-hostname-requires-server-hostname-错误"><a href="#pip安装包或更新pip时出现-ValueError-check-hostname-requires-server-hostname-错误" class="headerlink" title="pip安装包或更新pip时出现 ValueError: check_hostname requires server_hostname 错误"></a>pip安装包或更新pip时出现 ValueError: check_hostname requires server_hostname 错误</h1><p>解决方法：关闭代理服务器<br><a id="more"></a></p><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol><li><a href="https://blog.csdn.net/Noah_D/article/details/116670995" target="_blank" rel="noopener">pip安装包时出现 ValueError: check_hostname requires server_hostname 错误，解决办法</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;pip安装包或更新pip时出现-ValueError-check-hostname-requires-server-hostname-错误&quot;&gt;&lt;a href=&quot;#pip安装包或更新pip时出现-ValueError-check-hostname-requires-server-hostname-错误&quot; class=&quot;headerlink&quot; title=&quot;pip安装包或更新pip时出现 ValueError: check_hostname requires server_hostname 错误&quot;&gt;&lt;/a&gt;pip安装包或更新pip时出现 ValueError: check_hostname requires server_hostname 错误&lt;/h1&gt;&lt;p&gt;解决方法：关闭代理服务器&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="pip" scheme="https://sakronos.github.io/Note/categories/pip/"/>
-    
-    
-      <category term="pip" scheme="https://sakronos.github.io/Note/tags/pip/"/>
     
   </entry>
   
