@@ -542,7 +542,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2023-03-21T19:53:44+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2023-03-21T20:53:44+09:00">
                 2023-03-21
               </time>
             
@@ -552,6 +552,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Note/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -584,7 +606,7 @@
                   <span class="post-meta-item-text">字數統計&#58;</span>
                 
                 <span title="字數統計">
-                  0
+                  687
                 </span>
               
 
@@ -600,7 +622,7 @@
                   <span class="post-meta-item-text">閱讀時長 &asymp;</span>
                 
                 <span title="閱讀時長">
-                  1
+                  4
                 </span>
               
             </div>
@@ -622,9 +644,22 @@
 
       
         
-          
-            
-          
+          <p>今天为一个旧的git repository添加了“.gitignore”，但发现gitignore看起来没有生效？然后就必应，然后复制粘贴，有了下面这么一大段。</p>
+<p>TL;DR</p>
+<p><strong>Step 1</strong>. Type the following command and hit Enter to execute it. This command will unstage and remove the path to your files from the Git index.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2</strong>. Execute the following command. It will re-add all your files back and only the correct files will be updated.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p><strong>Step 3</strong>. Execute the following command to commit all your files back into the Git index.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">".gitignore is now working"</span></span><br></pre></td></tr></table></figure>
+<p>After that, you can test the files and see if the git ignore not working issue is fixed or not.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Note/2023/03/21/今日-gitignore不生效？/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -702,7 +737,7 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2023-03-21T19:46:31+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2023-03-21T20:46:31+09:00">
                 2023-03-21
               </time>
             
